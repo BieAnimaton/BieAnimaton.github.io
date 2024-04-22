@@ -107,12 +107,12 @@ author:
   name             : "BieAnimaton"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Sou uma pessoa cuirosa 👀👀."
-  location         : "Brasil, SP"
+  location         : "World"
   email            : "gcbragion@email.com"
   links:
     - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:gcbragion@email.com"
+      #icon: "fas fa-fw fa-envelope-square"
+      #url: "mailto:gcbragion@email.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
@@ -141,6 +141,12 @@ footer:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/BieAnimaton/"
+    - label: "LinkedIn Profile"
+      # icon: "fab fa-fw fa-linkedin"
+      # url: 
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://bieanimaton.github.io/"
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
       # url:
