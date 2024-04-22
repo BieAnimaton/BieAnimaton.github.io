@@ -1,5 +1,5 @@
 ---
-title: "PowerShell add or remove elements from an Array"
+title: "Proxmark3 to read, clone and emulate NFC"
 excerpt: "Learn how to read NFC card and clone the content to simulate using Proxmark3."
 categories:
   - Proxmark3

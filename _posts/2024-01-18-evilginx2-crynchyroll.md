@@ -1,5 +1,5 @@
 ---
-title: "PowerShell add or remove elements from an Array"
+title: "Evilginx2 phishlet for Crunchyroll"
 excerpt: "Learn how to create a fake Crunchyroll page to steal logins and passwords using Evilginx2."
 categories:
   - Evilginx2
