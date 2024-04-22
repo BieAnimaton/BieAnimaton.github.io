@@ -105,8 +105,8 @@ analytics:
 # Site Author
 author:
   name             : "BieAnimaton"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Sou uma pessoa cuirosa 👀👀."
+  avatar           : "/assets/images/avatar.png"
+  bio              : "Computer Science | Cyber Security | Red Team | Hardware Hacking | CPIA | CRTA | CRT-COI | CRT-ID | MITRE ATT&CK."
   location         : "World"
   email            : "gcbragion@email.com"
   links:
