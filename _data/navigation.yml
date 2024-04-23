@@ -5,7 +5,7 @@ main:
   - title: "Sobre"
     url: /sobre/
   - title: "Postagem por Categoria"
-    url: /categorias/
+    url: /categories/
   # - title: "Sample Posts"
   #   url: /year-archive/
   # - title: "Sample Collections"
