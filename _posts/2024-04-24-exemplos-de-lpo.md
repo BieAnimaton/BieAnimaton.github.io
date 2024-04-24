@@ -29,6 +29,7 @@ Lembrando que:
 > ≣  = estritamente equivalente  
 
 ### Exemplo das Cenouras
+
   ∀x ¬Gosta(x,Cenouras) ≣ ¬∃x Gosta(x,Cenouras) =
   “todo mundo detesta cenouras” =
   “não existe alguém que goste de cenouras”.
@@ -36,6 +37,7 @@ Lembrando que:
   ∀x¬P ≣ ¬∃xP
 
 ### Exemplo dos Sorvetes
+
   ∀x Gosta(x,Sorvete) ≣ ¬∃x ¬Gosta(x,Sorvete) =
   “todo mundo gosta de sorvete” =
   “não existe alguém que não goste de sorvete”
@@ -43,25 +45,30 @@ Lembrando que:
   ∀xP ≣ ¬∃x¬P
 
 ### Para todo departamento, há pelo menos um funcionário que é chefe.
+
   ∀x Existe(x, ∃y Cargo(y, chefe))
   x = departamento
   y = funcionario
 
 ### Algumas pessoas gostam de todos os tipos de música.
+
   ∃x Gosta(x, ∀y Música(y))
   x = pessoa
   y = música
 
 ### Existe um aluno que não está matriculado em nenhum curso.
+
   ¬∃x Matriculado(x, ∀y Curso(y))
   x = aluno
   y = curso
 
 ### Todos os alunos estudam matemática.
+
   ∀x Estudar(x, matemática)
   x = aluno
 
 ### Existe um estudante que gosta de todas as disciplinas.
-∃x Gosta(x, ∀y Disciplina(y))
-x = estudante
-y = disciplina
+
+  ∃x Gosta(x, ∀y Disciplina(y))
+  x = estudante
+  y = disciplina
