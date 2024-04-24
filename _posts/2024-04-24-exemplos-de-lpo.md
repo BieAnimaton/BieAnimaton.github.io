@@ -46,29 +46,20 @@ Lembrando que:
 
 ### Para todo departamento, há pelo menos um funcionário que é chefe.
 
-    ∀x Existe(x, ∃y Cargo(y, chefe))
-    x = departamento
-    y = funcionario
+    ∀x ∃y (Departamento(x) → Chefe(y, x))
 
 ### Algumas pessoas gostam de todos os tipos de música.
 
-    ∃x Gosta(x, ∀y Música(y))
-    x = pessoa
-    y = música
+    ∃x ∀y (GostaDe(x, y))
 
 ### Existe um aluno que não está matriculado em nenhum curso.
 
-    ∃x Matriculado(x, ¬∀y Curso(y))
-    x = aluno
-    y = curso
+    ∃x (Aluno(x) ∧ ¬(∃y MatriculadoEm(x, y)))
 
 ### Todos os alunos estudam matemática.
 
-    ∀x Estudar(x, matemática)
-    x = aluno
+    ∀x (EstudaMatematica(x))
 
 ### Existe um estudante que gosta de todas as disciplinas.
 
-    ∃x Gosta(x, ∀y Disciplina(y))
-    x = estudante
-    y = disciplina
+    ∃x (GostaTodas(x))
