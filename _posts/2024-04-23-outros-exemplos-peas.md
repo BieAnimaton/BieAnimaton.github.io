@@ -23,9 +23,9 @@ Sensores (como observo os pontos)
 ## Agente de Polícia
 
     Ambiente: cidade, rua, metrópole, estrada, ladrao, outros policias.
-    Performance: garantir a segurança do povo, evitar usar a arma, para um assalto.
-    Atuadores: carros de polícia, rádio, escuta, algemas, armas, distintivo, radar, velocímetro.
-    Sensores: agitação, bagunça, pessoas gritando, sons de tiros, notas do radar.
+    Performance: garantir a segurança do povo, evitar assalto, arma.
+    Atuadores: carros de polícia, rádio, escuta, algemas, armas, radar.
+    Sensores: agitação, bagunça, audição, visão, notas do radar.
 
 ## Agente Professora
 
@@ -52,7 +52,7 @@ Sensores (como observo os pontos)
 
     Ambiente: paciente, hospital, funcionários, etc.
     Perfomance: paciente saudável, minimar custos.
-    Atuadores: auto-falantes, displays para comunivcação com o paciente, etc.
+    Atuadores: auto-falantes, displays para comunicação com o paciente, etc.
     Sensores: câmera, leitora de exames (scanner), microfone, teclado, etc.
 
 ## Agente de Análise de imagens de satélite
@@ -67,7 +67,7 @@ Sensores (como observo os pontos)
     Ambiente: Conjunto de estudantes, escola.
     Perfomance: Melhorar o desempenho do estudante.
     Atudaores: Impressora, display com exercícios, sugestões e correções.
-    Sensores: câmera, para capturar imagens do aluno, microfone, teclado.
+    Sensores: câmera para capturar imagens do aluno, microfone, teclado.
 
 ## Agente robô de linha de montagem
 
