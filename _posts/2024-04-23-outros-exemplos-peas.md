@@ -20,6 +20,13 @@ Performance ou Desempenho (o que quero atingir).
 Atuadores (o que faço para influenciar).  
 Sensores (como observo os pontos).
 
+## Agente Submarino
+
+    Ambiente: oceano, água, peixes, algas, rochas.
+    Performance: fotografar e descobrir o oceano.
+    Atuadores: motores, hélices, âncora.
+    Sensores: GPS, sonar, sensor de som, temperatura, velocidade, câmera.
+
 ## Agente de Polícia
 
     Ambiente: cidade, rua, metrópole, estrada, ladrao, outros policias.
