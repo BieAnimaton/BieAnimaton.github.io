@@ -22,34 +22,34 @@ Função de custo (o que custou mudar de estado).
 ### Exercício 1
 Você deve colorir um mapa plano utilizando apenas quatro cores de tal modo que não haja duas regiões adjacentes com a mesma cor.  
 
-        Estado inicial: nenhuma região colorida no mapa.
-		Teste de objetivo: todas as regiões coloridas e nenhuma região adjacente com a mesma cor.
-		Função sucessor: atribuir uma cor a uma região que esteja sem cor.
-		Função de custo: número total de atribuições.
+    Estado inicial: nenhuma região colorida no mapa.
+    Teste de objetivo: todas as regiões coloridas e nenhuma região adjacente com a mesma cor.
+    Função sucessor: atribuir uma cor a uma região que esteja sem cor.
+    Função de custo: número total de atribuições.
 
 ### Exercício 2
 Um macaco com um metro de altura está em uma sala em que algumas bananas estão suspensas no teto a 2,5 metros de altura. Ajude o macaco a alcançar as bananas. A sala contém dois engradados empilháveis e móveis com um metro de altura cada.  
 
-        Estado inicial: como descrito no enunciado.
-		Teste de objetivo: macaco alcançou as bananas.
-		Função sucessor: subir no engradado, descer do engradado, mudar o engradado de lugar, andar de um lugar a  outro, agarrar bananas
-		Função de custo: número total de ações.
+    Estado inicial: como descrito no enunciado.
+    Teste de objetivo: macaco alcançou as bananas.
+    Função sucessor: subir no engradado, descer do engradado, mudar o engradado de lugar, andar de um lugar a  outro, agarrar bananas
+    Função de custo: número total de ações.
 
 ### Exercício 3
 Considere um programa que emite a seguinte mensagem: “registro de entrada inválido” quando alimentado com um certo arquivo de registros de entrada. Sabendo que cada registro é independente, como descobrir qual registro é inválido?  
 
-        Estado inicial: programa não emite nenhuma mensagem.
-		Teste de objetivo: receber a mensagem "registro de entrada inválido".
-		Função sucessor: escolher o próximo arquivo para alimentar o sistema.
-		Função de custo: número total de escolhas.
+    Estado inicial: programa não emite nenhuma mensagem.
+    Teste de objetivo: receber a mensagem "registro de entrada inválido".
+    Função sucessor: escolher o próximo arquivo para alimentar o sistema.
+    Função de custo: número total de escolhas.
 
 ### Exercício 4
 Três missionários e três canibais estão em um lado de um rio, juntamente com um barco que pode conter uma ou duas pessoas. Sem deixar que um grupo de missionários de um lado fique em número menor que o número de canibais, formule o problema par que eles possam ser levados ao outro lado.
 
-        Estado inicial: como descrito no enunciado.
-		Teste de objetivo: transportar os canibais e moisionários para o outro lado.
-		Função sucessor: escolher o próximo missionário ou canibal para colocar no barco.
-		Função de custo: número total de escolhas.
+    Estado inicial: como descrito no enunciado.
+    Teste de objetivo: transportar os canibais e moisionários para o outro lado.
+    Função sucessor: escolher o próximo missionário ou canibal para colocar no barco.
+    Função de custo: número total de escolhas.
 
 ## BFS e DFS
 Considere um espaço de estados onde o estado inicial é o número 1 e função sucessor para o estado n retorna dois estados, com números 2n e 2n+1.
@@ -62,10 +62,17 @@ Considere um espaço de estados onde o estado inicial é o número 1 e função 
 O algoritmo de caminho heurístico é uma busca pela melhor escolha na qual a função objetivo é f(n)=(2-w)g(n)+wh(n).  Responda:
 - Para que valores de w esse algoritmo oferece a garantia de ser
 ótimo?
-        Este algoritmo é ótimo quando h(n) é admissível e w=1.
+
+    Este algoritmo é ótimo quando h(n) é admissível e w=1.
+
 - Qual busca ele executa quando w=0?
-        w=0 faz com que f(n) = 2g(n), que equivale à busca de custo uniforme (a multiplicação por 2 não modifica a ordem em que os nós são expandidos).
+
+    w=0 faz com que f(n) = 2g(n), que equivale à busca de custo uniforme (a multiplicação por 2 não modifica a ordem em que os nós são expandidos).
+
 - E quando w=1?
-        w=1 faz com que f(n)= g(n)+h(n), que equivale à busca A*.
+
+    w=1 faz com que f(n)= g(n)+h(n), que equivale à busca A*.
+
 - E quando w=2?
-        w=2 faz com que f(n) = 2h(n), que equivale à busca gulosa pela melhor escolha.
+
+    w=2 faz com que f(n) = 2h(n), que equivale à busca gulosa pela melhor escolha.
