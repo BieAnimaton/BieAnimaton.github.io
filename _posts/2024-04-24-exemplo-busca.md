@@ -47,7 +47,7 @@ Considere um programa que emite a seguinte mensagem: “registro de entrada inv�
 Três missionários e três canibais estão em um lado de um rio, juntamente com um barco que pode conter uma ou duas pessoas. Sem deixar que um grupo de missionários de um lado fique em número menor que o número de canibais, formule o problema par que eles possam ser levados ao outro lado.
 
     Estado inicial: como descrito no enunciado.
-    Teste de objetivo: transportar os canibais e moisionários para o outro lado.
+    Teste de objetivo: transportar os canibais e missionários para o outro lado.
     Função sucessor: escolher o próximo missionário ou canibal para colocar no barco.
     Função de custo: número total de escolhas.
 
