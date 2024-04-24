@@ -15,8 +15,8 @@ tags:
 toc: true
 ---
 
-Este projeto exibe a localização estimada baseada no IP.
-A API por [ipgeolocation](https://ipgeolocation.io/)
+Este projeto exibe a localização estimada baseada no IP.  
+A API por [ipgeolocation](https://ipgeolocation.io/).
 
 Após inserir um endereço IPv4, a página deve retornar o local estimado deste IP, graças a API.
 
@@ -404,7 +404,8 @@ arrowBack.addEventListener("click", () => {
 });
 ```
 
-Lembre se se registrar no site, obter a sua API e substituir em API_KEY_CODE no arquivo script.js.
+> Lembre-se registrar no site, obter a sua API e substituir em API_KEY_CODE no arquivo script.js.
+
 Agora é só abrir o index.html no navegador.
 
 ## Ferramentas usadas 🛠
