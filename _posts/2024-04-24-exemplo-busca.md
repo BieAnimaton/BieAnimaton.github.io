@@ -59,11 +59,16 @@ Considere um espaço de estados onde o estado inicial é o número 1 e função 
 ![image](https://github.com/BieAnimaton/BieAnimaton/assets/52220244/252a2926-5ae8-400c-a009-6c5c17ff99af)
 
 ## Algoritmo
+Relembrando:  
+
+>h(n): distância em linha reta (heurística).  
+>g(n): distância real (custo acumulado).  
+
 O algoritmo de caminho heurístico é uma busca pela melhor escolha na qual a função objetivo é f(n)=(2-w)g(n)+wh(n).  Responda:
 - Para que valores de w esse algoritmo oferece a garantia de ser
 ótimo?
 
-    Este algoritmo é ótimo quando h(n) é admissível e w=1.
+    Este algoritmo é ótimo quando h(n) éadmissível e w=1.
 
 - Qual busca ele executa quando w=0?
 
