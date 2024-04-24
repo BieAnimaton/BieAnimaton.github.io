@@ -58,7 +58,7 @@ Lembrando que:
 
 ### Existe um aluno que não está matriculado em nenhum curso.
 
-    ¬∃x Matriculado(x, ∀y Curso(y))
+    ∃x Matriculado(x, ¬∀y Curso(y))
     x = aluno
     y = curso
 
