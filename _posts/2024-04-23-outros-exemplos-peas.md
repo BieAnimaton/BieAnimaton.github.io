@@ -15,10 +15,10 @@ toc: true
 
 # PEAS
 
-Ambiente (local ou entidades envolvidas)
-Performance ou Desempenho (o que quero atingir)
-Atuadores (o que faço para influenciar)
-Sensores (como observo os pontos)
+Ambiente (local ou entidades envolvidas).  
+Performance ou Desempenho (o que quero atingir).  
+Atuadores (o que faço para influenciar).  
+Sensores (como observo os pontos).
 
 ## Agente de Polícia
 
