@@ -12,14 +12,11 @@ tags:
 toc: true
 ---
 
-This is Arduino project about a Robotic cart.
+Projeto arduino sobre um carrinho robótico.
 Downloadable resources [Ardunio Robotic Cart](https://github.com/BieAnimaton/Arduino-Robotic-Cart).
 
-## Notes :books:
-- Responsive project to ambient.
-- Practice eletronics skills.
 
-## Images :robot:
+## Imagens :robot:
 ![robozinho 1](https://user-images.githubusercontent.com/52220244/97282113-09a72800-181d-11eb-88bb-599e40bb7581.jpg)
 
 ![robozinho 3](https://user-images.githubusercontent.com/52220244/97282118-0b70eb80-181d-11eb-8bc3-195452d3e3ca.jpg)
@@ -28,7 +25,7 @@ Downloadable resources [Ardunio Robotic Cart](https://github.com/BieAnimaton/Ard
 
 ![robozinho 7](https://user-images.githubusercontent.com/52220244/97283945-352b1200-181f-11eb-8fd8-8e37d3536771.gif)
 
-## Components :point_up:
+## Componentes 👆
 - Arduino Uno x1.
 - Ultrassonic sensor x1.
 - Servo motor x1.
@@ -40,7 +37,7 @@ Downloadable resources [Ardunio Robotic Cart](https://github.com/BieAnimaton/Ard
 - Cardboard body.
 - Jumpers xN.
 
-## Libraries :bookmark_tabs:
+## Bibliotecas 📔
 - AFMotor
 - NewPing
 - Servo

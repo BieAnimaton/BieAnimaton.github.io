@@ -1,11 +1,11 @@
 ---
-title: "Arduino Weather Station"
-excerpt: "Learn how to create a basic Weather Station using Arduino."
+title: "Arduino Estação Meteorológica"
+excerpt: "Aprenda a como criar uma Estação Meteorológica usando Arduino."
 categories:
   - Arduino
 tags:
   - Arduino
-  - Weather Station
+  - Estação Meteorológica
   - Adafruit_Sensor
   - DHT
   - DHT_U
@@ -14,12 +14,8 @@ tags:
 toc: true
 ---
 
-This is an Arduino project using LCD Display and DHT11 to create a weather station.
-Downloadable resources [Ardunio Weather Station](https://github.com/BieAnimaton/Arduino_Weather_Station/tree/main).
-
-## Notes :books:
-- Responsive project to ambient temperature and humidity.
-- Practice electronics skills.
+Este é um projeto Arduino que usa Display LCD e DHT11 para criar uma Estação Meteorológica.
+Recursos para download [Ardunio Weather Station](https://github.com/BieAnimaton/Arduino_Weather_Station/tree/main).
 
 ## Images :robot:
 ![lcd display + DHT11 1](https://user-images.githubusercontent.com/52220244/97283192-4d4e6180-181e-11eb-96ba-347683ac3eb4.jpg)
@@ -29,7 +25,7 @@ Downloadable resources [Ardunio Weather Station](https://github.com/BieAnimaton/
 ![lcd display + DHT11 3](https://user-images.githubusercontent.com/52220244/97283209-50495200-181e-11eb-8ea4-aa466eda5aad.jpg)
 
 
-## Components :point_up:
+## Componentes 👆
 - Arduino Uno x1.
 - LCD Display 1602 Arduino -- Blue Backlight -- 16 Pins x1.
 - DHT11 Sensor x1.
@@ -38,7 +34,7 @@ Downloadable resources [Ardunio Weather Station](https://github.com/BieAnimaton/
 - Protoboard x1.
 - Jumpers xN.
 
-## Libraries :bookmark_tabs:
+## Bibliotecas 📔
 - Adafruit_Sensor
 - DHT
 - DHT_U
