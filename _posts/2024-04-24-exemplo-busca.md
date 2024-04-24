@@ -65,19 +65,22 @@ Relembrando:
 >g(n): distância real (custo acumulado).  
 
 O algoritmo de caminho heurístico é uma busca pela melhor escolha na qual a função objetivo é f(n)=(2-w)g(n)+wh(n).  Responda:
-- Para que valores de w esse algoritmo oferece a garantia de ser
-ótimo?
+- Para que valores de w esse algoritmo oferece a garantia de ser ótimo?
 
-    Este algoritmo é ótimo quando h(n) é admissível e w=1.
+    Este algoritmo é ótimo quando h(n) é admissível e w=1.  
+    A função resultante será: f(n) = g(n)+h(n) que é A*.  
 
 - Qual busca ele executa quando w=0?
 
-    w=0 faz com que f(n) = 2g(n), que equivale à busca de custo uniforme (a multiplicação por 2 não modifica a ordem em que os nós são expandidos).
+    w = 0 faz com que f(n) = 2g(n).  
+    Equivale à busca de custo uniforme (a multiplicação por 2 não modifica a ordem em que os nós são expandidos).  
 
-- E quando w=1?
+- E quando w = 1?
 
-    w=1 faz com que f(n)= g(n)+h(n), que equivale à busca A*.
+    w = 1 faz com que f(n)= g(n)+h(n), que equivale à busca A*.  
+    É o melhor tipo de busca.  
 
-- E quando w=2?
+- E quando w = 2?
 
-    w=2 faz com que f(n) = 2h(n), que equivale à busca gulosa pela melhor escolha.
+    w = 2 faz com que f(n) = 2h(n).  
+    Equivale à busca gulosa pela melhor escolha.  
