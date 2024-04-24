@@ -68,7 +68,7 @@ O algoritmo de caminho heurístico é uma busca pela melhor escolha na qual a fu
 - Para que valores de w esse algoritmo oferece a garantia de ser
 ótimo?
 
-    Este algoritmo é ótimo quando h(n) éadmissível e w=1.
+    Este algoritmo é ótimo quando h(n) é admissível e w=1.
 
 - Qual busca ele executa quando w=0?
 
