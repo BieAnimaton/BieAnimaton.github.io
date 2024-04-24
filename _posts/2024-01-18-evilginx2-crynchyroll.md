@@ -1,5 +1,5 @@
 ---
-title: "Evilginx2 phishlet for Crunchyroll"
+title: "Evilginx2 Phishlet for Crunchyroll"
 excerpt: "Learn how to create a fake Crunchyroll page to steal logins and passwords using Evilginx2."
 categories:
   - Evilginx2
