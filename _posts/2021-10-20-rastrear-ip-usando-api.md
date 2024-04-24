@@ -404,7 +404,7 @@ arrowBack.addEventListener("click", () => {
 });
 ```
 
-> Lembre-se registrar no site, obter a sua API e substituir em API_KEY_CODE no arquivo script.js.
+> Lembre-se de criar uma conta no site, obter o seu código e substituir em API_KEY_CODE no arquivo script.js.
 
 Agora é só abrir o index.html no navegador.
 
