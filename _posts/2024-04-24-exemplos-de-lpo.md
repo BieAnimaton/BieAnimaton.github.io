@@ -62,6 +62,6 @@ Lembrando que:
   x = aluno
 
 ### Existe um estudante que gosta de todas as disciplinas.
-  ∃x Gosta(x, ∀y Disciplina(y))
-  x = estudante
-  y = disciplina
+∃x Gosta(x, ∀y Disciplina(y))
+x = estudante
+y = disciplina
