@@ -34,6 +34,34 @@ Sensores (como observo os pontos).
     Atuadores: carros de polícia, rádio, escuta, algemas, armas, radar.
     Sensores: agitação, bagunça, audição, visão, notas do radar.
 
+## Robô Jogador de Futebol
+
+    Ambiente: quadra, jogadores, juiz, plateia.
+    Performance: maior quantidade de gols.
+    Atuadores: braço, perna, sensores de movimento.
+    Sensores: displays de pontos, grito da plateia.
+
+## Agente Catálogo de Compras da Internet
+
+    Ambiente: site online, bots, usuários reais.
+    Performance: selecionar o melhores produtos, vender mais.
+    Atuadores: botões como adicionar, remover, editar.
+    Sensores: saldo, qualidade, descrição.
+
+## Andarilho Autônomo de Marte
+
+    Ambiente: espaço, marte, pedras.
+    Performance: capturar boas fotos, material para pesquisa.
+    Atuadores: braços, pernas, brocas, câmeras.
+    Sensores: displays, respostas da central, relatórios.
+
+## Assistente de matemático para demonstração de teoremas
+
+    Ambiente: sala de aula, outros professores.
+    Performance: simplificar conta ou teoremas.
+    Atuadores: braço, giz, caneta, teclado, microfone para explicar.
+    Sensores: verificar a solução, tempo menor, feedbacks, relatórios.
+
 ## Agente Professora
 
     Ambiente: conjunto de alunos.
@@ -71,21 +99,21 @@ Sensores (como observo os pontos).
 
 ## Agente Tutorial de inglês
 
-    Ambiente: Conjunto de estudantes, escola.
-    Perfomance: Melhorar o desempenho do estudante.
-    Atudaores: Impressora, display com exercícios, sugestões e correções.
+    Ambiente: conjunto de estudantes, escola.
+    Perfomance: melhorar o desempenho do estudante.
+    Atudaores: impressora, display com exercícios, sugestões e correções.
     Sensores: câmera para capturar imagens do aluno, microfone, teclado.
 
 ## Agente robô de linha de montagem
 
     Ambiente: esteira com peças,etc.
     Perfomance: percentual de peças corretamente montadas.
-    Atudaores: braço e mãos mecânicos.
+    Atudaores: braços e mãos mecânicos.
     Sensores: câmera, sensores de ângluos.
 
 ## Agente Músico de Jazz
 
-    Ambiente: Músicos, público, grades de acordes.
+    Ambiente: músicos, público, grades de acordes.
     Perfomance: tocar bem, divertir o público, agradar.
-    Atudaores: Instrumento de som, computador, etc.
-    Sensores: Microfone, câmera, etc.
+    Atudaores: instrumento de som, computador, etc.
+    Sensores: microfone, câmera, etc.
