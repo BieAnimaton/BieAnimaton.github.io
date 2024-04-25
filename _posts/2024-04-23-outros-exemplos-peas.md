@@ -27,7 +27,7 @@ Sensores (como observo os pontos).
     Atuadores: motores, hélices, âncora.
     Sensores: GPS, sonar, sensor de som, temperatura, velocidade, câmera.
 
-## Agente de Polícia
+## Agente Polícia
 
     Ambiente: cidade, rua, metrópole, estrada, ladrao, outros policias.
     Performance: garantir a segurança do povo, evitar assalto, arma.
