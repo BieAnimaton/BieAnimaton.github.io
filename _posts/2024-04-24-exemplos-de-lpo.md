@@ -23,6 +23,8 @@ Principal diferença entre lógica proposicional (LP) e lógica de primeira orde
 
 Lembrando que:  
 
+> ⋀ = E lógico  
+> ⋁ = OU lógico  
 > ∀x = para todo x  
 > ∃x = para algum x  
 > ¬ = negação  

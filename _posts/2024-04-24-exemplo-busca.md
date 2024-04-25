@@ -52,7 +52,7 @@ Três missionários e três canibais estão em um lado de um rio, juntamente com
     Função de custo: número total de escolhas.
 
 ## BFS e DFS
-Considere um espaço de estados onde o estado inicial é o número 1 e função sucessor para o estado n retorna dois estados, com números 2n e 2n+1.
+Considere um espaço de estados onde o estado inicial é o número 1 e a função sucessora para o estado n retorna dois estados, com números 2n e 2n+1.
 - Desenhe a porção do espaço de estados correspondente aos estados 1 a 15.
 - Considere que o estado objetivo seja 11. Liste a ordem em que os nós serão visitados no caso da busca em largura e em profundidade .
 
