@@ -26,8 +26,8 @@ Lembrando que:
 > ∀x = para todo x  
 > ∃x = para algum x  
 > ¬ = negação  
-> ⇒ = implicação lógica
-> ⟺ = equivalência lógica
+> ⇒ = implicação lógica  
+> ⟺ = equivalência lógica  
 > ≣  = estritamente equivalente  
 
 ### Exemplo das Cenouras
