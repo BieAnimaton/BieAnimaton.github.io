@@ -32,7 +32,7 @@ Um macaco com um metro de altura está em uma sala em que algumas bananas estão
 
     Estado inicial: como descrito no enunciado.
     Teste de objetivo: macaco alcançou as bananas.
-    Função sucessor: subir no engradado, descer do engradado, mudar o engradado de lugar, andar de um lugar a  outro, agarrar bananas
+    Função sucessor: subir no engradado, descer do engradado, mudar o engradado de lugar, andar de um lugar a outro, agarrar bananas
     Função de custo: número total de ações.
 
 ### Exercício 3
@@ -44,7 +44,7 @@ Considere um programa que emite a seguinte mensagem: “registro de entrada inv�
     Função de custo: número total de escolhas.
 
 ### Exercício 4
-Três missionários e três canibais estão em um lado de um rio, juntamente com um barco que pode conter uma ou duas pessoas. Sem deixar que um grupo de missionários de um lado fique em número menor que o número de canibais, formule o problema par que eles possam ser levados ao outro lado.
+Três missionários e três canibais estão em um lado de um rio, juntamente com um barco que pode conter uma ou duas pessoas. Sem deixar que um grupo de missionários de um lado fique em número menor que o número de canibais, formule o problema para que eles possam ser levados ao outro lado.
 
     Estado inicial: como descrito no enunciado.
     Teste de objetivo: transportar os canibais e missionários para o outro lado.
