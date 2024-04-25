@@ -14,7 +14,7 @@ toc: true
 ---
 
 ## Formule os Problemas
-Estado inicia (estado do começo do problema).  
+Estado inicial (estado do começo do problema).  
 Teste de objetivo (o que quero alcançar).  
 Função sucessor (função para avançar o estado).  
 Função de custo (o que custou mudar de estado).  
