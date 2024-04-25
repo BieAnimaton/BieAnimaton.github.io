@@ -1,21 +1,23 @@
 ---
-title: "Proxmark3 to read, clone and emulate NFC"
-excerpt: "Learn how to read NFC card and clone the content to simulate using Proxmark3."
+title: "Usando Proxmark3 para ler e emular NFC"
+excerpt: "Aprenda como ler TAG ou cartão NFC e emular seu conteúdo usando o Proxmark3."
 categories:
   - Proxmark3
 tags:
   - Proxmark3
   - NFC
-  - Read and clone
-  - Read NFC
-  - Clone NFC
+  - Ler e Emular
+  - Ler NFC
+  - Emular NFC
+  - TAG NFC
+  - Cartão NFC
 
 toc: true
 ---
 
 ## Usando o Proxmark3 para emular URL
 
-Etapas simples para escrever uma URL em uma TAG NFC usando o software "NFC Tools" no Android, como clonar este conteúdo (URL) e emular usando o Proxmark3.  
+Etapas simples para escrever uma URL em uma TAG ou cartão NFC usando o software "NFC Tools" no Android, como clonar este conteúdo (URL) e emular usando o Proxmark3.  
 
 ### Início
 
