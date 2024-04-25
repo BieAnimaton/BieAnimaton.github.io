@@ -34,7 +34,7 @@ Sensores (como observo os pontos).
     Atuadores: carros de polícia, rádio, escuta, algemas, armas, radar.
     Sensores: agitação, bagunça, audição, visão, notas do radar.
 
-## Robô Jogador de Futebol
+## Agente Robô Jogador de Futebol
 
     Ambiente: quadra, jogadores, juiz, plateia.
     Performance: maior quantidade de gols.
@@ -48,14 +48,14 @@ Sensores (como observo os pontos).
     Atuadores: botões como adicionar, remover, editar.
     Sensores: saldo, qualidade, descrição.
 
-## Andarilho Autônomo de Marte
+## Agente Andarilho Autônomo de Marte
 
     Ambiente: espaço, marte, pedras.
     Performance: capturar boas fotos, material para pesquisa.
     Atuadores: braços, pernas, brocas, câmeras.
     Sensores: displays, respostas da central, relatórios.
 
-## Assistente de matemático para demonstração de teoremas
+## Agente Assistente de Matemático para Demonstração de Teoremas
 
     Ambiente: sala de aula, outros professores.
     Performance: simplificar conta ou teoremas.
@@ -104,7 +104,7 @@ Sensores (como observo os pontos).
     Atudaores: impressora, display com exercícios, sugestões e correções.
     Sensores: câmera para capturar imagens do aluno, microfone, teclado.
 
-## Agente robô de linha de montagem
+## Agente Robô de Linha de Montagem
 
     Ambiente: esteira com peças,etc.
     Perfomance: percentual de peças corretamente montadas.
