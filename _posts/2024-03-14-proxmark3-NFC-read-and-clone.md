@@ -15,7 +15,7 @@ tags:
 toc: true
 ---
 
-## Usando o Proxmark3 para emular URL
+## Usando o Proxmark3 para emular cartão NFC
 
 Etapas simples para escrever uma URL em uma TAG ou cartão NFC usando o software "NFC Tools" no Android, como clonar este conteúdo (URL) e emular usando o Proxmark3.  
 
@@ -32,7 +32,7 @@ Etapas simples para escrever uma URL em uma TAG ou cartão NFC usando o software
 
   hf mf esave
 
-### Veja o conteúdo da memória (link e outros dados).
+### Veja o conteúdo da memória (URL e outros dados).
 
   hf mf review
 
@@ -41,4 +41,4 @@ Etapas simples para escrever uma URL em uma TAG ou cartão NFC usando o software
   hf mf yes --1k
 
 ### Exeucção
-Aproxime o seu celular com hardware de leitura NFC e abra o link.
+Aproxime o seu celular com hardware de leitura NFC (nativo, celulares modernos) e abra o link.
