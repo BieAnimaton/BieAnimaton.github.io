@@ -13,23 +13,30 @@ tags:
 toc: true
 ---
 
-Simple steps to write url on RFID tag using "NFC Tools" software on Android, how to clone and emulate with proxmark3.
+## Usando o Proxmark3 para emular URL
 
-# proxmark3_NFC_read_and_clone
+Etapas simples para escrever uma URL em uma TAG NFC usando o software "NFC Tools" no Android, como clonar este conteúdo (URL) e emular usando o Proxmark3.  
 
-install NFC Tools on your cell phone  
-read tag and write some link
+### Início
 
-### bruteforce + read the keys/sectors
-hf mf autopwn
+  Instale o NFC Tools no seu celular.  
+  Leia alguma tag e escreva algum link (também pelo celular).  
 
-### save the data in the emulator memory
-hf mf esave
+### Força-bruta + leitura das chaves/setores.
 
-### view memory data (link or etc)
-hf mf review
+  hf mf autopwn
 
-### simulate/emulate MIFRA CLASSIC 1k card using proxmark3
-hf mf yes --1k
+### Salve os dados na memória do emulador.
 
-### approach cell phone with nfc reader hardware and enter the link
+  hf mf esave
+
+### Veja o conteúdo da memória (link e outros dados).
+
+  hf mf review
+
+### Simule/emute o cartão MIFRA CLASSIC 1k usando o Proxmark3
+
+  hf mf yes --1k
+
+### Exeucção
+Aproxime o seu celular com hardware de leitura NFC e abra o link.
