@@ -1,5 +1,5 @@
 ---
-title: "Como trocar seu IP a cada 5 segundos com Tor e FoxyProxy."
+title: "Como trocar o IP a cada 5 segundos"
 excerpt: "Aprenda a trocar seu IP a cada 5 segundos ou mais usando Tor e FoxyProxy."
 categories:
   - Hacking
