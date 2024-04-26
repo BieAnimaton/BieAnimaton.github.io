@@ -1,5 +1,5 @@
 ---
-title: "Usando Digispark para abrir links"
+title: "Usando Digispark para Executar Links"
 excerpt: "Aprenda a excutar um link ou vários links no computador usando o Arduino Digispark."
 categories:
   - Hacking
