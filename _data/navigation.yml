@@ -6,6 +6,8 @@ main:
     url: /sobre/
   - title: "Postagem por Categoria"
     url: /categories/
+  - title: "Postagem por Ano"
+    url: /year-archive/
   # - title: "Sample Posts"
   #   url: /year-archive/
   # - title: "Sample Collections"
