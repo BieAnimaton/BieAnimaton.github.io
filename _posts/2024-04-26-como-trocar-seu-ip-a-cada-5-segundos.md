@@ -7,6 +7,7 @@ tags:
   - IP
   - Trocar IP
   - Tor
+  - Anonimato
   - Proxy
   - Firefox
   - FoxyProxy
