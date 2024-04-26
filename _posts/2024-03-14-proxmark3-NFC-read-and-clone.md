@@ -2,7 +2,7 @@
 title: "Usando Proxmark3 para ler e emular NFC"
 excerpt: "Aprenda como ler TAG ou cartão NFC e emular seu conteúdo usando o Proxmark3."
 categories:
-  - Proxmark3
+  - Hacking
 tags:
   - Proxmark3
   - NFC

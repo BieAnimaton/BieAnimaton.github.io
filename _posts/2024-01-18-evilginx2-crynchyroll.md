@@ -1,14 +1,14 @@
 ---
-title: "Evilginx2 Phishlet for Crunchyroll"
-excerpt: "Learn how to create a fake Crunchyroll page to steal logins and passwords using Evilginx2."
+title: "Evilginx2 Phishlet para Crunchyroll"
+excerpt: "Aprenda a criar uma página falsa da Crunchyroll para roubar login e senha usando Evilginx2."
 categories:
-  - Evilginx2
+  - Hacking
 tags:
   - Evilginx2
   - Phising
   - Crunchyroll
   - Crunchyroll phising
-  - Steal login and password
+  - Roubo de login e senha
 
 toc: true
 ---
