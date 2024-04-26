@@ -73,7 +73,7 @@ Após isso, o script já começa a seu trabalho.
 ### Selecionando configuração criada
 Por fim, basta abrir o menu do FoxyProxy e escolher o proxy criado.
 
-## Teste
+## Resultados
 Aqui estão os meus resultados.  
 
 ![ip2](https://github.com/BieAnimaton/BieAnimaton/assets/52220244/cdd48326-5e3c-4817-8097-bf07545b1f9e)
