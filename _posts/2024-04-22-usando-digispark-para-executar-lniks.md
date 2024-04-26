@@ -13,11 +13,11 @@ toc: true
 ---
 
 # Explicação rápida
-Além de ser possível a montagem do Digispark em uma protoboard e usar seus pinos, você pode usá-lo como um HID (Dispositivo de Interface Humana) para executar código na máquina.
+Além de ser possível a montagem e uso do Digispark em uma protoboard, você também pode usá-lo como um HID (Dispositivo de Interface Humana) para executar código na máquina.
 
 ![image](https://github.com/BieAnimaton/BieAnimaton/assets/52220244/29015d37-717b-4034-af70-841845dfd336)
 
-Você pode adquirir um tanto no Mercado Livre, AliExpress, Ebay ou qualquer outra loja.
+Você pode adquirir um no Mercado Livre, AliExpress, Ebay ou qualquer outra loja.
 
 # Instalação
 ## IDE
