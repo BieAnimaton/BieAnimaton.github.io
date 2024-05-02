@@ -19,7 +19,7 @@ toc: true
 Aqui será explicado a teoria de como destrancar um carro através de bloqueios, capturas e retransmissões (replay) do código enviado pela chave.
 
 ## Rolling Codes
-O código enviado pela chave do carro é único, ou seja, transmitir o mesmo código para abrir ou trancar o carro váries vezes não vai funcionar. Isso acontece por causa do Rolling Code, ou seja, um código que é usado em sistemas de entrada sem chave para evitar uma forma simples de ataque de repetição, onde um agente malicioso registra a transmissão e a reproduz posteriormente para fazer com que o receptor seja 'desbloqueado'.  
+O código enviado pela chave do carro é único, ou seja, transmitir o mesmo código para abrir ou trancar o carro várias vezes não vai funcionar. Isso acontece por causa do Rolling Code, ou seja, um código que é usado em sistemas de entrada sem chave para evitar uma forma simples de ataque de repetição, onde um agente malicioso registra a transmissão e a reproduz posteriormente para fazer com que o receptor seja 'desbloqueado'.  
 
 ![image](https://github.com/BieAnimaton/BieAnimaton/assets/52220244/12ba0ed7-7ac2-4ef8-9f11-4f047d3efd95)
 
