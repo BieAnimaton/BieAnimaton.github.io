@@ -295,19 +295,19 @@ Domínios são conceitos lógicos e não necessitam corresponder à distribuiç�
 ### Comente sobre Registros do DNS e Zonas de Autoridade.
 Cada registro deve ser único e inclui nome de domínio, tipo do registro (RR) e IP  
 	
-    Ex:	servidor		IN		A		192.168.0.1
+    Ex:	servidor	IN	A	192.168.0.1
 	
 Tipos de registros possíveis:  
 
-		A - mapeia um nome a um endereço IP
-		CNAME - alias de um nome de domínio
-		HINFO - tipo de CPU e SO do host
-		MX (Mail eXchanger) - mapeia os mail servers de um domínio
-		NS - DNS autoritativo para o domínio
-		PTR - ponteiro para a outra parte do domínio
-		SOA - identifica o início da zona de autoridade
-		A classe IN, em um registro, indica que o sistema é Internet
-		Um TTL (time-to-live) expressa o tempo de vida de um registro em segundos.
+    A - mapeia um nome a um endereço IP
+    CNAME - alias de um nome de domínio
+    HINFO - tipo de CPU e SO do host
+    MX (Mail eXchanger) - mapeia os mail servers de um domínio
+    NS - DNS autoritativo para o domínio
+    PTR - ponteiro para a outra parte do domínio
+    SOA - identifica o início da zona de autoridade
+    A classe IN, em um registro, indica que o sistema é Internet
+    Um TTL (time-to-live) expressa o tempo de vida de um registro em segundos.
 
 As zonas de autoridade consistem regiões da hierarquia sob a autoridade de um servidor.  
 - pode consistir um único domínio, subdomínio, ou grupos destes
@@ -343,19 +343,21 @@ Baseia-se em “hits” de requisição/resposta.
 - Response: enviada pelo servidor, conteúdo MIME especificado no campo Content-Type.  
 
 Cada requisição HTTP realizada pelo cliente representa a solicitação de um recurso hipermídia.  
-Gera uma nova conexão TCP para cada recurso que é encerrada quando na resposta.  
+Gera uma nova conexão TCP para cada recurso que é encerrada na resposta.  
 
 ### Comente sobre cliente-servidor no HTTP.
-Clientes:  
-- Ferramentas que permitem a interação do usuário através da interpretação e exibição do conteúdo (que pode ser GUI) e pelo suporte à seleção de links dos hipertextos.  
-Ex: mozilla, chrome.  
+- Clientes:  
+Ferramentas que permitem a interação do usuário através da interpretação e exibição do conteúdo (que pode ser GUI) e pelo suporte à seleção de links dos hipertextos.  
 
-Servidores:  
-- Aguardam requisições por recursos pelos clientes.  
-- A porta para o HTTP é a 80.  
-- Mantêm módulos específicos para execução de programas “server-side” (CGI, Perl, PHP), que criam conteúdo dinâmico.  
-- Esse recurso é normalmente referenciado por requisições de formulários HTML (meio tradicional de input de dados via HTTP).  
-Ex: Apache e IIS.  
+> Ex: mozilla, chrome.  
+
+- Servidores:  
+Aguardam requisições por recursos pelos clientes.  
+A porta para o HTTP é a 80.  
+Mantêm módulos específicos para execução de programas “server-side” (CGI, Perl, PHP), que criam conteúdo dinâmico.  
+Esse recurso é normalmente referenciado por requisições de formulários HTML (meio tradicional de input de dados via HTTP).  
+
+> Ex: Apache e IIS.  
 
 ### O que é Web Caching? Qual a função do proxy nisso?
 Web caching:  
