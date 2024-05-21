@@ -282,9 +282,10 @@ Uma organização pode registrar seu nome de domínio, aplicado a um TLD (global
 	usp.br - domínio da USP (o Registro.br demorou a criar o .edu)
 	terra.com.br - domínio do Terra
 
-Uma organização pode determinar sua própria estrutura interna - cada domínio tem autoridade para criar subdomínios.  
-Cada domínio/subdomínio delimita uma zona de autoridade
-Domínios são conceitos lógicos e não necessitam corresponder à distribuição física
+Uma organização pode determinar sua própria estrutura interna.  
+Cada domínio tem autoridade para criar subdomínios.  
+Cada domínio/subdomínio delimita uma zona de autoridade.  
+Domínios são conceitos lógicos e não necessitam corresponder à distribuição física.  
 
 	Ex: host "idg" do subdomínio "receita" do domínio "fazenda.gov.br"
 			idg.receita.fazenda.gov.br
@@ -314,18 +315,20 @@ As zonas de autoridade consistem regiões da hierarquia sob a autoridade de um s
 Nomes de domínio são gerenciados pela hierarquia de servidores DNS (associada às zonas de autoridade).  
 O servidor “Raiz” no topo da árvore detém os registros que descrevem servidores do próximo nível (e assim sucessivamente).  
 
-- DNS request - contém o nome a ser resolvido
-Encaminhada por um resolver (cliente do serviço).
+- DNS request:  
+    Contém o nome a ser resolvido.
+    Encaminhada por um resolver (cliente do serviço).
 	
-- DNS reply - contém o endereço IP para o nome solicitado
-Encaminhada pelo servidor DNS (autoridade pela zona do registro)
+- DNS reply:  
+Contém o endereço IP para o nome solicitado.  
+Encaminhada pelo servidor DNS (autoridade pela zona do registro).  
 
 Se a solicitação contém um nome gerenciado pelo servidor receptor, este responde diretamente.  
 Caso contrário, a solicitação deve ser encaminhada ao servidor autoritativo apropriado, através de uma busca iterativa.  
 Para se evitar que todas as requisições sejam feitas diretamente à autoridade, um DNS pode atuar como resolver (cliente) e representar tais solicitações.  
 	
-Note que um servidor DNS, ao realizar a solicitação pela resolução de nomes, no lugar do cliente origem, torna-se cliente do servidor autoritativo (e dos anteriores na hierarquia).  
-Uma implementação muito difundida do DNS é o BIND (Berkeley Internet Name Domain), mantida e disponibilizada pelo ISC (Internet Systems Consortium).  
+> Note que um servidor DNS, ao realizar a solicitação pela resolução de nomes, no lugar do cliente origem, torna-se cliente do servidor autoritativo (e dos anteriores na hierarquia).   
+> Uma implementação muito difundida do DNS é o BIND (Berkeley Internet Name Domain), mantida e disponibilizada pelo ISC (Internet Systems Consortium).  
 
 ### O que é URL? E HTTP?
 URL: caminho do site na web + caminho dentro do site + outros parâmetros.  
@@ -377,9 +380,10 @@ Conteúdo exclusivamente texto (ASCII) e formato de carta (remetente, destinatá
 ### O que é SMTP?
 Simple Mail Transfer Protocol.  
 O funcionamento básico consiste em enviar mensagens para caixas postais (mail boxes):  
-	> um cliente (user agent) pode acessar as caixas postais locais.  
-	> um cliente pode também efetuar encaminhamento das mensagens através do servidor (MTA – Message Transfer Agent).  
-	> as mensagens recebidas de outros MTAs são armazenadas nas caixas postais dos usuários.  
+
+> um cliente (user agent) pode acessar as caixas postais locais.  
+> um cliente pode também efetuar encaminhamento das mensagens através do servidor (MTA – Message Transfer Agent).  
+> as mensagens recebidas de outros MTAs são armazenadas nas caixas postais dos usuários.  
 	
 Identificação de uma caixa postal inclui o nome do usuário (login name) e o nome do host onde se localiza.  
         formato: login_name@host_name 
