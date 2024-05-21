@@ -256,6 +256,7 @@ Mecanismo de autenticação permite o controle de acesso ao sistema de arquivos 
 ### O que é DNS?
 Domain Name System.  
 Porta 53.  
+
 Os endereços IPs são eficientes à comunicação TCP/IP, inadequados à memorização humana e não faz referência geográfica.  
 O DNS provê a tradução dos IPs para nomes.  
 Os nomes completos (FQDN – Fully-Qualified Domain Name) são compostos por seqüências de alfanuméricos separados pontos:  
