@@ -179,7 +179,7 @@ Técnica three-way handshake.
 - O cliente pode solicitar uma conexão (CONNECT), que enviará um TCP com os flags SYN=1 e ACK=0
 - O servidor checará se a porta escolhida esta aceitando conexões, caso contrário envia uma resposta com o flag RST=1, rejeitando a conexão.
 - Caso dê certo, ela aceita a conexão, através de uma confirmação (acknowledgment), com os flags SYN=1 e ACK=1.
-- O processode encerramento de uma conexão é semelhante.
+- O processo de encerramento de uma conexão é semelhante.
 
 ### Descreva o processo de confirmação no TCP.
 O destino envia uma mensagem de controle com Confirmação (Acknowledgment - ACK) para a origem verificar a entrega da mensagem com sucesso.  
