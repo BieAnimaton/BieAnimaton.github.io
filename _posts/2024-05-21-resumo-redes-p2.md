@@ -411,7 +411,7 @@ Suporta diversos campos de cabeçalho (além do corpo da mensagem).
 ### O que é MIME?
 Extensão ao SMTP que permite a inclusão de outros conteúdos além de texto puro ASCII.  
 Base para interpretação de conteúdos convertidos em ASCII por outras aplicações, como o HTTP.  
-Um usuário pode anexar a uma mensagem partes distintas (arquivo executável, figura, p.e.) e o cliente (user agent) informará o tipo MIME do conteúdo.  
+Um usuário pode anexar partes distintas a uma mensagem (arquivo executável, figura, p.e.) e o cliente (user agent) informará o tipo MIME do conteúdo.  
 O conteúdo é codificado como conteúdo ASCII puro e inserido no corpo da mensagem, devidamente delimitado e identificado.  
 
 ### Explique o cliente-servidor no SMTP.
