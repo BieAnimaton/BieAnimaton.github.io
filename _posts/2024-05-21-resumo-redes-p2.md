@@ -446,6 +446,7 @@ Em seguida, o cliente pode iniciar uma conversa com o servidor, através dos com
 ### O que é POP3?
 Post Office Protocol.  
 Porta 110.  
+
 A caixa postal de um usuário pode ser armazenada em uma máquina diferente de onde é executado o cliente (user agent).  
 Permite a listagem, o download e a remoção de mensagens de uma caixa postal remota.  
 Originalmente definido para a solução do problema de acesso a caixas postais remotas usando o serviço dial-up (dado o problema com o custo de se manter o acesso contínuo).  
@@ -455,6 +456,7 @@ Originalmente definido para a solução do problema de acesso a caixas postais r
 ### Explique IMAP.
 Internet Message Access Protocol.  
 Porta 143.  
+
 Oferece outros serviços para acesso às caixas postais.  
 Permite os modos de operação conectado e desconectado.  
 Aceita conexão de múltiplos clientes simultâneos à mesma caixa postal e consegue gerenciar múltiplas caixas de correio (folders) do usuário em um mesmo servidor.  
@@ -469,48 +471,46 @@ Server message block.
 O coração do CIFS.  
 
 - CIFS:  
-Alto nível: opera camada Aplicação/Apresentação  
+Alto nível: opera na camada Aplicação/Apresentação.  
 Clientes trocam mensagens com servidor a fim de acessarem recursos neste (através do SMB).  
 
 ### Defina workgroup x domain.
 - Workgroup:  
-Coleção de máquinas onde cada qual define sua própria segurança.  
-Segurança descentralizada.  
+    Coleção de máquinas onde cada qual define sua própria segurança.  
+    Segurança descentralizada.  
 
-- Domain:
-Coleção de computadores para a qual a segurança é centralizada pelos Controladores de Domínio (Domain Controllers).  
-Usuário entra uma única vez e tem acesso a todos os serviços autorizados naquela rede.  
+- Domain:  
+    Coleção de computadores para a qual a segurança é centralizada pelos Controladores de Domínio (Domain Controllers).  
+    Usuário entra uma única vez e tem acesso a todos os serviços autorizados naquela rede.  
 
 ### O que é SAMBA? Quais são suas funcionalidades?
 Conjunto de ferramentas de código aberto que provê serviços de acesso a arquivos e impressoras em rede, para clientes SMB (Server Message Block).  
 	
-- Funcionalidades:
-
-    serviços de arquivos e Impressão.
-    autenticação e autorização.
-    resolução de nomes.
-    browsing (anúncio de serviços).
+- Funcionalidades:  
+    serviços de arquivos e Impressão.  
+    autenticação e autorização.  
+    resolução de nomes.  
+    browsing (anúncio de serviços).  
 	
-- Portas:
-
-    137 (netbios-ns): NETBIOS Name Service
-    138 (netbios-dgm): NETBIOS Datagram Service
-    139 (netbios-ssn): NETBIOS Session Service
-    445 microsoft-ds Win2k+ Server Message Block
+- Portas:  
+    137 (netbios-ns): NETBIOS Name Service  
+    138 (netbios-dgm): NETBIOS Datagram Service  
+    139 (netbios-ssn): NETBIOS Session Service  
+    445 microsoft-ds Win2k+ Server Message Block  
 
 ### Comente sobre SMBD e NMBD.
 Compõem o samba.  
 	
 - SMBD
-Responsável pelos serviços de diretórios e impressão que serão vistos pelas máquinas Windows.  
-Autenticação de “share mode” e “user mode”:
+    Responsável pelos serviços de diretórios e impressão que serão vistos pelas máquinas Windows.  
+    Autenticação de “share mode” e “user mode”:
 
-	share mode: atribui uma senha para o diretório ou impressora.
-	user mode: cada usuário tem senha para o serviço.
+        share mode: atribui uma senha para o diretório ou impressora.
+        user mode: cada usuário tem senha para o serviço.
 - NMBD
-Resolução de nomes.  
-Browsing.  
-Gerenciamento e distribuição de listas de nomes NetBIOS.  
+    Resolução de nomes.  
+    Browsing.  
+    Gerenciamento e distribuição de listas de nomes NetBIOS.  
 
 ### O que é CUPS? Quais as suas características?
 Commmom Unix Printing System.  
@@ -522,7 +522,7 @@ Proporciona um meio de impressão portátil e padronizado para os sistemas basea
         Gestão básica de trabalhos e filas de impressão.
         Permite a integração com LPD, SMB e AppSocket.
 	
-- Características são:
+- Características são:  
 
         Interface web para administração de impressoras e filas de impressão.
         Porta 631.
