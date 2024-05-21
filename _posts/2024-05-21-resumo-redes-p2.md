@@ -325,8 +325,8 @@ Encaminhada pelo servidor DNS (autoridade pela zona do registro).
 
 Se a solicitação contém um nome gerenciado pelo servidor receptor, este responde diretamente.  
 Caso contrário, a solicitação deve ser encaminhada ao servidor autoritativo apropriado, através de uma busca iterativa.  
-Para se evitar que todas as requisições sejam feitas diretamente à autoridade, um DNS pode atuar como resolver (cliente) e representar tais solicitações.  
-Note que um servidor DNS, ao realizar a solicitação pela resolução de nomes, no lugar do cliente origem, torna-se cliente do servidor autoritativo (e dos anteriores na hierarquia).   
+Um DNS pode atuar como resolver (cliente) para evitar que todas as requisições sejam feitas diretamente à autoridade.
+O servidor DNS se torna cliente do servidor autoritativo (e da hierarquia) ao realizar a solicitação pela resolução de nomes no lugar do cliente origem.   
 
 > Uma implementação muito difundida do DNS é o BIND (Berkeley Internet Name Domain), mantida e disponibilizada pelo ISC (Internet Systems Consortium).  
 
