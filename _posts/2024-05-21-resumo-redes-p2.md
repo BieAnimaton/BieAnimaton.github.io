@@ -216,8 +216,8 @@ A relação entre os aplicativos define o comportamento geral de algum serviço 
 ### Explique telnet.
 Serviço de emulação de terminal virtual, sobre uma conexão TCP.  
 Porta 23.  
-Terminais virtuais utilizados como formas de acesso a sistemas com processamento centralizado.  
-Conectava terminais "burros" a computadore de grande ou médio porte.  
+Terminais virtuais são utilizados como formas de acesso a sistemas com processamento centralizado.  
+Conectava terminais "burros" a computadores de grande ou médio porte.  
 
 Através de um NVT (Network Virtual Terminal), permite que o usuário realize uma sessão de terminal virtual e uma emulação de um cliente se comunica com um processo servidor (telnetd) através da Internet.  
 	
@@ -226,22 +226,23 @@ Transporte full-duplex.
 
 ### Qual é o problema do telnet?
 A segurança, pois os caracteres trocados durante a sessão de um terminal são transmitidos de forma plana (sem encriptação).  
-Os sniffers facilmente conseguem comprometer.  
+Os dados são facilmente comprometidos pelos sniffers.  
 
 ### Explique SSH.
 Secure shell.  
 Implementação segura da emulação de terminal virtual.  
 Porta 22.  
 Apresenta mecanismos para autenticação segura de usuários, confirmação de integridade de mensagens e encriptação de conteúdo (RSA de chaves assiméticas, DES, 3DES, AES).  
+
 Pode dar suporte à comunicação segura de outros tipos de aplicações através de um canal (túnel) seguro.  
 
 ### Explique FTP.
 File transfer protocol.  
 Protocolo padrão de transferência de arquivo.  
-Define um mecanismo para transferência de arquivos com conteúdo ASCII ou binário, através do estabelecimento de duas conexões TCP.  
-Porta 21 opera o canal de controle.  
-Porta 20 opera o canal de dados.  
-Mecanismo de autenticação permite o controle de acesso ao sistema de arquivos e pode também permitir acesso anônimo.  
+Define um mecanismo para transferência de arquivos com conteúdo ASCII ou binário, através do estabelecimento de duas conexões TCP:  
+> Porta 21 opera o canal de controle.  
+> Porta 20 opera o canal de dados.  
+Mecanismo de autenticação permite o controle de acesso ao sistema de arquivos e também pode permitir acesso anônimo.  
 
 ### Quais são os modos de operação do FTP?
 - Ativo:  
@@ -256,14 +257,14 @@ Mecanismo de autenticação permite o controle de acesso ao sistema de arquivos 
 Domain Name System.  
 Porta 53.  
 
-Os endereços IPs são eficientes à comunicação TCP/IP, inadequados à memorização humana e não faz referência geográfica.  
+Os endereços IPs são eficientes à comunicação TCP/IP, porém inadequados à memorização humana e não faz referência geográfica.  
 O DNS provê a tradução dos IPs para nomes.  
 Os nomes completos (FQDN – Fully-Qualified Domain Name) são compostos por seqüências de alfanuméricos separados pontos:  
 
     Parte mais à esquerda: nome do host.  
     Parte da direita: domínio (e sua hierarquia).  
 
-### Discute sobre a hierarquia DNS.
+### Comente a hierarquia DNS.
 A hierarquia do DNS define domínios de alto nível (TLDs - Top level domains) através de uma autoridade global (InterNIC), classificados como:  
 	
 	Por atividade:
