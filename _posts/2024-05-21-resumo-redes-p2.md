@@ -58,13 +58,11 @@ Entrega de mensagem entre cada par de aplicações de acordo com parâmetros de 
 
 ### Descreva os tipos de serviços prestados.
 
-- Confiabilidade:
-
+- Confiabilidade:  
     Confiável ou não confiável.  
     Confirmação, retransmissão e não duplicação de dados.  
 	
-- Conexão:
-
+- Conexão:  
     Orientado à conexão ou não.  
     Estabelecimento de conexões que representam um "circuito virtual fim-a-fim" por onde os dados são transmitidos de maneira ordenada dando a ideia de um fluxo contínuo.  
 
