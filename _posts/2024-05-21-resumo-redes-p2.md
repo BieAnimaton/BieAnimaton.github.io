@@ -416,9 +416,10 @@ O conteúdo é codificado como conteúdo ASCII puro e inserido no corpo da mensa
 
 ### Explique o cliente-servidor no SMTP.
 - Clientes:  
-Através do SMTP server solicitam o envio de mensagens do usuário e operam o acesso a caixas postais.  
-Localmente: pine, mutt, elm e webmail.  
-Remotamente: via POP3 ou IMAP, como Thunderbird, Outlook.
+Através do SMTP Server solicitam o envio de mensagens do usuário e operam o acesso a caixas postais.  
+
+> Localmente: pine, mutt, elm e webmail.  
+> Remotamente: via POP3 ou IMAP, como Thunderbird, Outlook.  
 
 - Servidores:
 Encaminham mensagens:  
@@ -426,16 +427,15 @@ Tornam-se clientes do mail server de destino, guardando uma cópia da mensagem a
 Enviam apenas uma cópia da mensagem para cada host de destino (mesmo que ela se destine a vários usuários).
 		
 Recebem mensagens:  
-Armazenamento no mail box do usuário (destin0).
+Armazenamento no mail box do usuário (destino).
 	
 A porta servidora do SMTP (conectada por clientes para encaminhamento ou por outros servidores) é a 25.  
-Ex: servidores SMTP: sendmail, exim, postfix.  
+> Ex: servidores SMTP: sendmail, exim, postfix.  
 
 ### Discuta a interação com um SMTP.
 O SMTP define um padrão para troca de mensagens entre clientes e servidores.  
-A interação básica se dá pela conexão do cliente à porta 25 de um SMTP server.  
-
-Em seguida, o cliente pode iniciar uma conversação com o servidor, utilizando-se de alguns comandos:  
+A interação básica se dá pela conexão do cliente à porta 25 do SMTP server.  
+Em seguida, o cliente pode iniciar uma conversa com o servidor, através dos comandos:  
 
     HELO – pede para o SMTP server contatar o MTA de destino.
     MAIL FROM: – informa a caixa postal de origem.
@@ -444,10 +444,11 @@ Em seguida, o cliente pode iniciar uma conversação com o servidor, utilizando-
     QUIT – encerra a conexão com o servidor.
 
 ### O que é POP3?
+Post Office Protocol.  
 Porta 110.  
 A caixa postal de um usuário pode ser armazenada em uma máquina diferente de onde é executado o cliente (user agent).  
 Permite a listagem, o download e a remoção de mensagens de uma caixa postal remota.  
-Originalmente definido para a solução do problema de acesso a caixas postais remotas unsado o serviço dial-up (dado o problema com o custo de se manter o acesso contínuo).  
+Originalmente definido para a solução do problema de acesso a caixas postais remotas usando o serviço dial-up (dado o problema com o custo de se manter o acesso contínuo).  
 
 > Implementação bem conhecida do POP3 server: Qpopper.  
 
@@ -456,10 +457,8 @@ Internet Message Access Protocol.
 Porta 143.  
 Oferece outros serviços para acesso às caixas postais.  
 Permite os modos de operação conectado e desconectado.  
-Aceita conexão de múltiplos clientes simultâneos à mesma caixa postal.  
-Consegue gerenciar múltiplas caixas de correio (folders) do usuário em um mesmo servidor.  
+Aceita conexão de múltiplos clientes simultâneos à mesma caixa postal e consegue gerenciar múltiplas caixas de correio (folders) do usuário em um mesmo servidor.  
 Mantém informação de estado da mensagem no servidor.  
-Oferece busca por mensagens no lado do servidor.  
 
 ### Explique CIFS e SMB.
 SMB/CIFS file sharing protocol.  
