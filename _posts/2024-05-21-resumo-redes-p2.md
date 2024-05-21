@@ -96,7 +96,7 @@ O cliente (papel ativo) solicita conexões e serviços.
 	    Aguarda o retorno da mensagem com a resposta.
 
 ### Cite as interações entre cliente e servidor.
-	Cliente pode acessar vários servidor diferentes.
+	Cliente pode acessar vários servidores diferentes.
 	Cliente pode acessar vários servidores de um mesmo serviço.
 	Servidores podem se tornar clientes de outros servidores.
 	Host pode executar várias aplicações clientes e/ou servidores.
