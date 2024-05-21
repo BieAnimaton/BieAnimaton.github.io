@@ -359,19 +359,18 @@ Esse recurso é normalmente referenciado por requisições de formulários HTML 
 
 > Ex: Apache e IIS.  
 
-### O que é Web Caching? Qual a função do proxy nisso?
-Web caching:  
-- Evita a demanda por muitas conexões (múltiplas requisições) de recursos descritos em páginas web.  
-- Uma forma consiste em manter cópias das páginas acessadas recentemente em um cache local, na máquina do cliente.  
-- O navegador pode carregá-la de uma cópia do disco quando o usuário decidir acessar novamente uma mesma página depois de um pequeno tempo.  
+### O que é Web Caching?
+Evita a demanda por muitas conexões (múltiplas requisições) de recursos descritos em páginas web.  
+Uma forma consiste em manter cópias das páginas acessadas recentemente em um cache local, na máquina do cliente.  
+O navegador pode carregá-la de uma cópia do disco quando o usuário decidir acessar novamente uma mesma página depois de um pequeno tempo.  
 
-Proxy server:
-- Atua normalmente como um cache para uma rede local.  
-- Clientes solicitam todos os objetos hipermídia (referenciados por suas URLs) ao servidor proxy.  
-- O servidor proxy intermedia a comunicação com o servidor Web e obtém o recurso solicitado.
-- A seguir, armazena uma cópia do mesmo, associando a sua identificação (URL) e o seu timestamp.  
-- O recurso então é enviado ao cliente que solicitou.  
-- Quando ocorrer a próxima solicitação do mesmo recurso, o servidor proxy pode decidir por encaminhar a cópia que mantém em cache, evitando assim um novo contato com o servidor Web.  
+### Qual a função do proxy?
+Atua normalmente como um cache para uma rede local.  
+Clientes solicitam todos os objetos hipermídia (referenciados por suas URLs) ao servidor proxy.  
+O servidor proxy intermedia a comunicação com o servidor Web e obtém o recurso solicitado.  
+A seguir, armazena uma cópia do mesmo, associando a sua identificação (URL) e o seu timestamp.  
+O recurso então é enviado ao cliente que solicitou.  
+Quando ocorrer a próxima solicitação do mesmo recurso, o servidor proxy pode decidir por encaminhar a cópia que mantém em cache, evitando assim um novo contato com o servidor Web.  
 		
 A implementação de servidor proxy mais famosa é o Squid e sua porta é a 3128.  
 Também permite estabelecer regras e restrições de acesso (ACL – Access Control Lists).  
