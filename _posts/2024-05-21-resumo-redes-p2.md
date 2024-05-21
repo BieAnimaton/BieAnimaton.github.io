@@ -325,7 +325,7 @@ Encaminhada pelo servidor DNS (autoridade pela zona do registro).
 
 Se a solicitação contém um nome gerenciado pelo servidor receptor, este responde diretamente.  
 Caso contrário, a solicitação deve ser encaminhada ao servidor autoritativo apropriado, através de uma busca iterativa.  
-Um DNS pode atuar como resolver (cliente) para evitar que todas as requisições sejam feitas diretamente à autoridade.
+Um DNS pode atuar como resolver (cliente) para evitar que todas as requisições sejam feitas diretamente à autoridade.  
 O servidor DNS se torna cliente do servidor autoritativo (e da hierarquia) ao realizar a solicitação pela resolução de nomes no lugar do cliente origem.   
 
 > Uma implementação muito difundida do DNS é o BIND (Berkeley Internet Name Domain), mantida e disponibilizada pelo ISC (Internet Systems Consortium).  
@@ -381,14 +381,12 @@ Conteúdo exclusivamente texto (ASCII) e formato de carta (remetente, destinatá
 Simple Mail Transfer Protocol.  
 O funcionamento básico consiste em enviar mensagens para caixas postais (mail boxes):  
 
-> um cliente (user agent) pode acessar as caixas postais locais.  
-
-> um cliente pode também efetuar encaminhamento das mensagens através do servidor (MTA – Message Transfer Agent).  
-
-> as mensagens recebidas de outros MTAs são armazenadas nas caixas postais dos usuários.  
+- Um cliente (user agent) pode acessar as caixas postais locais.  
+- Um cliente pode também efetuar encaminhamento das mensagens através do servidor (MTA – Message Transfer Agent).  
+- As mensagens recebidas de outros MTAs são armazenadas nas caixas postais dos usuários.  
 	
 Identificação de uma caixa postal inclui o nome do usuário (login name) e o nome do host onde se localiza.  
-        formato: login_name@host_name 
+> formato: login_name@host_name 
 
 ### Liste os passos do encaminhamento de um MTA.
 - O MTA de origem extrai o host de destino da mensagem e busca no serviço DNS a identificação dos mail exchangers (registros MX) para o endereço em questão.  
