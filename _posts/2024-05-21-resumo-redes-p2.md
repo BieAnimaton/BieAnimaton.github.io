@@ -118,10 +118,11 @@ Cada conexão/serviço de transporte possui um único par de identificadores.
 > (endereço IP, número de porta) no servidor X (endereço IP, número de porta) no cliente.  
 
 ### O que são portas bem conhecidas e registradas?
-Muitos serviços são bem conhecidos na internet.
-Para estes existem portas padronizadas que são registradas e mantidas pelo IANA.
-Portas menores que 1024 são reservadas para uso do sistema (WKP - Well Known Ports) ex: 80.
-Portas maiores que 1023 são chamadas de Registed Port Numbers ex: 3306.
+Muitos serviços são bem conhecidos na internet.  
+Para estes existem portas padronizadas que são registradas e mantidas pelo IANA.  
+
+Portas menores que 1024 são reservadas para uso do sistema (WKP - Well Known Ports) ex: 80.  
+Portas maiores que 1023 são chamadas de Registed Port Numbers ex: 3306.  
 
 ### Explique UDP e seu header.
 Serviço de datagrama semelhante ao IP.  
