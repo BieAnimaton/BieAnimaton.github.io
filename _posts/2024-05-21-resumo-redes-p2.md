@@ -242,6 +242,7 @@ Protocolo padrão de transferência de arquivo.
 Define um mecanismo para transferência de arquivos com conteúdo ASCII ou binário, através do estabelecimento de duas conexões TCP:  
 > Porta 21 opera o canal de controle.  
 > Porta 20 opera o canal de dados.  
+
 Mecanismo de autenticação permite o controle de acesso ao sistema de arquivos e também pode permitir acesso anônimo.  
 
 ### Quais são os modos de operação do FTP?
