@@ -326,8 +326,8 @@ Encaminhada pelo servidor DNS (autoridade pela zona do registro).
 Se a solicitação contém um nome gerenciado pelo servidor receptor, este responde diretamente.  
 Caso contrário, a solicitação deve ser encaminhada ao servidor autoritativo apropriado, através de uma busca iterativa.  
 Para se evitar que todas as requisições sejam feitas diretamente à autoridade, um DNS pode atuar como resolver (cliente) e representar tais solicitações.  
-	
-> Note que um servidor DNS, ao realizar a solicitação pela resolução de nomes, no lugar do cliente origem, torna-se cliente do servidor autoritativo (e dos anteriores na hierarquia).   
+Note que um servidor DNS, ao realizar a solicitação pela resolução de nomes, no lugar do cliente origem, torna-se cliente do servidor autoritativo (e dos anteriores na hierarquia).   
+
 > Uma implementação muito difundida do DNS é o BIND (Berkeley Internet Name Domain), mantida e disponibilizada pelo ISC (Internet Systems Consortium).  
 
 ### O que é URL? E HTTP?
@@ -382,7 +382,9 @@ Simple Mail Transfer Protocol.
 O funcionamento básico consiste em enviar mensagens para caixas postais (mail boxes):  
 
 > um cliente (user agent) pode acessar as caixas postais locais.  
+
 > um cliente pode também efetuar encaminhamento das mensagens através do servidor (MTA – Message Transfer Agent).  
+
 > as mensagens recebidas de outros MTAs são armazenadas nas caixas postais dos usuários.  
 	
 Identificação de uma caixa postal inclui o nome do usuário (login name) e o nome do host onde se localiza.  
