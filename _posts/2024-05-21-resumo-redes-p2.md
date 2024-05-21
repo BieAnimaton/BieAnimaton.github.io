@@ -137,7 +137,7 @@ o UDP é muito simples e define apenas:
 - Checksum (opcional)
 
 
-> A maior vantagem do UDO é ser um protocolo simples com poucos campos no header (pouco overhead).
+> A maior vantagem do UDP é ser um protocolo simples com poucos campos no header (pouco overhead).
 
 ### Explique TCP e seu header.
 É o principal protocolo de transporte da internet.  
@@ -188,9 +188,9 @@ A origem inicializa o relógio, se o tempo expira antes da confirmação, ele in
 
 ### Comente sobre o gerenciamento de janela no TCP.
 O TCP usa janela deslizante para controle de fluxo.  
-Destinatário especifica o tamanho da janela (window advertisement).  
+Destino especifica o tamanho da janela (window advertisement).  
 Descreve quais bytes do stream podem ser enviados.  
-Receptor envia uma confirmação para o próximo byte que pode ser enviado do fluxo atual e o número de bytes que pode aceitar, transportado como ACK.  
+Destino envia uma confirmação para o próximo byte que pode ser enviado e o número de bytes que pode aceitar do fluxo atual, transportado como ACK.  
 
 ### Explique a Síndrome da Janela Boba.
 O algoritmo janela deslizante pode resultar na transmissão de muitos segmentos pequenos.  
@@ -266,12 +266,12 @@ Os nomes completos (FQDN – Fully-Qualified Domain Name) são compostos por seq
 ### Discute sobre a hierarquia DNS.
 A hierarquia do DNS define domínios de alto nível (TLDs - Top level domains) através de uma autoridade global (InterNIC), classificados como:  
 	
-	por atividade:
+	Por atividade:
 		.com
 		.edu
 		.gov
 	
-	geográficos:
+	Geográficos:
 		.br
 		.fr
 		.ca
