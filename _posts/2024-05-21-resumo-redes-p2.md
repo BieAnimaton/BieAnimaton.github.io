@@ -18,6 +18,7 @@ tags:
   - Etapas da Conexão TCP
   - Janela Deslizante
   - Telnet
+  - NVT
   - SSH
   - FTP
   - DNS
@@ -135,7 +136,6 @@ o UDP é muito simples e define apenas:
 - Tamanho atual (UDP length) em bytes do datagrama (header + data).
 - Checksum (opcional)
 
-
 > A maior vantagem do UDP é ser um protocolo simples com poucos campos no header (pouco overhead).
 
 ### Explique TCP e seu header.
@@ -175,7 +175,7 @@ Limitação data pelo MTU da rede local.
 ### Descreva o processo de conexão no TCP.
 Técnica three-way handshake.  
 
-- O servidor deve estar em estado de LISTENING e ter executado uma chamada bloqueante de um ACCEPT, aguardando uma conexão
+- O servidor aguarda uma conexão em estado de LISTENING e deve ter executado uma chamada bloqueante de um ACCEPT.
 - O cliente pode solicitar uma conexão (CONNECT), que enviará um TCP com os flags SYN=1 e ACK=0
 - O servidor checará se a porta escolhida esta aceitando conexões, caso contrário envia uma resposta com o flag RST=1, rejeitando a conexão.
 - Caso dê certo, ela aceita a conexão, através de uma confirmação (acknowledgment), com os flags SYN=1 e ACK=1.
@@ -187,13 +187,12 @@ A origem inicializa o relógio, se o tempo expira antes da confirmação, ele in
 
 ### Comente sobre o gerenciamento de janela no TCP.
 O TCP usa janela deslizante para controle de fluxo.  
-Destino especifica o tamanho da janela (window advertisement).  
 Descreve quais bytes do stream podem ser enviados.  
-Destino envia uma confirmação para o próximo byte que pode ser enviado e o número de bytes que pode aceitar do fluxo atual, transportado como ACK.  
+O Destino especifica o tamanho da janela (window advertisement) e envia uma confirmação para o próximo byte que pode ser enviado e o número de bytes que pode aceitar do fluxo atual, transportado como ACK.  
 
 ### Explique a Síndrome da Janela Boba.
 O algoritmo janela deslizante pode resultar na transmissão de muitos segmentos pequenos.  
-Caso o destino estiver cheio e consumindo poucos bytes, avisará a origem sobre uma janela muito pequena.  
+Caso o destino esteja cheio e consumindo poucos bytes, avisará a origem sobre uma janela muito pequena.  
 O uso da banda será ineficiente se a origem enviar uma quantidade de dados para completar após o destino consumir um pouco dos dados.
 
 Duas soluções possíveis
@@ -201,37 +200,30 @@ Duas soluções possíveis
 - A origem pode atrasar o envio até receber um tamanho de janela satisfatório.
 
 ### Explique o controle de congestionamento.
-É detectado pelo RTT das confirmações recebidas e não recebidas.  
-É utilizada uma janela de congestionamento.  
-Inicialmente tal janela tem um tamanho mínimo para indicar o volume total de mensagens que pode ser encaminhadas à rede antes de receber uma confirmação (mensagens pendentes).  
-A janela é aumentada gradativamente à medida que o RTT médio das confirmações diminui e vice-versa.  
-Quando detectado um congestionamento (por timeout da confirmação), a janela é reduzida drasticamente.  
-Pode voltar a crescer com o passar do tempo.  
+É um controle para avisar sobre o congestionamento de dados na rede através de uma janela de congestionamento. Inicialmente tal janela tem um tamanho mínimo para indicar o volume total de mensagens que pode ser encaminhadas à rede antes de receber uma confirmação (mensagens pendentes). A janela é aumentada gradativamente à medida que o RTT médio das confirmações diminui e vice-versa. Quando detectado um congestionamento (por timeout da confirmação), a janela é reduzida drasticamente, mas pode voltar a crescer com o passar do tempo.  
 
 ## AULA VIII - APLICAÇÃO 1:
 ### O que é definido na camada de aplicação?
 São definidos os protocolos para comunicação entre programas aplicativos que atendem usuários e sistemas finais.  
-A relação entre os aplicativos define o comportamento geral de algum serviço que se utiliza da rede para a comunicação de dados.  
+A relação entre os aplicativos define o comportamento geral do serviço que se utiliza da rede para a comunicação de dados.  
 
 ### Explique telnet.
-Serviço de emulação de terminal virtual, sobre uma conexão TCP.  
-Porta 23.  
+Serviço de emulação de terminal virtual, sobre uma conexão TCP, através da porta 23.  
 Terminais virtuais são utilizados como formas de acesso a sistemas com processamento centralizado.  
 Conectava terminais "burros" a computadores de grande ou médio porte.  
 
-Através de um NVT (Network Virtual Terminal), permite que o usuário realize uma sessão de terminal virtual e uma emulação de um cliente se comunica com um processo servidor (telnetd) através da Internet.  
-	
-Cada caracter digitado pelo usuário é encaminhado ao servidor e ecoado de volta ao cliente, para ser exibido na tela.  
-Transporte full-duplex.  
+Através de um NVT (Network Virtual Terminal), permite que o usuário realize uma sessão de terminal virtual e a emulação do cliente se comunica com um processo servidor (telnetd) através da Internet.  
+O transporte é em full-duplex.  
+
+Cada caractere digitado pelo usuário é encaminhado ao servidor e ecoado de volta ao cliente, para ser exibido na tela.  
 
 ### Qual é o problema do telnet?
-A segurança, pois os caracteres trocados durante a sessão de um terminal são transmitidos de forma plana (sem encriptação).  
+A segurança, pois os dados trocados durante a sessão de um terminal são transmitidos em texto plano (sem encriptação).  
 Os dados são facilmente comprometidos pelos sniffers.  
 
 ### Explique SSH.
 Secure shell.  
-Implementação segura da emulação de terminal virtual.  
-Porta 22.  
+Implementação segura da emulação de terminal virtual através da porta 22.  
 Apresenta mecanismos para autenticação segura de usuários, confirmação de integridade de mensagens e encriptação de conteúdo (RSA de chaves assiméticas, DES, 3DES, AES).  
 
 Pode dar suporte à comunicação segura de outros tipos de aplicações através de um canal (túnel) seguro.  
@@ -243,7 +235,7 @@ Define um mecanismo para transferência de arquivos com conteúdo ASCII ou biná
 > Porta 21 opera o canal de controle.  
 > Porta 20 opera o canal de dados.  
 
-Mecanismo de autenticação permite o controle de acesso ao sistema de arquivos e também pode permitir acesso anônimo.  
+O mecanismo de autenticação permite o controle de acesso ao sistema de arquivos e também pode permitir acesso anônimo.  
 
 ### Quais são os modos de operação do FTP?
 - Ativo:  
@@ -256,7 +248,7 @@ Mecanismo de autenticação permite o controle de acesso ao sistema de arquivos 
 
 ### O que é DNS?
 Domain Name System.  
-Porta 53.  
+Usa a porta 53.  
 
 Os endereços IPs são eficientes à comunicação TCP/IP, porém inadequados à memorização humana e não faz referência geográfica.  
 O DNS provê a tradução dos IPs para nomes.  
@@ -318,12 +310,12 @@ Nomes de domínio são gerenciados pela hierarquia de servidores DNS (associada 
 O servidor “Raiz” no topo da árvore detém os registros que descrevem servidores do próximo nível (e assim sucessivamente).  
 
 - DNS request:  
-    Contém o nome a ser resolvido.
+    Contém o nome a ser resolvido.  
     Encaminhada por um resolver (cliente do serviço).
 	
 - DNS reply:  
-Contém o endereço IP para o nome solicitado.  
-Encaminhada pelo servidor DNS (autoridade pela zona do registro).  
+    Contém o endereço IP para o nome solicitado.  
+    Encaminhada pelo servidor DNS (autoridade pela zona do registro).  
 
 Se a solicitação contém um nome gerenciado pelo servidor receptor, este responde diretamente.  
 Caso contrário, a solicitação deve ser encaminhada ao servidor autoritativo apropriado, através de uma busca iterativa.  
@@ -339,17 +331,20 @@ HTTP: protocolo definido para a comunicação entre aplicações Web.
 ### Comente a interação HTTP.
 Baseia-se em “hits” de requisição/resposta.  
 
-- Request: enviada pelo cliente e possui conteúdo ASCII e as linhas de texto são separadas por blank lines.  
-- Response: enviada pelo servidor, conteúdo MIME especificado no campo Content-Type.  
+- Request:  
+    enviada pelo cliente com conteúdo ASCII e as linhas de texto são separadas por blank lines.  
+
+- Response:  
+    enviada pelo servidor com conteúdo MIME especificado no campo Content-Type.  
 
 Cada requisição HTTP realizada pelo cliente representa a solicitação de um recurso hipermídia.  
-Gera uma nova conexão TCP para cada recurso que é encerrada na resposta.  
+Ou seja, gera uma nova conexão TCP para cada recurso e é encerrada na resposta.  
 
 ### Comente sobre cliente-servidor no HTTP.
 - Clientes:  
 Ferramentas que permitem a interação do usuário através da interpretação e exibição do conteúdo (que pode ser GUI) e pelo suporte à seleção de links dos hipertextos.  
 
-> Ex: mozilla, chrome.  
+    Ex: mozilla, chrome.  
 
 - Servidores:  
 Aguardam requisições por recursos pelos clientes.  
@@ -357,28 +352,31 @@ A porta para o HTTP é a 80.
 Mantêm módulos específicos para execução de programas “server-side” (CGI, Perl, PHP), que criam conteúdo dinâmico.  
 Esse recurso é normalmente referenciado por requisições de formulários HTML (meio tradicional de input de dados via HTTP).  
 
-> Ex: Apache e IIS.  
+    Ex: Apache e IIS.  
 
 ### O que é Web Caching?
-Evita a demanda por muitas conexões (múltiplas requisições) de recursos descritos em páginas web.  
+Evita a demanda por múltiplas conexões (requisições) de recursos em páginas web.  
 Uma forma consiste em manter cópias das páginas acessadas recentemente em um cache local, na máquina do cliente.  
-O navegador pode carregá-la de uma cópia do disco quando o usuário decidir acessar novamente uma mesma página depois de um pequeno tempo.  
+O navegador pode carregár uma cópia do disco quando o usuário decidir acessar novamente uma mesma página depois de um pequeno tempo.  
 
-### Qual a função do proxy?
-Atua normalmente como um cache para uma rede local.  
-Clientes solicitam todos os objetos hipermídia (referenciados por suas URLs) ao servidor proxy.  
+### Qual a função do proxy? Liste seus passos.
+Atua normalmente como um cache para rede local.  
+
+Passos:  
+Clientes solicitam todos os objetos hipermídia ao servidor proxy.  
 O servidor proxy intermedia a comunicação com o servidor Web e obtém o recurso solicitado.  
 A seguir, armazena uma cópia do mesmo, associando a sua identificação (URL) e o seu timestamp.  
 O recurso então é enviado ao cliente que solicitou.  
 Quando ocorrer a próxima solicitação do mesmo recurso, o servidor proxy pode decidir por encaminhar a cópia que mantém em cache, evitando assim um novo contato com o servidor Web.  
 		
-A implementação de servidor proxy mais famosa é o Squid e sua porta é a 3128.  
-Também permite estabelecer regras e restrições de acesso (ACL – Access Control Lists).  
+> A implementação de servidor proxy mais famosa é o Squid e sua porta é a 3128.  
+> Também permite estabelecer regras e restrições de acesso (ACL – Access Control Lists).  
 
 ## AULA IV - APLICAÇÃO 2:
 ### O que é o serviço de correio eletrônico? Qual seu protocolo?
 Serviço criado para a transferência de mensagens entre usuários da internet.  
 Conteúdo exclusivamente texto (ASCII) e formato de carta (remetente, destinatário, assunto).  
+Seu protocolo é op SMTP.  
 
 ### O que é SMTP?
 Simple Mail Transfer Protocol.  
@@ -421,8 +419,8 @@ O conteúdo é codificado como conteúdo ASCII puro e inserido no corpo da mensa
 - Clientes:  
 Através do SMTP Server solicitam o envio de mensagens do usuário e operam o acesso a caixas postais.  
 
-> Localmente: pine, mutt, elm e webmail.  
-> Remotamente: via POP3 ou IMAP, como Thunderbird, Outlook.  
+    Localmente: pine, mutt, elm e webmail.  
+    Remotamente: via POP3 ou IMAP, como Thunderbird, Outlook.  
 
 - Servidores:
 Encaminham mensagens:  
@@ -433,7 +431,8 @@ Recebem mensagens:
 Armazenamento no mail box do usuário (destino).
 	
 A porta servidora do SMTP (conectada por clientes para encaminhamento ou por outros servidores) é a 25.  
-> Ex: servidores SMTP: sendmail, exim, postfix.  
+
+    Ex: servidores SMTP: sendmail, exim, postfix.  
 
 ### Discuta a interação com um SMTP.
 O SMTP define um padrão para troca de mensagens entre clientes e servidores.  
@@ -448,7 +447,7 @@ Em seguida, o cliente pode iniciar uma conversa com o servidor, através dos com
 
 ### O que é POP3?
 Post Office Protocol.  
-Porta 110.  
+Usa a porta 110.  
 
 A caixa postal de um usuário pode ser armazenada em uma máquina diferente de onde é executado o cliente (user agent).  
 Permite a listagem, o download e a remoção de mensagens de uma caixa postal remota.  
@@ -458,7 +457,7 @@ Originalmente definido para a solução do problema de acesso a caixas postais r
 
 ### Explique IMAP.
 Internet Message Access Protocol.  
-Porta 143.  
+Usa a porta 143.  
 
 Oferece outros serviços para acesso às caixas postais.  
 Permite os modos de operação conectado e desconectado.  
@@ -525,14 +524,10 @@ Proporciona um meio de impressão portátil e padronizado para os sistemas basea
         Gestão básica de trabalhos e filas de impressão.
         Permite a integração com LPD, SMB e AppSocket.
 	
-- Características são:  
-
-        Interface web para administração de impressoras e filas de impressão.
-        Porta 631.
-        Permite a instalação de impressoras PDF.
-        Filtragem extensível de arquivos e interfaces backend de dispositivos.
-        Serviços de diretório de impressoras em rede.
-        Função de encriptação.
+Interface web para administração de impressoras e filas de impressão.  
+Usa a porta 631.  
+Permite a instalação de impressoras PDF, filtragem extensível de arquivos e interfaces backend de dispositivos.  
+Serviços de diretório de impressoras em rede e função de encriptação.  
 
 ## AULA X - SEGURANÇA EM REDES:
 ### Quais são os requisitos de um sistema seguro?
@@ -567,7 +562,7 @@ Proporciona um meio de impressão portátil e padronizado para os sistemas basea
 Monitor promíscuo que intercepta o tráfego de pacotes.  
 Atua em redes de difusão (broadcasting).  
 	
-Os conteúdos sem encriptação são obtidos facilmente pelo atacante  principalmente para a obtenção de senhas.  
+Os conteúdos sem encriptação são obtidos facilmente pelo atacante principalmente para a obtenção de senhas.  
 
 ### O que é um scanner?
 Submete pesquisas a um host (ou vários).  
@@ -576,8 +571,8 @@ Objetivo de obter informações sobre o sistema como portas servidoras (aplicaç
 - Comportamento comum:  
 	Realiza conexões ou envia pacotes de reconhecimento para as portas do sistema.
 
-- Geralmente precede um probe (tentativa de acesso)
-	Consiste normalmente do primeiro passo de um ataque (reconhecimento de área).
+- Geralmente precede um probe (tentativa de acesso)  
+    Consiste normalmente do primeiro passo de um ataque (reconhecimento de área).
 
 ### O que é uma probe?
 Tentativas sucessivas de acesso a aplicações.  
@@ -587,7 +582,7 @@ Comportamento comum:
 - São usadas senhas óbvias ou vulnerabilidades conhecidas dos serviços em execução.  
 - Obtenção de dados sobre versões das aplicações e do sistema operacional.  
 	
-Uso de ferramentas e kits (exploits) prontos
+> Uso de ferramentas e kits (exploits) prontos
 
 ### Explique SYN attack.
 Explora uma deficiência no protocolo TCP.  
@@ -606,27 +601,27 @@ Procura consumir as conexões do servidor:
     Difícil de se rastrear (origens são falsificadas - IP spoofing).  
 
 - DDoS:  
-    Scan em um grande número de hosts.  
     Amplificação de um DoS.  
+    Scan em um grande número de hosts.   
     Hosts e até redes inteiras ficam inacessíveis.  
-    Até centenas de daemons distribuídos originarão o ataque.  
     Comprometem um site, uma rede ou até grandes domínios.  
+    Até centenas de daemons distribuídos originarão o ataque.  
     Invasão e instalação de ferramentas de ataque nos hosts.  
     Instalação de sniffers.  
     Envio dos dados coletados a um servidor central.  
 
 ### O que é trojan e código malicioso?
-Exploram falhas no ambiente do usuário como antivírus desatualizado e aplicativos vulneráveis e envolvem os usuários do sistema.  
+São código ou conjunto de códigos que exploram falhas no ambiente do usuário como antivírus desatualizado, aplicativos vulneráveis e envolvem os usuários do sistema.  
 Propagação em grande escala (mutação).  
-Consequências graves.  
+Apresentam consequências graves.  
 Criação backdoors para o processo de propagação ou para futuro comprometimento do sistema.  
 
 ### Explique a evolução dos códigos maliciosos.
-- Backdoors
-Furos de aplicações ou instalados pelo usuário desavisado.  
-Abrem portas servidoras, permitindo acesso de fora.  
+- Backdoors:  
+    Furos de aplicações ou instalados pelo usuário desavisado.  
+    Abrem portas servidoras, permitindo acesso de fora.  
 
-- Malwares
+- Malwares:  
     Uso de NAT:  
     Escondeu as portas servidoras das máquinas da Intranet.  
     O que motivou a evolução dos malwares para clientes.  
@@ -639,11 +634,11 @@ Abrem portas servidoras, permitindo acesso de fora.
 ### Quais devem ser os incidentes a serem reportados?
 Alertas de acesso (ou tentativa) não autorizado a um sistema ou a seus dados.  
 Paralisação de serviço não desejada (DoS).  
-Uuso não autorizado de um sistema para processamento ou armazenamento de dados.  
+Uso não autorizado de um sistema para processamento ou armazenamento de dados.  
 Alterações no sistema (hardware, firmware ou características de software) sem conhecimento, instrução ou consentimento do proprietário.  
 	
-Comunicação de ocorrências ao CERT.br  
-Centro de Estudos, Resposta e Tratamento de Incidentes de Segurança no Brasil.  
+> Comunicação de ocorrências ao CERT.br  
+> Centro de Estudos, Resposta e Tratamento de Incidentes de Segurança no Brasil.  
 
 ### Por que implementar uma política de segurança?
 Internet: não foi definida inicialmente para ser segura.
@@ -720,15 +715,25 @@ Ex: md5, sha.
 
 ### O que é assinatura digital?
 A assinatura digital é um conteúdo cifrado transmitido junto com a mensagem para sua conferência.  
-Inserida pela chave privada de uma pessoa.  
-Para permitir a autenticidade (integridade).  
-Só for ser verificada/decifrada pela chave pública parceira.  
+É criada pela chave privada de uma pessoa para permitir a autenticidade (integridade).  
+Só pode ser verificada/decifrada pela chave pública parceira.  
 Geralmente combinado com hashing criptográfico para reduzir seu tamanho.  
 
 ### Defina firewall.
 Equipamento (ou sistema) que permite o controle de segurança na comunicação entre duas ou mais redes.  
 Geralmente atua como um filtro, permitindo pacotes passarem, ou não, de acordo com regras.  
 
-### Defina Sistema Detector de Intrusão
-Software que reconhece atividades suspeitas e não previstas.  
+Abordagens clássicas de configuração:
+
+    O que não é expressamente proibido é permitido.
+    O que não é expressamente permitido é proibido.
+
+### Liste algumas implementações de firewalls
+Windows: ZoneAlarm, Norton Internet Security.  
+Linux: iptables, IPFilter.  
+
+### Defina Sistema Detector de Intrusão. Dê um exemplo.
+Também conhecidos como IDS, são softwares que reconheces atividades suspeitas e não previstas.  
 Permite a configuração de ações reativas automáticas.  
+
+Um exemplo gratuito é o Snort.
