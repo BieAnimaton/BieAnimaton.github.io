@@ -115,16 +115,16 @@ O servidor (papel passivo) aguarda a solicitação de conexões e serviços de o
 O cliente (papel ativo) solicita conexões e serviços.  
 
 ### Defina o comportamento cliente-servidor. Quais as principais interações?
-#### Sevidor:
+#### Sevidor
 Aguarda a mensagem com requisição (com dados).  
 Executa o serviço solicitado.  
 Envia a mensagem de resposta (pode conter dados).  
 
-#### Cliente:
+#### Cliente
 Envia mensagem de requisição ao servidor.  
 Aguarda o retorno da mensagem com a resposta.  
 
-#### Interações:
+#### Interações
 Cliente pode acessar vários servidores diferentes.  
 Cliente pode acessar vários servidores de um mesmo serviço.  
 Servidores podem se tornar clientes de outros servidores.  
@@ -169,17 +169,17 @@ O Destino especifica o tamanho da janela (window advertisement) e envia uma conf
 
 ## Aula VIII
 ### Compare Telnet com SSH.
-#### Telnet:
+#### Telnet
 Serviço de emulação de terminal virtual, sobre uma conexão TCP, através da porta 23.   
 Terminais virtuais são utilizados como formas de acesso a sistemas com processamento centralizado.  
 Através de um NVT (Network Virtual Terminal), permite que o usuário realize uma sessão de terminal virtual e a emulação do cliente se comunica com um processo servidor (telnetd) através da Internet.  
 Cada caractere digitado pelo usuário é encaminhado ao servidor e ecoado de volta ao cliente, para ser exibido na tela.  
 	
-#### Problema do Telnet:
+#### Problema do Telnet
 A segurança, pois os dados trocados durante a sessão de um terminal são transmitidos em texto plano (sem encriptação).  
 Os dados são facilmente comprometidos pelos sniffers.  
 	
-#### SSH:
+#### SSH
 Secure shell.  
 Implementação segura da emulação de terminal virtual através da porta 22.  
 Apresenta mecanismos para autenticação segura de usuários, confirmação de integridade de mensagens e encriptação de conteúdo (RSA de chaves assiméticas, DES, 3DES, AES).  
@@ -193,7 +193,7 @@ Define um mecanismo para transferência de arquivos com conteúdo ASCII ou biná
 > Porta 21 opera o canal de controle.  
 > Porta 20 opera o canal de dados.  
 	
-#### Modos:
+#### Modos
 - Ativo:  
     Cliente se conecta à porta 21 do servidor e informa o número da outra porta que será utilizada para receber a conexão de dados.  
     Costuma apresentar problemas em operações através de firewalls.  
@@ -313,16 +313,16 @@ Originalmente definido para a solução do problema de acesso a caixas postais r
 > Implementação bem conhecida do POP3 server: Qpopper.  
 
 ### O que é SAMBA e CUPS? Quais suas funcionalidades?
-#### SAMBA:
+#### SAMBA
 Conjunto de ferramentas de código aberto que provê serviços de acesso a arquivos e impressoras em rede, para clientes SMB (Server Message Block).
 	
-#### CUPS:
+#### CUPS
 Commmom Unix Printing System.  
 Interface web para administração de impressoras e filas de impressão.  
 Proporciona um meio de impressão portátil e padronizado para os sistemas baseados em Unix.  
 Usa a porta 631.
 	
-#### Funcionalidades:
+#### Funcionalidades
 - SAMBA:  
     Serviços de arquivos e Impressão.  
 	Autenticação e autorização.  
