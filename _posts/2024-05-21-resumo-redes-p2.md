@@ -1,6 +1,6 @@
 ---
 title: "Redes de Computadores - Resumão para P2"
-excerpt: "Resumo extenso que fiz através de perguntas e respostas para praticar."
+excerpt: "Resumo filtrado que fiz através de perguntas e respostas para praticar."
 categories:
   - Redes
 tags:
@@ -9,7 +9,6 @@ tags:
   - Resumão
   - Teoria
   - P2
-  - Primitivas de Serviço
   - Cliente-Servidor
   - UDP
   - Header UDP
@@ -26,12 +25,8 @@ tags:
   - POP3
   - IMAP
   - Proxy
-  - Squid
   - CUPS
-  - SMB
   - SAMBA
-  - SMBD
-  - NMBD
   - DoS
   - DDoS
   - SYN Attack
@@ -39,93 +34,18 @@ tags:
   - Sniffer
   - Scanner
   - Probe
-  - IDS
+  - Criptografia
+  - Chave Simétrica
+  - Chave Assimétrica
+  - Hash
 
 toc: true
 ---
 
 # Resumo para P2 de Redes de Computadores.
 
-## AULA VII - TRANSPORTE:
-### Onde o transporte fica em ISO/OSI e TCP/IP?
-
-    ISO/OSI = quarta camada.  
-    TCP/IP = terceira camada.  
-
-### Quais são as principais características da camada transporte?
-
-Identificação precisa e não-ambígua de cada aplicação (porta).  
-Entrega de mensagem entre cada par de aplicações de acordo com parâmetros de qualidade.  
-
-### Descreva os tipos de serviços prestados.
-
-- Confiabilidade:  
-    Confiável ou não confiável.  
-    Confirmação, retransmissão e não duplicação de dados.  
-	
-- Conexão:  
-    Orientado à conexão ou não.  
-    Estabelecimento de conexões que representam um "circuito virtual fim-a-fim" por onde os dados são transmitidos de maneira ordenada dando a ideia de um fluxo contínuo.  
-
-### Comente as principais primitivas de serviço.
-- LISTEN: coloca a aplicação em estado de atenção na espera por conexões de outras aplicações.  
-	
-- CONNECT: aplicação pode solicitar o estabelecimento de uma conexão com outra (em LISTENING) com uma mensagem de requisição de conexão (CONNECTION REQUEST).  
-	
-- SEND: permite que uma aplicação envie dados (DATA) para serem transmitidos pela camada de transporte.  
-	
-- RECEIVE: aplicação realiza uma espera bloqueada até que um pacote de dados chegue.  
-	
-- DISCONNECT: solicita o encerramento da conexão (DISCONNECT REQUEST).  
-
-### Explique o paradigma cliente servidor.
-Aplicações em rede realionam-se em pares: cliente e servidor.  
-
-O servidor (papel passivo) aguarda a solicitação de conexões e serviços de outras aplicações.  
-O cliente (papel ativo) solicita conexões e serviços.  
-
-### Comente sobre o comportamento cliente-servidor.
-- Sevidor:  
-
-        Aguarda a mensagem com requisição (com dados).
-        Executa o serviço solicitado.
-        Envia a mensagem de resposta (pode conter dados).
-
-- Cliente:
-
-    	Envia mensagem de requisição ao servidor.
-	    Aguarda o retorno da mensagem com a resposta.
-
-### Cite as interações entre cliente e servidor.
-	Cliente pode acessar vários servidores diferentes.
-	Cliente pode acessar vários servidores de um mesmo serviço.
-	Servidores podem se tornar clientes de outros servidores.
-	Host pode executar várias aplicações clientes e/ou servidores.
-
-### Liste os protocolos usados para o transporte, suas diferenças e igualdades.
-Os protocolos são o UDP e o TCP.  
-
-Ambos se diferenciam pelo formato de seus PDUs e pelo tipo de serviço prestado.  
-Função comum:  
-- multiplexação: várias aplicações clientes/servidores podem compartilhar os serviços de uma mesma entidade de transporte.
-- porta: identificador único local (número de 16 bits) que descreve e registra as aplicações em execução, atendidas pela pilha TCP/IP.
-- servidor usa a porta para se registrar localmente.
-- o cliente pode informar a porta à camada de transporte.		
-
-### Qual é o identificador único e global de uma aplicação na Internet?
-Obtido pela associação do endereço IP de um host (único na rede) com a porta da aplicação (única no host).  
-Cada conexão/serviço de transporte possui um único par de identificadores.  
-
-> (endereço IP, número de porta) no servidor X (endereço IP, número de porta) no cliente.  
-
-### O que são portas bem conhecidas e registradas?
-Muitos serviços são bem conhecidos na internet.  
-Para estes existem portas padronizadas que são registradas e mantidas pelo IANA.  
-
-Portas menores que 1024 são reservadas para uso do sistema (WKP - Well Known Ports) ex: 80.  
-Portas maiores que 1023 são chamadas de Registed Port Numbers ex: 3306.  
-
-### Explique UDP e seu header.
+## AULA VII
+### O que UDP? Explique seu header.
 Serviço de datagrama semelhante ao IP.  
 Não orientado à conexão e não confiável.  
 Não reordena as mensagens antes de entrega à aplicação e não garante a chegada de todas as mensagens.  
@@ -138,7 +58,7 @@ o UDP é muito simples e define apenas:
 
 > A maior vantagem do UDP é ser um protocolo simples com poucos campos no header (pouco overhead).
 
-### Explique TCP e seu header.
+### O que TCP? Explique seu header.
 É o principal protocolo de transporte da internet.  
 Oferece serviço baseado em stream (fluxo), orientado à conexão e confiável.  
 Realiza a transmissão ordenada e confiável através de uma conexão preestabecelida.  
@@ -153,7 +73,7 @@ O header do TCP é muito mais completo:
 - Options.
 - Data (opcional).
 
-### Explique os campos do header:
+### Explique os campos do header TCP.
 Sequence number: número de sequência (por conexão) do TPDU.   
 Acknowledgement number: descreve o número de sequência do TPDU que está sendo confirmado.    
 TCP header length: tamanho do cabeçalho TCP em palavras de 32 bits; este campo antecede um campo de 6 bits que não é utilizado.  
@@ -168,11 +88,56 @@ SYN: é usado para solicitar/aceitar o estabelecimento de uma conexão.
 FIN: é usado para solicitar/aceitar o encerramento de uma conexão.  
 Window size: indica o tamanho da janela a ser utilizada no controle de fluxo através do algoritmo de janela deslizante.  
 
-### Quais são as duas medidas que podem restringir o tamanho total de um PDU TCP?
-Tamanho máximo de payload do IP com 65515 bytes.  
-Limitação data pelo MTU da rede local.  
+### Dê exemplos de aplicabilidades de TCP ou UDP e explique.
+#### Aplicações TCP:
+É o protocolo a se escolher para confiabilidade e qualidade máximas. Pode não ser o mais rápido, mas entrega os dados sem erro.  
+	
+- envio de e-mails e de mensagens de texto.
+- transmissão de conteúdos pré-gravados em sites como Netflix, Hulu ou HBO Max (media stream).
+- transferência de arquivos entre aplicativos e dispositivos.
+- navegação na web em geral.
+- administração remota de dispositivos ou redes.
+	
+#### Aplicações UDP:
+O UDP é mais adequado para transferir um fluxo constante de dados ao vivo, permitindo que os usuários tenham acesso aos dados de forma fácil e rápida. Pode devolver ótimas ou péssimas qualidade devido a perda de dados.  
 
-### Descreva o processo de conexão no TCP.
+- jogos online.
+- multitransmissão.
+- chamadas de vídeo/videoconferência.
+- live broadcasting.
+- voIP (chamada de voz por aplicativo).
+- sistemas de nomes de domínio (que traduzem nomes de domínio em endereços de IP).
+
+### O que é paradigma cliente-servidor?
+Aplicações em rede realionam-se em pares: cliente e servidor.  
+
+O servidor (papel passivo) aguarda a solicitação de conexões e serviços de outras aplicações.  
+O cliente (papel ativo) solicita conexões e serviços.  
+
+### Defina o comportamento cliente-servidor. Quais as principais interações?
+#### Sevidor:
+Aguarda a mensagem com requisição (com dados).  
+Executa o serviço solicitado.  
+Envia a mensagem de resposta (pode conter dados).  
+
+#### Cliente:
+Envia mensagem de requisição ao servidor.  
+Aguarda o retorno da mensagem com a resposta.  
+
+#### Interações:
+Cliente pode acessar vários servidores diferentes.  
+Cliente pode acessar vários servidores de um mesmo serviço.  
+Servidores podem se tornar clientes de outros servidores.  
+Host pode executar várias aplicações clientes e/ou servidores.  
+
+### O que é comum tanto no TCP quando no UDP?
+Porta: identificador único local (número de 16 bits) que descreve e registra as aplicações em execução, atendidas pela pilha TCP/IP.  
+Multiplexação: várias aplicações clientes/servidores podem compartilhar os serviços de uma  mesma entidade de transporte.  
+	
+Servidor usa a porta para se registrar localmente.  
+O cliente pode informar a porta à camada de transporte.  
+
+### Explique o processo de conexão TCP.
 Técnica three-way handshake.  
 
 - O servidor aguarda uma conexão em estado de LISTENING e deve ter executado uma chamada bloqueante de um ACCEPT.
@@ -181,81 +146,73 @@ Técnica three-way handshake.
 - Caso dê certo, ela aceita a conexão, através de uma confirmação (acknowledgment), com os flags SYN=1 e ACK=1.
 - O processo de encerramento de uma conexão é semelhante.
 
-### Descreva o processo de confirmação no TCP.
+### Explique o processo de confirmação TCP.
 O destino envia uma mensagem de controle com Confirmação (Acknowledgment - ACK) para a origem verificar a entrega da mensagem com sucesso.  
 A origem inicializa o relógio, se o tempo expira antes da confirmação, ele inicia o relógio e retransmite.  
 
-### Comente sobre o gerenciamento de janela no TCP.
+### Explique o tempo de expiração TCP.
+É o tempo dado para entregar o pacote até sua perda. Deve ser diferente para cada conexão e inicializado dinamicamente.  
+Hosts na mesma LAN deve ser menores que entre hosts entre 20 hops.  
+Tempo de entrega na Internet muda dinamicamente, tempo de expiração deve se adequar.  
+	
+O tempo expiração é baseado em RTT (Round Trip Time).  
+- Emissor não pode prever o RTT antes de uma transmissão.  
+- Então define o RTO (Retransmission Timeout) baseado em um prévio RTT.  
+
+### Comente sobre o gerenciamento de janela.
 O TCP usa janela deslizante para controle de fluxo.  
 Descreve quais bytes do stream podem ser enviados.  
 O Destino especifica o tamanho da janela (window advertisement) e envia uma confirmação para o próximo byte que pode ser enviado e o número de bytes que pode aceitar do fluxo atual, transportado como ACK.  
 
-### Explique a Síndrome da Janela Boba.
-O algoritmo janela deslizante pode resultar na transmissão de muitos segmentos pequenos.  
-Caso o destino esteja cheio e consumindo poucos bytes, avisará a origem sobre uma janela muito pequena.  
-O uso da banda será ineficiente se a origem enviar uma quantidade de dados para completar após o destino consumir um pouco dos dados.
-
-Duas soluções possíveis
-- O destino pode atrasar a informação de mais janelas livres.
-- A origem pode atrasar o envio até receber um tamanho de janela satisfatório.
-
-### Explique o controle de congestionamento.
+### Controle de congestionamento.
 É um controle para avisar sobre o congestionamento de dados na rede através de uma janela de congestionamento. Inicialmente tal janela tem um tamanho mínimo para indicar o volume total de mensagens que pode ser encaminhadas à rede antes de receber uma confirmação (mensagens pendentes). A janela é aumentada gradativamente à medida que o RTT médio das confirmações diminui e vice-versa. Quando detectado um congestionamento (por timeout da confirmação), a janela é reduzida drasticamente, mas pode voltar a crescer com o passar do tempo.  
 
-## AULA VIII - APLICAÇÃO 1:
-### O que é definido na camada de aplicação?
-São definidos os protocolos para comunicação entre programas aplicativos que atendem usuários e sistemas finais.  
-A relação entre os aplicativos define o comportamento geral do serviço que se utiliza da rede para a comunicação de dados.  
-
-### Explique telnet.
-Serviço de emulação de terminal virtual, sobre uma conexão TCP, através da porta 23.  
+## Aula VIII
+### Compare Telnet com SSH.
+#### Telnet:
+Serviço de emulação de terminal virtual, sobre uma conexão TCP, através da porta 23.   
 Terminais virtuais são utilizados como formas de acesso a sistemas com processamento centralizado.  
-Conectava terminais "burros" a computadores de grande ou médio porte.  
-
 Através de um NVT (Network Virtual Terminal), permite que o usuário realize uma sessão de terminal virtual e a emulação do cliente se comunica com um processo servidor (telnetd) através da Internet.  
-O transporte é em full-duplex.  
-
 Cada caractere digitado pelo usuário é encaminhado ao servidor e ecoado de volta ao cliente, para ser exibido na tela.  
-
-### Qual é o problema do telnet?
+	
+#### Problema do Telnet:
 A segurança, pois os dados trocados durante a sessão de um terminal são transmitidos em texto plano (sem encriptação).  
 Os dados são facilmente comprometidos pelos sniffers.  
-
-### Explique SSH.
+	
+#### SSH:
 Secure shell.  
 Implementação segura da emulação de terminal virtual através da porta 22.  
 Apresenta mecanismos para autenticação segura de usuários, confirmação de integridade de mensagens e encriptação de conteúdo (RSA de chaves assiméticas, DES, 3DES, AES).  
 
 Pode dar suporte à comunicação segura de outros tipos de aplicações através de um canal (túnel) seguro.  
 
-### Explique FTP.
+### Explique FTP. Quais são seus modos?
 File transfer protocol.  
 Protocolo padrão de transferência de arquivo.  
 Define um mecanismo para transferência de arquivos com conteúdo ASCII ou binário, através do estabelecimento de duas conexões TCP:  
 > Porta 21 opera o canal de controle.  
 > Porta 20 opera o canal de dados.  
-
-O mecanismo de autenticação permite o controle de acesso ao sistema de arquivos e também pode permitir acesso anônimo.  
-
-### Quais são os modos de operação do FTP?
+	
+#### Modos:
 - Ativo:  
     Cliente se conecta à porta 21 do servidor e informa o número da outra porta que será utilizada para receber a conexão de dados.  
-    Costuma apresentar problemas em operações através de firewalls.
+    Costuma apresentar problemas em operações através de firewalls.  
 
 - Passivo:  
-	Cliente realiza uma conexão à porta 21 do servidor e informa que o modo será passivo.  
-	Abre uma conexão com a porta 20 do servidor para o canal de dados.  
+    Cliente realiza uma conexão à porta 21 do servidor e informa que o modo será passivo.  
+    Abre uma conexão com a porta 20 do servidor para o canal de dados.  
 
-### O que é DNS?
+### Explique DNS. O que é FQDN?
 Domain Name System.  
 Usa a porta 53.  
 
 Os endereços IPs são eficientes à comunicação TCP/IP, porém inadequados à memorização humana e não faz referência geográfica.  
 O DNS provê a tradução dos IPs para nomes.  
-Os nomes completos (FQDN – Fully-Qualified Domain Name) são compostos por seqüências de alfanuméricos separados pontos:  
-
-    Parte mais à esquerda: nome do host.  
-    Parte da direita: domínio (e sua hierarquia).  
+	
+FQDN:  
+Fully-Qualified Domain Name.  São os nomes completos compostos por sequências de alfanuméricos separados pontos:  
+- parte mais à esquerda: nome do host.
+- parte da direita: domínio (e sua hierarquia).
 
 ### Comente a hierarquia DNS.
 A hierarquia do DNS define domínios de alto nível (TLDs - Top level domains) através de uma autoridade global (InterNIC), classificados como:  
@@ -270,114 +227,64 @@ A hierarquia do DNS define domínios de alto nível (TLDs - Top level domains) a
 		.fr
 		.ca
 
-### O que é subordinação de domínios.
-Uma organização pode registrar seu nome de domínio, aplicado a um TLD (global ou de um país).  
+### Explique o processo de resolução DNS.
+Se a solicitação contém um nome gerenciado pelo servidor receptor, este responde diretamente.  
+Caso contrário, a solicitação deve ser encaminhada ao servidor autoritativo apropriado, através de uma busca iterativa.  
+Um DNS pode atuar como resolver (cliente) para evitar que todas as requisições sejam feitas diretamente à autoridade.  
+O servidor DNS se torna cliente do servidor autoritativo (e da hierarquia) ao realizar a solicitação pela resolução de nomes no lugar do cliente origem.  
 
-	usp.br - domínio da USP (o Registro.br demorou a criar o .edu)
-	terra.com.br - domínio do Terra
-
-Uma organização pode determinar sua própria estrutura interna.  
-Cada domínio tem autoridade para criar subdomínios.  
-Cada domínio/subdomínio delimita uma zona de autoridade.  
-Domínios são conceitos lógicos e não necessitam corresponder à distribuição física.  
-
-	Ex: host "idg" do subdomínio "receita" do domínio "fazenda.gov.br"
-			idg.receita.fazenda.gov.br
-
-### Comente sobre Registros do DNS e Zonas de Autoridade.
-Cada registro deve ser único e inclui nome de domínio, tipo do registro (RR) e IP  
-	
-    Ex:	servidor	IN	A	192.168.0.1
-	
-Tipos de registros possíveis:  
-
-    A - mapeia um nome a um endereço IP
-    CNAME - alias de um nome de domínio
-    HINFO - tipo de CPU e SO do host
-    MX (Mail eXchanger) - mapeia os mail servers de um domínio
-    NS - DNS autoritativo para o domínio
-    PTR - ponteiro para a outra parte do domínio
-    SOA - identifica o início da zona de autoridade
-    A classe IN, em um registro, indica que o sistema é Internet
-    Um TTL (time-to-live) expressa o tempo de vida de um registro em segundos.
-
-As zonas de autoridade consistem regiões da hierarquia sob a autoridade de um servidor.  
-- pode consistir um único domínio, subdomínio, ou grupos destes
-- pode ser atribuída a um servidor cujo nome não pertence àquela zona
-
-### Comente sobre cliente-servidor no DNS.
-Nomes de domínio são gerenciados pela hierarquia de servidores DNS (associada às zonas de autoridade).  
-O servidor “Raiz” no topo da árvore detém os registros que descrevem servidores do próximo nível (e assim sucessivamente).  
-
+### Explique um resolver (interação c/ cliente).
 - DNS request:  
     Contém o nome a ser resolvido.  
-    Encaminhada por um resolver (cliente do serviço).
-	
+    Encaminhada por um resolver (cliente do serviço).  
+
 - DNS reply:  
     Contém o endereço IP para o nome solicitado.  
     Encaminhada pelo servidor DNS (autoridade pela zona do registro).  
 
-Se a solicitação contém um nome gerenciado pelo servidor receptor, este responde diretamente.  
-Caso contrário, a solicitação deve ser encaminhada ao servidor autoritativo apropriado, através de uma busca iterativa.  
-Um DNS pode atuar como resolver (cliente) para evitar que todas as requisições sejam feitas diretamente à autoridade.  
-O servidor DNS se torna cliente do servidor autoritativo (e da hierarquia) ao realizar a solicitação pela resolução de nomes no lugar do cliente origem.   
+### O que é HTTP? Quais seus métodos?
+Protocolo definido para a comunicação entre aplicações Web.  
 
-> Uma implementação muito difundida do DNS é o BIND (Berkeley Internet Name Domain), mantida e disponibilizada pelo ISC (Internet Systems Consortium).  
+#### Alguns campos do header HTTP
+Content-Encoding - tipo de compressão do conteúdo.  
+Content-Language - código da linguagem natural do conteúdo.  
+Content-Length - tamanho em bytes do conteúdo.  
+Date - data e horário de criação da mensagem.  
+Content-Type - o tipo de conteúdo (MIME - RFC 822) transportado pela mensagem.  
 
-### O que é URL? E HTTP?
-URL: caminho do site na web + caminho dentro do site + outros parâmetros.  
-HTTP: protocolo definido para a comunicação entre aplicações Web.  
+#### Métodos
+GET - solicita que o servidor envie a página referenciada pela URL (pode conter parâmetros extra).  
+PUT - solicita que o servidor receba um documento, em um formato MIME (informado no Content-Type) e armazene na URL informada.  
+POST - solicita que o servidor receba dados (no conteúdo) para serem informados a um documento (normalmente um programa) especificado pela URL.  
 
-### Comente a interação HTTP.
+### Explique a interação HTTP:
 Baseia-se em “hits” de requisição/resposta.  
 
-- Request:  
-    enviada pelo cliente com conteúdo ASCII e as linhas de texto são separadas por blank lines.  
+#### Request  
+Enviada pelo cliente com conteúdo ASCII e as linhas de texto são separadas por blank lines.  
 
-- Response:  
-    enviada pelo servidor com conteúdo MIME especificado no campo Content-Type.  
+#### Response  
+Enviada pelo servidor com conteúdo MIME especificado no campo Content-Type.  
 
 Cada requisição HTTP realizada pelo cliente representa a solicitação de um recurso hipermídia.  
 Ou seja, gera uma nova conexão TCP para cada recurso e é encerrada na resposta.  
 
-### Comente sobre cliente-servidor no HTTP.
-- Clientes:  
-Ferramentas que permitem a interação do usuário através da interpretação e exibição do conteúdo (que pode ser GUI) e pelo suporte à seleção de links dos hipertextos.  
+### O que é URL?
+É o endereço na web para acessar alguma página. Especifica o protocolo, usuário, senha, host, porta, detalhes do caminho e algum parâmetro (caso necessário).  
+	
+    Ex: https://www.google.com.br/search?hl=pt-BR&q=teste&btnG=Pesquisa+Google&meta=  
 
-    Ex: mozilla, chrome.  
-
-- Servidores:  
-Aguardam requisições por recursos pelos clientes.  
-A porta para o HTTP é a 80.  
-Mantêm módulos específicos para execução de programas “server-side” (CGI, Perl, PHP), que criam conteúdo dinâmico.  
-Esse recurso é normalmente referenciado por requisições de formulários HTML (meio tradicional de input de dados via HTTP).  
-
-    Ex: Apache e IIS.  
-
-### O que é Web Caching?
-Evita a demanda por múltiplas conexões (requisições) de recursos em páginas web.  
-Uma forma consiste em manter cópias das páginas acessadas recentemente em um cache local, na máquina do cliente.  
-O navegador pode carregár uma cópia do disco quando o usuário decidir acessar novamente uma mesma página depois de um pequeno tempo.  
-
-### Qual a função do proxy? Liste seus passos.
+### O que é Proxy?
 Atua normalmente como um cache para rede local.  
 
-Passos:  
-Clientes solicitam todos os objetos hipermídia ao servidor proxy.  
-O servidor proxy intermedia a comunicação com o servidor Web e obtém o recurso solicitado.  
-A seguir, armazena uma cópia do mesmo, associando a sua identificação (URL) e o seu timestamp.  
-O recurso então é enviado ao cliente que solicitou.  
-Quando ocorrer a próxima solicitação do mesmo recurso, o servidor proxy pode decidir por encaminhar a cópia que mantém em cache, evitando assim um novo contato com o servidor Web.  
-		
-> A implementação de servidor proxy mais famosa é o Squid e sua porta é a 3128.  
-> Também permite estabelecer regras e restrições de acesso (ACL – Access Control Lists).  
+Passos:
+- Clientes solicitam todos os objetos hipermídia ao servidor proxy.
+- O servidor proxy intermedia a comunicação com o servidor Web e obtém o recurso solicitado.
+- A seguir, armazena uma cópia do mesmo, associando a sua identificação (URL) e o seu timestamp.
+- O recurso então é enviado ao cliente que solicitou.
+- Quando ocorrer a próxima solicitação do mesmo recurso, o servidor proxy pode decidir por encaminhar a cópia que mantém em cache, evitando assim um novo contato com o servidor Web.
 
-## AULA IV - APLICAÇÃO 2:
-### O que é o serviço de correio eletrônico? Qual seu protocolo?
-Serviço criado para a transferência de mensagens entre usuários da internet.  
-Conteúdo exclusivamente texto (ASCII) e formato de carta (remetente, destinatário, assunto).  
-Seu protocolo é op SMTP.  
-
+## Aula IX
 ### O que é SMTP?
 Simple Mail Transfer Protocol.  
 O funcionamento básico consiste em enviar mensagens para caixas postais (mail boxes):  
@@ -389,61 +296,11 @@ O funcionamento básico consiste em enviar mensagens para caixas postais (mail b
 Identificação de uma caixa postal inclui o nome do usuário (login name) e o nome do host onde se localiza.  
 > formato: login_name@host_name 
 
-### Liste os passos do encaminhamento de um MTA.
-- O MTA de origem extrai o host de destino da mensagem e busca no serviço DNS a identificação dos mail exchangers (registros MX) para o endereço em questão.  
-- A mensagem é então encaminhada para os registros MX por ordem de preferência (do menor valor para o maior).  
-- O MTA extrai a informação do usuário e armazena na caixa postal apropriada.  
-
-### Comente o formato da mensagens SMTP.
-Suporta diversos campos de cabeçalho (além do corpo da mensagem).  
-
-    From: Nome do remetente.
-    To: Endereço do destinatário.
-    Cc: Endereços para cópias carbono.
-    Bcc: Destinatários não informados (blind copies).
-    Date: Data de envio.
-    Sender: Endereço do remetente (geralmente igual ao From).
-    Subject: Assunto.
-    Reply-To: Endereço alternativo para resposta.
-    X-Charset: Conjunto de caracteres utilizado (ASCII).
-    X-Mailer: Software de correio usado para o envio da mensagem.
-    X-Sender: Duplicata do endereço do remetente.
-
 ### O que é MIME?
 Extensão ao SMTP que permite a inclusão de outros conteúdos além de texto puro ASCII.  
 Base para interpretação de conteúdos convertidos em ASCII por outras aplicações, como o HTTP.  
 Um usuário pode anexar partes distintas a uma mensagem (arquivo executável, figura, p.e.) e o cliente (user agent) informará o tipo MIME do conteúdo.  
 O conteúdo é codificado como conteúdo ASCII puro e inserido no corpo da mensagem, devidamente delimitado e identificado.  
-
-### Explique o cliente-servidor no SMTP.
-- Clientes:  
-Através do SMTP Server solicitam o envio de mensagens do usuário e operam o acesso a caixas postais.  
-
-    Localmente: pine, mutt, elm e webmail.  
-    Remotamente: via POP3 ou IMAP, como Thunderbird, Outlook.  
-
-- Servidores:
-Encaminham mensagens:  
-Tornam-se clientes do mail server de destino, guardando uma cópia da mensagem até a recepção completa.
-Enviam apenas uma cópia da mensagem para cada host de destino (mesmo que ela se destine a vários usuários).
-		
-Recebem mensagens:  
-Armazenamento no mail box do usuário (destino).
-	
-A porta servidora do SMTP (conectada por clientes para encaminhamento ou por outros servidores) é a 25.  
-
-    Ex: servidores SMTP: sendmail, exim, postfix.  
-
-### Discuta a interação com um SMTP.
-O SMTP define um padrão para troca de mensagens entre clientes e servidores.  
-A interação básica se dá pela conexão do cliente à porta 25 do SMTP server.  
-Em seguida, o cliente pode iniciar uma conversa com o servidor, através dos comandos:  
-
-    HELO – pede para o SMTP server contatar o MTA de destino.
-    MAIL FROM: – informa a caixa postal de origem.
-    RCPT TO: – informa a caixa postal de destino.
-    DATA – indica início da mensagem e deve encerrar com um ponto final.
-    QUIT – encerra a conexão com o servidor.
 
 ### O que é POP3?
 Post Office Protocol.  
@@ -455,144 +312,92 @@ Originalmente definido para a solução do problema de acesso a caixas postais r
 
 > Implementação bem conhecida do POP3 server: Qpopper.  
 
-### Explique IMAP.
-Internet Message Access Protocol.  
-Usa a porta 143.  
-
-Oferece outros serviços para acesso às caixas postais.  
-Permite os modos de operação conectado e desconectado.  
-Aceita conexão de múltiplos clientes simultâneos à mesma caixa postal e consegue gerenciar múltiplas caixas de correio (folders) do usuário em um mesmo servidor.  
-Mantém informação de estado da mensagem no servidor.  
-
-### Explique CIFS e SMB.
-SMB/CIFS file sharing protocol.  
-Este esquema é o mecanismo padrão para compartilhamento	de arquivos do Windows.  
-
-- SMB:  
-Server message block.  
-O coração do CIFS.  
-
-- CIFS:  
-Alto nível: opera na camada Aplicação/Apresentação.  
-Clientes trocam mensagens com servidor a fim de acessarem recursos neste (através do SMB).  
-
-### Defina workgroup x domain.
-- Workgroup:  
-    Coleção de máquinas onde cada qual define sua própria segurança.  
-    Segurança descentralizada.  
-
-- Domain:  
-    Coleção de computadores para a qual a segurança é centralizada pelos Controladores de Domínio (Domain Controllers).  
-    Usuário entra uma única vez e tem acesso a todos os serviços autorizados naquela rede.  
-
-### O que é SAMBA? Quais são suas funcionalidades?
-Conjunto de ferramentas de código aberto que provê serviços de acesso a arquivos e impressoras em rede, para clientes SMB (Server Message Block).  
+### O que é SAMBA e CUPS? Quais suas funcionalidades?
+#### SAMBA:
+Conjunto de ferramentas de código aberto que provê serviços de acesso a arquivos e impressoras em rede, para clientes SMB (Server Message Block).
 	
-- Funcionalidades:  
-    serviços de arquivos e Impressão.  
-    autenticação e autorização.  
-    resolução de nomes.  
-    browsing (anúncio de serviços).  
-	
-- Portas:  
-    137 (netbios-ns): NETBIOS Name Service  
-    138 (netbios-dgm): NETBIOS Datagram Service  
-    139 (netbios-ssn): NETBIOS Session Service  
-    445 microsoft-ds Win2k+ Server Message Block  
-
-### Comente sobre SMBD e NMBD.
-Compõem o samba.  
-	
-- SMBD
-    Responsável pelos serviços de diretórios e impressão que serão vistos pelas máquinas Windows.  
-    Autenticação de “share mode” e “user mode”:
-
-        share mode: atribui uma senha para o diretório ou impressora.
-        user mode: cada usuário tem senha para o serviço.
-- NMBD
-    Resolução de nomes.  
-    Browsing.  
-    Gerenciamento e distribuição de listas de nomes NetBIOS.  
-
-### O que é CUPS? Quais as suas características?
+#### CUPS:
 Commmom Unix Printing System.  
-Proporciona um meio de impressão portátil e padronizado para os sistemas baseados em Unix.  
-	
-- Usa o IPP (internet printing protocol):  
-
-        Sistema de impressão completo, que suporta novas impressoras.
-        Gestão básica de trabalhos e filas de impressão.
-        Permite a integração com LPD, SMB e AppSocket.
-	
 Interface web para administração de impressoras e filas de impressão.  
-Usa a porta 631.  
-Permite a instalação de impressoras PDF, filtragem extensível de arquivos e interfaces backend de dispositivos.  
-Serviços de diretório de impressoras em rede e função de encriptação.  
+Proporciona um meio de impressão portátil e padronizado para os sistemas baseados em Unix.  
+Usa a porta 631.
+	
+#### Funcionalidades:
+- SAMBA:  
+    Serviços de arquivos e Impressão.  
+	Autenticação e autorização.  
+	Resolução de nomes.  
+	Browsing (anúncio de serviços).  
 
-## AULA X - SEGURANÇA EM REDES:
-### Quais são os requisitos de um sistema seguro?
-- Disponibilidade:  
-    O sistema deve funcionar adequadamente fornecendo recursos aos usuários autorizados sem degradação de acesso.
+- CUPS:  
+	Permite a instalação de impressoras PDF, filtragem extensível de arquivos e interfaces backend de dispositivos.  
+	Serviços de diretório de impressoras em rede e função de encriptação.  
 
-- Integridade:  
-    A informação deve permanecer intacta e inalterada por acidentes e ataques.
+## Aula X
+### Liste os requisitos e ameaças.
+#### Requisitos
+- Disponibilidade  
+    O sistema deve funcionar adequadamente fornecendo recursos aos usuários autorizados sem degradação de acesso.  
 
-- Confidência:  
-    A informação deve ser acessada somente por pessoas autorizadas para tal.
+- Integridade  
+    A informação deve permanecer intacta e inalterada por acidentes e ataques.  
 
-### Liste os 3 tipos de ameaça à informação.
+- Confidência  
+	A informação deve ser acessada somente por pessoas autorizadas para tal.  
+	
+#### Ameaças
 - Interceptação  
     Acesso não autorizado à informação ou sua cópia ilegal.  
     Ameaça ao requisito de CONFIDÊNCIA.  
 
 - Interrupção  
-    Quando a informação torna-se inacessível.  
-    Indisponibilidade de um serviço ou destruição dos dados.  
-    Compromete o requisito de DISPONIBILIDADE.  
+	Quando a informação torna-se inacessível.  
+	Indisponibilidade de um serviço ou destruição dos dados.  
+	Compromete o requisito de DISPONIBILIDADE.  
 
 - Modificação  
     Alteração não autorizada/especificada dos dados ou em serviços.  
     Em redes geralmente precedida pela interceptação.  
-    Fere o requisito de integridade.  
+    Fere o requisito de INTEGRIDADE.  
 
 - Fabricação/falsificação  
-    criação de dados ou de eventos que não deveriam existir.  
+    Criação de dados ou de eventos que não deveriam existir.  
 
-### O que é um sniffer?
+### Discuta os principais ataques.
+#### Sniffer  
 Monitor promíscuo que intercepta o tráfego de pacotes.  
 Atua em redes de difusão (broadcasting).  
-	
+
 Os conteúdos sem encriptação são obtidos facilmente pelo atacante principalmente para a obtenção de senhas.  
 
-### O que é um scanner?
+#### Scanner
 Submete pesquisas a um host (ou vários).  
 Objetivo de obter informações sobre o sistema como portas servidoras (aplicações) que estão operantes.  
-	
+
 - Comportamento comum:  
-	Realiza conexões ou envia pacotes de reconhecimento para as portas do sistema.
+    Realiza conexões ou envia pacotes de reconhecimento para as portas do sistema.  
 
-- Geralmente precede um probe (tentativa de acesso)  
-    Consiste normalmente do primeiro passo de um ataque (reconhecimento de área).
-
-### O que é uma probe?
+- Geralmente precede um probe (tentativa de acesso).  
+    Consiste normalmente do primeiro passo de um ataque (reconhecimento de área).  
+	
+#### Probe
 Tentativas sucessivas de acesso a aplicações.  
 Comportamento comum:  
 
 - Tentativas sucessivas de acesso às aplicações servidoras.  
 - São usadas senhas óbvias ou vulnerabilidades conhecidas dos serviços em execução.  
 - Obtenção de dados sobre versões das aplicações e do sistema operacional.  
+Uso de ferramentas e kits (exploits) prontos.  
 	
-> Uso de ferramentas e kits (exploits) prontos
+#### SYN Attack
+Explora uma deficiência no protocolo TCP.
+Procura consumir as conexões do servidor:
 
-### Explique SYN attack.
-Explora uma deficiência no protocolo TCP.  
-Procura consumir as conexões do servidor:  
+Solicitam inúmeras requisições SYN consecutivas.
+Não devolvem o ACK para o servidor.
+Servidor fica saturado de conexões pendentes e pode deixar de atender clientes.
 
-- Solicitam inúmeras requisições SYN consecutivas.
-- Não devolvem o ACK para o servidor.
-- Servidor fica saturado de conexões pendentes e pode deixar de atender clientes.
-
-### O que é DoS? E DDos?
+#### O que é DoS? E DDoS?
 - DoS:  
     Saturação da rede (“flood”) ou das conexões.  
     Normalmente são utilizados ataques SYN.  
@@ -602,21 +407,21 @@ Procura consumir as conexões do servidor:
 
 - DDoS:  
     Amplificação de um DoS.  
-    Scan em um grande número de hosts.   
+    Scan em um grande número de hosts.  
     Hosts e até redes inteiras ficam inacessíveis.  
     Comprometem um site, uma rede ou até grandes domínios.  
     Até centenas de daemons distribuídos originarão o ataque.  
     Invasão e instalação de ferramentas de ataque nos hosts.  
     Instalação de sniffers.  
     Envio dos dados coletados a um servidor central.  
-
-### O que é trojan e código malicioso?
+	
+#### Trojan / Malicious code
 São código ou conjunto de códigos que exploram falhas no ambiente do usuário como antivírus desatualizado, aplicativos vulneráveis e envolvem os usuários do sistema.  
 Propagação em grande escala (mutação).  
 Apresentam consequências graves.  
 Criação backdoors para o processo de propagação ou para futuro comprometimento do sistema.  
-
-### Explique a evolução dos códigos maliciosos.
+	
+#### Explique a evolução dos códigos maliciosos.
 - Backdoors:  
     Furos de aplicações ou instalados pelo usuário desavisado.  
     Abrem portas servidoras, permitindo acesso de fora.  
@@ -625,101 +430,13 @@ Criação backdoors para o processo de propagação ou para futuro comprometimen
     Uso de NAT:  
     Escondeu as portas servidoras das máquinas da Intranet.  
     O que motivou a evolução dos malwares para clientes.  
-		
+
     Firewall e proxy:  
     Os malwares clientes não podem mais acessar portas externas.  
     Os malwares passaram a comunicar por protocolos Web (HTTP).  
     Portanto, propagam-se com a ajuda dos usuários e se valem dos acessos que eles têm.  
 
-### Quais devem ser os incidentes a serem reportados?
-Alertas de acesso (ou tentativa) não autorizado a um sistema ou a seus dados.  
-Paralisação de serviço não desejada (DoS).  
-Uso não autorizado de um sistema para processamento ou armazenamento de dados.  
-Alterações no sistema (hardware, firmware ou características de software) sem conhecimento, instrução ou consentimento do proprietário.  
-	
-> Comunicação de ocorrências ao CERT.br  
-> Centro de Estudos, Resposta e Tratamento de Incidentes de Segurança no Brasil.  
-
-### Por que implementar uma política de segurança?
-Internet: não foi definida inicialmente para ser segura.
-Ausência de política = ausência de padronização.
-
-### Liste as técnicas de proteção.
-- Encriptação (criptografia):  
-	Confidência: mensagens cifradas, indecifráveis por terceiros.  
-	Integridade: assinaturas digitais para conferência.  
-
-- Autenticação:  
-	Usada para checar a identidade de um usuário ou sistema.  
-	Normalmente apoiada por conferência de senhas.  
-
-- Autorização:  
-	Estabelece as regras de acesso (permissões) ao sistema.  
-	Diferentes tipos de usuários podem ter perfis distintos de acesso.  
-
-### Explique auditoria e forense:
-- Auditoria:  
-	Avaliação dos efeitos das técnicas de proteção adotadas para um sistema.  
-	Geralmente, são verificados registros históricos (arquivos de log), que descrevem as atividades do sistema.  
-	
-- Forense:  
-	Análise dos danos e das consequências de um ataque ao sistema (invasão, vírus, ou utilização inadequada).  
-	Unidades de armazenamento são analisadas por ferramentas externas e não pelo próprio sistema da máquina.  
-	Objetivo de recuperar dados e a responsabilizar legalmente os envolvidos.  
-
-### O que é criptografia?
-É  a arte e a ciência de esconder o objeto de uma comunicação de uma audiência não pretendida.  
-	
-	Permitem decifrar:
-		Chave simétrica:
-			+ Criptografia bidirecional.
-			+ Melhor desempenho.
-			- Como enviar a chave?
-			
-			Ex: DES, 3DES, AES, Blowfish.
-			
-			C = Eke(P)
-			P = Dkd(C)
-			Ke = Kd = Ks
-			
-		Chave assimétrica:
-			Par de chaves único.
-			Publicar com certificado.
-				Confidência: Ke+ (Kd-)
-				Integridade: Kd+ (Ke-)
-			
-			+ Impossível obter o par, a partir de uma.
-			+ Publicação de uma das chaves.
-			- Criptografia unidirecional.
-			- Pior desempenho.
-			
-			Ex: RSA, elamal, difle-helman
-			
-			Ke != Kd
-
-	Não permitem decifrar:
-		Hashs criptográficos.
-		"caminho único"
-		Hashs - digetores
-
-		Ex: MD3, MD5, SHA.
-
-### O que são algoritmos de hash?
-Conhecidos como digestores.  
-Algoritmos de caminho único (impossível fazer caminho inverso).  
-Dada uma mensagem 'm' de qualquer tamanho obtém-se o código 'f' de tamanho fixo para qualquer 'm' através de uma função 'H':  
-
-	h = H(m).
-
-Ex: md5, sha.  
-
-### O que é assinatura digital?
-A assinatura digital é um conteúdo cifrado transmitido junto com a mensagem para sua conferência.  
-É criada pela chave privada de uma pessoa para permitir a autenticidade (integridade).  
-Só pode ser verificada/decifrada pela chave pública parceira.  
-Geralmente combinado com hashing criptográfico para reduzir seu tamanho.  
-
-### Defina firewall.
+### O que é firewall?
 Equipamento (ou sistema) que permite o controle de segurança na comunicação entre duas ou mais redes.  
 Geralmente atua como um filtro, permitindo pacotes passarem, ou não, de acordo com regras.  
 
@@ -728,12 +445,70 @@ Abordagens clássicas de configuração:
     O que não é expressamente proibido é permitido.
     O que não é expressamente permitido é proibido.
 
-### Liste algumas implementações de firewalls
-Windows: ZoneAlarm, Norton Internet Security.  
-Linux: iptables, IPFilter.  
+### Explique criptografia, seus algoritmos, para que serve e para quais requisitos servem?
+É a arte e a ciência de esconder o objeto de uma comunicação de uma audiência não pretendida.  
+	
+Podem ser decifradas:  
 
-### Defina Sistema Detector de Intrusão. Dê um exemplo.
-Também conhecidos como IDS, são softwares que reconheces atividades suspeitas e não previstas.  
-Permite a configuração de ações reativas automáticas.  
+- Criptografia simétrica:  
+	A mesma chave serve tanto para criptografar quanto para descriptografar.  
+	Criptografia bidirecional e melhor desempenho.  
+	Maior preocupação é como transmitir a chave sem que seja exposta/vazada ao público.
+			
+	    Ex: AES, DES, 3DES
+	
+- Criptografia assimétrica:
+	Um par de chaves é criado. A chave privada serve para criptografar enquanto a chave pública para descriptografar.
+	Impossível obter o par todo a partir de uma das metades.
+	A chave pública pode ser publicada.
+	Criptografia unidirecional.
+	Pior desempenho.
+			
+	    EX: RSA, ElGamal, Diffie-Hellman
+	
+- Não podem ser decifradas:  
+    Hashs criptográficos.  
+	Conhecidos como digestores.  
+	Algoritmos de caminho único (impossível fazer caminho inverso).  
+	Dada uma mensagem ‘m’ de qualquer tamanho obtém-se o código ‘f’ de tamanho fixo para qualquer ‘m’ através de uma função ‘H’:  
+	
+	> h = H(m).
 
-Um exemplo gratuito é o Snort.
+	    Ex: MD3, MD5, SHA.  
+
+Servem para os requisitos de confidência.  
+
+### O que é assinatura digital?
+A assinatura digital é um conteúdo cifrado transmitido junto com a mensagem para sua conferência.  
+É criada pela chave privada de uma pessoa para permitir a autenticidade (integridade).  
+Só pode ser verificada/decifrada pela chave pública parceira.  
+Geralmente combinado com hashing criptográfico para reduzir seu tamanho.  
+
+## Aula XI
+### O que é VPN / túnel VPN?
+Virtual Private Network.  
+	
+Forma de comunicação privada, através de canais públicos.  
+Criadas através da Internet ou outras redes públicas ou privadas para transferência de informações, de modo seguro, entre redes corporativas ou usuários remotos.  
+Criptografia é usada para garantir a confidência e a integridade.  
+Pode interligar duas ou mais redes privadas, via Internet ou através de um link públicos, através de um túnel.  
+
+Tunelamento:  
+- Pacotes de dados são transmitidos na rede pública (Internet) em um túnel privado que simula uma conexão ponto-a-ponto.  
+
+Protocolo de tunelamento:  
+- Encapsula o protocolo a ser transportado.  
+- Seu cabeçalho fornece o destino (outra extremidade do túnel).  
+
+### Explique túnel voluntário e túnel compulsório.
+Túnel voluntário:  
+- VPN entre duas máquinas.  
+- O computador do usuário funciona como uma das extremidades do túnel e como cliente do túnel.  
+- O túnel pode estar disponível ou ser criado sob demanda.  
+- Os pontos finais sabem da existência do túnel.  
+	
+Túnel compulsório:  
+- VPN entre duas redes.  
+- O computador do usuário não funciona como extremidade do túnel, então desconhece sua existência.  
+-  O roteador da rede (de um provedor) identifica que tal destino é via VPN apenas ao se comunicar.
+-  Então encaminha pelo túnel, de forma transparente.
