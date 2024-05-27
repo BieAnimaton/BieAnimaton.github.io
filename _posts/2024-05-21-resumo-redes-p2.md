@@ -48,7 +48,7 @@ toc: true
 ### O que UDP? Explique seu header.
 Serviço de datagrama semelhante ao IP.  
 Não orientado à conexão e não confiável.  
-Não reordena as mensagens antes de entrega à aplicação e não garante a chegada de todas as mensagens.  
+Não reordena as mensagens antes de entregar à aplicação e não garante a chegada de todas as mensagens.  
 	
 o UDP é muito simples e define apenas:  
 - 32 bits totais.
