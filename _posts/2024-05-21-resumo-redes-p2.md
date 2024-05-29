@@ -46,9 +46,9 @@ toc: true
 
 ## AULA VII
 ### O que UDP? Explique seu header.
-Serviço de datagrama semelhante ao IP.  
-Não orientado à conexão e não confiável.  
-Não reordena as mensagens antes de entregar à aplicação e não garante a chegada de todas as mensagens.  
+É um serviço de datagrama semelhante ao IP.  
+Não é orientado à conexão e nem confiável.  
+Não reordena as mensagens antes de entregar à aplicação e nem garante a chegada de todas as mensagens.  
 	
 o UDP é muito simples e define apenas:  
 - 32 bits totais.
@@ -60,8 +60,8 @@ o UDP é muito simples e define apenas:
 
 ### O que TCP? Explique seu header.
 É o principal protocolo de transporte da internet.  
-Oferece serviço baseado em stream (fluxo), orientado à conexão e confiável.  
-Realiza a transmissão ordenada e confiável através de uma conexão preestabecelida.  
+Oferece um serviço baseado em stream (fluxo), orientado à conexão e confiável.  
+Realiza a transmissão ordenada e confiável através de uma conexão preestabelecida.  
 Essa conexão é mantida durante o serviço e encerrada no final.  
 	
 O header do TCP é muito mais completo:  
@@ -109,14 +109,14 @@ O UDP é mais adequado para transferir um fluxo constante de dados ao vivo, perm
 - sistemas de nomes de domínio (que traduzem nomes de domínio em endereços de IP).
 
 ### O que é paradigma cliente-servidor?
-Aplicações em rede realionam-se em pares: cliente e servidor.  
+Aplicações em rede relacionam-se em pares: cliente e servidor.  
 
 O servidor (papel passivo) aguarda a solicitação de conexões e serviços de outras aplicações.  
 O cliente (papel ativo) solicita conexões e serviços.  
 
 ### Defina o comportamento cliente-servidor. Quais as principais interações?
 #### Sevidor
-Aguarda a mensagem com requisição (com dados).  
+Aguarda a mensagem com requisição (pode conter dados).  
 Executa o serviço solicitado.  
 Envia a mensagem de resposta (pode conter dados).  
 
@@ -131,8 +131,11 @@ Servidores podem se tornar clientes de outros servidores.
 Host pode executar várias aplicações clientes e/ou servidores.  
 
 ### O que é comum tanto no TCP quando no UDP?
-Porta: identificador único local (número de 16 bits) que descreve e registra as aplicações em execução, atendidas pela pilha TCP/IP.  
-Multiplexação: várias aplicações clientes/servidores podem compartilhar os serviços de uma  mesma entidade de transporte.  
+#### Porta  
+Identificador único local (número de 16 bits) que descreve e registra as aplicações em execução, atendidas pela pilha TCP/IP.  
+
+#### Multiplexação
+Várias aplicações clientes/servidores podem compartilhar os serviços de uma  mesma entidade de transporte.  
 	
 Servidor usa a porta para se registrar localmente.  
 O cliente pode informar a porta à camada de transporte.  
@@ -165,14 +168,20 @@ Descreve quais bytes do stream podem ser enviados.
 O Destino especifica o tamanho da janela (window advertisement) e envia uma confirmação para o próximo byte que pode ser enviado e o número de bytes que pode aceitar do fluxo atual, transportado como ACK.  
 
 ### Controle de congestionamento.
-É um controle para avisar sobre o congestionamento de dados na rede através de uma janela de congestionamento. Inicialmente tal janela tem um tamanho mínimo para indicar o volume total de mensagens que pode ser encaminhadas à rede antes de receber uma confirmação (mensagens pendentes). A janela é aumentada gradativamente à medida que o RTT médio das confirmações diminui e vice-versa. Quando detectado um congestionamento (por timeout da confirmação), a janela é reduzida drasticamente, mas pode voltar a crescer com o passar do tempo.  
+É um controle para avisar sobre o congestionamento de dados na rede através de uma janela de congestionamento.  
+
+Inicialmente tal janela tem um tamanho mínimo para indicar o volume total de mensagens que pode ser encaminhadas à rede antes de receber uma confirmação (mensagens pendentes). A janela é aumentada gradativamente à medida que o RTT médio das confirmações diminui e vice-versa.  
+
+Quando detectado um congestionamento (por timeout da confirmação), a janela é reduzida drasticamente, mas pode voltar a crescer com o passar do tempo.  
 
 ## Aula VIII
 ### Compare Telnet com SSH.
 #### Telnet
-Serviço de emulação de terminal virtual, sobre uma conexão TCP, através da porta 23.   
+Serviço de emulação de terminal virtual, sobre uma conexão TCP, através da porta 23.  
+
 Terminais virtuais são utilizados como formas de acesso a sistemas com processamento centralizado.  
 Através de um NVT (Network Virtual Terminal), permite que o usuário realize uma sessão de terminal virtual e a emulação do cliente se comunica com um processo servidor (telnetd) através da Internet.  
+
 Cada caractere digitado pelo usuário é encaminhado ao servidor e ecoado de volta ao cliente, para ser exibido na tela.  
 	
 #### Problema do Telnet
@@ -182,6 +191,7 @@ Os dados são facilmente comprometidos pelos sniffers.
 #### SSH
 Secure shell.  
 Implementação segura da emulação de terminal virtual através da porta 22.  
+
 Apresenta mecanismos para autenticação segura de usuários, confirmação de integridade de mensagens e encriptação de conteúdo (RSA de chaves assiméticas, DES, 3DES, AES).  
 
 Pode dar suporte à comunicação segura de outros tipos de aplicações através de um canal (túnel) seguro.  
@@ -229,8 +239,10 @@ A hierarquia do DNS define domínios de alto nível (TLDs - Top level domains) a
 
 ### Explique o processo de resolução DNS.
 Se a solicitação contém um nome gerenciado pelo servidor receptor, este responde diretamente.  
+
 Caso contrário, a solicitação deve ser encaminhada ao servidor autoritativo apropriado, através de uma busca iterativa.  
 Um DNS pode atuar como resolver (cliente) para evitar que todas as requisições sejam feitas diretamente à autoridade.  
+
 O servidor DNS se torna cliente do servidor autoritativo (e da hierarquia) ao realizar a solicitação pela resolução de nomes no lugar do cliente origem.  
 
 ### Explique um resolver (interação c/ cliente).
@@ -298,8 +310,10 @@ Identificação de uma caixa postal inclui o nome do usuário (login name) e o n
 
 ### O que é MIME?
 Extensão ao SMTP que permite a inclusão de outros conteúdos além de texto puro ASCII.  
+
 Base para interpretação de conteúdos convertidos em ASCII por outras aplicações, como o HTTP.  
 Um usuário pode anexar partes distintas a uma mensagem (arquivo executável, figura, p.e.) e o cliente (user agent) informará o tipo MIME do conteúdo.  
+
 O conteúdo é codificado como conteúdo ASCII puro e inserido no corpo da mensagem, devidamente delimitado e identificado.  
 
 ### O que é POP3?
@@ -308,19 +322,21 @@ Usa a porta 110.
 
 A caixa postal de um usuário pode ser armazenada em uma máquina diferente de onde é executado o cliente (user agent).  
 Permite a listagem, o download e a remoção de mensagens de uma caixa postal remota.  
+
 Originalmente definido para a solução do problema de acesso a caixas postais remotas usando o serviço dial-up (dado o problema com o custo de se manter o acesso contínuo).  
 
 > Implementação bem conhecida do POP3 server: Qpopper.  
 
 ### O que é SAMBA e CUPS? Quais suas funcionalidades?
 #### SAMBA
-Conjunto de ferramentas de código aberto que provê serviços de acesso a arquivos e impressoras em rede, para clientes SMB (Server Message Block).
+Conjunto de ferramentas de código aberto que provê serviços de acesso a arquivos e impressoras em rede, para clientes SMB (Server Message Block).  
+Usa a porta 445.  
 	
 #### CUPS
 Commmom Unix Printing System.  
+Usa a porta 631.  
 Interface web para administração de impressoras e filas de impressão.  
 Proporciona um meio de impressão portátil e padronizado para os sistemas baseados em Unix.  
-Usa a porta 631.
 	
 #### Funcionalidades
 - SAMBA:  
@@ -416,22 +432,23 @@ Servidor fica saturado de conexões pendentes e pode deixar de atender clientes.
     Envio dos dados coletados a um servidor central.  
 	
 #### Trojan / Malicious code
-São código ou conjunto de códigos que exploram falhas no ambiente do usuário como antivírus desatualizado, aplicativos vulneráveis e envolvem os usuários do sistema.  
+São códigos ou conjunto de códigos que exploram falhas no ambiente do usuário como antivírus desatualizado, aplicativos vulneráveis e envolvem os usuários do sistema.  
+
 Propagação em grande escala (mutação).  
 Apresentam consequências graves.  
 Criação backdoors para o processo de propagação ou para futuro comprometimento do sistema.  
 	
 #### Explique a evolução dos códigos maliciosos.
-- Backdoors:  
-    Furos de aplicações ou instalados pelo usuário desavisado.  
-    Abrem portas servidoras, permitindo acesso de fora.  
+#### Backdoors:  
+Furos de aplicações ou instalados pelo usuário desavisado.  
+Abrem portas servidoras, permitindo acesso de fora.  
 
-- Malwares:  
-    Uso de NAT:  
+#### Malwares:  
+- Uso de NAT:  
     Escondeu as portas servidoras das máquinas da Intranet.  
     O que motivou a evolução dos malwares para clientes.  
 
-    Firewall e proxy:  
+- Firewall e proxy:  
     Os malwares clientes não podem mais acessar portas externas.  
     Os malwares passaram a comunicar por protocolos Web (HTTP).  
     Portanto, propagam-se com a ajuda dos usuários e se valem dos acessos que eles têm.  
@@ -453,16 +470,16 @@ Podem ser decifradas:
 - Criptografia simétrica:  
 	A mesma chave serve tanto para criptografar quanto para descriptografar.  
 	Criptografia bidirecional e melhor desempenho.  
-	Maior preocupação é como transmitir a chave sem que seja exposta/vazada ao público.
+	Maior preocupação é como transmitir a chave sem que seja exposta/vazada ao público.  
 			
 	    Ex: AES, DES, 3DES
 	
-- Criptografia assimétrica:
-	Um par de chaves é criado. A chave privada serve para criptografar enquanto a chave pública para descriptografar.
-	Impossível obter o par todo a partir de uma das metades.
-	A chave pública pode ser publicada.
-	Criptografia unidirecional.
-	Pior desempenho.
+- Criptografia assimétrica:  
+	Um par de chaves é criado. A chave privada serve para criptografar enquanto a chave pública para descriptografar.  
+	Impossível obter o par todo a partir de uma das metades.  
+	A chave pública pode ser publicada.  
+	Criptografia unidirecional.  
+	Pior desempenho.  
 			
 	    EX: RSA, ElGamal, Diffie-Hellman
 	
@@ -476,10 +493,11 @@ Podem ser decifradas:
 
 	    Ex: MD3, MD5, SHA.  
 
-Servem para os requisitos de confidência.  
+Servem para os requisitos de confidência e integridade.  
 
 ### O que é assinatura digital?
 A assinatura digital é um conteúdo cifrado transmitido junto com a mensagem para sua conferência.  
+
 É criada pela chave privada de uma pessoa para permitir a autenticidade (integridade).  
 Só pode ser verificada/decifrada pela chave pública parceira.  
 Geralmente combinado com hashing criptográfico para reduzir seu tamanho.  
@@ -487,10 +505,10 @@ Geralmente combinado com hashing criptográfico para reduzir seu tamanho.
 ## Aula XI
 ### O que é VPN / túnel VPN?
 Virtual Private Network.  
-	
 Forma de comunicação privada, através de canais públicos.  
+
 Criadas através da Internet ou outras redes públicas ou privadas para transferência de informações, de modo seguro, entre redes corporativas ou usuários remotos.  
-Criptografia é usada para garantir a confidência e a integridade.  
+A criptografia é usada para garantir a confidência e a integridade.  
 Pode interligar duas ou mais redes privadas, via Internet ou através de um link públicos, através de um túnel.  
 
 Tunelamento:  
