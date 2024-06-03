@@ -45,7 +45,7 @@ toc: true
 # Resumo para P2 de Redes de Computadores.
 
 ## AULA VII
-### O que UDP? Explique seu header.
+### O que é UDP? Explique seu header.
 É um serviço de datagrama semelhante ao IP.  
 Não é orientado à conexão e nem confiável.  
 Não reordena as mensagens antes de entregar à aplicação e nem garante a chegada de todas as mensagens.  
@@ -58,7 +58,7 @@ o UDP é muito simples e define apenas:
 
 > A maior vantagem do UDP é ser um protocolo simples com poucos campos no header (pouco overhead).
 
-### O que TCP? Explique seu header.
+### O que é TCP? Explique seu header.
 É o principal protocolo de transporte da internet.  
 Oferece um serviço baseado em stream (fluxo), orientado à conexão e confiável.  
 Realiza a transmissão ordenada e confiável através de uma conexão preestabelecida.  
@@ -88,7 +88,7 @@ SYN: é usado para solicitar/aceitar o estabelecimento de uma conexão.
 FIN: é usado para solicitar/aceitar o encerramento de uma conexão.  
 Window size: indica o tamanho da janela a ser utilizada no controle de fluxo através do algoritmo de janela deslizante.  
 
-### Dê exemplos de aplicabilidades de TCP ou UDP e explique.
+### Dê exemplos de aplicabilidades do TCP e do UDP e explique.
 #### Aplicações TCP:
 É o protocolo a se escolher para confiabilidade e qualidade máximas. Pode não ser o mais rápido, mas entrega os dados sem erro.  
 	
@@ -130,7 +130,7 @@ Cliente pode acessar vários servidores de um mesmo serviço.
 Servidores podem se tornar clientes de outros servidores.  
 Host pode executar várias aplicações clientes e/ou servidores.  
 
-### O que é comum tanto no TCP quando no UDP?
+### O que é comum tanto no TCP quanto no UDP?
 #### Porta  
 Identificador único local (número de 16 bits) que descreve e registra as aplicações em execução, atendidas pela pilha TCP/IP.  
 
@@ -146,7 +146,7 @@ Técnica three-way handshake.
 - O servidor aguarda uma conexão em estado de LISTENING e deve ter executado uma chamada bloqueante de um ACCEPT.
 - O cliente pode solicitar uma conexão (CONNECT), que enviará um TCP com os flags SYN=1 e ACK=0
 - O servidor checará se a porta escolhida esta aceitando conexões, caso contrário envia uma resposta com o flag RST=1, rejeitando a conexão.
-- Caso dê certo, ela aceita a conexão, através de uma confirmação (acknowledgment), com os flags SYN=1 e ACK=1.
+- Caso dê certo, ele aceita a conexão, através de uma confirmação (acknowledgment), com os flags SYN=1 e ACK=1.
 - O processo de encerramento de uma conexão é semelhante.
 
 ### Explique o processo de confirmação TCP.
@@ -154,17 +154,16 @@ O destino envia uma mensagem de controle com Confirmação (Acknowledgment - ACK
 A origem inicializa o relógio, se o tempo expira antes da confirmação, ele inicia o relógio e retransmite.  
 
 ### Explique o tempo de expiração TCP.
-É o tempo dado para entregar o pacote até sua perda. Deve ser diferente para cada conexão e inicializado dinamicamente.  
+É o tempo dado para entregar o pacote até sua perda e deve ser diferente para cada conexão e inicializado dinamicamente.  
 Hosts na mesma LAN deve ser menores que entre hosts entre 20 hops.  
-Tempo de entrega na Internet muda dinamicamente, tempo de expiração deve se adequar.  
+O tempo de entrega na Internet muda dinamicamente e o tempo de expiração deve se adequar.  
 	
 O tempo expiração é baseado em RTT (Round Trip Time).  
 - Emissor não pode prever o RTT antes de uma transmissão.  
 - Então define o RTO (Retransmission Timeout) baseado em um prévio RTT.  
 
 ### Comente sobre o gerenciamento de janela.
-O TCP usa janela deslizante para controle de fluxo.  
-Descreve quais bytes do stream podem ser enviados.  
+O TCP usa janela deslizante para controle de fluxo e descreve quais bytes do stream podem ser enviados.  
 O Destino especifica o tamanho da janela (window advertisement) e envia uma confirmação para o próximo byte que pode ser enviado e o número de bytes que pode aceitar do fluxo atual, transportado como ACK.  
 
 ### Controle de congestionamento.
