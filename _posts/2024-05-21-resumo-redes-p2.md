@@ -164,12 +164,12 @@ O tempo expiração é baseado em RTT (Round Trip Time).
 
 ### Comente sobre o gerenciamento de janela.
 O TCP usa janela deslizante para controle de fluxo e descreve quais bytes do stream podem ser enviados.  
-O Destino especifica o tamanho da janela (window advertisement) e envia uma confirmação para o próximo byte que pode ser enviado e o número de bytes que pode aceitar do fluxo atual, transportado como ACK.  
+O Destino especifica o tamanho da janela (window advertisement) e envia uma confirmação para o próximo byte que pode ser enviado e o número de bytes que pode aceitar no fluxo atual, transportado como ACK.  
 
 ### Controle de congestionamento.
 É um controle para avisar sobre o congestionamento de dados na rede através de uma janela de congestionamento.  
 
-Inicialmente tal janela tem um tamanho mínimo para indicar o volume total de mensagens que pode ser encaminhadas à rede antes de receber uma confirmação (mensagens pendentes). A janela é aumentada gradativamente à medida que o RTT médio das confirmações diminui e vice-versa.  
+Inicialmente a janela tem um tamanho mínimo para indicar o volume total de mensagens que podem ser encaminhadas à rede antes de receber uma confirmação (mensagens pendentes). A janela aumenta gradativamente à medida que o RTT médio das confirmações diminui e vice-versa.  
 
 Quando detectado um congestionamento (por timeout da confirmação), a janela é reduzida drasticamente, mas pode voltar a crescer com o passar do tempo.  
 
