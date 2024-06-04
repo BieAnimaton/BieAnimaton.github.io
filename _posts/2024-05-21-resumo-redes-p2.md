@@ -502,16 +502,7 @@ Geralmente combinado com hashing criptográfico para reduzir seu tamanho.
 Virtual Private Network.  
 Forma de comunicação privada, através de canais públicos.  
 
-Criadas através da Internet ou outras redes públicas ou privadas para transferência de informações, de modo seguro, entre redes corporativas ou usuários remotos.  
-A criptografia é usada para garantir a CONFIDÊNCIA e a INTEGRIDADE.  
-Pode interligar duas ou mais redes privadas, via Internet ou através de um link públicos, através de um túnel.  
-
-Tunelamento:  
-- Pacotes de dados são transmitidos na rede pública (Internet) em um túnel privado que simula uma conexão ponto-a-ponto.  
-
-Protocolo de tunelamento:  
-- Encapsula o protocolo a ser transportado.  
-- Seu cabeçalho fornece o destino (outra extremidade do túnel).  
+As redes privadas virtuais são conexões criadas através da Internet ou através de redes públicas/privadas para a transferência de informações, de modo seguro, entre redes corporativas ou usuários remotos. Apresentam criptografia e interligam duas ou mais redes privadas através de um túnel via internet ou link público. 
 
 ### Explique túnel voluntário e túnel compulsório.
 Túnel voluntário:  
