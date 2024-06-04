@@ -403,11 +403,10 @@ Comportamento comum:
 Uso de ferramentas e kits (exploits) prontos.  
 	
 #### SYN Attack
-Explora uma deficiência no protocolo TCP.
-Procura consumir as conexões do servidor:
+Explora uma deficiência no protocolo TCP.  
 
-Solicitam inúmeras requisições SYN consecutivas, porém não devolvem o ACK.
-Servidor fica saturado de conexões pendentes e pode deixar de atender clientes.
+Solicitam inúmeras requisições SYN consecutivas, porém não devolvem o ACK.  
+O servidor fica saturado de conexões pendentes e pode deixar de atender clientes.  
 
 #### O que é DoS? E DDoS?
 - DoS:  
