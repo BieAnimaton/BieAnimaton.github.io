@@ -155,7 +155,6 @@ A origem inicializa o relógio, se o tempo expira antes da confirmação, ele in
 
 ### Explique o tempo de expiração TCP.
 É o tempo dado para entregar o pacote até sua perda e deve ser diferente para cada conexão e inicializado dinamicamente.  
-Hosts na mesma LAN deve ser menores que entre hosts entre 20 hops.  
 O tempo de entrega na Internet muda dinamicamente e o tempo de expiração deve se adequar.  
 	
 O tempo expiração é baseado em RTT (Round Trip Time).  
@@ -178,10 +177,9 @@ Quando detectado um congestionamento (por timeout da confirmação), a janela é
 #### Telnet
 Serviço de emulação de terminal virtual, sobre uma conexão TCP, através da porta 23.  
 
-Terminais virtuais são utilizados como formas de acesso a sistemas com processamento centralizado.  
 Através de um NVT (Network Virtual Terminal), permite que o usuário realize uma sessão de terminal virtual e a emulação do cliente se comunica com um processo servidor (telnetd) através da Internet.  
 
-Cada caractere digitado pelo usuário é encaminhado ao servidor e ecoado de volta ao cliente, para ser exibido na tela.  
+Cada caractere digitado pelo usuário é encaminhado ao servidor e ecoado de volta para ser exibido na tela.  
 	
 #### Problema do Telnet
 A segurança, pois os dados trocados durante a sessão de um terminal são transmitidos em texto plano (sem encriptação).  
@@ -220,8 +218,8 @@ O DNS provê a tradução dos IPs para nomes.
 	
 FQDN:  
 Fully-Qualified Domain Name.  São os nomes completos compostos por sequências de alfanuméricos separados pontos:  
-- parte mais à esquerda: nome do host.
-- parte da direita: domínio (e sua hierarquia).
+- parte mais à esquerda: nome do host.  
+- parte da direita: domínio (e sua hierarquia).  
 
 ### Comente a hierarquia DNS.
 A hierarquia do DNS define domínios de alto nível (TLDs - Top level domains) através de uma autoridade global (InterNIC), classificados como:  
@@ -290,10 +288,10 @@ Atua normalmente como um cache para rede local.
 
 Passos:
 - Clientes solicitam todos os objetos hipermídia ao servidor proxy.
-- O servidor proxy intermedia a comunicação com o servidor Web e obtém o recurso solicitado.
-- A seguir, armazena uma cópia do mesmo, associando a sua identificação (URL) e o seu timestamp.
+- O servidor proxy intermedia a comunicação com o servidor web e obtém o recurso solicitado.
+- Armazena uma cópia do mesmo e associa a sua identificação (URL) e o seu timestamp.
 - O recurso então é enviado ao cliente que solicitou.
-- Quando ocorrer a próxima solicitação do mesmo recurso, o servidor proxy pode decidir por encaminhar a cópia que mantém em cache, evitando assim um novo contato com o servidor Web.
+- Quando ocorrer a próxima solicitação do mesmo recurso, o servidor proxy pode decidir por encaminhar a cópia que mantém em cache, evitando um novo contato com o servidor web.
 
 ## Aula IX
 ### O que é SMTP?
@@ -304,14 +302,14 @@ O funcionamento básico consiste em enviar mensagens para caixas postais (mail b
 - Um cliente pode também efetuar encaminhamento das mensagens através do servidor (MTA – Message Transfer Agent).  
 - As mensagens recebidas de outros MTAs são armazenadas nas caixas postais dos usuários.  
 	
-Identificação de uma caixa postal inclui o nome do usuário (login name) e o nome do host onde se localiza.  
+A identificação de uma caixa postal inclui o nome do usuário (login name) e o nome do host onde se localiza.  
 > formato: login_name@host_name 
 
 ### O que é MIME?
 Extensão ao SMTP que permite a inclusão de outros conteúdos além de texto puro ASCII.  
 
 Base para interpretação de conteúdos convertidos em ASCII por outras aplicações, como o HTTP.  
-Um usuário pode anexar partes distintas a uma mensagem (arquivo executável, figura, p.e.) e o cliente (user agent) informará o tipo MIME do conteúdo.  
+Um usuário pode anexar partes distintas a uma mensagem (arquivo executável, figura) e o cliente (user agent) informará o tipo MIME do conteúdo.  
 
 O conteúdo é codificado como conteúdo ASCII puro e inserido no corpo da mensagem, devidamente delimitado e identificado.  
 
@@ -408,8 +406,7 @@ Uso de ferramentas e kits (exploits) prontos.
 Explora uma deficiência no protocolo TCP.
 Procura consumir as conexões do servidor:
 
-Solicitam inúmeras requisições SYN consecutivas.
-Não devolvem o ACK para o servidor.
+Solicitam inúmeras requisições SYN consecutivas, porém não devolvem o ACK.
 Servidor fica saturado de conexões pendentes e pode deixar de atender clientes.
 
 #### O que é DoS? E DDoS?
@@ -433,9 +430,8 @@ Servidor fica saturado de conexões pendentes e pode deixar de atender clientes.
 #### Trojan / Malicious code
 São códigos ou conjunto de códigos que exploram falhas no ambiente do usuário como antivírus desatualizado, aplicativos vulneráveis e envolvem os usuários do sistema.  
 
-Propagação em grande escala (mutação).  
 Apresentam consequências graves.  
-Criação backdoors para o processo de propagação ou para futuro comprometimento do sistema.  
+Criação backdoors para o processo de propagação em grande escala (mutação) ou para futuro comprometimento do sistema.  
 	
 #### Explique a evolução dos códigos maliciosos.
 #### Backdoors:  
@@ -463,7 +459,7 @@ Abordagens clássicas de configuração:
 
 ### Explique criptografia, seus algoritmos, para que serve e para quais requisitos servem?
 É a arte e a ciência de esconder o objeto de uma comunicação de uma audiência não pretendida.  
-	
+
 Podem ser decifradas:  
 
 - Criptografia simétrica:  
@@ -482,22 +478,23 @@ Podem ser decifradas:
 			
 	    EX: RSA, ElGamal, Diffie-Hellman
 	
-- Não podem ser decifradas:  
-    Hashs criptográficos.  
-	Conhecidos como digestores.  
-	Algoritmos de caminho único (impossível fazer caminho inverso).  
-	Dada uma mensagem ‘m’ de qualquer tamanho obtém-se o código ‘f’ de tamanho fixo para qualquer ‘m’ através de uma função ‘H’:  
-	
+Não podem ser decifradas:  
+
+- Hashs criptográficos.  
+    Conhecidos como digestores.  
+    Algoritmos de caminho único (impossível fazer caminho inverso).  
+    Dada uma mensagem ‘m’ de qualquer tamanho obtém-se o código ‘f’ de tamanho fixo para qualquer ‘m’ através de uma função ‘H’:  
+
 	> h = H(m).
 
 	    Ex: MD3, MD5, SHA.  
 
-Servem para os requisitos de confidência e integridade.  
+Servem para os requisitos de CONFIDÊNCIA e INTEGRIDADE.  
 
 ### O que é assinatura digital?
 A assinatura digital é um conteúdo cifrado transmitido junto com a mensagem para sua conferência.  
 
-É criada pela chave privada de uma pessoa para permitir a autenticidade (integridade).  
+É criada pela chave privada de uma pessoa para permitir a autenticidade (INTEGRIDADE).  
 Só pode ser verificada/decifrada pela chave pública parceira.  
 Geralmente combinado com hashing criptográfico para reduzir seu tamanho.  
 
@@ -507,7 +504,7 @@ Virtual Private Network.
 Forma de comunicação privada, através de canais públicos.  
 
 Criadas através da Internet ou outras redes públicas ou privadas para transferência de informações, de modo seguro, entre redes corporativas ou usuários remotos.  
-A criptografia é usada para garantir a confidência e a integridade.  
+A criptografia é usada para garantir a CONFIDÊNCIA e a INTEGRIDADE.  
 Pode interligar duas ou mais redes privadas, via Internet ou através de um link públicos, através de um túnel.  
 
 Tunelamento:  
