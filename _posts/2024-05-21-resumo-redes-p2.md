@@ -413,7 +413,7 @@ O servidor fica saturado de conexões pendentes e pode deixar de atender cliente
     Saturação da rede (“flood”) ou das conexões.  
     Normalmente são utilizados ataques SYN.  
     Interrompe serviços e comunicações.  
-    Compromete o requisito de disponibilidade.  
+    Compromete o requisito de DISPONIBILIDADE.  
     Difícil de se rastrear (origens são falsificadas - IP spoofing).  
 
 - DDoS:  
