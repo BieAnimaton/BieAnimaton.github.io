@@ -243,20 +243,7 @@ Um DNS pode atuar como resolver (cliente) para evitar que todas as requisições
 O servidor DNS se torna cliente do servidor autoritativo (e da hierarquia) ao realizar a solicitação pela resolução de nomes no lugar do cliente origem.  
 
 ### Explique um resolver (interação c/ cliente).
-O resolver é um cliente qualquer que deseja acessar um site.  
-
-Envia o hostname para o servidos DNS através do DNS request.  
-Um DNS pode atuar como resolver (cliente) para evitar que todas as requisições sejam feitas diretamente à autoridade.  
-
-- DNS request:  
-    Contém o nome a ser resolvido.  
-    Encaminhada por um resolver (cliente do serviço).  
-
-O servidor DNS procura o IP referente ao hostname e retorna DNS reply.
-
-- DNS reply:  
-    Contém o endereço IP para o nome solicitado.  
-    Encaminhada pelo servidor DNS (autoridade pela zona do registro).  
+DNS resolver é associado ao servidor local, que fará o cache da resolução, pesquisando na hierarquia de zonas de autoridade.  
 
 ### O que é HTTP? Quais seus métodos?
 Protocolo definido para a comunicação entre aplicações Web.  
