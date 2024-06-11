@@ -75,12 +75,12 @@ O header do TCP é muito mais completo:
 
 ### Explique os campos do header TCP.
 Sequence number: número de sequência (por conexão) do TPDU.   
-Acknowledgement number: descreve o número de sequência do TPDU que está sendo confirmado.    
-TCP header length: tamanho do cabeçalho TCP em palavras de 32 bits; este campo antecede um campo de 6 bits que não é utilizado.  
+Acknowledgement number: descreve o número de sequência do TPDU que está sendo confirmado.  
+TCP header length: tamanho do cabeçalho TCP em palavras de 32 bits.  
 
 Flags:  
 URG: se 1, indica que o campo Urgent pointer foi usado e que existem dados urgentes (interrupção).  
-O campo Urgent pointer indica, através de um byte offset qual número de sequência (em relação ao TPDU atual) trará os dados urgentes.  
+Urgent pointer indica através de um byte offset qual número de sequência (em relação ao TPDU atual) trará os dados urgentes.  
 ACK: se 1, indica que o campo Acknowledgement foi usado.  
 PSH: comunica à entidade de transporte no destino para entregar cada mensagem que chega e não esperar para entregar todas de uma vez.  
 RST: é utilizado para solicitar o reset (restabelecimento) de uma conexão que apresenta problemas.  
@@ -177,7 +177,7 @@ Quando detectado um congestionamento (por timeout da confirmação), a janela é
 #### Telnet
 Serviço de emulação de terminal virtual, sobre uma conexão TCP, através da porta 23.  
 
-Através de um NVT (Network Virtual Terminal), permite que o usuário realize uma sessão de terminal virtual e a emulação do cliente se comunica com um processo servidor (telnetd) através da Internet.  
+Através de um NVT (Network Virtual Terminal), permite que o usuário realize uma sessão de terminal virtual, e a emulação se comunica com um processo servidor (telnetd) através da Internet.  
 
 Cada caractere digitado pelo usuário é encaminhado ao servidor e ecoado de volta para ser exibido na tela.  
 	
@@ -432,14 +432,10 @@ Furos de aplicações ou instalados pelo usuário desavisado.
 Abrem portas servidoras, permitindo acesso de fora.  
 
 #### Malwares:  
-- Uso de NAT:  
-    Escondeu as portas servidoras das máquinas da Intranet.  
-    O que motivou a evolução dos malwares para clientes.  
+O uso de NAT escondeu as portas servidoras das máquinas da Intranet, o que motivou a evolução dos malwares para clientes.  
 
-- Firewall e proxy:  
-    Os malwares clientes não podem mais acessar portas externas.  
-    Os malwares passaram a comunicar por protocolos Web (HTTP).  
-    Portanto, propagam-se com a ajuda dos usuários e se valem dos acessos que eles têm.  
+Os malwares clientes não podem mais acessar portas externas (firewall e proxy).  
+Passaram a se comunicar por protocolos Web (HTTP) e propagam-se com a ajuda dos usuários e se valem dos acessos que eles têm.  
 
 ### O que é firewall?
 Equipamento (ou sistema) que permite o controle de segurança na comunicação entre duas ou mais redes.  
@@ -447,8 +443,8 @@ Geralmente atua como um filtro, permitindo pacotes passarem, ou não, de acordo 
 
 Abordagens clássicas de configuração:
 
-    O que não é expressamente proibido é permitido.
-    O que não é expressamente permitido é proibido.
+    O que não é expressamente proibido é permitido - proxy.
+    O que não é expressamente permitido é proibido - firewall.
 
 ### Explique criptografia, seus algoritmos, para que serve e para quais requisitos servem?
 É a arte e a ciência de esconder o objeto de uma comunicação de uma audiência não pretendida.  
