@@ -116,7 +116,7 @@ Chamados coletivamente de configuração do software.
 
 ## Item de Configuração
 
-Conjunto de itens de hardware e/ou software vistos como uma entidade única para fins de gerência de configuração.  
+Conjunto de itens de hardware e/ou software vistos como uma **entidade única para fins de gerência de configuração**.  
 Um item de configuração está sujeito a mudanças e essas devem obedecer às políticas estabelecidas.  
 Um item de configuração é estabelecido para cada pedaço de software que pode ser projetado, implementado e testado de forma independente.
 
