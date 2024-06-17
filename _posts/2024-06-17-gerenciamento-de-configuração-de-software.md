@@ -220,8 +220,8 @@ Mesmo com o uso de ferramentas, em vários casos há necessidade de intervençã
 
 ## Contexto
 
-Desenvolvimento iterativo/incremental.
-Novos conjuntos de requisitos, detalhados a cada iteração.
+Desenvolvimento iterativo/incremental.  
+Novos conjuntos de requisitos, detalhados a cada iteração.  
 Mudanças em estratégias de negócio motivadaspelas mais diversas fontes: mercado, cultura, leis, etc.
 
 ## Problemas
@@ -232,18 +232,23 @@ Controle do escopo do projeto.
 Controle de consistência dos artefatos.
 - Uma mudança aparentemente localizada pode causar muito mais impacto do que o previsto.
 - Degradação da qualidade do software.
-- Retrabalho
+- Retrabalho.
 
-## O que é Gerência de Mudanças?
+## O que é Gerência de Mudanças (GM)?
 
-É o processo de avaliar, coordenar e decidir sobre a realização de mudanças propostas a itens de configuração (ICs).  
+É o processo de avaliar, coordenar e decidir sobre a realização de mudanças propostas a Itens de Configuração (ICs).  
 Mudanças aprovadas são implementadas nos itens de configuração e nos dados e documentos relacionados.  
-Garante que os artefatos do sistema alcançam e mantenham uma estrutura definida através do seu ciclo de vida.
+
+## Objetivos da GM
+
+Garante que os artefatos do sistema alcancem e mantenham uma estrutura definida através do seu ciclo de vida.  
+Define procedimentos e documentação necessários para realizar modificações a ICs.  
+Provê os mecanismos necessários para conduzir mudanças de uma maneira controlada.
 
 ### Benefícios
 
 Controle sobre o escopo do projeto.  
-Mais produtivida.  
+Mais produtividade.  
 Mais qualidade.
 
 # Ciclo de vida de um artefato
