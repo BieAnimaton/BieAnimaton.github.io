@@ -182,7 +182,7 @@ Quanto maior o sistema, mais difícil.
 ### Release
 
 Identificação e empacotamento de artefatos entregues ao cliente (interno ou externo) ou ao mercado.  
-Implica no no estabelecimento de um novo **baseline**.  
+Implica no no estabelecimento de um **novo baseline**.  
 Produto de software supostamente sem erros.
 
 Tipos
