@@ -164,12 +164,13 @@ Ação de inserir/atualizar um item de configuração no repositório.
 
 ### Build
 
-Versão ainda incompleta do sistema em desenvolvimento, mas com certa estabilidade.  
+Versão ainda incompleta do sistema em desenvolvimento, mas **com certa estabilidade**.  
 Apresenta limitações conhecidas.  
 Espaço para integração de funcionalidades.  
 Inclui código fonte, documentação, arquivos de configuração, base de dados.
 
-Problemas na geração das builds:  
+### Problemas na geração das builds:
+
 Fazer os builds do sistema manualmente é muito demorado.  
 Pode ser difícil saber qual a versão “correta” de um arquivo.  
 Os pedaços do sistema podem estar em diversos locais diferentes.  
