@@ -264,7 +264,7 @@ Controle formal dificulta a criação do artefato.
 ## Artefato Aceito
 
 Artefato seguiu um processo de revisão, testes e aceitação.  
-Inserido dentro do processo de controle de mudanças, tornando-se de fato item de configuração.  
+Inserido dentro do processo de controle de mudanças, **tornando-se de fato Item de Configuração**.  
 Mudanças via solicitação formal.  
 Presença do grupo gestor de mudanças (CCB) para avaliar e priorizar mudanças.
 
