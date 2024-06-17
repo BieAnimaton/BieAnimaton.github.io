@@ -185,7 +185,7 @@ Alguns arquivos podem ser esquecidos.
 ### Release
 
 Identificação e empacotamento de artefatos entregues ao cliente (interno ou externo) ou ao mercado.  
-Implica no no estabelecimento de um **novo baseline**.  
+Implica no estabelecimento de um **novo baseline**.  
 Produto de software supostamente sem erros.
 
 ### Tipos de Release
