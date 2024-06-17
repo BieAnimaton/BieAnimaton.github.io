@@ -150,13 +150,17 @@ Problema: “serializa” o trabalho dos desenvolvedores.
 
 ### Check-Out
 
-Recupera a última versão de um item de configuração guardada no repositório.
+Recupera a última versão de um item de configuração guardada no repositório.  
+Escrita: verifica se ninguém detém o LOCK, obtém o LOCK, cria uma cópia para edição.  
+Leitura: verifica que alguém já detém o LOCK, cria uma cópia apenas para leitura.
 
 ### Check-In
 
-Ação de inserir/atualizar um item de configuração no repositório.
-
-Registra informações das mudanças.
+Ação de inserir/atualizar um item de configuração no repositório.  
+- Verifica o **LOCK** do item de configuração, caso o mesmo já exista.  
+- Verifica e incrementa a versão do item.  
+- Registra informações das mudanças (autor, data, hora, comentários).  
+- Inclui/atualiza o item.
 
 ### Build
 
