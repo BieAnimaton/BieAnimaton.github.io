@@ -287,7 +287,8 @@ Balanço entre o nível de controle desejado e overhead suportado.
 
 ## Características
 
-Composição multidisciplinar.
+Composição multidisciplinar.  
+Profissionais com grande capacidade de comunicação e negociação.
 
 # Análise de Impacto
 
