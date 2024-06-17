@@ -25,7 +25,7 @@ tags:
   - Ciclo de Vida de um Artefato
   - Artefato Draft
   - Artefato Aceito
-  - Artefato Manutenção
+  - Artefato em Manutenção
   - CCB
   - Análise de Impacto
 
@@ -268,7 +268,7 @@ Inserido dentro do processo de controle de mudanças, **tornando-se de fato Item
 Mudanças via solicitação formal.  
 Presença do grupo gestor de mudanças (CCB) para avaliar e priorizar mudanças.
 
-## Artefato Manutenção
+## Artefato em Manutenção
 
 Controle de mudanças permanece formal para os artefatos de um **baseline**.  
 Novos artefatos podem ser desenvolvidos usando o mesmo modelo de ciclo de vida.  
