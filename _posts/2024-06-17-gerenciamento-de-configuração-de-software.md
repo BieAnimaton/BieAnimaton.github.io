@@ -253,7 +253,7 @@ Mais qualidade.
 
 # Ciclo de vida de um artefato
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/8296bd9a-b112-4770-aee3-37d9a4bc27f2/c992786f-8477-4390-b1aa-12f65e6c1075/Untitled.png)
+![image](https://github.com/BieAnimaton/BieAnimaton/assets/52220244/968a9fee-a7ed-4482-b9d1-cbf7e254c76c)
 
 ## Artefato Draft
 
