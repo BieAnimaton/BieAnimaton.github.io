@@ -1,6 +1,6 @@
 ---
 title: "Inspeção em Engenharia de Software"
-excerpt: "Resumo sobre inspeção em engenharia de software."
+excerpt: "Resumo sobre inspeção em Engenharia de Software."
 categories:
   - Engenharia de Software
 tags:
