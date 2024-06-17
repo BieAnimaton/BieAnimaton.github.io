@@ -176,8 +176,11 @@ Pode ser difícil saber qual a versão “correta” de um arquivo.
 Os pedaços do sistema podem estar em diversos locais diferentes.  
 Alguns arquivos podem ser esquecidos.  
 
-Integrar as partes de um sistema é uma tarefa trabalhosa e sujeita a erros.  
-Quanto maior o sistema, mais difícil.  
+> Integrar as partes de um sistema é uma tarefa trabalhosa e sujeita a erros.
+> 
+
+> Quanto maior o sistema, mais difícil.
+>
 
 ### Release
 
@@ -185,7 +188,7 @@ Identificação e empacotamento de artefatos entregues ao cliente (interno ou ex
 Implica no no estabelecimento de um **novo baseline**.  
 Produto de software supostamente sem erros.
 
-Tipos
+### Tipos de Release
 
 internos: controle de qualidade, acompanhamento do projeto, controle de riscos, aceitação, aquisição de conhecimento através da coleta de feedbacks, desenho da estratégia.  
 externos: implantado e utilizado pelo cliente.
