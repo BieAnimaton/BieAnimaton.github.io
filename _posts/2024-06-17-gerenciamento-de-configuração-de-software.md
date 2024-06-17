@@ -270,6 +270,7 @@ Presença do grupo gestor de mudanças (CCB) para avaliar e priorizar mudanças.
 
 ## Artefato em Manutenção
 
+Após a entrega de uma versão do produto, os artefatos passam para a fase de manutenção.  
 Controle de mudanças permanece formal para os artefatos de um **baseline**.  
 Novos artefatos podem ser desenvolvidos usando o mesmo modelo de ciclo de vida.  
 Sistema pode ser descontinuado ou removido do ambiente de produção.
