@@ -151,8 +151,8 @@ Problema: “serializa” o trabalho dos desenvolvedores.
 ### Check-Out
 
 Recupera a última versão de um item de configuração guardada no repositório.  
-Escrita: verifica se ninguém detém o LOCK, obtém o LOCK, cria uma cópia para edição.  
-Leitura: verifica que alguém já detém o LOCK, cria uma cópia apenas para leitura.
+- Escrita: verifica se ninguém detém o **LOCK**, obtém o **LOCK**, cria uma cópia para edição.  
+- Leitura: verifica que alguém já detém o **LOCK**, cria uma cópia apenas para leitura.
 
 ### Check-In
 
