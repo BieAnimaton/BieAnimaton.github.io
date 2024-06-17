@@ -204,9 +204,9 @@ Denomina uma versão do projeto (um build ou release) rotulando todos os arquivo
 ### Branch
 
 Criação de um fluxo alternativo para a atualização de versão.  
-Recurso muito poderoso.  
+Recurso muito **poderoso**.  
 Devem existir regras bem definidas para a criação de branches.  
-Uso de lock inviabiliza a criação de branches.  
+**Uso de lock inviabiliza a criação de branches**.  
 Branches normalmente se originam de correções em versões anteriores.
 
 ### Merge
