@@ -135,7 +135,7 @@ O autor corrige os defeitos encontrados pelos inspetores e confirmados pelo mode
 
 Material corrigido pelos autores é repassado para o moderador, que faz uma análise da inspeção como um todo e reavalia a qualidade do artefato inspecionado.
 
-## O que muda
+## Atividades Sequências
 
 - Processo alternativo que mantém a estrutura sistemática e os aspectos colaborativos do processo tradicional.
 - Substitui as atividades de preparação e de reunião do processo tradicional por três novas atividades sequenciais.
