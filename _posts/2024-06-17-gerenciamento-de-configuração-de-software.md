@@ -222,7 +222,7 @@ Mesmo com o uso de ferramentas, em vários casos há necessidade de intervençã
 
 Desenvolvimento iterativo/incremental.  
 Novos conjuntos de requisitos, detalhados a cada iteração.  
-Mudanças em estratégias de negócio motivadaspelas mais diversas fontes: mercado, cultura, leis, etc.
+Mudanças em estratégias de negócio motivadas pelas mais diversas fontes: mercado, cultura, leis, etc.
 
 ## Problemas
 
