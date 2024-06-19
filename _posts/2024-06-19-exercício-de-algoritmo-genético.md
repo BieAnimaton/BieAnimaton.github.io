@@ -17,8 +17,7 @@ toc: true
 
 ![image](https://github.com/BieAnimaton/BieAnimaton/assets/52220244/11aacf88-569a-407c-addf-192aab7ac36d)
 
-
-### Anotando os Dados
+### Analisando
 
 Este é mais tranquilo, pois não impõe nenhum limite e você já pode perceber que o máximo é 31.  
 A função f(x) também é fácil.  
@@ -183,7 +182,7 @@ TOTAL f(x)			3268
 # Problema 2
 ![image](https://github.com/BieAnimaton/BieAnimaton/assets/52220244/3c618a13-b236-43f2-b6d6-483064850bdc)
 
-### Anotando os Dados
+### Analisando
 
 Encontrar ponto mínimo da função.  
 Considerar 4 indivíduos.  
