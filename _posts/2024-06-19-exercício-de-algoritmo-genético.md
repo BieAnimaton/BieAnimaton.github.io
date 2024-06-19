@@ -17,6 +17,9 @@ toc: true
 
 ![image](https://github.com/BieAnimaton/BieAnimaton/assets/52220244/11aacf88-569a-407c-addf-192aab7ac36d)
 
+
+### Anotando os Dados
+
 Este é mais tranquilo, pois não impõe nenhum limite e você já pode perceber que o máximo é 31.  
 A função f(x) também é fácil.  
 Usaremos quantas gerações precisar e apenas 1 ponto de corte.  
@@ -26,7 +29,6 @@ Usaremos quantas gerações precisar e apenas 1 ponto de corte.
 Cromossomo de 5 bits.  
 Avaliação é a própria função.  
 
-## Iniciando
 ### 1ª Geração
 
 - **Seleção do melhor indivíduo (maior avaliação):**  
@@ -180,6 +182,8 @@ TOTAL f(x)			3268
 
 # Problema 2
 ![image](https://github.com/BieAnimaton/BieAnimaton/assets/52220244/3c618a13-b236-43f2-b6d6-483064850bdc)
+
+### Anotando os Dados
 
 Encontrar ponto mínimo da função.  
 Considerar 4 indivíduos.  
