@@ -17,6 +17,8 @@ toc: true
 
 ![image](https://github.com/BieAnimaton/BieAnimaton/assets/52220244/11aacf88-569a-407c-addf-192aab7ac36d)
 
+## Analisando
+
 Este é mais tranquilo, pois não impõe nenhum limite e você já pode perceber que o máximo é 31.  
 A função f(x) também é fácil.  
 Usaremos quantas gerações precisar e apenas 1 ponto de corte.  
@@ -26,7 +28,7 @@ Usaremos quantas gerações precisar e apenas 1 ponto de corte.
 Cromossomo de 5 bits.  
 Avaliação é a própria função.  
 
-### 1ª Geração
+## 1ª Geração
 
 - **Seleção do melhor indivíduo (maior avaliação):**  
 indivíduos....x....f(x)	Pedaço da roleta (%)  
@@ -61,7 +63,7 @@ a4 = (81 / 1131) * 100 = 7,16%
 11001 + 10000  =  11000 e 11001  
 01101 + 01001  =  11001 e 01101
 
-### 2ª Geração
+## 2ª Geração
 
 - **Seleção do melhor indivíduo (maior avaliação):**
 
@@ -90,7 +92,7 @@ TOTAL f(x)			1995
 11001 + 11001  =  11101 e 11001  
 11000 + 01101  =  11001 e 11100  
 
-### 3ª Geração
+## 3ª Geração
 
 - **Seleção do melhor indivíduo (maior avaliação):**
 
@@ -119,7 +121,7 @@ TOTAL f(x)			2875
 11101 + 11100  =  11100 e 11111   
 11001 + 11001  =  11101 e 11001  
 
-### 4ª Geração
+## 4ª Geração
 
 - **Seleção do melhor indivíduo (maior avaliação):**
 
@@ -148,7 +150,7 @@ TOTAL f(x)			2995
 11111 + 11100  =  11111 e 11101  
 11001 + 11001  =  11001 e 11101  
 
-### 5ª Geração
+## 5ª Geração
 
 - **Seleção do melhor indivíduo (maior avaliação):**
 
@@ -180,6 +182,8 @@ TOTAL f(x)			3268
 # Problema 2
 ![image](https://github.com/BieAnimaton/BieAnimaton/assets/52220244/3c618a13-b236-43f2-b6d6-483064850bdc)
 
+## Analisando
+
 Encontrar ponto mínimo da função.  
 Considerar 4 indivíduos.  
 Considerar 5 gerações.
@@ -197,7 +201,7 @@ g(x) = 4 + f(x)
 7 = 111  
 cromossomo de 3 genes (bits).
 
-### 1ª Geração
+## 1ª Geração
 
 - **Seleção do melhor:**
 
@@ -226,7 +230,7 @@ TOTAL g(x): 32
 
 010, 000, 001, 000
 
-### 2ª Geração
+## 2ª Geração
 
 - **Seleção do melhor:**
 
@@ -255,7 +259,7 @@ TOTAL g(x): 29
 
 010, 000, 010, 011
 
-### 3ª Geração
+## 3ª Geração
 
 - **Seleção do melhor:**
 
@@ -284,7 +288,7 @@ TOTAL g(x): 27
 
 010, 100, 011, 110
 
-### 4ª Geração
+## 4ª Geração
 
 - **Seleção do melhor:**
 
@@ -313,7 +317,7 @@ TOTAL g(x): 16
 
 111, 010, 111 e 100
 
-### 5ª Geração
+## 5ª Geração
 
 - **Seleção do melhor:**
 indivíduos...x.....f(x)..g(x)...Pedaço da roleta (%)  
