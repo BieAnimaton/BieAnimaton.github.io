@@ -185,16 +185,17 @@ TOTAL f(x)			3268
 
 ## Analisando
 
-Encontrar ponto mínimo da função.  
+Encontrar ponto mínimo da função.
+
 Considerar 4 indivíduos.  
 Considerar 5 gerações.
 
-f(x) = 2x - 3x + 4 ->  
+f(x) = 2x - 3x + 4 =  
 f(x) = - x + 4
 
 x = [0, +7]
 
-**Nesta caso, dependendo do valor de "x", a função pode dar 0 ou um valor negativo. Para solucionar, incrementamos um valor:**
+**Neste caso, dependendo do valor de "x", a função pode dar 0 ou um valor negativo. Para solucionar, incrementamos um valor:**
 
 g(x) = 4 + f(x)  
 
