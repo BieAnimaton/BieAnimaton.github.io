@@ -31,6 +31,7 @@ Avaliação é a própria função.
 ## 1ª Geração
 
 - **Seleção do melhor indivíduo (maior avaliação):**  
+
 indivíduos....x....f(x)	Pedaço da roleta (%)  
 a1 = 10000  16	256		22,63%  
 a2 = 11001  25	625		55,26%  
