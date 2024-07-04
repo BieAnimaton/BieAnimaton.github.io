@@ -1,5 +1,5 @@
 ---
-title: "Kerberoasting"
+title: "Kerberoastinh"
 excerpt: "Teoria e prática sobre Kerberoasting."
 categories:
   - Hacking
@@ -58,7 +58,15 @@ foreach($result in $results)
 
 ![Untitled 2](https://github.com/BieAnimaton/BieAnimaton/assets/52220244/2a55426a-72bd-4aa2-9b5a-2efabc551fb1)
 
-A Mônica está associada ao SPN `MSSQLSvc/monica.com`.
+A Mõnica está associada ao SPN `MSSQLSvc/monica.com`.
+
+## Extração de Contas com SPN através do ADSearch
+
+```powershell
+ADSearch.exe --search "(&(objectCategory=person)(objectClass=user)(servicePrincipalName=*))" --attributes cn,distinguishedname,samaccountname
+```
+
+![Untitled 3](https://github.com/BieAnimaton/BieAnimaton/assets/52220244/a6b2135b-26f4-464e-9e71-282d67cbe31e)
 
 ## Ataque
 
