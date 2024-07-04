@@ -58,7 +58,7 @@ foreach($result in $results)
 
 ![Untitled 2](https://github.com/BieAnimaton/BieAnimaton/assets/52220244/2a55426a-72bd-4aa2-9b5a-2efabc551fb1)
 
-A Mõnica está associada ao SPN `MSSQLSvc/monica.com`.
+A Mônica está associada ao SPN `MSSQLSvc/monica.com`.
 
 ## Ataque
 
