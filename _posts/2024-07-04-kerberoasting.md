@@ -1,5 +1,5 @@
 ---
-title: "Kerberoastinh"
+title: "Kerberoasting"
 excerpt: "Teoria e prática sobre Kerberoasting."
 categories:
   - Hacking
