@@ -25,7 +25,9 @@ Caso a conta de serviço seja de máquina (`MACHINENAME$`), será impossível de
 
 **OBS: Com a senha, a movimentação lateral se torna possível.**
 
-Quando senhas fracas estão em uso, a probabilidade de sucesso do ataque aumenta significativamente, ou seja, é importante aplicar políticas de senhas fortes para a proteção.
+![Untitled](https://github.com/BieAnimaton/BieAnimaton/assets/52220244/e264e012-a56a-4da1-9725-6f4a0ebfc873)
+
+A Mônica está associada ao SPN `MSSQLSvc/monica.com`.
 
 ## Extração de Contas com SPN através do LDAP
 
@@ -59,8 +61,6 @@ foreach($result in $results)
 ```
 
 ![Untitled 2](https://github.com/BieAnimaton/BieAnimaton/assets/52220244/2a55426a-72bd-4aa2-9b5a-2efabc551fb1)
-
-A Mõnica está associada ao SPN `MSSQLSvc/monica.com`.
 
 ## Extração de Contas com SPN através do ADSearch
 
@@ -96,6 +96,6 @@ O Hashcat será usado para quebrar a senha.
 
 ## Medidas de Proteção
 
-Criação de senhas fortes (tamanho 10 ou mais, números, letras maiúsculas e minúsculas e caracteres especiais).  
-Remover e evitar SPN em contas de usuário.  
-Caso realmente seja necessário, usar o Microsoft Managed Service Accounts (MSA).
+- Aplicar políticas de senhas fortes (tamanho 10 ou mais, números, letras maiúsculas e minúsculas e caracteres especiais) para proteção.
+- Remover e evitar SPN em contas de usuário.
+- Caso realmente seja necessário, usar o Microsoft Managed Service Accounts (MSA).
