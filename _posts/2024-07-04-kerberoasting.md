@@ -7,6 +7,8 @@ tags:
   - Kerberoasting
   - Active Directory
   - SPN
+  - LDAP
+  - ADSearch
   - Rubeus
   - Hahscat
 

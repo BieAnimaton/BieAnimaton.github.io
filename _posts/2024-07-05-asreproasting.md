@@ -98,4 +98,4 @@ O Hashcat será usado para quebrar a senha.
 
 ## Medidas de Proteção
 
-Ativar a pré-autenticação Kerberos para todos os usuários.
+- Ativar a pré-autenticação Kerberos para todos os usuários.
