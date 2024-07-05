@@ -33,7 +33,9 @@ A Mônica está associada ao SPN `MSSQLSvc/monica.com`.
 
 Pode-se realizar um filtro LDAP para extrair as contas que possuem mais de um SPN:
 
-`(objectCategory=person)(objectClass=user)(servicePrincipalName=*)`
+```powershell
+(objectCategory=person)(objectClass=user)(servicePrincipalName=*)
+```
 
 ![Untitled](https://github.com/BieAnimaton/BieAnimaton/assets/52220244/19cf4a23-3478-416a-9cd5-8b145caa6b3c)
 
