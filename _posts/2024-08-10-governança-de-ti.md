@@ -11,8 +11,6 @@ tags:
 toc: true
 ---
 
-# Governança de TI
-
 Compreender a importância da GTI em uma organização e suas implicações no negócios.
 
 Cenários:
