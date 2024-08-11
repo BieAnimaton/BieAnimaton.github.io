@@ -66,7 +66,7 @@ Criação de código de baixo nível que reflete os comandos do código fonte.
 
 Otimização dos comandos gerados para uma determinada arquitetura.
 
-## Exemplo.
+## Exemplo
 
 soma := soma + 35
 
