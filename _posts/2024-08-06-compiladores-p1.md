@@ -40,7 +40,7 @@ compilador completo em 1957, FORTAN - John Backus
 - Análise semântica
 - Geração e otimização de código
 
-## Analise léxica
+### Analise léxica
 
 Vai executar os autômatos.
 
@@ -50,17 +50,17 @@ Verificar se a palavra é reservada, constante, variável.
 
 Ignora comentários.
 
-## Analise sintática
+### Analise sintática
 
 Identifica as construções válidas da linguagem com base nos elementos léxicos.
 
-## Analise semântica
+### Analise semântica
 
 Garante que as construções identificadas façam sentido de acordo com as regras da linguagem.
 
 Verifica se as variáveis usadas foram devidamente declaradas
 
-## Gerador de código
+### Gerador de código
 
 Criação de código de baixo nível que reflete os comandos do código fonte.
 
@@ -70,7 +70,7 @@ Otimização dos comandos gerados para uma determinada arquitetura.
 
 soma := soma + 35
 
-## Análise léxica
+### Análise léxica
 
 (valor)	(classe)
 
@@ -84,7 +84,7 @@ SOMA	identificador
 
 35		constante numérica inteira
 
-## Análise sintática
+### Análise sintática
 
 Árvore de execução (desenho).
 
@@ -100,7 +100,7 @@ Linguagens formais não seguiam nenhum algoritmo específico → tentava e erro.
 
 ![analisador sintatioc](https://github.com/user-attachments/assets/ba88ab9b-9808-48f5-b784-49ade1dd71fc)
 
-## Análise semântica
+### Análise semântica
 
 SOMA foi declarada?
 
@@ -112,7 +112,7 @@ Qual o tipo de SOMA?
 
 Coloca informações adicionais na árvore
 
-## Geração de código
+### Geração de código
 
 Movimentação de registradores
 
