@@ -106,7 +106,7 @@ analytics:
 author:
   name             : "BieAnimaton"
   avatar           : "/assets/images/avatar.png"
-  bio              : "Computer Science, Cyber Security, Red Team, Hardware Hacking, CPIA, CRTA, CRT-COI, CRT-ID, MITRE ATT&CK."
+  bio              : "Computer Science, Cyber Security, Red Team, Hardware Hacking, CPIA, CRTA, CRTSv2, CRT-COI, CRT-ID, MITRE ATT&CK."
   location         : "World"
   email            : "gcbragion@email.com"
   links:
