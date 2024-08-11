@@ -11,7 +11,7 @@ tags:
 toc: true
 ---
 
-# Sistemas Distribuídos
+# Aula I
 
 ![imagem da lousa](https://github.com/user-attachments/assets/148d3673-8740-48e8-ac6a-5244bf9e529a)
 
