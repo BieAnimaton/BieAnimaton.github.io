@@ -156,7 +156,7 @@ Bom para rodar em arquitetura diferentes (um código Java feito no Linux pode ro
 Gramática é uma ferramenta para descrever uma linguagem.  
 É a base do analisador léxico e sintático.
 
-## Obs
+## Para quê autômatos finitos são utilizados?
 Autômatos finitos são utilizados na análise lexicográfica para reconhecimento dos programas e na definição de suas estrutras.
 
 ## O que é um compilador?
@@ -178,7 +178,7 @@ Gramática G=(V,T,P,S), onde:
 – P: conjunto de regras de produção  
 – S: elemento de V denominado inicial  
 
-## Exercício 1
+## Exemplo 1
 
 ![image](https://github.com/user-attachments/assets/95ab7a54-aeb1-4b40-a929-4c4f5dfa21ba)
 
