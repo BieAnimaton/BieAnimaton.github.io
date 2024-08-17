@@ -18,7 +18,7 @@ toc: true
 
 Aristóteles foi o primeiro filósofo a tratar da ética como uma área própria do conhecimento, sendo considerado o fundador da ética como uma disciplina da filosofia. Para ele, a ética está diretamente relacionada com a ideia de virtude (areté) e da felicidade (eudaimonia).
 
-> Para Aristóteles, tudo tende para o bem e a felicidade (finalidade da vida humana.  
+> Para Aristóteles, tudo tende para o bem e a felicidade - é a finalidade da vida humana. 
 
 Entretanto, a felicidade não deve ser compreendida como prazer, posse de bens ou reconhecimento. A felicidade é a prática de uma vida virtuosa.
 
