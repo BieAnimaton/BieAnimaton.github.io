@@ -11,6 +11,8 @@ tags:
 toc: true
 ---
 
+# Aula I
+
 Compreender a importância da GTI em uma organização e suas implicações no negócios.
 
 Cenários:
