@@ -94,3 +94,87 @@ Enfrentar esses desafios exige uma abordagem estratégica e colaborativa, envolv
 - Planos de Continuidade: Desenvolver e testar planos eficazes de continuidade de negócios e recuperação de desastres é essencial, mas muitas organizações falham em realizar testes regulares e em manter a documentação atualizada.
 
 Esses desafios exigem que as organizações adotem uma abordagem proativa e integrada para a gestão de riscos tecnológicos, envolvendo desde a alta administração até os operadores de TI, para garantir a segurança e a resiliência organizacional.
+
+# Aula II
+
+## O que é Governança Corporativa?
+Nos EUA, surgiu entre a década de 80 e 90.  
+Caracterizou-se por um movimento de adionistas investidores que tinham o objetivo de protegerem dos abusos praticados pela diretoria das empresas.  
+Conjunto de regras e de sistema de monitoramento tnato interno quanto externo para impedir tais abusos.  
+Empresa que incentivou: Enron, empresa de energia americana, que em 2022 fraudou os sistemas dos balanços para elevar o valor das suas ações.  
+
+## Comente alguns dos principios da governança corporativa.
+Pode-se citar 5 como os principais.
+
+Transparência:  
+- Boa comunicação interna e externa que gera o ambiente de confiança dentro da organização.
+- Presta informação sobre a empresa.  
+- Divulgação clara e precisa das informações, não apenas exigidas por lei ou regulamentos, mas aquelas relevantes para stakeholders (investidores).  
+- "torna público".  
+
+Equidade:  
+- Tratamento de forma justa de igualitária de todos os stakeholders.  
+- "justiça para todos".  
+
+Responsabilidade:  
+- O negócios devem ser conduzidos com o objetivo de alcançar a longevidade da empresa, incorporando decisões de ordem social de ambiental na definição dos negócios e operações da empresa. Detalhamento sobre as atribuições.  
+- "sustentabilidade e ética".  
+
+Compliance:  
+- Conformidade com leis, regulamentos e normas internas.  
+- Implementando políticas e procedimnentos para garantir a conformdidade.  
+- "conformidade rigorosa".  
+	
+Integridade (novo):  
+- Praticar e promover o contínuo aprimoramento da cultura ética na organização, evitando decisões sob a influência de conflitos de interesses.  
+- Mantém a coerência entre discuro e ação, preservando a lealdade à organização e o cuidado com suas partes interesadas (com a sociedade geral e o meio ambiente.  
+
+## Quais são os benefícios ao se aplicar esses princípios?
+Melhoria na gestão e eficiência: adoção de boas práticas de governança pode levar a uma gestão mais efeciente e eficaz.
+	
+Aumento da confiança dos investidores: transparência e responsabilidade aumentam a confiança dos investidores.
+	
+Redução de riscos: estruturas de governança bem definidas ajudam a identificar e mitigar os riscos.
+	
+Sustnetabilidade a longe prazo: práticas de governança corporativa promovem sustentabilidade e a responsabilidade social, contribuindo para a longevidade da empresa.
+
+## Define ativos corporativos.
+Ativos corporativos são considerados estratégicos para a governança corporativa e referem-se aos recurso e bens que uma empresa possio e que têm valor econômico.  
+Esses ativos podem ser classificados como tangíveis ou intangíveis.
+	
+- Tangíveis  
+    Ativos humanos: oessias (habilidades, plano de carreira, treinamentos, competências).  
+	Ativos financeiros: dinheiro, investimentos, fluxo de caixa, contas a receber.  
+	Ativos físicos: prédios, equipamentos, veículos.  
+
+- Intangíveis  
+	Ativos intelectuais: produto, serviço e processo patenteados ou registrados.  
+	Ativos de relacionamento: relacionamentos internos e externos da organização, marca, reputação, fornecedores.  
+	Ativos em TI: programas (sistema de informação), dados e informações.  
+
+## Cite os ativos mais importantes para a Governança de TI.
+Alguns ativos têm importância particular para garantir a eficácia, segurança e conformidade das operações de TI. 
+
+- Infraestrutura de TI: servidores, redes, sistema de armazenamento.
+- Sistemas e aplicações: softwares utilizados par agerenciador processos de négocios, CRM, ERP.
+- Dados e informações: dados dos clientes, informações financeira e operacionais.
+- Segurança da informação: ferramenta e protoclos de segurança, como firewalls, sistema de detecção.
+- Recursos humanos: equipes de TI e especialistas em segurança da informaçãoque gerenciam e protegram os ativos de TI.
+- Políticas e procedimentos: documentação que define como a TI deve operar, normas de segurança, política e processos.
+
+## O que são políticas corporativas:
+As políticas corporativas desempenham um papel fundamental na governança corporativa, uma vez que estabelecem diretrizes e práticas que promovem a transparência, a responsabilidade e a ética nas organizações.
+	
+Algumas:
+- Política de sustentabilidade;
+- Política de ética e conduta;
+- Política de qualidade total;
+- Política de remuneração;
+- Política de diversidade e inclusão;
+- Política de segurança da informação;
+- Política de conflito de interesses;
+- Política de compliance;
+- Política de gestão de riscos;
+- Política de transparência e divulgação de informações;
+- Política de governança de TI;
+- Outras...
