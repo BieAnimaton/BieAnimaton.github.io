@@ -97,7 +97,7 @@ Enquanto realidade virtual precisava de muitos equipamentos/periférics, realida
 hj em dia - realidade aumentada de forma muit simples - proprio google
 realidade virtual - ainda que seja uma tecnologia evoluida - evolução no mundo do entretenimento (comprar alguns dos periféricos) - equipamento um pouquinho mais restritos - caros - mais processamento
 
-## Linha crecente
+## Linha crescente
 
 Da realidade concreta para realidade virtual.  
 Aumentando a quantidade de elementos virtuais apresentadas ao observador.  
