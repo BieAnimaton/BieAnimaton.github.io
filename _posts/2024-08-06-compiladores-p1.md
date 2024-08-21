@@ -313,3 +313,50 @@ Qual é o AFN?
 ![image](https://github.com/user-attachments/assets/83795735-8c0a-44f2-83c5-91d65f946e59)
 
 ![image](https://github.com/user-attachments/assets/cb107a40-a390-47f1-a3c1-113836ba5282)
+
+# Aula III
+
+## Exercício II
+
+![image](https://github.com/user-attachments/assets/78706f74-9789-4dfc-8d62-eea0b630ead4)
+
+## Análise léxica - AFN para AFD
+Simula todos os caminhos de um AFN simultaneamente.  
+Criação de diversos “estados” de operação.  
+Cada estado se tornará um único AFD.  
+
+## Epsilon-states
+
+Sempre que estivermos em um estado AFN, nós sempre poderemos ler um símbolo vazio.  
+Assim, nos podemos usar uma transição vazia sem ler nenhum símbolo.  
+
+## algoritmo
+
+![image](https://github.com/user-attachments/assets/f17d44a7-5417-420c-9b98-feecfd87ad66)
+
+## Exemplo 1
+
+Passar o AFN do exercício 1 anterior para AFD.
+
+(a|b)*ac -> AFD.
+
+![image](https://github.com/user-attachments/assets/f271fc2c-5519-4c47-b652-341f804e460a)
+
+### Iniciando
+
+![image](https://github.com/user-attachments/assets/f7dfa985-9ae9-4d9e-aef5-e2344341054a)
+![image](https://github.com/user-attachments/assets/092c5fff-70b9-487e-8aea-4a5205613ac2)
+![image](https://github.com/user-attachments/assets/01584dc7-a894-406f-8546-aea83584c4fc)
+![image](https://github.com/user-attachments/assets/9be2c496-6151-4534-b663-0b972ea42f6c)
+![image](https://github.com/user-attachments/assets/cbfb60b8-a611-485c-908d-0eb10ea747e2)
+![image](https://github.com/user-attachments/assets/4129e891-0cd7-4001-9f2d-05667617013e)
+![image](https://github.com/user-attachments/assets/24b0bcc7-24a5-4539-b2f5-3c84fb3f1aca)
+![image](https://github.com/user-attachments/assets/3a0028a9-0317-46d4-a1be-339073d32df0)
+![image](https://github.com/user-attachments/assets/83c75000-3346-42f0-a648-319d898098d7)
+![image](https://github.com/user-attachments/assets/9f479910-6330-4d1a-889a-9a4423d71edb)
+![image](https://github.com/user-attachments/assets/b6e02008-08e7-45d9-94c2-dcd7601c4c93)
+![image](https://github.com/user-attachments/assets/4cfae1ac-83cc-4ed6-a492-215e7dba30d3)
+
+### Finalizando
+
+![image](https://github.com/user-attachments/assets/4b32e505-a8d3-4711-b2c0-97ba812cd062)
