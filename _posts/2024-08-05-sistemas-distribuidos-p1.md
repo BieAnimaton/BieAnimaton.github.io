@@ -655,9 +655,9 @@ O NFS permite criar hierarquias de abstrações aninhadas, obtendo partes das es
 
 ![image](https://github.com/user-attachments/assets/bfff7e9f-7deb-414b-8db9-977ca309248c)
 
-# Aula 3
+# Aula III
 
-# Comunicação entre Processos
+## Comunicação entre Processos
 
 ## Explique o paradgma cliente-servidor
 
