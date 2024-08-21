@@ -339,6 +339,8 @@ Os sistemas distribuídos devem prever a interação de vários usuários que po
 
 # Aula II
 
+# Sistemas Distribuídos
+
 ## Tipos de modelos
 	físicos
 		forma explícita de modelo.
@@ -652,3 +654,145 @@ A forma de operação do NFS consiste em montar o FS remoto
 O NFS permite criar hierarquias de abstrações aninhadas, obtendo partes das estruturas em diversos servidores.
 
 ![image](https://github.com/user-attachments/assets/bfff7e9f-7deb-414b-8db9-977ca309248c)
+
+# Aula 3
+
+# Comunicação entre Processos
+
+## Explique o paradgma cliente-servidor
+
+Cliente: tem comportamento ativo (mestre)  
+- Solicita conexão e serviços a um servidor  
+
+Servidor: tem comportamento passivo (escravo)  
+- Aguarda solicitações do cliente, através de uma porta previamente registrada e informada à camada de transporte  
+
+## Explique a interface de sockets
+
+TSAP – Transport Service Access Point  
+- Ponto de acesso aos serviços prestados pela camada de transporte  
+
+![image](https://github.com/user-attachments/assets/082fb0ef-b326-4faf-85e9-36db991a43cf)
+
+Interface da camada de transporte da Internet  
+- Oferece acesso aos protocolos de transporte (TCP, UDP) e rede (IP).  
+
+Provê funções (primitivas) e estruturas de dados de alto nível  
+- Extensão das abstrações de operações com arquivos.  
+- Um descritor de socket é mantido na tabela de arquivos abertos.  
+- As operações para ler e escrever em um socket são semelhantes às realizadas em arquivos (read, write, close, p.e).  
+
+Hoje, praticamente todas as plataformas oferecem suporte e às API´s de linguagens de alto nível para uso de sockets  
+- Desde PC (Windows, Mac, Linux), smartphones (Android, IOS), até controladores (Arduino, BeagleBone, Raspberry).  
+
+## Modelo de interação
+
+Comportamento solicitação-resposta (request-reply).  
+- Cliente demanda um serviço e fica aguardando a resposta.  
+- Servidor recebe a solicitação, processa o pedido e envia resposta ao cliente.  
+
+![image](https://github.com/user-attachments/assets/fbc52e29-ce1a-477d-8553-1d5c9962bfba)
+
+Dois tipos de serviços de transporte.  
+- Orientados à conexão (SOCK_STREAM) - protocolo TCP.  
+- Não-orientado à conexão (SOCK_DGRAM) - protocolo UDP.  
+
+## Modelo do SOCK_STREAM
+
+![image](https://github.com/user-attachments/assets/95ecb0f3-8da2-4789-ad8d-5894d50563e2)
+
+## Modelo do SOCK_DGRAM
+
+![image](https://github.com/user-attachments/assets/dd10a963-7b13-4f10-bff7-cd30f3451d14)
+
+## O que é Projeto de protocolo de aplicação
+
+TCP e UDP não definem  
+- Regras para formato (sintaxe) das mensagens entre aplicações.  
+- Significado (semântica) do conteúdo das mensagens.  
+- Comportamento de clientes ou servidores.  
+
+O projeto do protocolo de aplicação deve prever isso.  
+
+Alguns serviços (aplicações) criaram definições padronizadas.  
+para apresentação de dados.  
+- Exemplos: MIME, SSL, XDR (do RPC).  
+
+Em sockets, o formato oferecido é de uma sequência de bytes.  
+
+Há três estratégias distintas para formatos de mensagens.  
+- Campos de tamanhos fixos.  
+- Campos separados por delimitadores.  
+- Pares de parâmetro x valor (com delimitadores).  
+
+## Explique campos de tamanhos fixos
+
+O formato e os tamanhos dos campos são fixos.
+- Estrutura fixa do cabeçalho é especificada no protocolo.
+
+### Vantagens
+Melhora o desempenho para criação e interpretação.
+Regras mais rígidas para implementação das aplicações.
+
+### Desvantagens
+Demanda a especificação completa da aplicação antes de defini-lo.
+Não suporta dados maiores que o tamanho fixo.
+Desperdício de espaço, quando os dados são menores.
+
+Ex.:  
+
+![image](https://github.com/user-attachments/assets/8bf25c16-3f4e-4d86-b543-f40170e76473)
+
+
+– O primeiro byte é um código de tipo da mensagem.  
+– O segundo campo (10 bytes seguintes) é o nome (para esse tipo).  
+– O terceiro campo (12 últimos bytes) é o tipo de usuário.  
+
+## Campos separados por delimitadores
+
+Formato pode variar na quantidade e tamanho dos campos.
+
+### Vantagens
+Pode se adaptar a diferentes situações de demanda.  
+Exemplo: aplicação de transferência de arquivos.  
+- Inicialmente envia o nome e o tamanho do arquivo, e a operação desejada.  
+- Em seguida, o conteúdo do arquivo.  
+
+### Desvantagem
+Pior desempenho para interpretação das mensagens.
+
+Ex.: 1;José;Professor
+
+### Maior problema
+Caractere delimitador pode aparecer no conteúdo de um campo (principalmente em conteúdos binários).
+
+### Solução
+Byte stuffing
+
+## Pares de parâmetro x valor
+
+Carrega, junto ao valor, o nome do parâmetro.  
+Padrão adotado por protocolos orientados a texto da Internet (HTTP, SMTP, etc).
+
+### Vantagens
+Permite adaptação de conteúdo e extensões.  
+A aplicação pode consumir somente parte dos campos.  
+
+### Desvantagem
+Pior desempenho para interpretação das mensagens.  
+Ex.: codigo=1;nome=José;tipo=Professor  
+
+### Problema
+Caracteres delimitadores podem aparecer no conteúdo de um campo (principalmente em conteúdos binários).
+
+### Solução
+Byte stuffing
+
+## Comportamento do cliente e do servidor
+
+Em um protocolo define a funcionalidade esperada para as duas entidades, cliente e servidor.  
+
+Especifica também em quais situações que tipo de mensagem será recebida ou enviada  
+Formas de especificação.  
+- Descrição textual: as possíveis funções, pré-condições e possíveis resultados são cuidadosamente enumerados
+- Diagramas de estados, de atividades, ou pseudocódigo
