@@ -213,22 +213,30 @@ Depois de ser digitalizada -> matrizes bitmap (.bmp)
 
 ## RGB e CMY
 
-O modelo RGB surgiu a partir de estudos de composição de luzes, que demonstraram que a partir de apenas três cores primárias é possível obter todas as outras cores do espectro da luz visível.
+O modelo RGB surgiu através de estudos de composição de luzes e demonstraram que a partir de apenas três cores primárias é possível obter todas as outras cores do espectro da luz visível.
 
-Os estudos também mostraram que as três cores primárias que apresentam as melhores combinações para gerar outras cores são as cores vermelho (Red), verde (Green) e azul (Blue), o que deu origem ao modelo RGB.
+As três cores primárias que apresentam as melhores combinações para gerar outras cores são as cores vermelho (Red), verde (Green) e azul (Blue), dando origem ao modelo RGB.
 
 ![image](https://github.com/user-attachments/assets/698ded06-a315-4b77-946d-e4ab4c7bb19c)
 
-O modelo RGB é um modelo de cor aditivo. A combinação das cores primárias gera as cores secundárias. Com r = 0, não há contribuição da cor vermelha, e com r = 255, há o máximo de contribuição da cor vermelha. O mesmo vale para as cores verde (g) e azul (b).  
+O modelo RGB é um modelo de cor aditivo e a combinação das cores primárias gera as cores secundárias.  
 
-Uma cor é, portanto, um ponto no interior do cubo de cores, cujos vértices representam as cores primárias (R, G e B), as cores secundárias (C, M e Y), a ausência de cor (K) e a composição de todas as cores (W).  
+Com r = 0, não há contribuição da cor vermelha, e com r = 255, há o máximo de contribuição da cor vermelha. O mesmo vale para as cores verde (g) e azul (b).  
+
+Uma cor é, portanto, um ponto no interior do cubo de cores, cujos vértices representam:  
+
+- as cores primárias (R, G e B),
+- as cores secundárias (C, M e Y),
+- a ausência de cor (K),
+- a composição de todas as cores (W).  
 
 ![image](https://github.com/user-attachments/assets/84872c5e-448e-41c7-b6e1-1f3c92eaa927)
 
-O modelo HSL representa a cor pelos componentes de cromaticidade matiz (H - hue) e saturação (S - saturation), e pela componente de luminância (L - luminance). É um modelo bastante utilizado no processamento de imagens, isso porque alguns algoritmos de processamento de imagens requerem uma relação de ordem entre os elementos do contradomínio.
+HSL (Hue, Saturation, Lightness) é um modelo de cores que representa as cores de forma mais próxima à percepção humana, onde a matiz define a tonalidade (como vermelho ou azul), a saturação define a intensidade da cor, e a luminosidade define a quantidade de luz. Diferente do RGB (Red, Green, Blue), que mistura as três cores primárias em diferentes intensidades para criar outras cores, o HSL separa a cor em aspectos que são mais intuitivos para manipulação, como ajustar a intensidade ou a claridade de uma cor específica.
 
-O contradomínio da componente luminância (L) do HSL contém todos os contornos da imagem (como uma fotografia monocromática) e
-possui a relação de ordem (número inteiro). 
+Ex: clarear uma cor em HSL envolve simplesmente aumentar o valor da luminosidade, enquanto no RGB é necessário um cálculo mais complexo, podendo alterar inadvertidamente a tonalidade da cor.
+
+Obs:
+O contradomínio da componente luminância (L) do HSL contém todos os contornos da imagem (como uma fotografia monocromática) e possui a relação de ordem (número inteiro). 
 
 ![image](https://github.com/user-attachments/assets/174ae2e8-cd1f-4516-b582-cfafbf13f4e1)
-
