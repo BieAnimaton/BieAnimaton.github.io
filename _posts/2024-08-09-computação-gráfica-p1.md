@@ -23,10 +23,12 @@ Computação Gráfica → 3 grandes áreas
 ## Processamento de imagem
 
 Área mais pesquisada e evoluída.  
-Imagem que entra é alguma foto e precisa ser complexa.  
+Imagem que entra é alguma foto e precisa ser complexa → digitalização.  
 Ajuda a preparar as imagens que serão analisadas (imagem mais critica).  
 
-É a subárea da computação gráfica que visa o tratamento e alterações de imagens digitais. O objetivo do processamento de imagens é fazer modificações em imagens digitais para se obterem outras imagens digitais. Engloba qualquer aplicação de edição de imagens e o processamento mais comum é a filtragem, mas a segmentação e a reconstrução também são usadas no processamento.
+- Procura o tratamento e alterações de imagens digitais.  
+- O objetivo é fazer modificações em imagens digitais para se obterem outras imagens digitais.  
+- Engloba qualquer aplicação de edição de imagens com processamentos de filtragem, - segmentação e reconstrução.  
 
 ## Análise de imagem
 
@@ -34,27 +36,32 @@ Imagem processada entra aqui.
 Questões mais simples.  
 Resulta em dados para a síntese.  
 
-A análise de imagens é o conjunto de artefatos e processamentos para extrair informação digital da imagem digital. O objetivo é a extração de características e análise de dados extraídos da imagem. Para isso, a imagem digital pode passar por pré-processamento, visando facilitar a extração de características. Pode ser uma filtragem, com o objetivo de realçar características, ou uma segmentação, com o objetivo de separar objetos de interesse.
+- Conjunto de artefatos e processamentos para extrair informação digital da imagem digital.  
+- O objetivo é a extração de características e análise de dados extraídos da imagem.  
+- Para isso, a imagem digital pode passar por pré-processamento, visando facilitar a extração de características.  
+- Pode ser uma filtragem, com o objetivo de realçar características, ou uma segmentação, com o objetivo de separar objetos de interesse.
 
 ## Síntese de imagem
 
 Área mais antiga e conhecida.  
 Desenhar alguma coisa com os dados recebidos.  
-Gerar uma imagem e retorna ao processamento de imagem.  
+Gerar uma imagem e retorna ao processamento de imagem  → renderização.  
 
-A síntese de imagens é a subárea da computação gráfica que visa à produção de imagens sintéticas a partir de modelos matemáticos e transformações do modelo. É também a subárea que trata da criação de interfaces gráficas de usuário e animações. A imagem digital é o produto final resultante de processamentos realizados sobre modelos e descritores de imagem.
+- Procura à produção de imagens sintéticas a partir de modelos matemáticos e transformações do modelo.  
+- Também trata da criação de interfaces gráficas de usuário e animações.  
+- A imagem digital é o produto final resultante de processamentos realizados sobre modelos e descritores de imagem.
 
 ## Observações
 
 - Imagem externa para processamento → digitalização.
 - Imagem da síntese para processamento → renderização.
 
-Entrar com dados (foto de uma casa - digitalização), processar (filtros), analisar (obter a posição das janelas) e devolver uma imagem (janelas em 3D pelo Blender, por exemplo- renderização).
+Ex: Entrar com dados (foto de uma casa - digitalização), processar (filtros), analisar (obter a posição das janelas) e devolver uma imagem (janelas em 3D pelo Blender, por exemplo- renderização).
 
 ## Por fim
 
-Imagem que entra do mundo externo - digitalizada.
-Imagem sintetizado - sintética / vetorial.
+Imagem que entra do mundo externo - digitalizada.  
+Imagem sintetizado - sintética / vetorial.  
 
 # Aula I
 
@@ -67,7 +74,7 @@ Ex: placa, ler o que está escrito no livro, copo de vidro...
 Consguimos extrair informação (conjunto) de algo que existe.  
 
 ## Realidade virtual
-Substitui as infos que a realidade concreta (real) estaria dando.
+Substitui as infos que a realidade concreta (real) estaria dando.  
 Eu sei que não é concreta.  
 Ex: Óculos para enxergar, fone de ouvido para ouvir, esteira para andar
 equipamentos para traduzir sentidos reais no virtual e vice-versa.  
@@ -82,20 +89,23 @@ Ex: ao pesquisa um cachorro no google, você consegue "criar" um cachorro na vid
 Mistura de coisas que existem no ambiente real (móvel, iluminação) acrescidas da info virtual (cachorro).  
 Junção entre elementos reais e elementos virtuais - predominância de elementos reais.  
 
-Ex2:Pokemon Go
-![image](https://github.com/user-attachments/assets/3fa40baa-598a-4cf6-a5d9-5272f4158f4c)
+Ex 2: Pokemon Go
+![image](https://github.com/user-attachments/assets/7f2c7991-1879-4ab5-86bc-8084e8715655)
 
 ### Elementos mais proximos do virtual - virtualidade aumentada
-Também é uma junção do real e virtual.
-Muito mais elementos virtuais do que reais.
+Também é uma junção do real e virtual.  
+Muito mais elementos virtuais do que reais.  
+
 Ex: filme ou jornal, apresentador e fundo verde com outra imagem, da impressão que está em outro lugar.
 
 ## Resumindo
 
-Enquanto realidade virtual precisava de muitos equipamentos/periférics, realidae aumentada só precisa de webcam e computador.
+Enquanto realidade virtual precisa de muitos equipamentos/periférics, a realidade aumentada só precisa de webcam e computador.
 
-hj em dia - realidade aumentada de forma muit simples - proprio google
-realidade virtual - ainda que seja uma tecnologia evoluida - evolução no mundo do entretenimento (comprar alguns dos periféricos) - equipamento um pouquinho mais restritos - caros - mais processamento
+## Hoje em dia
+Realidade aumentada de forma muito simples - próprio google.  
+
+Realidade virtual - ainda que seja uma tecnologia evoluída, principalmente no mundo do entretenimento (compra de alguns dos periféricos), os equipamento são um pouquinho mais restritos (caros, necesistam mais processamento).
 
 ## Linha crescente
 
@@ -107,19 +117,21 @@ Obs: A observação das diferentes realidades pode ser continua.
 > A realidade virtual da década de 90 é a realidade virtual imersiva hoje em dia.  
 
 ## Realidade virtual imersiva
-Para que a pçessoa experimentar, é necessário equipamentos que traduzam todos os sentidos para o ambiente virtual - tato, olfato, visao, audicao, rosto - traduziods de alguma maneira.  
+Para que a pçessoa experimentar, é necessário equipamentos que traduzam todos os sentidos para o ambiente virtual - tato, olfato, visão, audição, rosto - traduziods de alguma maneira.  
 Objetivo de simular sensações que soa como se fossem provenientes da realidade concreta.
 
-## Realidade virtual não imersiva - jogo - vai te transportar para uma outra realidade
+## Realidade virtual não imersiva
+Muito presente em jogos - vai te transportar para uma outra realidade.  
 Imersivo de maneira contemporânea sem todos os aparelhos.  
-Não considera os outros sentidos - como tato.
+Não considera os outros sentidos - como tato e olfato.
 
 Ex: Beat Saber
 ![image](https://github.com/user-attachments/assets/40ac7c36-236b-4554-9dd5-a50295aa8227)
 
 ## Fundamentos de imagem - Cap II
 
-A imagem - resultado do processo de digitalização - é uma matriz de valores chamados pixels.
+Imagem - resultado do processo de digitalização - é uma matriz de valores chamados pixels.  
+Imagem matricial - resultado do processo de digitalização.  
 
 Possuem 3 canais para armazenar as cores R, G e B.
 
@@ -134,15 +146,60 @@ A imagem representada por uma matriz é chamada de imagem matricial, bitmap ou, 
 ![image](https://github.com/user-attachments/assets/32a6714c-da24-4de3-bb1a-8f8f4052ec4e)
 
 Etapas de digitalização
-- Sinal original - fótons saindo da lâmpada, relfetindo no objeto e chegando no meu olho (cones e bastonetes).
-- Filro analógico (qualidade da máquina fotografia) sensores q vao perceber a quantidade de fotons chegando - imagem capturada pela câmera.
-- Sinal filtrado - possui menos informações.
-- Amostragem : em quantos quadradrihos eu vou diviir esses sinal filtrado - pixels no final da minha imagem - quantos mais amostras melhor a resolução - resulta sinal amostrado.
-- Sinal amostrado - elementos q eu vou escolher.
-- Quantização atribuição de valores a cada uma dessas amostras - 256 tonalidades de R G e B - quanto mais eu aumentar, mais bits na grade de quantização, maior a capacidade de representação da img - 8 bits para cada um dos canais.
-- Sinal digital - saída da quantização.
-- Sistema digital - faz o storage da imagem digital.
-- Sinal digital - disponivel para os dispositivos eletrônicos.
+
+### Sinal original
+Fótons da realidade concreta saindo da lâmpada, refletindo no objeto e as informações luminosas chegando no meu olho (cones e bastonetes).  
+
+### Filro analógico
+Relacionados com qualidade da máquina fotografia.  
+Os sensores vão perceber a quantidade de fótons chegando (sensores mais precisos conseguem perceber uma maior quantidade de luz e vice-versa).  
+Imagem capturada pela câmera gera o sinal filtrado.  
+
+### Sinal filtrado
+Já é menor que o original, possui menos informações.  
+
+### Amostragem
+Em quantos quadradrihos eu vou subdiviir esses sinal filtrado.  
+Representa os pixels no final da minha imagem.  
+Quanto mais amostras melhor a resolução.  
+Resulta sinal amostrado.  
+
+Ex: 2 mega pixels = 2 milhões de quadradrihos que "olham" o sinal filtrado e tentam representar o comportamento do mesmo.  
+Diretamente relacionado com a quantidade de pixels que eu vou ter lá no final da minha imagem.  
+Quanto mais amostragem, melhor a resolução da imagem.  
+
+### Sinal amostrado
+A quantidade elementos q eu vou escolher para representar o sinal original a partir do sinal filtrado.  
+
+### Quantização
+Atribuição de valores a cada uma dessas amostras.  
+Recebe 3 valores, 256 tonalidades de R G e B.  
+Para representar 1 cores 1 bit só.  
+Quanto menos bits, mais informações perdidas.  
+Quanto mais eu aumentar, mais bits na grade de quantização, maior a capacidade de representação da imagem.  
+8 bits para cada um dos canais.  
+Resulta no sinal digital.  
+
+![image](https://github.com/user-attachments/assets/d2e84ba8-9141-45d1-940e-c8d80a0ded88)
+
+### Sinal digital
+Sinal já digitalizado.  
+
+### Sistema digital
+Faz o armazenamento da imagem digital (sinal digital) no sistema para uso futuro.  
+
+### Sinal digital
+Disponivel para os todos dispositivos.  
+
+## Pontos positivos e negativos da digitalização
+
+Positivos  
+- Manipulação,
+- Armazenamento,
+- Distribuição.
+
+negativos  
+- Nível de detable (menos informações).
 
 ## Bitmap e imagens vetoriais
 
