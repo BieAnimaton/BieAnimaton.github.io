@@ -140,7 +140,7 @@ Redução de riscos: estruturas de governança bem definidas ajudam a identifica
 	
 Sustnetabilidade a longe prazo: práticas de governança corporativa promovem sustentabilidade e a responsabilidade social, contribuindo para a longevidade da empresa.
 
-## Define ativos corporativos.
+## Defina ativos corporativos.
 Ativos corporativos são considerados estratégicos para a governança corporativa e referem-se aos recurso e bens que uma empresa possio e que têm valor econômico.  
 Esses ativos podem ser classificados como tangíveis ou intangíveis.
 	
@@ -180,3 +180,133 @@ Algumas:
 - Política de transparência e divulgação de informações;
 - Política de governança de TI;
 - Outras...
+
+# Aula III
+
+## Concluindo...
+
+## Resuma governança corporativa
+Governança corporativa é um sistema formado por princípios, regras, estruturas e processos pelo qual as organizações são dirigidas e monitoradas, com vistas à geração de valor sustentável para a organização, para seus sócios e para a sociedade em geral.
+
+Seu foco é a busca pelo equilíbrio entre os interesses de todas as partes, contribuindo positivamente para a sociedade e para o meio ambiente.
+
+## Governança de TI (GTI)
+
+![image](https://github.com/user-attachments/assets/9f84caae-adbc-4682-a5c1-6f99643e542e)
+
+A GTI surgiu como um subconjunto da governança corporativa, e na figura acima, se vê a interação entre esses dois modelos.
+
+## O que motiva a GTI?
+
+A GTI pode ser motivada por vários fatores dentre eles: o ambiente de negócios, as integrações tecnológicas, a segurança da informação, os marcos de regulação e a dependência do negócio em relação a TI.
+
+## Quando o conceito de GTI surgiu?
+
+Surgiu em meio às mudanças das organizações em utilizar a TI como uma ferramenta de melhoramento de produtos e serviços, bem como o relacionamento cliente/empresa, influenciando todos os setores presentes na organização.
+
+Uma definição que se pode destacar é a da ISO/IEC 38500 (ABNT, 2009) “é o sistema pelo qual o uso atual e futuro da TI são dirigidos e controlados. Significa  avaliar e direcionar o uso da TI para dar suporte à organização e monitorar seu uso para realizar planos”. 
+
+## Quais são os objetivos principais da GTI?
+
+- promover o alinhamento da TI em relação ao negócio, no que se refere a aplicações, e a infraestrutura dos serviços;
+- promover a implantação de mecanismos que garantem o processo continuo dos negócios; e por fim
+- promover o alinhamento de TI a marcos de regulação.
+
+## Princípios orientados da GTI
+
+### Responsabilidade
+Assumir as responsabilidades quanto ao fornecimento e demandas de recursos de TI.
+
+### Estratégia
+Os planos (estratégico, tático e operacional) são balizados pelas capacidades atuais e futuras de recursos de TI.
+
+### Aquisição
+As aquisições de recursos de TI são fundamentadas com base em análises apropriadas e transparentes.
+
+### Desempenho
+Os recursos de TI são adequados ao propósito de apoiar a organização em suas necessidades atuais e futuras.
+
+### Conformidade
+Os recursos de TI atendem às legislações e normas obrigatórias.
+
+### Comportamento Humano
+O exercício respeita os aspectos comportamentais do ser humano envolvido com os recursos de TI.
+
+## Ciclo da GTI
+
+![image](https://github.com/user-attachments/assets/9286824c-9932-4ceb-a407-f607eb5b6897)
+
+### Alinhamento Estratégico e compliance
+refere-se ao planejamento estratégico de TI (PETI): leva em consideração o planejamento estratégico corporativo, para promover o alinhamento, além dos requisitos de compliance externos, como o SOX.
+
+### Decisão, compromisso, priorização e alocação de recursos
+refere-se às responsabilidades pelas decisões relativas à TI, tais como arquitetura, infra-estrutura, investimentos e necessidades de aplicações, assim como a definição dos mecanismos de decisão, isto é, quem deve tomar as decisões referentes a TI.
+
+### Estrutura, processos, operações e gestão
+refere-se à estrutura organizacional e funcional de TI, aos processos de gestão e operação dos produtos e serviços de TI, alinhados com as necessidades do negócio.
+
+### Medição do desempenho
+refere-se à determinação, coleta e geração de indicadores de resultados dos processos e serviços de TI e sua contribuição para o negócio. Modelos como o BSC (Balanced Scorecard) são utilizados para quantificar estes resultados.
+
+![image](https://github.com/user-attachments/assets/decf0072-385d-4d79-b1a4-978add25f72f)
+
+## Governança de TI X Gestão de TI
+
+### Propósito da Governança de TI (COBIT)
+- Assegurar que as necessidades , os requisitos e as opções dos interessados da empresa sejam avaliadas para determinar, de forma equilibrada e consensual, como alcançar os objetivos da empresa.
+- Estabelecer a direção através de prioridades e tomada de decisão.
+- Monitorar o desempenho e a conformidade de acordo com a direção eos objetivos.
+
+### Propósito da Gestão de TI (ITIL)
+- Gerir planos, implementações, execuções e monitoramento de atividades em alinhamento com a direção definida pelo corpo de governança para atingir os objetivos empresariais.
+
+### Em resumo:
+A governança define a direção.
+A gestão tem que garantir que a direção seja respeitada.
+
+## Visão Geral
+
+![image](https://github.com/user-attachments/assets/bd4a077f-faf9-4853-93ab-35a5f70ab482)
+
+## Principais Modelos de Melhores Práticas
+
+![image](https://github.com/user-attachments/assets/de601947-fe4b-4a13-9b29-3bcc003a079f)
+
+## Quais são os fatores que motivam as empresas a reverem seus atuais modelos?
+
+- Complexidade cada vez maior da tecnologia.
+- Crescente dependência de TI.
+- Pressão por redução de custos.
+- Maior flexibilidade e agilidade.
+- Responsabilidade legal (civil e criminal).
+- Exigência de transparência pelos acionistas e pelo mercado.
+- Mudança do perfil da concorrência.
+- Aumento das ameaças e vulnerabilidades em TI.
+
+## Como a ISACA define GTI?
+
+“Governança de TI é de responsabilidade dos executivos e da alta direção, consistindo em aspectos de liderança, estrutura organizacional e processos que garantam que a área de TI da organização suporte e aprimore os objetivos e as estratégias da organização.”
+
+Obs: ISACA é o acrônimo para Information Systems Audit and Control Association, uma associação internacional que suporta e patrocina o desenvolvimento de metodologias e certificações para o desempenho das atividades de auditoria e controle em sistemas de informação.
+
+## Como o ITGI define GTI?
+
+O ITGI (2003), refere-se à GTI “como sendo um subconjunto da governança corporativa”.
+
+Obs: ITGI é o acrônimo para Information Technology Governance Institute, fundado em 1998 pela ISACA.
+
+## Como a RNP (escola superior de redes) define GTI ?
+
+Obs: RNP = Rede Nacional de Pesquisa
+
+“A Governança em TI está relacionada ao desenvolvimento de um conjunto estruturado de competências e habilidades estratégicas para profissionais de TI. Assim, são responsáveis pelo planejamento, implantação, controle e monitoramento de programas e projetos de governança. Portanto, requisito fundamental para as organizações, do ponto de vista de aspectos operacionais e de implicações legais.”
+
+## Resumindo  a GTI:
+
+- Busca o compartilhamento de decisões de TI com os demais dirigentes da organização.
+- Estabelece regras.
+- Auxilia a organização e os processos que nortearão o uso de TI pelos usuários, departamentos, divisões de negócios além de fornecedores e clientes.
+- Determina como a TI deve prover os serviços para a empresa.
+- Deve garantir o alinhamento de TI ao negócio.
+- Garante a continuidade do negócio contra interrupções e falhas.
+- Garante o alinhamento de TI com os marcos reguladores.
