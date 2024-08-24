@@ -104,3 +104,78 @@ observou as 4 etapas que fazem parta da moral
 ### Autonomia: (por si mesmo / lei própria)
 Interiorização das normas morais e (o  momento em que) nos comportamos a partir ( e de acordo) com as normas.  
 > Absorver as normas morais e agir de acordo com elas.
+
+# Aula III
+
+## Ética X moral
+
+Para Vãzquez, o problema da essência do ato moral, levanta um outro problema importante : RESPONSABILIDADE.
+
+“ É possível falar em comportamento moral somente quando o sujeito que assim se comporta é responsável pelos seus atos, mas isto, por sua vez, envolve o pressuposto de que pôde fazer o que queria fazer, ou seja, de que pôde escolher entre duas ou mais alternativas, e agir de acordo coma decisão tomada”.
+
+## Para Vãzquez
+
+Definição : “a ética é a teoria ou ciência do comportamento moral dos homens em sociedade. Ou seja, é ciência de uma forma específica de comportamento humano”.
+
+
+“A ética é a ciência da moral, isto é, de uma esfera do comportamento humano.
+
+“A moral não é ciência, mas objeto da ciência; e, neste sentido, é por ela estudada e investigada. A ética não é a moral e, portanto, não pode ser reduzida a um conjunto de normas e prescrições; sua missão [ da ética] é explicar a moral efetiva e, neste sentido, pode influir na própria moral”.
+
+Ética (= ciência específica) 
+Moral (= objeto da ética)
+
+A moral se refere, assim, ao comportamento adquirido ou modo de ser conquistado pelo homem. 
+Ética vem do grego ethos, que significa analogamente “modo de ser” ou “caráter” enquanto forma de vida também adquirida ou conquistada pelo homem”. 
+
+Moral = costume ou costumes
+Ética = modo de ser ou caráter
+
+Assim , para Vãzquez, Ética (ethos) e moral (mos) assentam-se num modo de comportamento que não corresponde a uma disposição natural, mas que é adquirido ou conquistado por hábito.
+
+## O que é moral?
+
+“conjunto de normas e regras destinadas a regular as relações dos indivíduos numa comunidade social dada, o seu significado, função e validade não podem deixar de variar historicamente nas diferentes sociedades”.
+
+As morais concretas, efetivas, se sucedem e substituem uma as outras.
+
+A moral é um fato histórico... E devemos considerá-la como um aspecto da realidade humana mutável com o tempo.
+
+O homem é um ser histórico, isto é, “um ser cuja característica é a de estar se fazendo ou se autoproduzindo constantemente tanto no plano de sua existência material, prática, como no de sua vida espiritual, incluída nesta a moral”. 
+
+## Comente sobre as origens da moral.
+
+“A moral só pode surgir – e efetivamente surge – quando o homem supera a sua natureza puramente natural, instintiva, e possui (já) uma natureza social: isto é, quando já é membro de uma coletividade”.
+
+“(...) a moral exige necessariamente não só que o homem esteja em relação com os demais, mas também certa consciência – por limitada e imprecisa que seja – desta relação para que se possa comportar de acordo com as norma ou prescrições que o governam”. 
+
+A palavra ética deriva do grego ethos, que significa costume. Em latim, os costumes do povo designam-se com a palavra mos, moris; dele deriva a voz moral. Por isso, do ponto de vista etimológico, pode-se falar indistintamente de ética ou de moral. (...)”
+
+Grego – ethos (ética) = costume.
+Latim – costume = mos, mores (moral)
+
+“Ambos os termos ética e moral, costumam ser usados como adjetivos de uma conduta: diz-se moral ou ética a conduta boa, e imoral ou  antiética a conduta má”
+
+## Reafirmam a visçao de Vãzquez
+
+Quanto... Ao uso atual dos termos ética  e moral, predomina a corrente de utilizar o primeiro (ética) para denominar a ciência ou a filosofia da conduta humana e o segundo (moral) para se referir a qualidade da conduta humana.
+
+“Ética é a ciência da conduta humana, segundo o bem e o mal, com vistas à felicidade. É a ciência que estuda a vida do ser humano, sob o ponto de vista da qualidade da sua conduta. Disto precisamente trata a Ética, da boa e da má conduta e da correlação entre boa conduta e felicidade, na interioridade do ser humano. A Ética não é uma ciência teórica ou especulativa, mas uma ciência prática, no sentido de que se preocupa com a ação, com o ato humano”.
+
+## Qual a finalidade da ética ?
+
+Para Aristóteles, é a felicidade ! (viver bem... Agir bem !)
+
+“Assim, praticar a ética é o meio, o único meio para alcançar a felicidade. Esta é a finalidade da Ética. Ela nos oferece o caminho para alcançar uma vida moralmente boa e, através dela, a felicidade. Ser feliz é resultado do hábito do bem agir”.
+
+Epicuro – “Nenhuma teoria é válida se não possuir um objetivo moral... A finalidade da ética consiste em propiciar a felicidade dos homens, de modo que essa possa libertá-lo das mazelas que os atormentam, quer advenham de circunstâncias políticas e sociais, quer sejam causadas por motivos religiosos”
+
+“ A felicidade é alcançada por meio do controle dos medos e dos desejos, de maneira que seja possível chegar [a um estado de prazer estável e equilíbrio] e consequentemente, a um estado de tranquilidade e a ausência de perturbações... Há ´prazeres maus e violentos, decorrentes do vício e que são passageiros, provocando somente insatisfação e dor. Maas também há prazeres decorrentes da busca moderada da Felicidade”.
+
+Humildade como alternativa / saída para uma boa saúde da “alma”.
+
+- 1 Não se deve temer os deuses;
+- 2 Não se deve temer a morte;
+- 3 O Bem não é difícil de alcançar;
+- 4 Os males não são difíceis de suportar;
+
