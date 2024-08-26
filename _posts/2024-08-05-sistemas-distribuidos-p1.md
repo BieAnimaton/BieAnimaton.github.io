@@ -416,21 +416,22 @@ Comunicação
 - barramento de alta velocidade ou o próprio barramento de uma rede local.
 
 ## Multiprocessadores
-Comunicam-se através de um barramento comum que permite acesso à memória compartilhada.  
-Latência é muito pequena.  
-Concorrência entre os processadores pelo barramento para acesso à memória é um grande problema.  
-Problema pode ser minimizado com uso de memória cache, associada a cada processador.  
-Fortemente acoplado, alto nível de interdependência e coordenação contínua.
+- Comunicam-se através de um barramento comum que permite acesso à memória compartilhada.  
+- Latência é muito pequena.  
+- Concorrência entre os processadores pelo barramento para acesso à memória é um grande problema.  
+- Problema pode ser minimizado com uso de memória cache, associada a cada processador.  
+- Fortemente acoplado, alto nível de interdependência e coordenação contínua.
 
 ## Multicomputadores
-Sistema que conecta vários computadores - através de rede, latência é muito maior.  
-Dois tipos
+- Sistema que conecta vários computadores - através de rede, latência é muito maior.  
 - sistemas homogêneos  
-  aplicados em soluções que demnandam forte acoplamento
-  Ex: supercomputadores muito caros
+    aplicados em soluções que demnandam forte acoplamento  
+    Ex: supercomputadores muito caros  
 - sistemas heterogêneos  
 	aplicado em soluções que permitem fraco acoplamento  
-  Ex: computação em nuvem, aplicações perr-to-peer
+    Ex: computação em nuvem, aplicações perr-to-peer  
+- Fracamente acoplado, cada um com seu própri processador, memória e SO.
+
 
 ## O que são sistema operacionais distribuídos?
 São SO que atuam como gerenciador de recursos permitindo o seu uso como se fosse um sistema único.  
