@@ -459,7 +459,7 @@ def bresenham(x1, y1, x2, y2):
     return pixels
 ```
 
-# Exercício 3
+## Exercício 3
 
 Demonstre na prática que o algoritmo Bresenham é mais rápido que o algoritmo DDA.
 
