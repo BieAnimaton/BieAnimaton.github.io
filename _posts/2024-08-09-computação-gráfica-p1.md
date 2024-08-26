@@ -262,6 +262,8 @@ Criar uma imagem com 3 canais (canais de cores)
 color=np.ones((200,200,3))*155
 ```
 
+![image](https://github.com/user-attachments/assets/7fc08138-ee9f-46b1-b70d-4c1f791d4c15)
+
 Preenchidas com 1 - multiplicou por 155
 
 ## Criando retas com Opencv no Python
