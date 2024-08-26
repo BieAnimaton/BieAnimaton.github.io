@@ -330,197 +330,207 @@ Falhas do hardware ou software podem comprometer o sistema.
 Os sistemas distribuídos devem prever a interação de vários usuários que podem concorrer pelo mesmo recurso.
 
 - O recurso pode ser o próprio sistema ou rede
-    
-    Vários usuários podem querer acesso a um mesmo serviço ou sistema.
-    
-    Diferentes threads do mesmo aplicativo concorrerão pelos recursos da máquina.
-    
-    Muitos usuários acessando pode comprometer a disponibilidade do sistema.
+- Vários usuários podem querer acesso a um mesmo serviço ou sistema.
+- Diferentes threads do mesmo aplicativo concorrerão pelos recursos da máquina.
+- Muitos usuários acessando pode comprometer a disponibilidade do sistema.
 
 # Aula II
 
 # Sistemas Distribuídos
 
 ## Tipos de modelos
-	físicos
-		forma explícita de modelo.
-		basei-a na organização do hardware e sua interligação através de redes.
-	de arquitetura
-		sistemas pelas tarefas computacionais e de comunicação que são realizadas através de computadores individuais ou clusters.
-	fundamentais
-		perspectiva abstrata dos aspectos individuais de um sistema distribuído
-		modelos de interação - consideram estrutura e ordenação da comunicação de seus elementos
-		modelos de falha - consideram as maneiras pelas quais um sistema pode deixar de funcionar
-		modelos de segurança - como o sistema está protegido contra tentativas de interferências em seu funcionamento
+Físicos
+- forma explícita de modelo.
+- basei-a na organização do hardware e sua interligação através de redes.
+De arquitetura
+- sistemas pelas tarefas computacionais e de comunicação que são realizadas através de computadores individuais ou clusters.
+Fundamentais
+- perspectiva abstrata dos aspectos individuais de um sistema distribuído  
+    modelos de interação - consideram estrutura e ordenação da comunicação de seus elementos.  
+    modelos de falha - consideram as maneiras pelas quais um sistema pode deixar de funcionar.  
+    modelos de segurança - como o sistema está protegido contra tentativas de interferências em seu funcionamento.  
 
 ## Evolução dos sistemas distribuídos
-	sistemas distribuídos primitivos (início 1980)
-		redes locais - ethernet
-		10 a 100 nós - acesso limitado à internet
-		serviços de impressão, arquivos compartilhados e e-mail
-	sistemas distribuídos adaptados para a internet (1990)
-		surgimento da Web e dos mecanismos de busca - google
-		maior escala, conjunto grande e extensível de nós conectados
-		serviços globalizados para corporações, dentro e fora de suas redes
-		grande heterogeneidade de hardware, software e redes
-		demanda por padrões e tecnologias de middleware abertos
+Sistemas distribuídos primitivos (início 1980)
+- Redes locais - ethernet
+- 10 a 100 nós - acesso limitado à internet
+- Serviços de impressão, arquivos compartilhados e e-mail
+Sistemas distribuídos adaptados para a internet (1990)
+- Surgimento da Web e dos mecanismos de busca - google
+- Maior escala, conjunto grande e extensível de nós conectados
+- Serviços globalizados para corporações, dentro e fora de suas redes
+- Grande heterogeneidade de hardware, software e redes
+- Demanda por padrões e tecnologias de middleware abertos
 
 ## Sistemas distribuídos atuais
-	surgimento da computação móvel (smartphones e notebooks)
-		equipamentos podem mudar de lugar durante a operação - a um ponto fixo e isolado de rede
-		demanda por mais recursos e serviços
-	surgimento da computação ubíqua (pervasiva)
-		permitem seus integrantes serem incorporados em objetos comuns e no ambiente circundante
-	surgimento da computação em nuvem
-		conjunto de nós agrupados em arquiteturas agregadas (clusters) para determinada tarefa
+Surgimento da computação móvel (smartphones e notebooks)
+- equipamentos podem mudar de lugar durante a operação.
+- demanda por mais recursos e serviços.
+Surgimento da computação ubíqua (onipresente)
+- permitem seus integrantes serem incorporados em objetos comuns e no ambiente (casas inteligentes).
+Surgimento da computação em nuvem
+- conjunto de nós agrupados em arquiteturas agregadas (clusters) para determinada tarefa.
 
 ## Padrões arquitetonicos
-	arquitetura de camadas lógicas (layer)
-		camadas verticais de acordo com o nivel de abstração
-			Aplicativos, serviços
-			Middleware
-			Sistema Operacional
-			Computador e hardware de rede
-		a plataforma é composta pelas camadas mais baixas, de hardware e software - oferece suporte para integração com periféricos e rede
-		middleware é a camada de software que mascara a heterogeneidade e fornece um modelo de programação conveniente para os programadores
-	arquitetura de camadas físicas (tier)
-		decomposição funcional e distribuição física das partes de um sistema distribuído
-		ex de arq de 2 a 3 camadas
-		cliente -> servidor -> banco de dados
-	arquitetura orientadas a serviços (Web)
-		desacoplamento de aplicações e seu funcionamento em clientes magros
-		comunicação HTTP leva vantagem na comunicação entre redes
+Arquitetura de camadas lógicas (layer)
+- camadas verticais de acordo com o nivel de abstração
+
+![image](https://github.com/user-attachments/assets/5fc03c6c-9188-4b9a-ba29-655e07efe740)
+
+
+- a plataforma é composta pelas camadas mais baixas, de hardware e software - oferece Suporte para integração com periféricos e rede
+- middleware é a camada de software que mascara a heterogeneidade e fornece um modelo de programação conveniente para os programadores
+Arquitetura de camadas físicas (tier)
+- decomposição funcional e distribuição física das partes de um sistema distribuído
+- Ex de arq de 2 a 3 camadas
+- cliente -> servidor -> banco de dados
+
+![image](https://github.com/user-attachments/assets/c0dc5dae-52c8-48b6-8a3f-44be2a96c55f)
+
+
+Arquitetura orientadas a serviços (Web)
+
+![image](https://github.com/user-attachments/assets/1deec76d-129b-4641-a675-985dade439eb)
+
+
+- desacoplamento de aplicações e seu funcionamento em clientes magros
+- comunicação HTTP leva vantagem na comunicação entre redes
 
 ## Estilos arquitetonicos
-	em camadas
-	baseado em objetos
-	baseado em eventos
-	de espaço de dados compartilhado
+Em camadas.  
+Baseado em objetos.  
+Baseado em eventos.  
+De espaço de dados compartilhado.  
+
+![image](https://github.com/user-attachments/assets/dfc15304-db0d-4550-a8f7-06fcaf61efc1)
 
 ## Conceitos de hardware
-	multiplas CPUs é a caracteristica comum de sistemas distribuidos
-	duas categorias
-		multiprocessadores - operam em memória compartilhada
-		multicomputadores - não usam memória compartilhada
-	comunicação
-		realizada através de barramento
-		barramento de alta velocidade ou o próprio barramento de uma rede local
+Multiplas CPUs é a caracteristica comum de sistemas distribuidos.  
+Duas categorias  
+- multiprocessadores - operam em memória compartilhada
+- multicomputadores - não usam memória compartilhada
+Comunicação
+- realizada através de barramento.
+- barramento de alta velocidade ou o próprio barramento de uma rede local.
 
 ## Multiprocessadores
-	comunicam-se através de um barramento comum que permite acesso à memória compartilhada
-	latência é muito pequena
-	concorrência entre os processadores pelo barramento para acesso à memória é um grande problema
-	problema pode ser minimizado com uso de memória cache, associada a cada processador
+Comunicam-se através de um barramento comum que permite acesso à memória compartilhada.  
+Latência é muito pequena.  
+Concorrência entre os processadores pelo barramento para acesso à memória é um grande problema.  
+Problema pode ser minimizado com uso de memória cache, associada a cada processador.  
+Fortemente acoplado, alto nível de interdependência e coordenação contínua.
 
 ## Multicomputadores
-	sistema que conecta vários computadores - através de rede, latência é muito maior
-	dois tipos
-		sistemas homogêneos
-			aplicados em soluções que demnandam forte acoplamento
-			Ex: supercomputadores muito caros
-		sistemas heterogêneos
-			aplicado em soluções que permitem fraco acoplamento
-			Ex: computação em nuvem, aplicações perr-to-peer
+Sistema que conecta vários computadores - através de rede, latência é muito maior.  
+Dois tipos
+- sistemas homogêneos  
+  aplicados em soluções que demnandam forte acoplamento
+  Ex: supercomputadores muito caros
+- sistemas heterogêneos  
+	aplicado em soluções que permitem fraco acoplamento  
+  Ex: computação em nuvem, aplicações perr-to-peer
 
 ## O que são sistema operacionais distribuídos?
-	Atua como gerenciador de recursos permitindo o seu uso como se fosse um sistema único
-	esconde as diferenças de harware entre seus integrantes
-	classificados
-		sis. fortemente acoplados
-			aplicados ao gerenciamento de multiprocessadores e sistemas de multicomputadores homogêneos
-			grande dependência entre os nós que o compõem
-		sis. fracamente acoplados
-			aplicam-se ao gerenciamento de sistemas de multicomputadores heterogêneos
-			Ex: NOS (Network OS – SO de rede), que disponibilizam serviços locais a clientes remotos, através de redes de computadores
+São SO que atuam como gerenciador de recursos permitindo o seu uso como se fosse um sistema único.  
+- esconde as diferenças de harware entre seus integrantes.
+- fortemente acoplados  
+  aplicados ao gerenciamento de multiprocessadores e sistemas de multicomputadores homogêneos.  
+  grande dependência entre os nós que o compõem.  
+- fracamente acoplados  
+	aplicam-se ao gerenciamento de sistemas de multicomputadores heterogêneos.  
+	Ex: NOS (Network OS – SO de rede), que disponibilizam serviços locais a clientes remotos, através de redes de computadores.  
 
 ## O que são sistemas operacionais de rede?
-	surgiram da necessidade de integrar plataformas heterogêneas em um mesmo sistema 
-		os sistemas operacionais devem possuir protocolos comuns para oferecimento de serviços de comunicação em rede
-		permitir a administração centralizada dos seus recursos
-		aplicações distribuídas podem ser construídas sobre esse ambiente
+Surgiram da necessidade de integrar plataformas heterogêneas em um mesmo sistema.  
+- os sistemas operacionais devem possuir protocolos comuns para oferecimento de serviços de comunicação em rede.  
+- permitir a administração centralizada dos seus recursos.  
+- aplicações distribuídas podem ser construídas sobre esse ambiente.  
+
+![image](https://github.com/user-attachments/assets/6167d4f6-84d3-42dc-a3a3-af799b55b063)
 
 ## O que é um middleware?
-modelos anteriores com problemas
-	multicomputadores homogêneos não pode gerenciar um conjunto de computadores independentes
-	NOS não oferece uma visão coerente de um sistema único
-a solução é juntar o melhor dos dois
-	transparência e a facilidade de uso do primeiro
-	escalabilidade e a abertura do segundo
-middleware oferece
-	camada adicional de software que esconde a heterogeneidade dos computadores e oferece transparência de distribuição
-	geralmente é colocado acima de um sistema operacional de rede e abaixo das aplicações que usarão o ambiente
+Modelos anteriores com problemas
+- multicomputadores homogêneos não pode gerenciar um conjunto de computadores independentes.
+- NOS não oferece uma visão coerente de um sistema único.
+A solução é juntar o melhor dos dois
+- transparência e a facilidade de uso do primeiro.
+- escalabilidade e a abertura do segundo.
+Middleware oferece
+- camada adicional de software que esconde a heterogeneidade dos computadores e oferece transparência de distribuição.
+- geralmente é colocado acima de um sistema operacional de rede e abaixo das aplicações que usarão o ambiente.
+
+![image](https://github.com/user-attachments/assets/d4b50da3-f2a2-40af-a76c-0de4654ae011)
 
 ## Classifique os middlewares.
-baseado em
-	sistema de arquivos distribuidos (NFS. SMB)
-		estratégia introduzida pelas sistemas Unix
-		todos os recursos do sistema eram representados em arquivos
-	chamadas remotas procedimentais (RPC)
-		esconde a complexidade da comunição através da rede
-		uma aplicação apenas implementa uma chamada a um procedimento que possui um adaptador local que é trocada em tempo de execução por uma chamada ao procedimento remoto
-	objetos distribuídos (CORBA, RMI, DCOM)
-		cada objeto remoto implementa uma interface que esconde os detalhes do objeto dos usuários
-		a aplicação usa a interface localmente e as mensagens são interceptadas pelo middleware e transmitidas pela rede até o objeto que implementa
-	documentos/serviços distribuídos (WS)
-		introduzido pela Web, cada recurso possui uma referência única (URL)
+Sistema de arquivos distribuidos (NFS. SMB)
+- estratégia introduzida pelas sistemas Unix
+- todos os recursos do sistema eram representados em arquivos
+Chamadas remotas procedimentais (RPC)
+- esconde a complexidade da comunição através da rede
+- uma aplicação apenas implementa uma chamada a um procedimento que possui um adaptador local que é trocada em tempo de execução por uma chamada ao procedimento remoto
+Objetos distribuídos (CORBA, RMI, DCOM)
+- cada objeto remoto implementa uma interface que esconde os detalhes do objeto dos usuários
+- a aplicação usa a interface localmente e as mensagens são interceptadas pelo middleware e transmitidas pela rede até o objeto que implementa
+Documentos/serviços distribuídos (WS)
+- introduzido pela Web, cada recurso possui uma referência única (URL)
 
 ## Quais são os serviços oferecidos pelo middleware?
-	São facilidades de comunicação, serviço de nome, persistência, transações distribuídas e segurança.
+São facilidades de comunicação, serviço de nome, persistência, transações distribuídas e segurança.
 
 ## Explique cada um dos serviços distribuídos.
-	Facilidade de comunicação
-		Transparência de acesso aos serviços de comunicação da rede.
-	Serviço de nome
-		Referência independente de endereço de rede
-		Provê transparência de localização e permite escalabilidade e replicação.
-	Persistência
-		Serviço de armazenamento de dados integrados a SGBDs.
-	Transações distribuídas
-		Operações compostas podem ser vistas como unidades atômicas (transações), mesmo sendo executadas em várias máquinas.
-		Levam o sistema a um estado consistente, tanato na conclusão com sucesso quanto no retorno
-	Segurança
-		Provê facilidades para autenticação de usuários, controle de acesso, encriptação e assinatura
+Facilidade de comunicação
+- transparência de acesso aos serviços de comunicação da rede.
+Serviço de nome
+- referência independente de endereço de rede
+- provê transparência de localização e permite escalabilidade e replicação.
+Persistência
+- serviço de armazenamento de dados integrados a SGBDs.
+Transações distribuídas
+- operações compostas podem ser vistas como unidades atômicas (transações), mesmo sendo executadas em várias máquinas.
+- levam o sistema a um estado consistente, tanato na conclusão com sucesso quanto no retorno
+Segurança
+- provê facilidades para autenticação de usuários, controle de acesso, encriptação e assinatura
 
 ## O que o middlewre deve prover?
-	Um middleware deve prover facilidades para comunicação
-		Acrescenta um nível extra de abstração na plataforma operacional.
-		O protocolo de comunicação define o serviço prestado e as regras para a transmissão de mensagens.
-		Tcp.
+Um middleware deve prover facilidades para comunicação
+- acrescenta um nível extra de abstração na plataforma operacional.
+- o protocolo de comunicação define o serviço prestado e as regras para a transmissão de mensagens.
+- Tcp.
 
 ## Quais são os tipos de comunicação:
-	A base da comunicação é a troca de mensagens.
-	Novos tipos podem ser adotados, de acordo com o paradigma estabelecido pelo middleware.
+A base da comunicação é a troca de mensagens.  
+Novos tipos podem ser adotados, de acordo com o paradigma estabelecido pelo middleware.  
 
 ## O que é memória compartilhada distribuída?
-	Processo transparente de solicitação de páginas de memória
-		Ao detectar que um processo local requisita uma página que está em outro computador
-		Solicita a cópia da página remota
-	Dois problemas são concorrentes na solução
-		Performance
-		Consistência
+Processo transparente de solicitação de páginas de memória
+- ao detectar que um processo local requisita uma página que está em outro computador
+- solicita a cópia da página remota
+Dois problemas são concorrentes na solução
+- performance
+- consistência
 
 ## Explique troca de mensagens.
-	Mensagens sãi unidades básicas de comunicação
-		carregam dados trocados entre as partes do sistemas distribuído
-		comunicam eventos que permitem sincronizar as ações do sistema
-	Há várias formas de se estabelecer um ponto de sincronismo
-		bloqueio do emissor até o buffer estiver disponível
-		bloqueio do emissor até a mensagem ser enviada
-		bloqueio do emissor até a mensagem ser recebida
-		bloqueio do emissor até a mensagem ser respondida
+Mensagens sãi unidades básicas de comunicação
+- carregam dados trocados entre as partes do sistemas distribuído
+- comunicam eventos que permitem sincronizar as ações do sistema
+Há várias formas de se estabelecer um ponto de sincronismo
+- bloqueio do emissor até o buffer estiver disponível
+- bloqueio do emissor até a mensagem ser enviada
+- bloqueio do emissor até a mensagem ser recebida
+- bloqueio do emissor até a mensagem ser respondida
 
 ## Diferencie persistência e transiência
-	Define se as mensagens serão armazenadas pelo meio ou não.
+Define se as mensagens serão armazenadas pelo meio ou não.
 	
-	Comunicação persistente
-		Mensagens são armazenadas pelo serviço de comunicação
-		Mesmo que um dos comunicantes (ou ambos) esteja indisponível
-		Isso permite que transmissor e receptor operem em tempos distintos
+Comunicação persistente
+- mensagens são armazenadas pelo serviço de comunicação
+- mesmo que um dos comunicantes (ou ambos) esteja indisponível
+- isso permite que transmissor e receptor operem em tempos distintos
 		
-	Comunicação transiente
-		As mensagens são mantidas apenas na memória das partes comunicantes
-		Para haver comunicação, transmissor e receptor devem estar operantes
-		Concluído e confirmado o envio, o emissor pode apagar a mensagem da memória
+Comunicação transiente
+- as mensagens são mantidas apenas na memória das partes comunicantes
+- para haver comunicação, transmissor e receptor devem estar operantes
+- concluído e confirmado o envio, o emissor pode apagar a mensagem da memória
 
 ![image](https://github.com/user-attachments/assets/9650c962-504e-4039-927e-1004232a11e2)
 
@@ -529,16 +539,16 @@ baseado em
 ![image](https://github.com/user-attachments/assets/54f4afbe-534a-4476-a737-344519f1b322)
 
 ## Diferencie sincronismo e assincronismo
-	Descrevem a forma como as aplicações se comportarão durante o envio da mensagem.
+Formas como as aplicações se comportarão durante o envio da mensagem.
 	
-	Comunicação assíncrona
-		O emissor da mensagem não é bloqueado enquanto a resposta não chega
-		Pode continuar executando outras tarefas
-		Na prática, geralmente coloca-se um thread para esperar a resposta
+Comunicação assíncrona
+- o emissor da mensagem não é bloqueado enquanto a resposta não chega
+- pode continuar executando outras tarefas
+- na prática, geralmente coloca-se um thread para esperar a resposta
 		
-	Comunicação síncrona
-		O emissor fica bloqueado enquanto a confirmação não chega
-		Uma forma mais comum de sincronismo (operações request/reply) exige que o emissor fique bloqueado até a resposta final do destinatário
+Comunicação síncrona
+- o emissor fica bloqueado enquanto a confirmação não chega
+- uma forma mais comum de sincronismo (operações request/reply) exige que o emissor fique bloqueado até a resposta final do destinatário
 
 ![image](https://github.com/user-attachments/assets/39f25c8d-45b6-4f0c-8131-80a8542f5f56)
 
@@ -547,24 +557,24 @@ baseado em
 ![image](https://github.com/user-attachments/assets/4a76572e-0262-44af-ad02-069996cf5d7a)
 
 ## O que os sockets oferecem?
-	A interface de sockets oferece apenas um modelo transiente.
-		Além disso no TCP as primitivas de solicitação e aceite de conexão bem como de escrita e leitura de stream são bloqueantes
-		isso impoe ao par comunicante pontos de sincronismo
+A interface de sockets oferece apenas um modelo transiente.
+- além disso no TCP as primitivas de solicitação e aceite de conexão bem como de escrita e leitura de stream são bloqueantes
+- isso impoe ao par comunicante pontos de sincronismo
 
 ## O que são mensagens persistentes? Quais as combinações?
-	MOM (Message-Oriented Middleware)
-		Serviço de enfileiramento de mensagens (message-queueing systems)
-		Provê suporte à comunicação persistente assíncrona
-		Oferece armazenamento intermediário de mensagens
+MOM (Message-Oriented Middleware)
+- serviço de enfileiramento de mensagens (message-queueing systems)
+- provê suporte à comunicação persistente assíncrona
+- oferece armazenamento intermediário de mensagens
 	
-	Modo geral de operação
-		Aplicações comunicam-se através da inserção de mensagens em filas
-		Cada aplicação tem uma fila específica
-		É possível o compartilhamento de uma fila por várias aplicações
+Modo geral de operação
+- aplicações comunicam-se através da inserção de mensagens em filas
+- cada aplicação tem uma fila específica
+- é possível o compartilhamento de uma fila por várias aplicações
 	
-	Isso permite a comunicação fracamente acoplada
-		Não exige que o destinatário esteja executando quando uma mensagem é enviada para a fila
-		Emissor e destinatário podem executar em tempos distintos
+Isso permite a comunicação fracamente acoplada
+- não exige que o destinatário esteja executando quando uma mensagem é enviada para a fila
+- emissor e destinatário podem executar em tempos distintos
 
 ![image](https://github.com/user-attachments/assets/74751f3f-b844-4792-bd64-ebbba948c220)
 
@@ -575,10 +585,10 @@ baseado em
 ## Arquitetura de servidores de filas
 
 Elementos comuns às arquiteturas de servidores de filas
-– Fila de origem: onde emissor coloca (put) mensagem a ser enviada
-– Fila de destino: mantida junto ao receptor, onde mensagens chegam
-– Serviço de nomes de filas: referência global para localização das filas
-– Gerenciador de filas: administra as filas, interagindo com as aplicações
+- Fila de origem: onde emissor coloca (put) mensagem a ser enviada
+- Fila de destino: mantida junto ao receptor, onde mensagens chegam
+- Serviço de nomes de filas: referência global para localização das filas
+- Gerenciador de filas: administra as filas, interagindo com as aplicações
 
 ![image](https://github.com/user-attachments/assets/a68d51c6-db99-47bc-930b-bbf61e5b47b2)
 
@@ -595,18 +605,18 @@ Um message broker integra diferentes plataformas, convertendo padrões de format
 ![image](https://github.com/user-attachments/assets/bb6ad51d-8c19-47e5-947f-21beb9e8216b)
 
 ## Sistemas de arquivos distribuídos
-	Requisitos funcionais
-		Transparência: acesso, localização, mobilidade, desempenho e escala
-		Atualizações concorrentes de arquivos
-		Replicação de arquivos
-		Heterogeneidade de plataformas (hardware e sistema operacional)
-		Tolerância a falhas
-		Consistência, segurança (integridade e confidência) e eficiência
-	Permitem compartilhamento de dados
-		Processos podem executar em tempos e locais diferentes
-		Fornecem visão hierárquica de um name space
-	Paradigma que precede os SGBDs
-		Uma das primeiras formas de integração/comunicação em middlewares
+Requisitos funcionais
+- transparência: acesso, localização, mobilidade, desempenho e escala
+- atualizações concorrentes de arquivos
+- replicação de arquivos
+- heterogeneidade de plataformas (hardware e sistema operacional)
+- tolerância a falhas
+- consistência, segurança (integridade e confidência) e eficiência
+Permitem compartilhamento de dados
+- processos podem executar em tempos e locais diferentes
+- fornecem visão hierárquica de um name space
+Paradigma que precede os SGBDs
+- uma das primeiras formas de integração/comunicação em middlewares
 
 ## Comparação com outras formas de armazenamento
 
@@ -617,27 +627,27 @@ Um message broker integra diferentes plataformas, convertendo padrões de format
 ![image](https://github.com/user-attachments/assets/ecb22767-f61c-4447-bea6-49ff4da594be)
 
 ## Modelos de arquivos distribuídos
-	Modelo de acesso remoto (ex.: NFS)
-		A versão atual do arquivo é mantida no servidor
-		O acesso ao arquivo remoto é feito pelo serviço de FS em rede
-	Modelo de carga/atualização (ex.: FTP)
-		Cliente obtém uma cópia do arquivo e nela realiza alterações
-		Depois, a nova versão pode substituir a antiga, no servidor
+Modelo de acesso remoto (ex.: NFS)
+- a versão atual do arquivo é mantida no servidor
+- o acesso ao arquivo remoto é feito pelo serviço de FS em rede
+Modelo de carga/atualização (ex.: FTP)
+- cliente obtém uma cópia do arquivo e nela realiza alterações
+- depois, a nova versão pode substituir a antiga, no servidor
 		
 ![image](https://github.com/user-attachments/assets/fc5f82a7-32c4-4f08-8da0-056f42d6055a)
 
 ## Sun NFS
 
-	Serviço de acesso remoto e armazenamento de arquivos – Primeiro serviço de arquivos distribuídos amplamente divulgado
-		Tornou-se padrão para muitas outras implementações
+serviço de acesso remoto e armazenamento de arquivos – Primeiro serviço de arquivos distribuídos amplamente divulgado.  
+Tornou-se padrão para muitas outras implementações.  
 		
-	Network File System (NFS) Version 4 Protocol (RFC 7530)
+Network File System (NFS) Version 4 Protocol (RFC 7530)
 
-	Modelo geral
-		O acesso é fornecido aos clientes, através de uma abstração do sistema remoto em seu próprio sistema de arquivos
-			Clientes acessam um VFS (Virtual File System) que verifica se o arquivo requisitado é local ou remoto
-			Se for remoto, o cliente NFS intercepta a solicitação e estabelece a comunicação com o servidor, através de RPC (Remote Procedure Call)
-		No servidor, as solicitações recebidas são passadas ao servidor NFS que as transforma em operações regulares ao VFS
+Modelo geral
+- o acesso é fornecido aos clientes, através de uma abstração do sistema remoto em seu próprio sistema de arquivos
+- clientes acessam um VFS (Virtual File System) que verifica se o arquivo requisitado é local ou remoto
+- se for remoto, o cliente NFS intercepta a solicitação e estabelece a comunicação com o servidor, através de RPC (Remote Procedure Call)
+- no servidor, as solicitações recebidas são passadas ao servidor NFS que as transforma em operações regulares ao VFS
 
 ## NFS: cliente x servidor
 
@@ -645,8 +655,8 @@ Um message broker integra diferentes plataformas, convertendo padrões de format
 
 ## Montagem de FS remoto 
 A forma de operação do NFS consiste em montar o FS remoto
-	O servidor remoto mantém o registro do ponto de montagem (em /etc/exports)
-	O cliente monta (mount –t nfs) o ponto remoto e cria uma abstração em algum ponto do FS local
+- o servidor remoto mantém o registro do ponto de montagem (em /etc/exports)
+- o cliente monta (mount –t nfs) o ponto remoto e cria uma abstração em algum ponto do FS local
 
 ![image](https://github.com/user-attachments/assets/a9e54e7a-268a-437e-b00d-c2b76908bcd3)
 
