@@ -240,3 +240,266 @@ Obs:
 O contradomínio da componente luminância (L) do HSL contém todos os contornos da imagem (como uma fotografia monocromática) e possui a relação de ordem (número inteiro). 
 
 ![image](https://github.com/user-attachments/assets/174ae2e8-cd1f-4516-b582-cfafbf13f4e1)
+
+# Aula II
+
+## Representação de imagems
+
+Área mais essencial da imagem (juntamente com os fundamentos - aula passada).
+
+Com a maior capacidade de processamento, houve a evolução e o aumentado da representação do objeto - se aproximando da realidade (comparação dos gráficos de ps1 com ps5).
+
+Vértices ligados 2 a 2 formam arestas.  
+Arestas ligadas 3 a 3 formam faces.  
+
+2 algorítmos em especial.  
+
+## Criando imagem com Opencv no Python
+
+Criar uma imagem com 3 canais (canais de cores)
+
+```
+color=np.ones((200,200,3))*155
+```
+
+Preenchidas com 1 - multiplicou por 155
+
+## Criando retas com Opencv no Python
+
+parâmetros: (matriz, inicio, final, cor, espessura)
+
+```
+color=cv2.line(color,(0,0),(200,200),(17,200,180),4)
+```
+
+![image](https://github.com/user-attachments/assets/9a826ffa-cf2a-4ace-ab65-eccaad06c39a)
+
+
+## Criando círculos com Opencv no Python
+
+```
+image2 = np.zeros((200, 200, 3))
+```
+
+Desenhando um círculo vermelho com o centro em (100, 100) e raio 50, cor e espessura são os outros dois parametros
+
+```
+image2 = cv2.circle(image2, (100, 100), 50, (5, 0, 200), 2)
+```
+
+![image](https://github.com/user-attachments/assets/1c5a1029-ba67-479c-aaaf-2c988969e6c9)
+
+
+## Exercíco 1
+Criar uma paisagem com as funções de retas e círculos.
+
+Utilize as funções de linhas e de círculos para desenvolver uma composição (em uma imagem matricial) que apresente um cenário no qual se observam:
+
+- um gramado
+- uma árvore
+- montanhas
+- o céu
+- o por-do-sol
+
+```
+paisagem = np.zeros((200, 200, 3))
+
+paisagem = cv2.line(paisagem,(0,0),(200,0),(120, 80, 0), 320) #ceu
+
+for i in range(0, 25):
+  paisagem = cv2.circle(paisagem, (200, 160), i, (0, 255, 255), 2) # sol
+
+paisagem = cv2.line(paisagem,(2,180),(200,180),(120, 220, 120), 35) # grama
+
+paisagem = cv2.line(paisagem,(50,140),(50,170),(0, 120, 200), 9) # arvore
+for i in range(0, 25):
+    paisagem = cv2.circle(paisagem, (50, 120), i, (0, 255, 0), 2) # folha
+
+# montanha 1
+paisagem = cv2.line(paisagem,(90,170),(110,130),(42, 77, 107), 2)
+paisagem = cv2.line(paisagem,(130,170),(110,130),(42, 77, 107), 2)
+paisagem = cv2.line(paisagem,(90,170),(130,170),(42, 77, 107), 2)
+
+pts = np.array([[90, 170], [110, 130], [130, 170]], np.int32)
+pts = pts.reshape((-1, 1, 2))
+
+cv2.fillPoly(paisagem, [pts], (42, 77, 107))
+
+# montanha 2
+paisagem = cv2.line(paisagem,(130,170),(140,90),(42, 77, 107), 2)
+paisagem = cv2.line(paisagem,(140,90),(170,170),(42, 77, 107), 2)
+paisagem = cv2.line(paisagem,(90,170),(170,170),(42, 77, 107), 2)
+
+pts = np.array([[130,170], [140,90], [170,170]], np.int32)
+pts = pts.reshape((-1, 1, 2))
+
+cv2.fillPoly(paisagem, [pts], (42, 77, 107))
+
+# nuvem 1 e 2
+for i in range(0, 15):
+    paisagem = cv2.circle(paisagem, (50, 30), i, (255, 255, 255), 2) # folha
+    paisagem = cv2.circle(paisagem, (60, 30), i, (255, 255, 255), 2) # folha
+    paisagem = cv2.circle(paisagem, (70, 30), i, (255, 255, 255), 2) # folha
+
+    paisagem = cv2.circle(paisagem, (140, 40), i, (255, 255, 255), 2) # folha
+    paisagem = cv2.circle(paisagem, (150, 40), i, (255, 255, 255), 2) # folha
+    paisagem = cv2.circle(paisagem, (160, 40), i, (255, 255, 255), 2) # folha
+
+cv2_imshow(paisagem)
+```
+
+![image](https://github.com/user-attachments/assets/ac52e58b-a722-4883-8fe7-7bf09dd1978a)
+
+## Algoritmos
+
+## Algoritmo DDA
+
+Desenha retas muitos bem feitas, porém utiliza elementos que vão fazer com que perca um pouco de tempo (divisões e arredondamentos).  
+A dificuldade maior para realizar desenho em tempo real - quando precisa interagir com objetos.  
+Ex: jogo - entrando com informações em tempo real - DDA demora muito (principalmente quando usar funções externas).  
+
+```
+#algoritmo DDA
+
+#definindo a função DDA
+def dda(x1, y1, x2, y2):
+  #calculando a diferença entre os pontos
+  dx = x2 - x1
+  dy = y2 - y1
+
+  #calculando os passos
+  if abs(dx) > abs(dy):
+    steps = abs(dx)
+  else:
+    steps = abs(dy)
+
+  #calculando o incremento
+  x_increment = dx / steps
+  y_increment = dy / steps
+
+  x = x1
+  y = y1
+
+  pixels = []
+
+  #percorrendo os passos
+  for _ in range(steps):
+    #adicionando o pixel na lista
+    pixels.append((round(x), round(y)))
+    #calculando o próximo pixel
+    x += x_increment
+    y += y_increment
+
+  #retornando a lista de pixels
+  return pixels
+```
+
+## Exercício 2
+
+Obter entradas do usuário e criar um triângulo com o algoritmo DDA.
+
+```
+triangulo = np.zeros((200, 200))
+
+x1 = int(input("Valor X1: "))
+y1 = int(input("Valor Y1: "))
+x2 = int(input("Valor X2: "))
+y2 = int(input("Valor Y2: "))
+x3 = int(input("Valor X3: "))
+y3 = int(input("Valor Y3: "))
+
+a = dda(x1, y1, x2, y2)
+b = dda(x3, y3, x2, y2)
+c = dda(x1, y1, x3, y3)
+
+vertices = a + b + c
+for pixel in vertices:
+  x, y = pixel
+  triangulo[y, x] = 255
+
+cv2_imshow(triangulo)
+```
+
+![image](https://github.com/user-attachments/assets/650b385b-cd83-4b75-a5d7-17fd7b3e83fc)
+
+## Observação
+
+Hoje em dia com o poder de processamento avançado - são feitas várias chamdas em pontos próximos para maior definição.  
+Ex: várias chamdas de Bresenham para o desenho de um círculo. 
+
+## Algoritmo Bresenham
+
+Evolução do DDA - para desenhar mais rápido.  
+Evita fazer contas de dividir e arredondamento.  
+Verifica se pixel proximo é um pixel à direta ou um pixel na diagonal subindo.
+
+```
+#algoritmo de Bresenham
+
+def bresenham(x1, y1, x2, y2):
+    dx = abs(x2 - x1)
+    dy = abs(y2 - y1)
+    sx = 1 if x1 < x2 else -1
+    sy = 1 if y1 < y2 else -1
+    err = dx - dy
+
+    pixels = []
+    while True:
+        pixels.append((x1, y1))
+        if x1 == x2 and y1 == y2:
+            break
+        e2 = 2 * err
+        if e2 > -dy:
+            err -= dy
+            x1 += sx
+        if e2 < dx:
+            err += dx
+            y1 += sy
+
+    return pixels
+```
+
+# Exercício 3
+
+Demonstre na prática que o algoritmo Bresenham é mais rápido que o algoritmo DDA.
+
+```
+import time
+
+image3 = np.zeros((200, 200))
+
+x1 = int(input("Valor X1: "))
+y1 = int(input("Valor Y1: "))
+x2 = int(input("Valor X2: "))
+y2 = int(input("Valor Y2: "))
+
+start_time = time.time()
+
+dda_pix = dda(x1, y1, x2, y2)
+for pixel in dda_pix:
+    x, y = pixel
+    image3[y, x] = 255
+
+end_time = time.time()
+
+execution_time = end_time - start_time
+
+cv2_imshow(image3)
+print(f"DDA: {execution_time:.5f} segundos")
+
+start_time = time.time()
+
+bre_pix = bresenham(x1, y1, x2, y2)
+for pixel in bre_pix:
+    x, y = pixel
+    image3[y, x] = 255
+
+end_time = time.time()
+
+execution_time = end_time - start_time
+
+cv2_imshow(image3)
+print(f"Bresenham: {execution_time:.5f} segundos")
+```
+
+![image](https://github.com/user-attachments/assets/e6fedc7e-a51b-4366-b529-1031613fd8ec)
