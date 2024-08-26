@@ -341,14 +341,16 @@ Os sistemas distribuídos devem prever a interação de vários usuários que po
 ## Tipos de modelos
 Físicos
 - forma explícita de modelo.  
-- basei-a na organização do hardware e sua interligação através de redes.  
+- baseia-se na organização do hardware e sua interligação através de redes.  
+
 De arquitetura
 - sistemas pelas tarefas computacionais e de comunicação que são realizadas através de computadores individuais ou clusters.  
+
 Fundamentais
-- perspectiva abstrata dos aspectos individuais de um sistema distribuído  
-    modelos de interação - consideram estrutura e ordenação da comunicação de seus elementos.  
-    modelos de falha - consideram as maneiras pelas quais um sistema pode deixar de funcionar.  
-    modelos de segurança - como o sistema está protegido contra tentativas de interferências em seu funcionamento.  
+- perspectiva abstrata dos aspectos individuais.
+- modelos de interação - consideram estrutura e ordenação da comunicação de seus elementos.  
+- modelos de falha - consideram as maneiras pelas quais um sistema pode deixar de funcionar.  
+- modelos de segurança - como o sistema está protegido contra tentativas de interferências em seu funcionamento.  
 
 ## Evolução dos sistemas distribuídos
 Sistemas distribuídos primitivos (início 1980)
