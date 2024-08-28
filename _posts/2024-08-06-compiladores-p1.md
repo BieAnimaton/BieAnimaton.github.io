@@ -360,3 +360,143 @@ Passar o AFN do exercício 1 anterior para AFD.
 ### Finalizando
 
 ![image](https://github.com/user-attachments/assets/4b32e505-a8d3-4711-b2c0-97ba812cd062)
+
+
+# Aula IV
+
+## Exercíco 1
+
+![image](https://github.com/user-attachments/assets/2939e7ec-5147-4a85-b5c5-74e66eef6d59)
+![image](https://github.com/user-attachments/assets/02394ea5-0078-487c-b2e4-00b4b5e73cba)
+
+E = {a,b}  
+s'0 = {1,2,3,4,5}  
+s'1 = {1,6,2,3,4,5}  
+s'2 = {6}  
+s'3 = {7,1,6,2,3,4,5}  
+s'4 = {7}  
+s'5 = {8,7,1,6,2,3,4,5}  
+s'6 = {8}  
+
+---------------------------------
+
+(s'0,a) = {1,6} U {2,3,4,5}  
+s'1 = {1,6,2,3,4,5}  
+entenda como:  
+s'0 percorrendo 'a' da {1,6}  
+{1,6} percorrendo vazio da {2,3,4,5}  
+Depois união de todos  
+{1,6,2,3,4,5}.  
+
+(s'0,b) = {6} U {∅}  
+s'2 = {6}  
+entenda como:  
+s'0 percorrendo 'b' da {6}  
+{6} percorrendo vazio da {∅}  
+Depois união de todos  
+{6}.  
+
+(s'1,a) = {7,1,6} U {2,3,4,5}  
+s'3 = {7,1,6,2,3,4,5}  
+entenda como:  
+s'1 percorrendo 'a' da {7,1,6}  
+{7,1,6} percorrendo vazio da {2,3,4,5}  
+Depois união de todos  
+{7,1,6,2,3,4,5}.  
+
+(s'1,b) = {6} U {∅}  
+s'1,b = {6} = s'2  
+entenda como:  
+s'1 percorrendo 'b' da {6}  
+{6} percorrendo vazio da {∅}  
+Depois união de todos  
+{6}.  
+
+(s'2,a) = {7} U {∅}  
+s'4 = {7}  
+
+(s'2,b) = {∅} U {∅}  
+∅  
+
+(s'3,a) = {8,7,1,6} U {2,3,4,5}  
+s'5 = {8,7,1,6,2,3,4,5} -> como possui 8 e 8 é estado final no AFN, s'5 é um estado final.  
+
+(s'3,b) = {6} U {∅}  
+s'3,b = {6} = s'2  
+
+(s'4,a) = {8} U {∅}  
+s'6 = {8} -> como possui 8, s'6 é um estado final.  
+
+(s'4,b) = {∅} U {∅}  
+∅  
+
+(s'5,a) = {8,7,1,6} U {2,3,4,5}  
+s'5,a = {8,7,1,6,2,3,4,5} = s'5  
+
+(s'5,b) = {6} U {∅}  
+s'5,b = {6} = s'2  
+
+---------------------------------
+
+Meu desenho:
+
+![image](https://github.com/user-attachments/assets/a0698aad-6bc8-43a4-9150-f26fa806c27b)
+
+---------------------------------
+
+**CORREÇÃO DO PROFESSOR**
+
+![image](https://github.com/user-attachments/assets/78a718b6-8724-4f9e-b804-668ae0073cb2)
+![image](https://github.com/user-attachments/assets/2594c7fa-c3ab-4606-99fc-f980dc99d0b6)
+![image](https://github.com/user-attachments/assets/3839d966-d95d-4830-ae1a-a39ef9f10fb8)
+
+## Exercíco 2
+
+![image](https://github.com/user-attachments/assets/56848985-f25b-4044-ba0e-86479a8f4e8c)
+
+q0 percorrendo 0 vai para q0 (loop).  
+q0 percorrendo 1 vai para q1.  
+
+q1 percorrendo 1 vai para q1 (loop).  
+q1 percorrendo 0 vai para q1 e q2 (criamos um estado q1q2).  
+
+Obs: Podemos fazer operação de união como no slide:  
+q1 percorre 0 -> {q1,q2}  
+q2 percorre 0 -> {q2}  
+União dos dois  
+{q1,q2}
+
+q2 percorrendo 0 vai para q2 - para não criar novo estado deixamos q1q2 (loop).  
+q2 percorrendo 1 vai para q1q2 (loop)
+
+q1 percorre 1 -> {q1}  
+q2 percorre 1 -> {q1,q2}  
+União dos dois  
+{q1,q2}
+
+![image](https://github.com/user-attachments/assets/31730da4-6061-4f64-a078-98bd739f498a)
+
+## Exercíco 3
+
+![image](https://github.com/user-attachments/assets/d211a206-3b31-424f-9d06-042b47a769b1)
+
+q0 percorrendo 0 vai para q0 e q1 (criamos um estado q0q1).  
+q0 percorrendo 1 vai para q1.  
+
+q0q1 percorrendo 0 vai para q0q1 (loop).
+
+q0 percorre 0 -> {q0,q1}  
+q1 percorre 0 -> {∅}  
+União dos dois  
+{q0,q1}
+
+q0q1 percorrendo 1 vai para q0q1 (loop).
+
+q0 percorre 1 -> {q1}  
+q1 percorre 1 -> {q1,q0}  
+União dos dois  
+{q0,q1}
+
+q1 percorrendo 1 vai para q0 (podemos aproveitar o estado q0q1 já que o q1 faz parte do loop).
+
+![image](https://github.com/user-attachments/assets/5f5d44a8-502d-49bc-9030-7a0fdd0eed47)
