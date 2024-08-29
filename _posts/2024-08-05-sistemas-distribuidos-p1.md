@@ -809,3 +809,249 @@ Especifica também em quais situações que tipo de mensagem será recebida ou e
 Formas de especificação.  
 - Descrição textual: as possíveis funções, pré-condições e possíveis resultados são cuidadosamente enumerados
 - Diagramas de estados, de atividades, ou pseudocódigo
+
+# Aula IV
+
+## Sincronização de relógios.
+## Coordenação processos.
+
+## Formas de sincronismo entre processos.
+
+Com relação a recursos compartilhados.  
+Precedência de eventos.  
+
+## Sincronização de relógios
+
+Em um sistema centralizado, o tempo é único para todos os processos.  
+Quando dois sistemas autônomos relacionam-se em um sistema distribuído, não há um referencial único de tempo (data/hora atuais).  
+
+## O registro de tempo (timer) em um computador
+
+Quando o SO é carregado, obtém a data atual em um endereço na memória (CMOS RAM).  
+O registro é atualizado por um circuito alimentado por bateria.  
+- Possui um cristal de quartzo que oscila numa frequência bem conhecida.
+- Cada cristal mantém taxa constante, mas cristais diferentes apresentam pequenas variações de frequência.
+Dois registradores são operados: counter, e holding register.  
+- A cada oscilação do cristal decrementa-se o counter em uma unidade.
+- Quando o counter chega em zero, uma interrupção é gerada e o contador é recarregado com o valor do holding register.
+Cada interrupção gerada é chamada de um clock tick.
+
+## Diferentes computadores
+
+Taxas distintas de atualização, dadas as diferenças de frequência dos cristais, geram registros de tempo diferentes (clock skew).  
+Recursos entre tais máquinas (arquivos, objetos, processos e mensagens), não podem ser associados a um timestamp.  
+
+## A noção do tempo pela humanidade
+
+Observação dos movimentos de rotação e translação da Terra.  
+- Cada rotação delimita a duração de um dia.
+- Cada translação, um ano.
+
+## Medição do tempo por relógios atômicos
+
+Utilizam as transições do átomo de Césio 133.  
+Em intervalos regulares, informam ao BIH (Bureau International de l'Heure – Paris) quantos clock ticks foram registrados.  
+- Atualmente, existem cerca de 260 ao redor da Terra.
+O BIH calcula a média dos valores informados e produz o TAI (International Atomic Time).
+- O erro do TAI é de 100ns por ano (perante um relógio fictício perfeito).
+
+## Problema com relógios atômicos
+Tempo de rotação da Terra tem aumentado.  
+Descompasso com a expectativa natural.  
+- O referencial de tempo registrará horários incompatíveis para os períodos do dia (manhã, tarde e noite).
+
+## Solução
+UTC (Universal Coordinated Time)  
+- Mecanismo que dispara ajustes de um segundo (leap seconds) toda vez
+que a diferença atinge tal montante.
+- Veio substituir o sistema GMT (Greenwich Mean Time) – tempo astronômico.
+NIST (National Institute of Standard Time)  
+- Opera em um canal de ondas curtas (WWV) a difusão de um pulso curto, a cada segundo, informando o tempo UTC.
+
+## Ajustes de relógios
+
+![image](https://github.com/user-attachments/assets/d7f4615d-ca38-48e7-a485-e9b951e7ddb2)
+
+## Cristian´s Algorithm
+
+Considera que existe um receptor WWV (UTC)  
+- Tal máquina assumirá o papel de time server para as demais.
+- A cada instante, as máquinas participantes enviam uma mensagem ao servidor, pedindo a hora atual.
+- O servidor responde o mais rápido possível o valor de CUTC.
+
+![image](https://github.com/user-attachments/assets/8d2c5d8c-2918-4712-a640-e8733ce30f49)
+
+![image](https://github.com/user-attachments/assets/46bad536-b17f-48cb-971d-d5814b43565d)
+
+## Berkeley Algorithm
+
+Não utiliza um receptor WWV
+Baseia-se na utilização de um servidor monitor
+- Tal servidor solicita para cada máquina envolvida, em intervalos regulares, o registro de tempo
+- O servidor computa a média de todos os registros, e envia a todas as máquinas, para ajustarem seus relógios em relação a ela
+
+![image](https://github.com/user-attachments/assets/d7315f1e-cf93-448b-98f8-38d2e919a018)
+
+## Sincronismo entre relógios
+
+Em certas situações, não importa a noção do tempo natural
+- Sistemas que não têm como referência a Terra (aplicações espaciais).
+- Sistemas sincronizados (como telefonia digital e sistemas tempo real).
+
+Aplicações distribuídas que operam transações necessitam sequenciar suas ações
+- Relações causais (causa-efeito).
+- Aplicações baseadas em de eventos.
+
+Relógios lógicos (logical clocks)
+- Mantêm a sequência lógica de eventos de um sistema.
+- Uma implementação: Lamport Timestamps.
+
+## Lamport Timestamps
+
+![image](https://github.com/user-attachments/assets/fde8233d-1e8d-4449-b5b8-c5d19d83c6f6)
+
+## Estado Global
+
+Em um sistema distribuído é descrito por
+- Estados locais dos processos
+- Mensagens que estão em trânsito naquele momento, ou seja, que foram enviadas mas ainda não entregues
+
+Estado de paralisação
+- Se todos os processos de um sistema pararam, e não existem mensagens em trânsito
+- Duas situações: ocorreu um deadlock ou o encerramento
+
+Estados intermediários
+- Descritos por distributed snapshots
+
+## Distributed snapshot
+
+![image](https://github.com/user-attachments/assets/67f88b90-c658-4814-95af-570f15fd3956)
+
+## Coordenação de processos
+
+Em um sistema distribuído, não há controle centralizado
+- Não há um SO que coordene e sequencie as ações
+- Cada processo pode executar em uma plataforma diferente
+
+A coordenação é importante para
+- Garantir a isolação de acesso a recursos compartilhados e concorridos
+- Resolver situações de impasse (deadlock)
+- Permitir o uso justo (fair) dos recursos, sem starvation
+- Sequenciar, priorizar e autorizar os bloqueios dos recursos
+
+## Eleição do coordenador
+
+Em sistemas distribuídos necessita-se definir um coordenador entre os processos concorrentes.  
+
+Algoritmos geralmente definem formas para se localizar e eleger o processo com maior valor (número, id, etc..)  
+- O principal objetivo de um algoritmo de eleição é estabelecer um acordo entre os processos sobre qual será o coordenador.
+
+Comportamento geral dos algoritmos.
+- Assume-se que os processos conhecem os “valores” dos demais
+- Então procura-se descobrir, entre os operantes, qual tem o maior
+- O de maior valor assume a coordenação
+
+## Algoritmo de Bully
+
+Parte da ideia que os processos estão sempre “querendo” se tornar coordenadores.  
+
+Quando um processo P detecta que o coordenador não está operante, P inicia uma eleição.  
+- P encaminha uma mensagem ELECTION a todos os processos com números maiores.
+- Se ninguém responder, P vence a eleição e se torna coordenador.
+- Se um processo (com número maior) responder (mensagem OK), ele assume a dianteira, e reinicia em 1.
+– O processo que vencer a eleição.
+
+Encaminha uma mensagem COORDINATOR a todos os processos e assume o papel de coordenador.  
+
+Se um processo, que estava parado, retorna à execução  
+- Inicia uma nova eleição
+
+![image](https://github.com/user-attachments/assets/3352033b-cea2-49f8-832e-9dc7fa5dd2e8)
+
+## Algoritmo em anel (ring)
+
+O anel representa a ordenação sequencial dos processos  
+Quando um processo detecta que o coordenador está inoperante  
+- Ele encaminha ao seu sucessor (ou o próximo ativo na ordem do anel) uma mensagem ELECTION contendo o seu próprio número de processo.
+Cada processo, na sequência, insere seu número na lista e torna-se candidato à eleição.  
+Quando a mensagem chegar novamente ao emissor (que detectará seu próprio número na lista).
+- Verifica qual processo ativo tem maior número.
+- Constrói uma mensagem COORDINATOR para informar a todos quem venceu a eleição e assumirá a função de coordenador.
+
+![image](https://github.com/user-attachments/assets/a8bab0f6-b426-4d61-86ef-8742525e4b16)
+
+## Bloqueio de recursos
+
+Exclusão mútua
+- Evita que dois ou mais processos usem recursos compartilhados ao mesmo tempo.
+
+A concorrência pode ser local
+- Vários processos (threads) de um servidor podem executar em prol de cada cliente conectado, e disputarem recursos locais.
+- A identificação das regiões críticas e aplicação de mutex, semáforos ou monitores podem resolver o problema.  
+
+Para processos distribuídos existem alguns algoritmos
+- Centralizado
+- Distribuído
+- Token Ring
+
+## Algoritmo centralizado
+
+Exige a prévia eleição de um processo coordenador
+
+Quando um processo quer entrar em uma região crítica, ele envia uma mensagem ao coordenador, e solicita permissão.  
+
+Se nenhum outro processo estiver executando a região crítica, o coordenador pode então responder e autorizar.  
+Mas, se outro processo estiver executando, duas ações são possíveis.  
+- Não responder: o processo solicitante ficará aguardando, bloqueado, a mensagem de autorização, e a requisição será enfileirada pelo coordenador (estratégia mais comum).
+
+Responder “permissão negada”: o coordenador pode, ou não, enfileirar o pedido, para posterior resposta.
+- Quando um processo encerra a execução da região crítica ele envia comunica o coordenador da liberação.
+
+![image](https://github.com/user-attachments/assets/f9adb2e9-68ec-43d6-b5e0-aabfa9854ca8)
+
+## Algoritmo distribuído
+
+Assume existir relação de ordem entre os eventos do sistema
+Quando um processo quiser entrar em uma região crítica
+- Encaminha mensagem a todos, contendo o nome da região crítica, o seu número (do processo), e a hora atual (timestamp)
+
+No receptor, três situações distintas
+- Não está executando (nem pretende) aquela região crítica e retorna uma mensagem OK.
+- Está executando aquela região crítica, não responde e enfileira a solicitação
+- Quer entrar na mesma região crítica
+
+Compara o timestamp da mensagem recebida com o da sua
+- Se o da recebida for menor envia uma mensagem OK
+- Senão, ele enfileira a solicitação, e não responde
+
+![image](https://github.com/user-attachments/assets/515a991f-d4e4-43a0-80bb-3aa28b1d12c6)
+
+
+Da mesma forma que o algoritmo centralizado
+- Garante a exclusão mútua sem deadlocks ou starvations
+
+Problemas
+- Número de mensagens entre n processos, a cada interação, é de 2 n -1
+- Não existe um único ponto de falha, mas sim n
+- Se um processo travar, não poderá responder as solicitações
+
+Uma solução
+- Fazer com que o processo sempre responda imediatamente uma solicitação, seja para permitir ou para proibir o acesso
+- A mensagem OK poderá ser enviada a um processo ao qual encaminhou-se uma mensagem de proibição anteriormente
+
+## Algoritmo em anel
+
+Assume-se que
+- Processos estão dispostos em rede local de difusão (bus)
+- Sequência lógica em anel é fornecida pelo software
+- É associada uma posição para cada processo no anel
+
+Quando o anel é inicializado
+- É fornecido um token ao processo 0
+- O token circula o anel, passado do processo k ao k+1 (módulo no tamanho do anel) em mensagens ponto-a-ponto
+
+O processo que recebe o token
+- Pode acessar a região crítica
+- Quando terminar de executá-la, passa o token adiante
+
+![image](https://github.com/user-attachments/assets/be6103b2-abd2-4d86-9098-bc53cc257e8c)
