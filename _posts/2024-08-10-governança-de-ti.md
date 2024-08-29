@@ -100,26 +100,29 @@ Esses desafios exigem que as organizações adotem uma abordagem proativa e inte
 # Aula II
 
 ## O que é Governança Corporativa?
-Nos EUA, surgiu entre a década de 80 e 90.  
-Caracterizou-se por um movimento de adionistas investidores que tinham o objetivo de protegerem dos abusos praticados pela diretoria das empresas.  
-Conjunto de regras e de sistema de monitoramento tnato interno quanto externo para impedir tais abusos.  
-Empresa que incentivou: Enron, empresa de energia americana, que em 2022 fraudou os sistemas dos balanços para elevar o valor das suas ações.  
+É um movimento de adionistas investidores que tinham o objetivo de protegerem dos abusos praticados pela diretoria das empresas.  
+Conjunto de regras e de sistema de monitoramento tanato interno quanto externo para impedir tais abusos.  
+Surgiu entre a década de 80 e 90 nos EUA.  
+
+Empresa que incentivou: Enron, empresa de energia americana, que em 2002 fraudou os sistemas dos balanços para elevar o valor das suas ações.  
 
 ## Comente alguns dos principios da governança corporativa.
-Pode-se citar 5 como os principais.
+
+São 5.
 
 Transparência:  
 - Boa comunicação interna e externa que gera o ambiente de confiança dentro da organização.
 - Presta informação sobre a empresa.  
 - Divulgação clara e precisa das informações, não apenas exigidas por lei ou regulamentos, mas aquelas relevantes para stakeholders (investidores).  
-- "torna público".  
+- "tornar público".  
 
 Equidade:  
 - Tratamento de forma justa de igualitária de todos os stakeholders.  
 - "justiça para todos".  
 
 Responsabilidade:  
-- O negócios devem ser conduzidos com o objetivo de alcançar a longevidade da empresa, incorporando decisões de ordem social de ambiental na definição dos negócios e operações da empresa. Detalhamento sobre as atribuições.  
+- O negócios devem ser conduzidos com o objetivo de alcançar a longevidade da empresa, incorporando decisões de ordem social de ambiental na definição dos negócios e operações da empresa.  
+- Detalhamento sobre as atribuições.  
 - "sustentabilidade e ética".  
 
 Compliance:  
@@ -132,39 +135,60 @@ Integridade (novo):
 - Mantém a coerência entre discuro e ação, preservando a lealdade à organização e o cuidado com suas partes interesadas (com a sociedade geral e o meio ambiente.  
 
 ## Quais são os benefícios ao se aplicar esses princípios?
-Melhoria na gestão e eficiência: adoção de boas práticas de governança pode levar a uma gestão mais efeciente e eficaz.
+
+Melhoria na gestão e eficiência:  
+Adoção de boas práticas de governança pode levar a uma gestão mais efeciente e eficaz.
 	
-Aumento da confiança dos investidores: transparência e responsabilidade aumentam a confiança dos investidores.
+Aumento da confiança dos investidores:  
+Transparência e responsabilidade aumentam a confiança dos investidores.
 	
-Redução de riscos: estruturas de governança bem definidas ajudam a identificar e mitigar os riscos.
+Redução de riscos:  
+Estruturas de governança bem definidas ajudam a identificar e mitigar os riscos.
 	
-Sustnetabilidade a longe prazo: práticas de governança corporativa promovem sustentabilidade e a responsabilidade social, contribuindo para a longevidade da empresa.
+Sustentabilidade a longe prazo:  
+Práticas de governança corporativa promovem sustentabilidade e a responsabilidade social, contribuindo para a longevidade da empresa.
 
 ## Defina ativos corporativos.
-Ativos corporativos são considerados estratégicos para a governança corporativa e referem-se aos recurso e bens que uma empresa possio e que têm valor econômico.  
-Esses ativos podem ser classificados como tangíveis ou intangíveis.
+
+Referem-se aos recurso e bens que uma empresa possio e que têm valor econômico.  
+São considerados estratégicos para a governança corporativa.  
+
+Classificados como tangíveis ou intangíveis.
 	
-- Tangíveis  
-    Ativos humanos: oessias (habilidades, plano de carreira, treinamentos, competências).  
-	Ativos financeiros: dinheiro, investimentos, fluxo de caixa, contas a receber.  
-	Ativos físicos: prédios, equipamentos, veículos.  
+### Tangíveis
 
-- Intangíveis  
-	Ativos intelectuais: produto, serviço e processo patenteados ou registrados.  
-	Ativos de relacionamento: relacionamentos internos e externos da organização, marca, reputação, fornecedores.  
-	Ativos em TI: programas (sistema de informação), dados e informações.  
+Ativos humanos: pessoas (habilidades, plano de carreira, treinamentos, competências).  
+Ativos financeiros: dinheiro, investimentos, fluxo de caixa, contas a receber.  
+Ativos físicos: prédios, equipamentos, veículos.  
 
-## Cite os ativos mais importantes para a Governança de TI.
-Alguns ativos têm importância particular para garantir a eficácia, segurança e conformidade das operações de TI. 
+### Intangíveis
 
-- Infraestrutura de TI: servidores, redes, sistema de armazenamento.
-- Sistemas e aplicações: softwares utilizados par agerenciador processos de négocios, CRM, ERP.
-- Dados e informações: dados dos clientes, informações financeira e operacionais.
-- Segurança da informação: ferramenta e protoclos de segurança, como firewalls, sistema de detecção.
-- Recursos humanos: equipes de TI e especialistas em segurança da informaçãoque gerenciam e protegram os ativos de TI.
-- Políticas e procedimentos: documentação que define como a TI deve operar, normas de segurança, política e processos.
+Ativos intelectuais: produto, serviço e processo patenteados ou registrados.  
+Ativos de relacionamento: relacionamentos internos e externos da organização, marca, reputação, fornecedores.  
+Ativos em TI: programas (sistema de informação), dados e informações.  
+
+## Cite os ativos mais importantes para a Governança de TI. (GTI)
+
+Infraestrutura de TI:  
+servidores, redes, sistema de armazenamento.
+
+Sistemas e aplicações:  
+Softwares utilizados par agerenciador processos de négocios, CRM, ERP.
+
+Dados e informações:  
+Dados dos clientes, informações financeira e operacionais.
+
+Segurança da informação:  
+Ferramenta e protoclos de segurança, como firewalls, sistema de detecção.
+
+Recursos humanos:  
+Equipes de TI e especialistas em segurança da informaçãoque gerenciam e protegram os ativos de TI.
+
+Políticas e procedimentos:  
+Documentação que define como a TI deve operar, normas de segurança, política e processos.
 
 ## O que são políticas corporativas:
+
 As políticas corporativas desempenham um papel fundamental na governança corporativa, uma vez que estabelecem diretrizes e práticas que promovem a transparência, a responsabilidade e a ética nas organizações.
 	
 Algumas:
@@ -181,6 +205,11 @@ Algumas:
 - Política de governança de TI;
 - Outras...
 
+## O que é 5W2H?
+
+Sigla para What, Why, Where, Who, When, How e How Much.  
+Explica as dimensões.  
+
 # Aula III
 
 ## Concluindo...
@@ -194,42 +223,56 @@ Seu foco é a busca pelo equilíbrio entre os interesses de todas as partes, con
 
 ![image](https://github.com/user-attachments/assets/9f84caae-adbc-4682-a5c1-6f99643e542e)
 
-A GTI surgiu como um subconjunto da governança corporativa, e na figura acima, se vê a interação entre esses dois modelos.
+A GTI é um subconjunto da governança corporativa.  
+Na figura acima é possivel ver a interação entre esses dois modelos.
 
 ## O que motiva a GTI?
 
-A GTI pode ser motivada por vários fatores dentre eles: o ambiente de negócios, as integrações tecnológicas, a segurança da informação, os marcos de regulação e a dependência do negócio em relação a TI.
+A GTI pode ser motivada por vários fatores:
+- o ambiente de negócios.
+- as integrações tecnológicas.
+- a segurança da informação.
+- os marcos de regulação.
+- a dependência do negócio em relação a TI.
 
 ## Quando o conceito de GTI surgiu?
 
-Surgiu em meio às mudanças das organizações em utilizar a TI como uma ferramenta de melhoramento de produtos e serviços, bem como o relacionamento cliente/empresa, influenciando todos os setores presentes na organização.
+Surgiu em meio às mudanças das organizações em utilizar a TI como uma ferramenta de **melhoramento de produtos e serviços** e também como o **relacionamento cliente/empresa**, influenciando todos os setores presentes na organização.
 
-Uma definição que se pode destacar é a da ISO/IEC 38500 (ABNT, 2009) “é o sistema pelo qual o uso atual e futuro da TI são dirigidos e controlados. Significa  avaliar e direcionar o uso da TI para dar suporte à organização e monitorar seu uso para realizar planos”. 
+Uma definição que se pode destacar é a da ISO/IEC 38500 (ABNT, 2009):  
+
+“é o sistema pelo qual o uso atual e futuro da TI são dirigidos e controlados. Significa  avaliar e direcionar o uso da TI para dar suporte à organização e monitorar seu uso para realizar planos”. 
 
 ## Quais são os objetivos principais da GTI?
 
-- promover o alinhamento da TI em relação ao negócio, no que se refere a aplicações, e a infraestrutura dos serviços;
-- promover a implantação de mecanismos que garantem o processo continuo dos negócios; e por fim
+- Promover o alinhamento da TI em relação ao negócio (aplicações) e a infraestrutura dos serviços.
+- Promover a implantação de mecanismos que garantem o processo continuo dos negócios.
 - promover o alinhamento de TI a marcos de regulação.
 
 ## Princípios orientados da GTI
 
 ### Responsabilidade
+
 Assumir as responsabilidades quanto ao fornecimento e demandas de recursos de TI.
 
 ### Estratégia
+
 Os planos (estratégico, tático e operacional) são balizados pelas capacidades atuais e futuras de recursos de TI.
 
 ### Aquisição
+
 As aquisições de recursos de TI são fundamentadas com base em análises apropriadas e transparentes.
 
 ### Desempenho
+
 Os recursos de TI são adequados ao propósito de apoiar a organização em suas necessidades atuais e futuras.
 
 ### Conformidade
+
 Os recursos de TI atendem às legislações e normas obrigatórias.
 
 ### Comportamento Humano
+
 O exercício respeita os aspectos comportamentais do ser humano envolvido com os recursos de TI.
 
 ## Ciclo da GTI
@@ -237,16 +280,23 @@ O exercício respeita os aspectos comportamentais do ser humano envolvido com os
 ![image](https://github.com/user-attachments/assets/9286824c-9932-4ceb-a407-f607eb5b6897)
 
 ### Alinhamento Estratégico e compliance
-refere-se ao planejamento estratégico de TI (PETI): leva em consideração o planejamento estratégico corporativo, para promover o alinhamento, além dos requisitos de compliance externos, como o SOX.
+
+Planejamento estratégico de TI (PETI):  
+leva em consideração o planejamento estratégico corporativo, para promover o alinhamento, além dos requisitos de compliance externos, como o SOX.
 
 ### Decisão, compromisso, priorização e alocação de recursos
-refere-se às responsabilidades pelas decisões relativas à TI, tais como arquitetura, infra-estrutura, investimentos e necessidades de aplicações, assim como a definição dos mecanismos de decisão, isto é, quem deve tomar as decisões referentes a TI.
+
+Responsabilidades pelas decisões relativas à TI:  
+arquitetura, infra-estrutura, investimentos e necessidades de aplicações, assim como a definição dos mecanismos de decisão, isto é, quem deve tomar as decisões referentes a TI.
 
 ### Estrutura, processos, operações e gestão
-refere-se à estrutura organizacional e funcional de TI, aos processos de gestão e operação dos produtos e serviços de TI, alinhados com as necessidades do negócio.
+
+Estrutura organizacional e funcional de TI, aos processos de gestão e operação dos produtos e serviços de TI, alinhados com as necessidades do negócio.
 
 ### Medição do desempenho
-refere-se à determinação, coleta e geração de indicadores de resultados dos processos e serviços de TI e sua contribuição para o negócio. Modelos como o BSC (Balanced Scorecard) são utilizados para quantificar estes resultados.
+
+Determinação, coleta e geração de indicadores de resultados dos processos e serviços de TI e sua contribuição para o negócio.  
+Modelos como o BSC (Balanced Scorecard) são utilizados para quantificar estes resultados.
 
 ![image](https://github.com/user-attachments/assets/decf0072-385d-4d79-b1a4-978add25f72f)
 
@@ -255,13 +305,13 @@ refere-se à determinação, coleta e geração de indicadores de resultados dos
 ### Propósito da Governança de TI (COBIT)
 - Assegurar que as necessidades , os requisitos e as opções dos interessados da empresa sejam avaliadas para determinar, de forma equilibrada e consensual, como alcançar os objetivos da empresa.
 - Estabelecer a direção através de prioridades e tomada de decisão.
-- Monitorar o desempenho e a conformidade de acordo com a direção eos objetivos.
+- Monitorar o desempenho e a conformidade de acordo com a direção e os objetivos.
 
 ### Propósito da Gestão de TI (ITIL)
 - Gerir planos, implementações, execuções e monitoramento de atividades em alinhamento com a direção definida pelo corpo de governança para atingir os objetivos empresariais.
 
 ### Em resumo:
-A governança define a direção.
+A governança define a direção.  
 A gestão tem que garantir que a direção seja respeitada.
 
 ## Visão Geral
@@ -272,7 +322,7 @@ A gestão tem que garantir que a direção seja respeitada.
 
 ![image](https://github.com/user-attachments/assets/de601947-fe4b-4a13-9b29-3bcc003a079f)
 
-## Quais são os fatores que motivam as empresas a reverem seus atuais modelos?
+## Liste os fatores que motivam as empresas a reverem seus modelos?
 
 - Complexidade cada vez maior da tecnologia.
 - Crescente dependência de TI.
