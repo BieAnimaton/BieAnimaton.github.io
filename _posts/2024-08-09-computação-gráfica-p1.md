@@ -429,7 +429,7 @@ cv2_imshow(triangulo)
 Hoje em dia com o poder de processamento avançado - são feitas várias chamdas em pontos próximos para maior definição.  
 Ex: várias chamdas de Bresenham para o desenho de um círculo. 
 
-## Algoritmo Bresenham
+## Algoritmo Bresenham para Retas
 
 Evolução do DDA - para desenhar mais rápido.  
 Evita fazer contas de dividir e arredondamento.  
@@ -505,3 +505,59 @@ print(f"Bresenham: {execution_time:.5f} segundos")
 ```
 
 ![image](https://github.com/user-attachments/assets/e6fedc7e-a51b-4366-b529-1031613fd8ec)
+
+# Aula III
+
+## Como é feito o desenho de cículos?
+
+Quanto menos pixels para representação, mais torto o circulo vai ficar.  
+Calcular só alguns pixels, os outros são obtidos por espelhamento: 360 / 8 -> octantes.  
+Algoritmo de círculo deve calcular apenas um octante e os outros s~s~o encontrados por espelhamento.  
+Isso economiza processamento e poder computacional.  
+
+## Algoritmo Bresenham para Círculos
+
+Sem divisão, arredondamento.  
+x começar maior que y.  
+
+## Processamento de Imagem
+
+Recebe uma imagem (matriz) de entrada - resulta imagem (matriz) melhorada com alguma manipulação.  
+
+Estar em tom de cinza não significa necessariamente que a imagem possúi apenas 1 canal, ela pode estar entregando dois canais extras a toa.  
+É necessário transformar os 3 canais em 1 canal para que as transformações sejam mais rapidas (não precisa passar os 3 canais).  
+- A maioria das manipulações vao usar em imagens de tons de cinza (0 a 255).  
+- As operações morfológica usam imagens binárias (1 ou 0).  
+
+## O que é binarização?
+
+Binarização é transformar uma imagem em tons de cinza para 2 pontos, de 255 tons de cinza para 0 e 1.  
+Contornos mais chamativos/proeminentes/importantes são guardadas, porém quanto mais tons, melhor (com 3 canais eu vou conseguir ver melhor ainda).  
+
+Adição de brilho, contraste, subtração do pixel, soma de duas imagens, subtração de duas imagens.  
+
+setosa.io/ev/image-kernel.  
+Mostra os calculos feitos pelo blur.  
+Formação classica do filtro gaussiano.  
+Filtro gaussiano tbm chamado de filtro de media ponderada.  
+
+# Filtro identidade 
+
+Considera o peso do pixel central.  
+
+# Histogramas
+
+Tipos:
+- Histograma muito concentrado no centro: imagem com baixo constraste, muito tons de cinza médio.  
+- Histograma com alta concentração no inicio: imagem muito escura, precisa melhorar o contraste.  
+- Histograma com alta no final: imagem muito branca, precisa melhorar contraste.  
+
+O objetivo é encontrar o espalhamento homogêneo dos pixels, ou seja, encontrar o histograma equalizado.  
+
+### Eficiência
+Essa representação é menos eficiente do que uma representação que reconstrói e ordena os pixels.  
+Percorrer histograma é mais faicl que percorrer matriz pois é um vetor que guardar as informações dessas imagens.  
+As operações sobre histogramas tendem a ser mais rapida, e quando possivel, usar histograma pela agilidade.  
+Encontrar o resltado de maneira eficiente utilizando pouco poder comptuacional.  
+
+Ex: transformo a img em histograma e comparo o histograma no banco de dados para verificar se existe semelhante de fomra mais rápida. Recupero e faço as operações de forma ágil, computacionalmente muito eficiente.  
