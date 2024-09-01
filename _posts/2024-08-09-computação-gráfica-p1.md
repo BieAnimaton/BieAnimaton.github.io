@@ -529,10 +529,146 @@ Estar em tom de cinza não significa necessariamente que a imagem possúi apenas
 - A maioria das manipulações vao usar em imagens de tons de cinza (0 a 255).  
 - As operações morfológica usam imagens binárias (1 ou 0).  
 
-## O que é binarização?
+## Operações pontuais
 
-Binarização é transformar uma imagem em tons de cinza para 2 pontos, de 255 tons de cinza para 0 e 1.  
-Contornos mais chamativos/proeminentes/importantes são guardadas, porém quanto mais tons, melhor (com 3 canais eu vou conseguir ver melhor ainda).  
+Também conhecida como operações de ponto.
+
+Tratam cada pixel de uma imagem de forma independente, ou seja, a operação aplicada a um pixel não depende dos valores dos pixels vizinhos.
+
+Essas operações são aplicadas diretamente à intensidade ou cor de cada pixel, baseando-se apenas nos próprios valores do pixel.
+
+### Conversão de cor (tons de cinza)
+
+```
+cinza=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
+```
+
+### Binarização
+
+Transforma uma imagem em tons de cinza para 2 pontos, ou seja, de 255 tons de cinza para 0 e 1.  
+Contornos mais chamativos/proeminentes são guardadas.  
+Forma mais barata de representar uma imagem (de 8 bit por pixel para 1 bit por pixel).  
+Preto, brando e essa a mistura de preto e brando custam o msm poder computacional.  
+A mais barata possivel e a mais inteligente entre as baratas.  
+
+```
+ret,binaria = cv2.threshold(cinza,100,255,cv2.THRESH_BINARY)
+```
+
+OBS: # ret signifca retorno, no caso de erro.
+
+### Por que ao diminuir o limiar eu aumento a qntdade de brancos?
+
+Pois 0-50 é preto e 51-255 é branco, então terá mais branco, ou seja, maior possibilidade de branco do que preto.
+
+### Limiarização
+
+Diminuir a quantidade de tons em uma imagem.  
+Diferentes limiares.  
+
+## Operações de contexto
+
+Também chamadas de operações de vizinhança.  
+
+Consideram o valor de um pixel em relação aos valores dos pixels vizinhos.
+
+Essas operações são fundamentais para processos de filtragem, detecção de bordas, suavização e outros efeitos que dependem do padrão local de pixels.
+
+### Filtro de Média
+
+Famoso blur.
+
+Suavização de contornos.  
+Kernel é o espaço que será seleciona para realizar a operação.
+
+O pixel resultante é muito distante da imagem original.
+
+Quanto maior o kernel, mais destruido será a imagem, maior a diversidade dos pixels vizinhos e mais tempo de processamento vai ser consumido.
+
+```
+imgBlur = cv2.blur(cinza,(10,10))
+```
+
+### Filtro de Mediana
+
+Suavização para remover ruídos.
+
+```
+imgMedian = cv2.medianBlur(cinza,3)
+```
+
+Neste caso o kernel só pode ser **ímpar**.
+
+### Filtro gaussiano
+
+Passa baixa.  
+Perde para o filtro de média.
+
+Conserva um pouco mais a informação original.  
+Para kernels do mesmo tamanho, o filtro gaussiano tem o comportamento melhor.
+
+Suaviza contornos com menor perda.
+
+```
+imgGauss = cv2.GaussianBlur(cinza,(3,3),0)
+```
+
+### Filtro Canny
+
+Vai encontrar as bordas.  
+
+Filtro passa alta.  
+Se for passado em imagem ruidosa, fica mto ruim. Tal imagem deve passar primeiro pelo filtro passa baixa e depois para passa alta.
+
+Define dois limiares e detecta as bordas entre estes duis limiares.  
+
+```
+t_lower = 50  # Lower Threshold
+t_upper = 150  # Upper threshold
+
+edge = cv2.Canny(cinza, t_lower, t_upper)
+```
+
+
+### Filtro manual (customizado)
+
+Definir um kernel
+
+Detector de borda:  
+Pixel central mais forte
+
+```
+kernel = np.array([[-1, -1, -1],
+                   [-1,  8, -1],
+                   [-1, -1, -1]])
+```
+
+Laplaciano:  
+Identiifca bordas de maneira mais suave.  
+Central mais suave e eixos X sem valor.  
+
+```
+kernel2 = np.array([[0, -1, 0],
+                   [-1,  4, -1],
+                   [0, -1, 0]])
+```
+
+Identidade:  
+Considera o peso do pixel central.  
+
+```
+kernel3 = np.array([[0, 0, 0],
+                   [0,  1, 0],
+                   [0, 0, 0]])
+```
+
+Aplicar o filtro
+
+```
+imagem = cv2.filter2D(imgMedian, -1, kernel2)
+```
+
+## Extra
 
 Adição de brilho, contraste, subtração do pixel, soma de duas imagens, subtração de duas imagens.  
 
@@ -541,23 +677,42 @@ Mostra os calculos feitos pelo blur.
 Formação classica do filtro gaussiano.  
 Filtro gaussiano tbm chamado de filtro de media ponderada.  
 
-# Filtro identidade 
-
-Considera o peso do pixel central.  
-
-# Histogramas
+## Histogramas
 
 Tipos:
 - Histograma muito concentrado no centro: imagem com baixo constraste, muito tons de cinza médio.  
 - Histograma com alta concentração no inicio: imagem muito escura, precisa melhorar o contraste.  
 - Histograma com alta no final: imagem muito branca, precisa melhorar contraste.  
 
+```
+hist = cv2.calcHist(imgMedian,[0],None,[256],[0,256])
+```
+
 O objetivo é encontrar o espalhamento homogêneo dos pixels, ou seja, encontrar o histograma equalizado.  
+
+```
+imgEq = cv2.equalizeHist(imgMedian)
+```
+
+### Histograma Original
+
+![image](https://github.com/user-attachments/assets/841260a5-3eaa-471d-95ff-20e8840491e5)
+
+### Histograma Ajustado
+
+![image](https://github.com/user-attachments/assets/b2ab88d2-9ca3-4331-8c5f-3d66c5c51031)
+
+### Imagem Original e Ajustada
+
+![image](https://github.com/user-attachments/assets/85e384a7-036a-4d19-926f-bc5040288766)
+
 
 ### Eficiência
 Essa representação é menos eficiente do que uma representação que reconstrói e ordena os pixels.  
-Percorrer histograma é mais faicl que percorrer matriz pois é um vetor que guardar as informações dessas imagens.  
-As operações sobre histogramas tendem a ser mais rapida, e quando possivel, usar histograma pela agilidade.  
-Encontrar o resltado de maneira eficiente utilizando pouco poder comptuacional.  
 
-Ex: transformo a img em histograma e comparo o histograma no banco de dados para verificar se existe semelhante de fomra mais rápida. Recupero e faço as operações de forma ágil, computacionalmente muito eficiente.  
+Percorrer histograma é mais faicl que percorrer matriz pois é um vetor que guarda as informações dessas imagens.  
+As operações sobre histogramas tendem a ser mais rapida, e quando possivel, usar histograma pela agilidade.  
+
+Encontra o resultado de maneira eficiente utilizando pouco poder comptuacional.  
+
+Ex: transformo a imagem em histograma e comparo no banco de dados para verificar de fomra mais rápida se existe algum semelhante. Recupero e faço as operações de forma ágil, computacionalmente muito eficiente.  
