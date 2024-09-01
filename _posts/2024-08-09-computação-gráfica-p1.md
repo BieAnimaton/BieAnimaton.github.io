@@ -689,6 +689,11 @@ Aplicar o filtro com o kernel.
 imagem = cv2.filter2D(imgMedian, -1, kernel2)
 ```
 
+![image](https://github.com/user-attachments/assets/2113718c-7561-4bed-856f-74f65ccd1b05)
+![image](https://github.com/user-attachments/assets/931a8cfa-5f92-4ba9-b463-a10f5f2967da)
+![image](https://github.com/user-attachments/assets/2b60fa64-5580-4843-8292-697989914946)
+
+
 ## Extra
 
 Adição de brilho, contraste, subtração do pixel, soma de duas imagens, subtração de duas imagens.  
