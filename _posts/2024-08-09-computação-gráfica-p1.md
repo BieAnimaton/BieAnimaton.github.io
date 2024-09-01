@@ -515,6 +515,10 @@ Calcular só alguns pixels, os outros são obtidos por espelhamento: 360 / 8 -> 
 Algoritmo de círculo deve calcular apenas um octante e os outros s~s~o encontrados por espelhamento.  
 Isso economiza processamento e poder computacional.  
 
+![image](https://github.com/user-attachments/assets/f70642ab-2489-40eb-9eb1-38f65347e94a)
+
+![image](https://github.com/user-attachments/assets/4bf3259f-1914-4339-98e9-82b57f4c7cd6)
+
 ## Algoritmo Bresenham para Círculos
 
 Sem divisão, arredondamento.  
@@ -528,6 +532,10 @@ Estar em tom de cinza não significa necessariamente que a imagem possúi apenas
 É necessário transformar os 3 canais em 1 canal para que as transformações sejam mais rapidas (não precisa passar os 3 canais).  
 - A maioria das manipulações vao usar em imagens de tons de cinza (0 a 255).  
 - As operações morfológica usam imagens binárias (1 ou 0).  
+
+### Imagem usada
+
+![image](https://github.com/user-attachments/assets/bdfa8bd9-438d-4926-b28b-b7f34cd33c62)
 
 ## Operações pontuais
 
@@ -543,6 +551,8 @@ Essas operações são aplicadas diretamente à intensidade ou cor de cada pixel
 cinza=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
 ```
 
+![image](https://github.com/user-attachments/assets/86f7db30-1f5d-4c6a-80c5-b4ac9e0c0bd2)
+
 ### Binarização
 
 Transforma uma imagem em tons de cinza para 2 pontos, ou seja, de 255 tons de cinza para 0 e 1.  
@@ -554,6 +564,8 @@ A mais barata possivel e a mais inteligente entre as baratas.
 ```
 ret,binaria = cv2.threshold(cinza,100,255,cv2.THRESH_BINARY)
 ```
+
+![image](https://github.com/user-attachments/assets/51d07312-cc8f-4a10-916c-df02796417e7)
 
 OBS: # ret signifca retorno, no caso de erro.
 
@@ -589,6 +601,8 @@ Quanto maior o kernel, mais destruido será a imagem, maior a diversidade dos pi
 imgBlur = cv2.blur(cinza,(10,10))
 ```
 
+![image](https://github.com/user-attachments/assets/8254e436-a0af-406e-a83a-fe9e87b4317b)
+
 ### Filtro de Mediana
 
 Suavização para remover ruídos.
@@ -599,12 +613,14 @@ imgMedian = cv2.medianBlur(cinza,3)
 
 Neste caso o kernel só pode ser **ímpar**.
 
+![image](https://github.com/user-attachments/assets/0f557874-9d9e-4f00-899f-bab03af53055)
+
 ### Filtro Gaussiano
 
 Passa baixa.  
 Perde para o filtro de média.
 
-Conserva um pouco mais a informação original.  
+Conserva um pouco mais da informação original.  
 Para kernels do mesmo tamanho, o filtro gaussiano tem o comportamento melhor.
 
 Suaviza contornos com menor perda.
@@ -612,6 +628,8 @@ Suaviza contornos com menor perda.
 ```
 imgGauss = cv2.GaussianBlur(cinza,(3,3),0)
 ```
+
+![image](https://github.com/user-attachments/assets/4056c3b6-e48e-43f7-a66a-55fcf13802b5)
 
 ### Filtro Canny
 
@@ -631,6 +649,7 @@ t_upper = 150  # Upper threshold
 edge = cv2.Canny(cinza, t_lower, t_upper)
 ```
 
+![image](https://github.com/user-attachments/assets/79877fa1-8267-49c3-8789-a65f80d0438d)
 
 ### Filtro manual (customizado)
 
@@ -664,7 +683,7 @@ kernel3 = np.array([[0, 0, 0],
                    [0, 0, 0]])
 ```
 
-Aplicar o filtro
+Aplicar o filtro com o kernel.
 
 ```
 imagem = cv2.filter2D(imgMedian, -1, kernel2)
