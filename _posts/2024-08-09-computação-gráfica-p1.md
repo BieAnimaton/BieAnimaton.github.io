@@ -618,7 +618,9 @@ imgGauss = cv2.GaussianBlur(cinza,(3,3),0)
 Vai encontrar as bordas.  
 
 Filtro passa alta.  
-Se for passado em imagem ruidosa, fica mto ruim. Tal imagem deve passar primeiro pelo filtro passa baixa e depois para passa alta.
+Se for passado em imagem ruidosa, fica mto ruim.
+
+A imagem ruidosa deve passar primeiro pelo filtro passa baixa (remover ruídos) e depois para passa alta (encontrar bordas ou fazer outra transformação).
 
 Define dois limiares e detecta as bordas entre estes duis limiares.  
 
