@@ -599,7 +599,7 @@ imgMedian = cv2.medianBlur(cinza,3)
 
 Neste caso o kernel só pode ser **ímpar**.
 
-### Filtro gaussiano
+### Filtro Gaussiano
 
 Passa baixa.  
 Perde para o filtro de média.
@@ -632,7 +632,7 @@ edge = cv2.Canny(cinza, t_lower, t_upper)
 
 ### Filtro manual (customizado)
 
-Definir um kernel
+Definir um kernel manual para a operações.
 
 Detector de borda:  
 Pixel central mais forte
