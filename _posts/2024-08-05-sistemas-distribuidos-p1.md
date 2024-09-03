@@ -513,7 +513,8 @@ Dois problemas são concorrentes na solução
 - performance
 - consistência
 
-## Explique troca de mensagens.
+## Explique troca de mensagens
+
 Mensagens sãi unidades básicas de comunicação
 - carregam dados trocados entre as partes do sistemas distribuído
 - comunicam eventos que permitem sincronizar as ações do sistema
@@ -523,7 +524,8 @@ Há várias formas de se estabelecer um ponto de sincronismo
 - bloqueio do emissor até a mensagem ser recebida
 - bloqueio do emissor até a mensagem ser respondida
 
-## Diferencie persistência e transiência
+## Persistência e Transiência
+
 Define se as mensagens serão armazenadas pelo meio ou não.
 	
 Comunicação persistente
@@ -542,7 +544,8 @@ Comunicação transiente
 
 ![image](https://github.com/user-attachments/assets/54f4afbe-534a-4476-a737-344519f1b322)
 
-## Diferencie sincronismo e assincronismo
+## Sincronismo e Assincronismo
+
 Formas como as aplicações se comportarão durante o envio da mensagem.
 	
 Comunicação assíncrona
@@ -561,6 +564,7 @@ Comunicação síncrona
 ![image](https://github.com/user-attachments/assets/4a76572e-0262-44af-ad02-069996cf5d7a)
 
 ## O que os sockets oferecem?
+
 A interface de sockets oferece apenas um modelo transiente.
 - além disso no TCP as primitivas de solicitação e aceite de conexão bem como de escrita e leitura de stream são bloqueantes
 - isso impoe ao par comunicante pontos de sincronismo
