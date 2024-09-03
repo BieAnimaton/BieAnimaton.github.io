@@ -411,6 +411,7 @@ Multiplas CPUs é a caracteristica comum de sistemas distribuidos.
 Duas categorias  
 - multiprocessadores - operam em memória compartilhada
 - multicomputadores - não usam memória compartilhada
+
 Comunicação
 - realizada através de barramento.
 - barramento de alta velocidade ou o próprio barramento de uma rede local.
@@ -425,12 +426,12 @@ Comunicação
 ## Multicomputadores
 - Sistema que conecta vários computadores - através de rede, latência é muito maior.  
 - sistemas homogêneos  
-    aplicados em soluções que demnandam forte acoplamento  
+    aplicados em soluções que demandam forte acoplamento  
     Ex: supercomputadores muito caros  
 - sistemas heterogêneos  
 	aplicado em soluções que permitem fraco acoplamento  
     Ex: computação em nuvem, aplicações perr-to-peer  
-- Fracamente acoplado, cada um com seu própri processador, memória e SO.
+- Fracamente acoplado, cada um com seu próprio processador, memória e SO.
 
 
 ## O que são sistema operacionais distribuídos?
