@@ -342,7 +342,53 @@ Passar o AFN do exercício 1 anterior para AFD.
 
 ![image](https://github.com/user-attachments/assets/f271fc2c-5519-4c47-b652-341f804e460a)
 
-### Iniciando
+E = {a,b,c}
+s'0 = {1,2,5,6,7}
+s'1 = {3,8,1,2,5,6,7}
+s'2 = {8,1,2,5,6,7}
+s'3 = {4}
+
+(s'0,a) = {3,8} U {1,2,5,6,7}
+s'1 = {3,8,1,2,5,6,7}
+
+(s'0,b) = {8} U {1,2,5,6,7}
+s'2 = {8,1,2,5,6,7}
+
+(s'0,c) = {∅} U {∅}
+∅
+
+(s'1,a) = {3,8} U {1,2,5,6,7}
+(s'1,a) = {3,8,1,2,5,6,7} = s'1
+
+(s'1,b) = {8} U {1,2,5,6,7}
+(s'1,b) = {8,1,2,5,6,7} = s'2
+
+(s'1,c) = {4} U {∅}  
+s'3 = {4} -> como possui 4, s'3 é um estado final.  
+
+(s'2,a) = {3,8} U {1,2,5,6,7}
+(s'2,a) = {3,8,1,2,5,6,7} = s'1
+
+(s'2,b) = {8} U {1,2,5,6,7}
+(s'2,b) = {8,1,2,5,6,7} = s'2
+
+(s'2,c) = {∅} U {∅}
+∅
+
+(s'3,a) = {∅} U {∅}
+∅
+
+(s'3,b) = {∅} U {∅}
+∅
+
+(s'3,c) = {∅} U {∅}
+∅
+
+Meu desenho:
+
+![image](https://github.com/user-attachments/assets/bc0fcd78-b30f-4275-bcbe-3cf5ae965691)
+
+**CORREÇÃO DO PROFESSOR**
 
 ![image](https://github.com/user-attachments/assets/f7dfa985-9ae9-4d9e-aef5-e2344341054a)
 ![image](https://github.com/user-attachments/assets/092c5fff-70b9-487e-8aea-4a5205613ac2)
@@ -357,7 +403,7 @@ Passar o AFN do exercício 1 anterior para AFD.
 ![image](https://github.com/user-attachments/assets/b6e02008-08e7-45d9-94c2-dcd7601c4c93)
 ![image](https://github.com/user-attachments/assets/4cfae1ac-83cc-4ed6-a492-215e7dba30d3)
 
-### Finalizando
+### AFN e AFD
 
 ![image](https://github.com/user-attachments/assets/4b32e505-a8d3-4711-b2c0-97ba812cd062)
 
