@@ -615,6 +615,7 @@ Um message broker integra diferentes plataformas, convertendo padrões de format
 ![image](https://github.com/user-attachments/assets/bb6ad51d-8c19-47e5-947f-21beb9e8216b)
 
 ## Sistemas de arquivos distribuídos
+
 Requisitos funcionais
 - transparência: acesso, localização, mobilidade, desempenho e escala
 - atualizações concorrentes de arquivos
@@ -622,9 +623,11 @@ Requisitos funcionais
 - heterogeneidade de plataformas (hardware e sistema operacional)
 - tolerância a falhas
 - consistência, segurança (integridade e confidência) e eficiência
+
 Permitem compartilhamento de dados
 - processos podem executar em tempos e locais diferentes
 - fornecem visão hierárquica de um name space
+
 Paradigma que precede os SGBDs
 - uma das primeiras formas de integração/comunicação em middlewares
 
