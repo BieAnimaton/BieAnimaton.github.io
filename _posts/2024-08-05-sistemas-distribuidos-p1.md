@@ -569,6 +569,8 @@ A interface de sockets oferece apenas um modelo transiente.
 - além disso no TCP as primitivas de solicitação e aceite de conexão bem como de escrita e leitura de stream são bloqueantes
 - isso impoe ao par comunicante pontos de sincronismo
 
+![image](https://github.com/user-attachments/assets/7fba94db-e9e1-4e13-86d7-ac3ed325a72c)
+
 ## O que são mensagens persistentes? Quais as combinações?
 MOM (Message-Oriented Middleware)
 - serviço de enfileiramento de mensagens (message-queueing systems)
