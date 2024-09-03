@@ -651,12 +651,15 @@ Modelo de carga/atualização (ex.: FTP)
 
 ## Sun NFS
 
-serviço de acesso remoto e armazenamento de arquivos – Primeiro serviço de arquivos distribuídos amplamente divulgado.  
-Tornou-se padrão para muitas outras implementações.  
+Serviço de acesso remoto e armazenamento de arquivos
+
+-Primeiro serviço de arquivos distribuídos amplamente divulgado.  
+- Tornou-se padrão para muitas outras implementações.  
 		
 Network File System (NFS) Version 4 Protocol (RFC 7530)
 
 Modelo geral
+
 - o acesso é fornecido aos clientes, através de uma abstração do sistema remoto em seu próprio sistema de arquivos
 - clientes acessam um VFS (Virtual File System) que verifica se o arquivo requisitado é local ou remoto
 - se for remoto, o cliente NFS intercepta a solicitação e estabelece a comunicação com o servidor, através de RPC (Remote Procedure Call)
