@@ -825,52 +825,73 @@ Precedência de eventos.
 Em um sistema centralizado, o tempo é único para todos os processos.  
 Quando dois sistemas autônomos relacionam-se em um sistema distribuído, não há um referencial único de tempo (data/hora atuais).  
 
-## O registro de tempo (timer) em um computador
+## Relógios Físicos
+
+### O registro de tempo (timer) em um computador
 
 Quando o SO é carregado, obtém a data atual em um endereço na memória (CMOS RAM).  
+
 O registro é atualizado por um circuito alimentado por bateria.  
 - Possui um cristal de quartzo que oscila numa frequência bem conhecida.
 - Cada cristal mantém taxa constante, mas cristais diferentes apresentam pequenas variações de frequência.
+
 Dois registradores são operados: counter, e holding register.  
 - A cada oscilação do cristal decrementa-se o counter em uma unidade.
 - Quando o counter chega em zero, uma interrupção é gerada e o contador é recarregado com o valor do holding register.
+
 Cada interrupção gerada é chamada de um clock tick.
 
-## Diferentes computadores
+### Diferentes computadores
 
 Taxas distintas de atualização, dadas as diferenças de frequência dos cristais, geram registros de tempo diferentes (clock skew).  
+
 Recursos entre tais máquinas (arquivos, objetos, processos e mensagens), não podem ser associados a um timestamp.  
 
-## A noção do tempo pela humanidade
+## Tempo Natural
 
-Observação dos movimentos de rotação e translação da Terra.  
-- Cada rotação delimita a duração de um dia.
-- Cada translação, um ano.
+### A noção do tempo pela humanidade
 
-## Medição do tempo por relógios atômicos
+Cada rotação delimita a duração de um dia.
+Cada translação, um ano.
+
+### Medição do tempo por relógios atômicos
 
 Utilizam as transições do átomo de Césio 133.  
+
 Em intervalos regulares, informam ao BIH (Bureau International de l'Heure – Paris) quantos clock ticks foram registrados.  
-- Atualmente, existem cerca de 260 ao redor da Terra.
-O BIH calcula a média dos valores informados e produz o TAI (International Atomic Time).
-- O erro do TAI é de 100ns por ano (perante um relógio fictício perfeito).
 
-## Problema com relógios atômicos
+O BIH calcula a média dos valores informados e produz o TAI (International Atomic Time) - (erro do TAI é de 100ns por ano).
+
+### Problema com relógios atômicos
+
 Tempo de rotação da Terra tem aumentado.  
-Descompasso com a expectativa natural.  
-- O referencial de tempo registrará horários incompatíveis para os períodos do dia (manhã, tarde e noite).
 
-## Solução
+O referencial de tempo registrará horários incompatíveis para os períodos do dia (manhã, tarde e noite).
+
+### Solução
+
 UTC (Universal Coordinated Time)  
 - Mecanismo que dispara ajustes de um segundo (leap seconds) toda vez
 que a diferença atinge tal montante.
 - Veio substituir o sistema GMT (Greenwich Mean Time) – tempo astronômico.
+
 NIST (National Institute of Standard Time)  
 - Opera em um canal de ondas curtas (WWV) a difusão de um pulso curto, a cada segundo, informando o tempo UTC.
 
 ## Ajustes de relógios
 
-![image](https://github.com/user-attachments/assets/d7f4615d-ca38-48e7-a485-e9b951e7ddb2)
+O UTC pode servir de referência para máquinas
+
+### Como sincronizar máquinas diferetens em um sistema distribuído?
+
+- Cada máquina tem um registrador de tempo que causa interrupções H vezes por segundo
+- O registro de tempo é realizado através do incremento de valor  um um relógio C, a cada interrupção
+- Quando um tempo UTC for t, em uma máquina p, o valor do relógio será Cp(t)
+> Em uma situação ótima, Cp(t) para todo p e todo t, ou seja, dC/dt = 1
+- A diferença entre relógios (atuais) é da ordem de 10^-5, que será representada por ρ
+> Então: 1 - ρ <= dC/dt <= 1 + ρ 
+
+![image](https://github.com/user-attachments/assets/070cb480-b425-4f37-a6ba-5917d41e27e7)
 
 ## Cristian´s Algorithm
 
@@ -881,14 +902,21 @@ Considera que existe um receptor WWV (UTC)
 
 ![image](https://github.com/user-attachments/assets/8d2c5d8c-2918-4712-a640-e8733ce30f49)
 
-![image](https://github.com/user-attachments/assets/46bad536-b17f-48cb-971d-d5814b43565d)
+### Dois Problemas
+
+O tempo de resposta (RTT – Round Trip Time) da rede pode se alterar
+- Neste caso, o solicitante pode armazenar o timestamp da mensagem de solicitação e registrar o tempo na chegada da resposta.
+- Ao valor de C será acrescida a metade do RTT.
+
+Um relógio só pode registrar o acréscimo do tempo
+- Toda vez que um relógio estiver adiantado, o ajuste a ser promovido envolve a diminuição da frequência por um intervalo de tempo.
+- O relógio será alterado mais devagar, até encontrar com o tempo correto.
 
 ## Berkeley Algorithm
 
-Não utiliza um receptor WWV
 Baseia-se na utilização de um servidor monitor
-- Tal servidor solicita para cada máquina envolvida, em intervalos regulares, o registro de tempo
-- O servidor computa a média de todos os registros, e envia a todas as máquinas, para ajustarem seus relógios em relação a ela
+- Tal servidor solicita para cada máquina envolvida o registro de tempo em intervalos regulares.
+- O servidor computa a média de todos os registros, e envia a todas as máquinas, para ajustarem seus relógios em relação a ela.
 
 ![image](https://github.com/user-attachments/assets/d7315f1e-cf93-448b-98f8-38d2e919a018)
 
@@ -908,36 +936,68 @@ Relógios lógicos (logical clocks)
 
 ## Lamport Timestamps
 
-![image](https://github.com/user-attachments/assets/fde8233d-1e8d-4449-b5b8-c5d19d83c6f6)
+Relação "happens-before" (ocorre antes)
+
+- 'a -> b' significa "a happens before b" (a ocorre antes de b).
+
+Relações de precedência.
+
+- Se 'a' e 'b' são eventos de um mesmo processo, e 'a' ocorre antes de 'b', então 'a → b' é verdadeira.
+- Se 'a' é um evento de uma mensagem sendo enviada para um processo, e 'b' é o evento de uma mensagem sendo recebida por outro processo, então 'a → b' também é verdadeira.
+
+Relação 'a -> b' é transitiva: se 'a -> b -> c', então 'a -> c'.
+
+Sequenciamento de eventos em sistemas distribuídos.
+
+Troca de mensagns.
+Dois eventos x e y são concorrentes se ocorrem em processos distintos que não trocam mensagens, pois nenhuma relação de precedência pode ser definida entre eles
+
+![image](https://github.com/user-attachments/assets/bd064ca7-7290-41d6-b3be-a77f384f0012)
+
 
 ## Estado Global
 
-Em um sistema distribuído é descrito por
-- Estados locais dos processos
-- Mensagens que estão em trânsito naquele momento, ou seja, que foram enviadas mas ainda não entregues
+### Decrito em sistema distribuído por
 
-Estado de paralisação
+- Estados locais dos processos.
+- Mensagens que estão em trânsito naquele momento, ou seja, que foram enviadas mas ainda não entregues.
+
+### Estado de paralisação
+
 - Se todos os processos de um sistema pararam, e não existem mensagens em trânsito
 - Duas situações: ocorreu um deadlock ou o encerramento
 
-Estados intermediários
+### Estados intermediários
+
 - Descritos por distributed snapshots
 
 ## Distributed snapshot
 
-![image](https://github.com/user-attachments/assets/67f88b90-c658-4814-95af-570f15fd3956)
+Estado global de um sistema distribuído em um instante 't'
+
+-  Estado consistente  
+    Todas mensagens recebidas possuem o registro de encaminhamento
+
+- Estado inconsistente  
+    Recebimento de mensagem sem registro de seu envio
+
+Representado graficamente com uma linha de corte (cut)
+
+![image](https://github.com/user-attachments/assets/01837eb3-10bd-41bb-9f0a-97dfc6bbed37)
+
 
 ## Coordenação de processos
 
 Em um sistema distribuído, não há controle centralizado
-- Não há um SO que coordene e sequencie as ações
-- Cada processo pode executar em uma plataforma diferente
+- Não há um SO que coordene e sequencie as ações.
+- Cada processo pode executar em uma plataforma diferente.
 
-A coordenação é importante para
-- Garantir a isolação de acesso a recursos compartilhados e concorridos
-- Resolver situações de impasse (deadlock)
-- Permitir o uso justo (fair) dos recursos, sem starvation
-- Sequenciar, priorizar e autorizar os bloqueios dos recursos
+### Por que a coordenação é importante?
+
+- Para garantir a isolação de acesso a recursos compartilhados e concorridos,
+- Resolver situações de impasse (deadlock),
+- Permitir o uso justo (fair) dos recursos (sem starvation),
+- Sequenciar, priorizar e autorizar os bloqueios dos recursos.
 
 ## Eleição do coordenador
 
@@ -951,45 +1011,48 @@ Comportamento geral dos algoritmos.
 - Então procura-se descobrir, entre os operantes, qual tem o maior
 - O de maior valor assume a coordenação
 
+### Quando ocorre a troca?
+
+- Falha do Coordenador Atual.
+- Chegada de um Processo com Maior Prioridade.
+- Detecção de Inatividade ou Desempenho Insatisfatório do Coordenador.
+
 ## Algoritmo de Bully
 
 Parte da ideia que os processos estão sempre “querendo” se tornar coordenadores.  
 
-Quando um processo P detecta que o coordenador não está operante, P inicia uma eleição.  
-- P encaminha uma mensagem ELECTION a todos os processos com números maiores.
-- Se ninguém responder, P vence a eleição e se torna coordenador.
-- Se um processo (com número maior) responder (mensagem OK), ele assume a dianteira, e reinicia em 1.
-– O processo que vencer a eleição.
+Quando um processo 'P' detecta que o coordenador não está operante, 'P' inicia uma eleição.  
 
-Encaminha uma mensagem COORDINATOR a todos os processos e assume o papel de coordenador.  
-
-Se um processo, que estava parado, retorna à execução  
-- Inicia uma nova eleição
+- 'P' encaminha uma mensagem 'ELECTION' a todos os processos com números maiores.
+- Se ninguém responder, 'P' vence a eleição e se torna coordenador.
+- Se um processo (com número maior) responder (mensagem OK), ele assume a dianteira, e reinicia em 1 (enfrenta outro).
+- O processo que vencer a eleição encaminha uma mensagem COORDINATOR a todos os processos e assume o papel de coordenador.
+- Se um processo, que estava parado, retorna à execução, inicia uma nova eleição.
 
 ![image](https://github.com/user-attachments/assets/3352033b-cea2-49f8-832e-9dc7fa5dd2e8)
 
-## Algoritmo em anel (ring)
+## Algoritmo em Anel (ring)
 
-O anel representa a ordenação sequencial dos processos  
-Quando um processo detecta que o coordenador está inoperante  
-- Ele encaminha ao seu sucessor (ou o próximo ativo na ordem do anel) uma mensagem ELECTION contendo o seu próprio número de processo.
-Cada processo, na sequência, insere seu número na lista e torna-se candidato à eleição.  
-Quando a mensagem chegar novamente ao emissor (que detectará seu próprio número na lista).
-- Verifica qual processo ativo tem maior número.
-- Constrói uma mensagem COORDINATOR para informar a todos quem venceu a eleição e assumirá a função de coordenador.
+O anel representa a ordenação sequencial dos processos  .
+
+- Quando um processo detecta que o coordenador está inoperante, ele encaminha ao seu sucessor (ou o próximo ativo na ordem do anel) uma mensagem 'ELECTION' contendo o seu próprio número de processo.
+- Cada processo, na sequência, insere seu número na lista e torna-se candidato à eleição.  
+- Quando a mensagem chegar novamente ao emissor (que detectará seu próprio número na lista), verifica qual processo ativo tem maior número.
+- Constrói uma mensagem 'COORDINATOR' para informar a todos quem venceu a eleição e assumirá a função de coordenador.
 
 ![image](https://github.com/user-attachments/assets/a8bab0f6-b426-4d61-86ef-8742525e4b16)
 
 ## Bloqueio de recursos
 
-Exclusão mútua
-- Evita que dois ou mais processos usem recursos compartilhados ao mesmo tempo.
+### O que a exclusão mútua faz?
 
-A concorrência pode ser local
-- Vários processos (threads) de um servidor podem executar em prol de cada cliente conectado, e disputarem recursos locais.
-- A identificação das regiões críticas e aplicação de mutex, semáforos ou monitores podem resolver o problema.  
+Evita que dois ou mais processos usem recursos compartilhados ao mesmo tempo.
 
-Para processos distribuídos existem alguns algoritmos
+A concorrência pode ser local  
+Vários processos (threads) de um servidor podem executar em prol de cada cliente conectado, e disputarem recursos locais. A identificação das regiões críticas e aplicação de mutex, semáforos ou monitores podem resolver o problema.  
+
+### Algoritmos para processos distribuídos.
+
 - Centralizado
 - Distribuído
 - Token Ring
@@ -998,60 +1061,81 @@ Para processos distribuídos existem alguns algoritmos
 
 Exige a prévia eleição de um processo coordenador
 
-Quando um processo quer entrar em uma região crítica, ele envia uma mensagem ao coordenador, e solicita permissão.  
+- Quando um processo quer entrar em uma região crítica, ele envia uma mensagem ao coordenador, e solicita permissão.  
+- Se nenhum outro processo estiver executando a região crítica, o coordenador pode então responder e autorizar.  
+- Mas, se outro processo estiver executando, duas ações são possíveis:
 
-Se nenhum outro processo estiver executando a região crítica, o coordenador pode então responder e autorizar.  
-Mas, se outro processo estiver executando, duas ações são possíveis.  
-- Não responder: o processo solicitante ficará aguardando, bloqueado, a mensagem de autorização, e a requisição será enfileirada pelo coordenador (estratégia mais comum).
+- Não responder:  
+    O processo solicitante ficará bloqueado aguardando a mensagem de autorização e a requisição será enfileirada pelo coordenador (estratégia mais comum).
 
-Responder “permissão negada”: o coordenador pode, ou não, enfileirar o pedido, para posterior resposta.
-- Quando um processo encerra a execução da região crítica ele envia comunica o coordenador da liberação.
+- Responder “permissão negada”:  
+    O coordenador pode (ou não) enfileirar o pedido para posterior resposta.
 
-![image](https://github.com/user-attachments/assets/f9adb2e9-68ec-43d6-b5e0-aabfa9854ca8)
+- Quando um processo encerra a execução da região crítica, ele  comunica o coordenador da liberação.
+
+![image](https://github.com/user-attachments/assets/3f294f6a-3066-41b7-8a9c-0aff5a935dfa)
+
+O algoritmo garante, assim, a exclusão mútua
+- Só um processo, por vez, pode acessar a região crítica.
+- Pedidos são recebidos e atendidos em ordem de chegada.
+- Nenhum processo aguarda indefinidamente (starvation).
+
+Problema
+- O coordenador é o ponto central de ocorrência falhas no sistema
 
 ## Algoritmo distribuído
 
-Assume existir relação de ordem entre os eventos do sistema
-Quando um processo quiser entrar em uma região crítica
-- Encaminha mensagem a todos, contendo o nome da região crítica, o seu número (do processo), e a hora atual (timestamp)
+Assume existir relação de ordem entre os eventos do sistema.  
+
+Quando um processo quiser entrar em uma região crítica, deve encaminhar mensagem a todos, contendo o nome da região crítica, o seu número (do processo), e a hora atual (timestamp)
 
 No receptor, três situações distintas
 - Não está executando (nem pretende) aquela região crítica e retorna uma mensagem OK.
 - Está executando aquela região crítica, não responde e enfileira a solicitação
-- Quer entrar na mesma região crítica
+- Quer entrar na mesma região crítica  
+    Compara o timestamp da mensagem recebida com o da sua  
+    Se o da recebida for menor envia uma mensagem OK  
+    Senão, ele enfileira a solicitação, e não responde  
+- Quando um processo encerrar uma região crítica, envia uma mensagem OK a todos os processos, cujas requisições ele enfileirou, e limpa a fila de espera
 
-Compara o timestamp da mensagem recebida com o da sua
-- Se o da recebida for menor envia uma mensagem OK
-- Senão, ele enfileira a solicitação, e não responde
-
-![image](https://github.com/user-attachments/assets/515a991f-d4e4-43a0-80bb-3aa28b1d12c6)
-
+![image](https://github.com/user-attachments/assets/0451f0ec-9969-412b-9017-2f49894d915b)
 
 Da mesma forma que o algoritmo centralizado
 - Garante a exclusão mútua sem deadlocks ou starvations
 
 Problemas
-- Número de mensagens entre n processos, a cada interação, é de 2 n -1
-- Não existe um único ponto de falha, mas sim n
-- Se um processo travar, não poderá responder as solicitações
+- Número de mensagens entre n processos, a cada interação, é de '2^n -1'.
+- Não existe um único ponto de falha, mas sim 'n'.
+- Se um processo travar, não poderá responder as solicitações.
 
 Uma solução
-- Fazer com que o processo sempre responda imediatamente uma solicitação, seja para permitir ou para proibir o acesso
-- A mensagem OK poderá ser enviada a um processo ao qual encaminhou-se uma mensagem de proibição anteriormente
 
-## Algoritmo em anel
+- Fazer com que o processo sempre responda imediatamente uma solicitação, seja para permitir ou para proibir o acesso.
+- A mensagem OK poderá ser enviada a um processo ao qual encaminhou-se uma mensagem de proibição anteriormente.
+
+## Algoritmo em Anel
 
 Assume-se que
-- Processos estão dispostos em rede local de difusão (bus)
-- Sequência lógica em anel é fornecida pelo software
-- É associada uma posição para cada processo no anel
+- Processos estão dispostos em rede local de difusão (bus).
+- Sequência lógica em anel é fornecida pelo software.
+- É associada uma posição para cada processo no anel.
 
 Quando o anel é inicializado
-- É fornecido um token ao processo 0
-- O token circula o anel, passado do processo k ao k+1 (módulo no tamanho do anel) em mensagens ponto-a-ponto
+- É fornecido um token ao processo 0.
+- O token circula o anel, passado do processo 'k' ao 'k+1' (módulo no tamanho do anel) em mensagens ponto-a-ponto.
 
 O processo que recebe o token
 - Pode acessar a região crítica
 - Quando terminar de executá-la, passa o token adiante
 
-![image](https://github.com/user-attachments/assets/be6103b2-abd2-4d86-9098-bc53cc257e8c)
+![image](https://github.com/user-attachments/assets/3621ee93-2244-459e-96e5-86d1128c9daa)
+
+Garante a exclusão mútua, sem deadlocks ou starvations
+- Controlar o acesso à região crítica pela posse do token.
+- O token só pode ser utilizado uma vez por rodada.
+
+Problema
+- Perda de um token (processo detentor travou).
+
+Solução
+- Confirmação de recepção do token pode minimizar a ocorrência.
