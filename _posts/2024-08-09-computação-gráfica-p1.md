@@ -624,7 +624,8 @@ Neste caso o kernel só pode ser **ímpar**.
 ### Filtro Gaussiano
 
 Passa baixa.  
-Perde para o filtro de média.
+Perde para o filtro de média.  
+Não gera efeitos indesejáveis nas bordas como o filtro de média.  
 
 Conserva um pouco mais da informação original.  
 Para kernels do mesmo tamanho, o filtro gaussiano tem o comportamento melhor.
