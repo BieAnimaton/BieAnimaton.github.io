@@ -546,3 +546,123 @@ União dos dois
 q1 percorrendo 1 vai para q0 (podemos aproveitar o estado q0q1 já que o q1 faz parte do loop).
 
 ![image](https://github.com/user-attachments/assets/5f5d44a8-502d-49bc-9030-7a0fdd0eed47)
+
+# Aula V
+
+## Último exercício de AFN para AFD.
+
+ER = a(a|bc)*
+
+AFN = 
+![ex 1 AFN](https://github.com/user-attachments/assets/f33d661d-1c30-43a5-9071-3129db443b86)
+
+AFD = 
+
+AFD:
+E = {a,b,c}  
+s'0 = {1}  
+s'1 = {2,3,4,5,8}  
+s'2 = {7,2,3,4,5,8}  
+s'3 = {6}  
+
+s'0 = {1} U {1}  
+s'0 = {1}  
+
+(s'0,a) = {2} U {3,4,5,8}  
+s'1 = {2,3,4,5,8} -> tem 8, estado final  
+
+(s'0,b) = {∅} U {∅}  
+∅  
+
+(s'0,c) = {∅} U {∅}  
+∅  
+
+(s'1,a) = {7} U {2,3,4,5,8}  
+s'2 = {7,2,3,4,5,8} -> tem 8, estado final  
+
+(s'1,b) = {6} U {∅}  
+s'3 = {6}  
+
+(s'1,c) = {∅} U {∅}  
+∅  
+
+(s'2,a) = {7} U {2,3,4,5,8}  
+(s'2,a) = {7,2,3,4,5,8} = s'2  
+
+(s'2,b) = {6} U {∅}  
+(s'2,b) = {6} = s'3  
+
+(s'2,c) = {∅} U {∅}  
+∅  
+
+(s'3,a) = {∅} U {∅}  
+∅  
+
+(s'3,b) = {∅} U {∅}  
+∅  
+
+(s'3,c) = {7} U {2,3,4,5,8}  
+(s'3,c) = {7,2,3,4,5,8} = s'2  
+
+![ex 1 AFD](https://github.com/user-attachments/assets/384058d1-a049-480b-a8fd-f41f1d853def)
+
+Vídeo Auxiliar: [Assista](https://www.youtube.com/watch?v=paycBmJqwOs)
+
+## Flex/Lex
+
+É uma linaguagem de analisador léxico.
+
+Existem 3 maneiras de construir um analisador léxico:
+- Utilizar um gerador automático de analisadores léxicos.
+- Escrever um analisador léxico utilizando uma linguagem de programação convencional.
+- Escrever um analisador léxico utilizando uma linguagem de montagem.
+
+## Linguagem Lex
+
+Gerador automático de analisadores léxicos.
+
+Também conhecida como Flex em uma implementação mais
+recente.
+
+Função:
+- Diferenciar os diversos tipos de tokens através de ER
+- Não verifica se todos as partes estão presentes
+- Decidir como sub-dividir os tokens
+
+## Estrutura de um programa Lex:
+
+[definições]  
+%%  
+(expressão_regular [ação])*  
+[%%  
+funções auxiliares em C]  
+
+![image](https://github.com/user-attachments/assets/85f57b05-8fda-4fe2-9f6e-332f2e2cb043)
+
+![image](https://github.com/user-attachments/assets/4a6e7283-e7e7-48f3-a3ba-cad93e0293af)
+
+![image](https://github.com/user-attachments/assets/8a55604e-114a-46b6-a427-2699a3841cc6)
+
+![image](https://github.com/user-attachments/assets/0dfa6fe6-e97c-46b2-a787-732470eb12f3)
+
+### Exemplos
+
+![image](https://github.com/user-attachments/assets/324cbd86-f6ce-44bd-9a9f-97bcacd416e4)
+
+![image](https://github.com/user-attachments/assets/fe199130-4691-463b-bb55-afcb1566646b)
+
+![image](https://github.com/user-attachments/assets/621fc200-594b-4e25-9967-1d71df8cb947)
+
+### Tente fazer
+
+![image](https://github.com/user-attachments/assets/a1cc3695-e311-44f8-bc78-055a74389b70)
+
+### Resposta
+
+![image](https://github.com/user-attachments/assets/83e8651c-280f-4bc0-85a6-1370889ec4f7)
+
+### Exercícios
+
+![image](https://github.com/user-attachments/assets/f3b10aca-636e-426d-88ec-e8e8207a4952)
+
+![image](https://github.com/user-attachments/assets/6f7e9d8e-3e47-4c8e-b77e-fa11a7fbcee4)
