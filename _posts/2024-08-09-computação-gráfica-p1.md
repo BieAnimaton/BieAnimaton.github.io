@@ -533,6 +533,12 @@ Estar em tom de cinza não significa necessariamente que a imagem possúi apenas
 - A maioria das manipulações vao usar em imagens de tons de cinza (0 a 255).  
 - As operações morfológica usam imagens binárias (1 ou 0).  
 
+### Domínio Espacial
+A imagem é trabalhada diretamente em termos de pixels e suas intensidades. Processos como filtros e operações de convolução utilizam kernels (ou máscaras), que são pequenos blocos de pixels usados para modificar a imagem. Por exemplo, um kernel de desfoque pode ser aplicado a cada pixel da imagem para suavizar os detalhes.
+
+### Domínio da Frequência
+As imagens são analisadas em termos de suas componentes de frequência. A transformação de Fourier é usada para converter a imagem do domínio espacial para o domínio da frequência. Nesse domínio, filtros são aplicados para modificar a imagem. Ao aplicar um filtro no domínio da frequência e depois transformar de volta para o domínio espacial, você pode realizar operações como remoção de ruído ou aumento de contraste.
+
 ### Imagem usada
 
 ![image](https://github.com/user-attachments/assets/bdfa8bd9-438d-4926-b28b-b7f34cd33c62)
