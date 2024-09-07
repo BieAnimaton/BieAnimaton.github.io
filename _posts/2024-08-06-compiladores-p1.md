@@ -551,7 +551,7 @@ q1 percorrendo 1 vai para q0 (podemos aproveitar o estado q0q1 já que o q1 faz 
 
 ## Último exercício de AFN para AFD.
 
-ER = a(a|bc)*
+ER = a(a | bc)*
 
 AFN = 
 ![ex 1 AFN](https://github.com/user-attachments/assets/f33d661d-1c30-43a5-9071-3129db443b86)
