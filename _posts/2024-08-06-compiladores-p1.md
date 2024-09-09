@@ -653,7 +653,7 @@ funções auxiliares em C]
 
 ![image](https://github.com/user-attachments/assets/621fc200-594b-4e25-9967-1d71df8cb947)
 
-### Tente fazer
+## Tente fazer
 
 ![image](https://github.com/user-attachments/assets/a1cc3695-e311-44f8-bc78-055a74389b70)
 
@@ -661,8 +661,80 @@ funções auxiliares em C]
 
 ![image](https://github.com/user-attachments/assets/83e8651c-280f-4bc0-85a6-1370889ec4f7)
 
-### Exercícios
+## Exercícios
 
-![image](https://github.com/user-attachments/assets/f3b10aca-636e-426d-88ec-e8e8207a4952)
+![image](https://github.com/user-attachments/assets/0b76af52-3be3-40e0-821b-a184c3036e59)
 
-![image](https://github.com/user-attachments/assets/6f7e9d8e-3e47-4c8e-b77e-fa11a7fbcee4)
+### Exercício 1
+
+![image](https://github.com/user-attachments/assets/2eb7ac01-0bad-49e7-bd4e-505410f2576f)
+
+### Exercício 2
+
+![image](https://github.com/user-attachments/assets/cd5bf6dc-97fe-462b-b667-6845b5660ebe)
+
+### Exercício 3
+
+![image](https://github.com/user-attachments/assets/8924b0f7-5f84-4d23-878e-e842ac42a6b4)
+
+### Exercíco 4
+
+![image](https://github.com/user-attachments/assets/c4792383-51f1-4cc1-bbd0-274ff10dd9fd)
+
+### Exercíco 5
+
+![image](https://github.com/user-attachments/assets/4fb9218b-77c4-4da1-b51c-17aa4599ca97)
+
+### Exercíco 6
+
+![image](https://github.com/user-attachments/assets/2dd8ccc8-7f7b-4e62-af71-4bfbd56e54f1)
+
+## Exemplos de Análise Léxica
+
+![image](https://github.com/user-attachments/assets/ed0926bd-1e69-4f8c-8972-cd1007511e31)
+
+![image](https://github.com/user-attachments/assets/4437db3c-92ee-4d02-b73c-005603adb0f9)
+
+## Exercícios
+
+
+### Exercício 1
+
+Código:  
+```
+while indice < 10 do
+ indice:= total + indice;
+```
+
+Sequência de tokens:  
+<while,> <id,7> <<,> <numero,10> <do,> <id,7> <:=,> <id,12> <+,> <id,7> <;, >
+
+### Exercício 2
+
+Código:  
+```
+position = initial + rate * 60
+```
+
+Sequência de tokens:  
+<id, 1> <=, > <id, 2> <+, > <id, 3> <*, > <numero, 60>
+
+### Exercício 3
+
+Código:  
+```
+a[index] = 4 + 2
+```
+
+Sequência de tokens:  
+<id, 1> <[,> <id, 2> <],> <=,> <numero, 4> <+,> <numero, 2>
+
+### Exercício 4
+
+Código:  
+```
+position = initial + rate * 60
+```
+
+Sequência de tokens:  
+<id, 1> <=, > <id, 2> <+, > <id, 3> <*, > <numero, 60>
