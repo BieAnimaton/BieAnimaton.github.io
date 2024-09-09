@@ -613,6 +613,11 @@ imgBlur = cv2.blur(cinza,(10,10))
 
 Suavização para remover ruídos.
 
+Método mais longo e caro.  
+Percorre a imagem, usa um kernel que vai selecionar um pedacinho dessa imagem e depois tenho ordenação e por fim a criação da imagem resultante.  
+
+Imagens maiores - muito mais ordenação de vetores.
+
 ```
 imgMedian = cv2.medianBlur(cinza,3)
 ```
@@ -749,3 +754,46 @@ As operações sobre histogramas tendem a ser mais rapida, e quando possivel, us
 Encontra o resultado de maneira eficiente utilizando pouco poder comptuacional.  
 
 Ex: transformo a imagem em histograma e comparo no banco de dados para verificar de fomra mais rápida se existe algum semelhante. Recupero e faço as operações de forma ágil, computacionalmente muito eficiente.  
+
+# Aula IV
+
+## Operações Morfológicas
+
+São técnicas de processamento de imagens que se baseiam na forma e na estrutura dos objetos dentro de uma imagem.  
+Usadas em imagens preto e branco.
+
+## Erosão
+
+Crescimento das regiões em preto em áreas brancas (remoção de ruído branco).  
+Pegar valores em preto e aumenta.  
+Objetivo eliminação de ruidos brancas em areas pretas.  
+Reduzir pixels brancos e aumentar pixels pretos.  
+
+![image](https://github.com/user-attachments/assets/7ad77a69-7f81-4bd5-a019-a1d1711ad889)
+
+## Dilatação
+
+Crescimento das regiões em branco (remoção de ruído preto).
+
+![image](https://github.com/user-attachments/assets/daac40e8-890f-44df-bbdc-79ba6cc8aaa4)
+
+## Abertura e fechamento
+
+São tipos esspecíficos de erosão e dilação.
+
+## Abertura
+
+A abertura é composta por uma erosão seguida de dilatação.
+
+Conservação dos elementos estruturias e filtrando de ruidos brancos em fundos pretos.
+
+![image](https://github.com/user-attachments/assets/4cc2cc2b-fc07-4f51-818d-23bd3b7ea0b5)
+
+## Fechamento
+
+O fechamento é o contrário da abertura.
+Uma dilatação seguida de erosão.
+
+Há uma tentativa de conservação dos elementos estruturais - ainda da para reconhecer.
+
+![image](https://github.com/user-attachments/assets/40b7108c-4cf6-42b8-8d62-1e9f4f045d8f)
