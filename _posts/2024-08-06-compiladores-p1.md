@@ -738,3 +738,31 @@ position = initial + rate * 60
 
 Sequência de tokens:  
 <id, 1> <=, > <id, 2> <+, > <id, 3> <*, > <numero, 60>
+
+### Extra
+
+Código:  
+```
+const a[book] = 5;
+contador = 11;
+while contador > 1 do {
+	contador =- 1;
+	if (contador <= 5) {
+		a[contador] = contador + 2;
+		print("numero inferior");
+	}
+}
+contador *= 60;
+```
+
+Sequência de tokens:  
+<const, > <id, 1> <[, > <id, 2} <], > <=, > <numero, 5> <;, >  
+<id, 3> <=, > <numero, 11> <;, >  
+<while, > <id, 3> <>, > <numero, 1> <> <do, > <{, >  
+<id, 3> <=-, > <numero, 1> <;, >  
+<if, > <(, > <id, 1> <<=,> <numero, 5> <), > <{, >  
+<id, 1> <[, > <id, 1> <], > <=, > <id, 3> <+, > <numero, 2> <;, >  
+<print, > <(, > <literal, "numero inferior"> <), > <;, >  
+<}, >  
+<}, >  
+<id, 3> <*=, > <numero, 60> <;, >  
