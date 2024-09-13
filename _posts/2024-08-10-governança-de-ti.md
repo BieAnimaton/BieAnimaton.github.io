@@ -368,6 +368,7 @@ Obs: RNP = Rede Nacional de Pesquisa
 ### Ambientes de Negócios
 
 - Novos entrantes no mercado (competição).
+
 - Surgimento de produtos e serviços substitutos.
 - Globalização (novos concorrentes, menor custo).
 - Barganha de fornecedores e clientes.
@@ -382,6 +383,7 @@ Obs: RNP = Rede Nacional de Pesquisa
 ### Integrações tecnológicas
 
 - Integração das cadeias de suprimentos através de SCM.
+
 - Integração entre gestão da empresa e seu chão de fábrica (ERP).
 - Padronização de seus aplicativos.
 - Integração na comunicação de dados.
@@ -392,20 +394,22 @@ Obs: RNP = Rede Nacional de Pesquisa
 ### Segurança da informação
 
 - Riscos diários: afetam as operações da empresa.
+
 - Envolve todos os níveis da organização na gestão da Segurança da Informação.
 
 ### Dependência do negócio em relação à TI
 
 - Mais operações e estratégias corporativas dependem de TI.
+
 - TI é estratégica para o negócio.
 
 ### Marcos de regulação
 
-A GTI refere-se ao conjunto de práticas, estruturas e processos que
+A GTI se refere ao conjunto de práticas, estruturas e processos que
 garantem que a TI de uma organização apoie e potencialize suas
-metas e objetivos. Os marcos de regulação da governança de TI são
-fundamentais para garantir que as políticas e normas sejam seguidas,
-promovendo a eficiência e a conformidade.
+metas e objetivos.
+
+Os marcos de regulação da GTI são fundamentais para garantir que as políticas e normas sejam seguidas, promovendo a eficiência e a conformidade.
 
 Alguns dos principais marcos de regulação que orientam a GTI:
 
@@ -414,71 +418,87 @@ Alguns dos principais marcos de regulação que orientam a GTI:
 ### TI como prestadora de serviços
 
 - Projetos dentro prazo.
+
 - Atendimento aos requisitos do negócio.
 - Disponibilidade das aplicações.
 - Postura e organização orientada a prestação de serviços.
 
 ## Regulamentações de Compliance
 
-Compliance
+Compliance é uma palavra da língua inglesa cuja tradução é conformidade, vem do verbo “to comply” que significa: **obedecer, cumprir, agir de acordo com uma regra**.
 
-- Compliance é uma palavra da língua inglesa cuja tradução é conformidade. O termo advém do verbo “to comply”, que significa obedecer, cumprir, agir de acordo com uma regra.
+Quando o termo é relacionado ao mundo corporativo, ele **diz respeito à conformidade de uma empresa com as leis e normas**.
 
-- Quando o termo é relacionado ao mundo corporativo, ele diz respeito à conformidade de uma empresa com as leis e normas.
+Existem obrigações ambientais, trabalhistas, tributárias e regulatórias, além de questões legais, éticas envolvendo a concorrência e os regulamentos internos da empresa, que existem para serem cumpridos.
 
-- Existem obrigações ambientais, trabalhistas, tributárias e regulatórias, além de questões legais e éticas envolvendo a concorrência.
+A GTI envolve diversas áreas, incluindo a gestão de riscos, a segurança da informação, a gestão de projetos e a gestão de recursos, sempre com foco em garantir que a TI contribua para o valor organizacional.
 
-- E ainda os regulamentos internos da empresa, que existem para serem cumpridos.
-
-A GTI envolve diversas áreas, incluindo a gestão de riscos, a segurança da informação, a gestão de projetos e a gestão de recursos, sempre com foco em garantir que a TI contribua para o valor organizacional. Nesse contexto, a conformidade (compliance) é um aspecto fundamental, pois se refere à adesão a leis, regulamentos, políticas internas e normas aplicáveis.
+Nesse contexto, a conformidade (compliance) é um aspecto fundamental, pois se refere à adesão a leis, regulamentos, políticas internas e normas aplicáveis.
 
 ## Relação entre GTI e compliance pode ser explicada por diversos fatores
 
 ### Alinhamento com Regulamentações
 
-A GTI deve assegurar que as iniciativas de tecnologia estejam em conformidade com regulamentações específicas do setor, como leis de proteção de dados (por exemplo, GDPR, LGPD), normas de segurança da informação (como ISO/IEC 27001) e requisitos financeiros (como SOX). Isso implica em implementar controles e processos que garantam que os dados sejam tratados de forma ética e legal.
+A GTI deve assegurar que as iniciativas de tecnologia estejam em conformidade com regulamentações específicas do setor, como leis de proteção de dados (por exemplo, GDPR, LGPD), normas de segurança da informação (como ISO/IEC 27001) e requisitos financeiros (como SOX).
+
+Isso implica em implementar controles e processos que garantam que os dados sejam tratados de forma ética e legal.
 
 ### Gestão de Risco
 
-Uma boa GTI identifica e gerencia os riscos associados ao uso da tecnologia. A conformidade é uma parte essencial desse processo, pois a não conformidade pode resultar em penalidades legais, danos à reputação e perdas financeiras. Portanto, a governança deve integrar práticas de compliance para mitigar riscos.
+A GTI identifica e gerencia os riscos associados ao uso da tecnologia.
+
+A não conformidade pode resultar em penalidades legais, danos à reputação e perdas financeiras.
+
+Portanto, a governança deve integrar práticas de compliance (conformidade) para mitigar riscos.
 
 ### Políticas e Processos
 
-A GTI estabelece políticas e processos que garantem que todas as atividades relacionadas à tecnologia sejam realizadas de acordo com as normas e regulamentos. Isso inclui a definição de responsabilidades e a criação de mecanismos de controle para monitorar a conformidade.
+A GTI estabelece políticas e processos que garantem que todas as atividades relacionadas à tecnologia sejam realizadas de acordo com as normas e regulamentos.
+
+Isso inclui a definição de responsabilidades e a criação de mecanismos de controle para monitorar a conformidade.
 
 ### Auditoria e Monitoramento
 
-A implementação de práticas de GTI também envolve auditorias regulares e monitoramento de processos e sistemas. Isso não apenas garante que as políticas de compliance sejam seguidas, mas também ajuda a identificar áreas de melhoria e a prevenir problemas antes que se tornem críticos.
+A GTI também possui auditorias regulares e monitoramento de processos e sistemas.
+
+Isso não apenas garante que as políticas de compliance sejam seguidas, mas também ajuda a identificar áreas de melhoria e a prevenir problemas antes que se tornem críticos.
 
 ### Cultura Organizacional
 
-A GTI deve estar alinhada à cultura organizacional e aos valores éticos da empresa. O compliance reforça essa conexão ao promover uma cultura de conformidade e ética, assegurando que todos os colaboradores estejam cientes e comprometidos com as normas que regem suas atividades.
+A GTI deve estar alinhada à cultura organizacional e aos valores éticos da empresa.
 
-Esses fatores demonstram que a GTI e a compliance não são disciplinas isoladas, mas interconectadas, que, quando alinhadas, podem contribuir para uma gestão mais eficaz e responsável da TI nas organizações.
+O compliance reforça essa conexão ao promover uma cultura de conformidade e ética, assegurando que todos os colaboradores estejam cientes e comprometidos com as normas que regem suas atividades.
+
+Esses fatores demonstram que a GTI e a compliance não são disciplinas isoladas e sim interconectadas que podem contribuir para uma gestão mais eficaz e responsável da TI nas organizações.
 
 ## O que é programa de Compliance?
 
-- Um programa de compliance consiste na organização interna de uma empresa para cumprir com todos os requisitos que implicam em “estar em compliance”.
+Um programa de compliance consiste na organização interna de uma empresa para cumprir com todos os requisitos que implicam em “estar em compliance”.
 
-- São mecanismos e procedimentos internos que incluem a criação de normas, fiscalização, auditoria, incentivo à denúncias de irregularidades, aplicação do código de conduta e promoção de campanhas de comunicação interna sobre esses tópicos.
+São procedimentos internos que incluem a criação de normas, fiscalização, auditoria, incentivo à denúncias de irregularidades, aplicação do código de conduta e promoção de campanhas de comunicação sobre esses tópicos.
 
-- É um trabalho constante, que deve ser feito mesmo quando não há um histórico de condutas inapropriadas dos colaboradores da organização.
+É um trabalho constante e deve ser feito mesmo quando não há um histórico de condutas inapropriadas da organização.
 
-- Porque o programa de compliance é preventivo, existe para evitar que os problemas aconteçam, não para remediá-los.
+O programa de compliance é preventivo, existe para evitar que os problemas aconteçam e não para remediá-los.
 
 ## Sistema de Compliance é obrigatório?
 
 Em 2013, foi sancionada a Lei Nº 12.846, que dispõe sobre a “responsabilização administrativa e civil de pessoas jurídicas pela prática de atos contra a administração pública, nacional ou estrangeira”.
 
-Ela é conhecida também como Lei Anticorrupção. A novidade é que, dessa vez, não aborda a corrupção no trabalho de governantes eleitos e servidores públicos, mas sim das empresas. A lei estabelece punições às organizações que lesam a administração pública, como prometer vantagem indevida a um agente público ou fraudar uma licitação.
+Esta é a Lei Anticorrupção.
 
-A lei NÃO o torna obrigatório. Porém, com ela, grandes corporações que não adotam um programa do tipo estão correndo grandes riscos. O que acontece é que situações nas quais os interesses da companhia esbarram em regulações do poder público são muito frequentes.
+Aborda a corrupção no trabalho das empresas, estabelecendo punições às organizações que lesam a administração pública, como prometer vantagem indevida a um agente público ou fraudar uma licitação.
 
-Após a aprovação da lei, embora não seja obrigatório, grandes empresas não têm muita escolha: o sistema de compliance é essencial para a sua própria segurança. Em alguns estados, por outro lado, adotar um programa de compliance é obrigatório para que a empresa possa celebrar determinados tipos de contrato com a administração pública: Lei Nº 7.753/2017 no Rio de Janeiro e Lei Nº 6.112/2018 no Distrito Federal, que usam o termo “programa de integridade”
+A lei NÃO é obrigatório, porém, corporações que não adotam um programa do tipo estão correndo grandes riscos.
+
+O que acontece é que situações nas quais os interesses da companhia esbarram em regulações do poder público são muito frequentes.
+
+Após a aprovação da lei: o sistema de compliance é essencial para a sua própria segurança. Em alguns estados, por outro lado, adotar um programa de compliance é obrigatório para que a empresa possa celebrar determinados tipos de contrato com a administração pública: Lei Nº 7.753/2017 no Rio de Janeiro e Lei Nº 6.112/2018 no Distrito Federal, que usam o termo “programa de integridade”
 
 ## Principais benefícios
 
 - Melhora a imagem da empresa.
+
 - Melhora a satisfação dos funcionários.
 - Melhora a produtividade.
 - Melhora a retenção e atração de talentos.
@@ -507,19 +527,49 @@ São eles: SOX, Basileia II, Resolução 3380 do Bacen, GDPR, LGPD, ISSO/IEC 270
 
 ## SARBANES-OXLEY ACT (SOX, SARBOX, SOA)
 
-O ano de 2001 não ficou marcado somente pelos atentados às Torres Gêmeas, em Nova York. Também ocorreu o escândalo financeiro de uma das maiores empresas americanas, a Enron (empresas líderes no mundo em distribuição de energia (eletricidade, gás natural e comunicações). Uma empresa gigantesca do setor de energia, localizada em Houston, Texas que empregava cerca de 21000 pessoas e com faturamento superior a U$ 100 bilhões, envolveu-se num emaranhado de fraudes contábeis que a levou decretar falência, prejudicando milhares de investidores.
+### Contexto
 
-Diante desses acontecimentos, o Congresso dos EUA contraatacou,  provando a lei Sarbanes-Oxley, conhecida como SOX, que tinha o objetivo de proteger investidores e "stakeholders" contra crimes financeiros e evitar a proliferação de práticas desse tipo, que manchavam a imagem do mercado de capitais do país.
+O ano de 2001 não ficou marcado somente pelos atentados às Torres Gêmeas, em Nova York.
+
+Também ocorreu o escândalo financeiro de uma das maiores empresas americanas, a Enron (empresas líderes no mundo em distribuição de energia (eletricidade, gás natural e comunicações).
+
+Uma empresa gigantesca do setor de energia, localizada em Houston, Texas que empregava cerca de 21000 pessoas e com faturamento superior a U$ 100 bilhões, envolveu-se num emaranhado de fraudes contábeis que a levou decretar falência, prejudicando milhares de investidores.
+
+### Objetivo da lei?
+
+Diante desses acontecimentos, o Congresso dos EUA contra-atacou,  aprovando a lei **Sarbanes-Oxley**, conhecida como **SOX**, que tinha o objetivo de proteger investidores e "stakeholders" contra crimes financeiros e evitar a proliferação de práticas desse tipo, que manchavam a imagem do mercado de capitais do país.
 
 A SOX visa aprimorar a governança corporativa e a prestação de
-contas (informações sobre receitas, despesas, balanço patrimonial e total de ativos e passivos). Em outras palavras, o objetivo da SOx é o de identificar, combater e prevenir fraudes que impactam no desempenho financeiro das organizações, garantindo o compliance.
+contas (informações sobre receitas, despesas, balanço patrimonial e total de ativos e passivos).
 
-Todas as empresas, sejam americanas ou não, com ações na SEC (Securities and Exchange Comission, o que equivale a nossa CVM) devem seguir as definições da SOX. Importante destacar que a Lei Sarbanes-Oxley não é um conjunto de práticas de negócios e não especifica como uma empresa deve armazenar registros. Em vez disso, define quais registros devem ser armazenados e por quanto tempo.
+Em outras palavras, o objetivo da SOx é o de identificar, combater e prevenir fraudes que impactam no desempenho financeiro das organizações, garantindo o compliance.
 
-Por esse motivo, não é apenas o lado financeiro das empresas que é afetado, mas também os departamentos de TI, que são encarregados de armazenar os registros eletrônicos. De acordo com a SOX, todos os registros comerciais, incluindo registros eletrônicos e mensagens eletrônicas, devem ser salvos por não menos de cinco anos. As consequências para o não cumprimento do ato variam desde multas até prisão.
+### Quem obedece a lei?
 
-Atinge empresas de capital aberto e que tem ações nas bolsas de valores norte-americanas. Projeto de lei dos deputados Paul S. Sarbanes e Michael Oxley foi aprovada e editada como lei norte-americano George W. Bush em 30 de julho de 2002.
+Todas as empresas, sejam americanas ou não, com ações na SEC (Securities and Exchange Comission, o que equivale a nossa CVM) devem seguir as definições da SOX.
 
-A criação desta lei foi uma consequência das fraudes e escândalos contábeis que, na época, atingiram grandes corporações nos Estados Unidos (Enron, Arthur Andersen, WorldCom, Xerox etc…), e teve como intuito tentar evitar a fuga dos investidores causada pela insegurança e perda de confiança em relação as escriturações contábeis e aos princípios de governança nas empresas.
+Importante destacar que a Lei Sarbanes-Oxley não é um conjunto de práticas de negócios e não especifica como uma empresa deve armazenar registros.
 
-A SOX prevê a criação, nas empresas, de mecanismos de auditoria e segurança confiáveis, definindo regras para a criação de comitês encarregados de supervisionar suas atividades e operações, formados em boa parte por membros independentes. Isso com o intuito explícito de evitar a ocorrência de fraudes e criar meios de identificá-las quando ocorrem, reduzindo os riscos nos negócios e garantindo a transparência na gestão.
+Em vez disso, **define quais registros devem ser armazenados e por quanto tempo**.
+
+Por esse motivo, não é apenas o lado financeiro das empresas que é afetado, mas também os departamentos de TI, que são encarregados de armazenar os registros eletrônicos.
+
+### Onde a TI é afetada pela SOX?
+
+De acordo com a SOX, todos os registros comerciais, incluindo registros eletrônicos e mensagens eletrônicas, **devem ser salvos por não menos de cinco anos**. As consequências para o não cumprimento do ato variam desde multas até prisão.
+
+Atinge empresas de capital aberto e que tem ações nas bolsas de valores norte-americanas.
+
+### Quem foram os criados?
+
+Projeto de lei dos deputados Paul S. Sarbanes e Michael Oxley foi aprovada e editada como lei norte-americano George W. Bush em 30 de julho de 2002.
+
+### Resumindo
+
+A criação desta lei foi uma consequência das fraudes e escândalos contábeis que atingiram grandes corporações nos Estados Unidos (Enron, Arthur Andersen, WorldCom, Xerox etc…).
+
+Teve como objetivo evitar a fuga dos investidores pela insegurança e perda de confiança em relação as escriturações contábeis e aos princípios de governança nas empresas.
+
+A SOX prevê criação de mecanismos de auditoria e segurança confiáveis nas empresas, definindo regras para a criação de comitês formados por membros independentes para supervisionar suas atividades e operações.
+
+Busca evitar a ocorrência de fraudes e criar meios de identificá-las quando ocorrem, reduzindo os riscos nos negócios e garantindo a transparência na gestão.
