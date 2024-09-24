@@ -188,3 +188,119 @@ Tedências que incluem o uso crescente de inteligênica artificiall e machine le
 Tecnologias de sequenciamento de terceira geração, como o sequeciameto por nanopore, oferecem leituras longas e em tempo real, com potencial de reduzir custps e expandir o uso clínico.
 
 Dispositivos portátiveis estão possibilitando análises genômicas em campo, ampliando as aplicações da bioinformática em áreas como agricultura, conservação e saúde pública.
+
+# Privacidade de Dados
+
+Apresentação Leo Basso e João Vitor - 18/09
+
+## O que é?
+
+### Definição de privacidade de dados pessoais:
+
+Privacidade de dados pessoais refere-se à proteção das informações que podem identificar diretamente ou indiretamente uma pessoa. Isso envolve o controle sobre como os dados são coletados, armazenados, compartilhados e usados, garantindo que indivíduos mantenham sua autonomia e confidencialidade no ambiente digital.
+
+### Por que a privacidade de dados é importante na era digital?
+
+Na era digital, grandes volumes de dados são coletados por empresas e governos, e a falta de proteção adequada pode levar a fraudes, roubos de identidade e invasões de privacidade. A proteção desses dados é essencial para preservar direitos individuais e evitar o uso indevido de informações pessoais.
+
+## Principais ameaças à privacidade de dados.
+
+### Ciberataques: phishing, malware, ransomware:
+
+Ciberataques como phishing, malware e ransomware visam roubar ou comprometer dados pessoais.  
+Phishing envolve enganar usuários para fornecerem informações sensíveis, enquanto malware infecta dispositivos para roubar dados.  
+Ransomware criptografa dados e exige pagamento para liberá-los, causando grandes prejuízos a indivíduos e empresas.
+
+### Vazamentos de dados: causas e impactos:
+
+Vazamentos de dados ocorrem quando informações sensíveis são expostas devido a falhas de segurança, ataques cibernéticos ou erros humanos. Os impactos incluem perdas financeiras, danos à reputação e riscos de fraude ou roubo de identidade, afetando tanto usuários quanto organizações responsáveis pela proteção dos dados.
+
+### Coleta indevida de dados por empresas: rastreamento online, uso de cookies.
+
+Empresas muitas vezes coletam dados pessoais indevidamente através de rastreamento online e cookies sem o consentimento claro dos usuários.  
+Essas práticas podem violar a privacidade ao monitorar hábitos de navegação, comportamento de compras e localização, usando essas informações para publicidade direcionada ou outras finalidades não autorizadas.
+
+## Técnicas para proteção de dados pessoais.
+
+### Criptografia: como funciona e sua importância:
+
+Criptografia é o processo de codificação de dados, tornando-os ilegíveis para qualquer pessoa sem a chave de decriptação. Ela protege informações confidenciais contra acessos não autorizados, sendo essencial para garantir a segurança em comunicações digitais, transações financeiras e armazenamento de dados pessoais.
+
+### Anonimização e Pseudonimização: diferenças e aplicações
+
+Anonimização remove qualquer identificação dos dados, impossibilitando a reidentificação de um indivíduo.  
+Pseudonimização substitui informações identificáveis por pseudônimos, permitindo a reversão sob condições específicas.  
+Ambas são usadas para proteger dados em conformidade com regulamentos, mas a anonimização oferece maior segurança.
+
+### Autenticação Multifator (MFA)
+
+Autenticação Multifator (MFA) exige que o usuário forneça dois ou mais elementos de verificação (senha, biometria, token) antes de acessar uma conta ou sistema.  
+Isso dificulta acessos não autorizados, mesmo que uma das credenciais seja comprometida, aumentando significativamente a segurança dos dados.
+
+### Backup de dados: proteção contra perda e ataques de ransomware
+
+O backup de dados é a prática de criar cópias redundantes de informações importantes, armazenando-as em locais seguros.  
+Essa medida protege contra perda de dados devido a falhas no sistema, erros humanos ou ataques de ransomware, permitindo que os dados sejam restaurados em caso de incidentes.
+
+## Regulamentos de proteção de dados
+
+### GDPR (Regulamento Geral de Proteção de Dados - Europa): princípios e aplicação.
+
+O GDPR é a lei europeia que regula o tratamento de dados pessoais, garantindo a privacidade e proteção dos indivíduos. Seus princípios incluem transparência, limitação de propósito, minimização de dados e segurança. Ele se aplica a todas as empresas que processam dados de cidadãos da UE, impondo pesadas multas em caso de descumprimento.
+
+### LGPD (Lei Geral de Proteção de Dados - Brasil): principais pontos e obrigações
+
+A LGPD é a legislação brasileira que regula o uso de dados pessoais, inspirada no GDPR. Ela exige o consentimento explícito dos titulares para o processamento de seus dados, além de assegurar direitos como acesso, correção e exclusão de informações. As empresas precisam implementar medidas de segurança e nomear um encarregado de proteção de dados (DPO).
+
+### Outros regulamentos globais (CCPA, HIPAA, etc.):
+Outros regulamentos importantes incluem o CCPA (California Consumer Privacy Act), que dá aos consumidores da Califórnia mais controle sobre seus dados, e a HIPAA (Health Insurance Portability and Accountability Act), que protege informações de saúde nos EUA. Esses regulamentos refletem a crescente preocupação global com a privacidade de dados em diferentes setores.
+
+## Como as empresas  se adaptam aos regulamentos?
+
+### Compliance (Conformidade): como as empresas garantem que estão em conformidade com as leis.
+
+Compliance envolve a adoção de práticas e políticas que asseguram que as empresas sigam as leis de proteção de dados, como LGPD e GDPR. Isso inclui a criação de políticas internas, treinamento de funcionários, nomeação de um DPO, e implementação de medidas técnicas e organizacionais para garantir a segurança dos dados.
+
+### Processos internos e auditorias: implementação de políticas de privacidade.
+
+Empresas desenvolvem processos internos para garantir a privacidade, como revisão de contratos, controle de acesso a dados e monitoramento do fluxo de informações. Auditorias periódicas avaliam a eficácia das medidas adotadas e verificam se estão alinhadas às exigências legais, corrigindo eventuais falhas.
+
+### Multas e penalidades: consequências do não cumprimento.
+
+O não cumprimento das leis de proteção de dados pode resultar em multas elevadas, como até 4% do faturamento anual global no caso do GDPR, ou até R$ 50 milhões por infração com a LGPD. Além das penalidades financeiras, há danos à reputação e perda de confiança dos clientes, o que pode impactar significativamente os negócios.
+
+## Exemplos recentes de violação de dados.
+
+### Caso Facebook-Cambridge Analytica
+
+Envolveu a coleta indevida de dados de 87 milhões de usuários do Facebook sem consentimento, usada para influenciar campanhas políticas, incluindo as eleições presidenciais dos EUA em 2016. A Cambridge Analytica utilizou informações pessoais para criar perfis psicológicos e direcionar propaganda política. O escândalo gerou grandes repercussões, resultando em investigações globais e multa bilionária ao Facebook, além de levantar questões sobre privacidade e manipulação de dados online.
+
+### Caso Yahoo (2013-2014)
+
+Entre 2013 e 2014, o Yahoo sofreu o maior vazamento de dados da história, com mais de 3 bilhões de contas afetadas. Informações como e-mails, datas de nascimento e senhas criptografadas foram expostas. A falha de segurança, revelada apenas em 2016, impactou gravemente a confiança dos usuários e contribuiu para a venda da empresa à Verizon por um valor reduzido.
+
+### Caso Uber (2016)
+
+Em 2016, a Uber sofreu uma violação que expôs dados de 57 milhões de motoristas e passageiros. A empresa, em vez de notificar as autoridades, pagou US$ 100 mil aos hackers para encobrir o incidente. Quando o caso veio a público em 2017, a Uber enfrentou uma grave crise de confiança e multas por falha em relatar a violação de maneira adequada.
+
+## Desafios atuais e futuros da proteção de dados
+
+### Tecnologias emergentes: IA, IoT e seus impactos na privacidade.
+
+A Inteligência Artificial (IA) e a Internet das Coisas (IoT) estão transformando a coleta e análise de dados, permitindo automação e conectividade em larga escala. No entanto, essas tecnologias aumentam os riscos à privacidade, já que mais dados pessoais são processados em tempo real, muitas vezes sem controle adequado ou consentimento explícito dos usuários.
+
+### Dificuldade em equilibrar inovação e proteção de dados.
+
+O rápido avanço tecnológico desafia a capacidade de equilibrar inovação com a proteção de dados pessoais. Empresas buscam explorar ao máximo as informações dos usuários para desenvolver produtos e serviços, mas precisam garantir conformidade com as leis de privacidade, o que pode limitar o uso de certos dados e criar obstáculos regulatórios.
+
+### Tendências futuras: novas regulamentações, aumento da conscientização.
+
+Espera-se que novas regulamentações globais sejam implementadas para acompanhar o desenvolvimento tecnológico, especialmente em áreas como IA e IoT. Além disso, a conscientização dos usuários sobre a importância da privacidade tende a crescer, impulsionando uma demanda maior por transparência e controle sobre seus dados pessoais.
+
+## Conclusão
+
+Resumo
+
+Nesta apresentação, exploramos a privacidade de dados pessoais, destacando técnicas de proteção como criptografia e pseudonimização, e discutimos regulamentos como GDPR e LGPD. Analisamos os impactos de violações de dados e as medidas necessárias para garantir a conformidade, incluindo a importância do DPO e a implementação de políticas internas robustas.
+
+A privacidade de dados é crucial para proteger direitos individuais e evitar abusos. Conformidade com regulamentações como GDPR e LGPD não apenas evita multas e danos à reputação, mas também constrói confiança com os clientes. A adoção de práticas de proteção de dados é essencial para garantir segurança e respeito às informações pessoais em um mundo cada vez mais digital.
