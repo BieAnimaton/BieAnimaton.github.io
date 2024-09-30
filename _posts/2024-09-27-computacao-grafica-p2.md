@@ -12,7 +12,7 @@ tags:
 toc: true
 ---
 
-# Aula VI
+# Aula V
 
 Transformações mais simples: escala e translação.
 
