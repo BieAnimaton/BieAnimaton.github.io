@@ -7,16 +7,11 @@ tags:
   - Sistemas Distribuídos
   - Resumo
   - Teoria
-  - Resolução de Nomes
-  - DNS
-  - Name Spaces
-  - LDAP
-  - LDIF
 
 toc: true
 ---
 
-# Aula VII
+# Aula VI
 
 ## Por que sistemas distribuídos usam resolução de nomes?
 
@@ -89,6 +84,10 @@ O nome é resolvido através de diversas iterações de consulta, partindo do n�
 Ex:
 
 ![image](https://github.com/user-attachments/assets/fe600bae-f92d-4970-a203-45df41c6ec2b)
+
+ftp:// -> name space -> porta aplicação.  
+ftp.cs.vu.nl -> DNS host (IP).  
+/pub/globe/index.txt -> caminho FS.  
 
 ## Servidores de nomes
 
