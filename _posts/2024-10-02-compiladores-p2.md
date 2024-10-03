@@ -52,6 +52,8 @@ Derivação mais à direita:
 
 ![image](https://github.com/user-attachments/assets/47a890f6-d203-4dcc-846e-a5c6d946a461)
 
+Observe que o código final é o mesmo nos dois casos.
+
 ## Exercício 1
 
 ![image](https://github.com/user-attachments/assets/908bddb5-8a1c-4f4d-b5ad-c42cadc0149c)
@@ -84,7 +86,7 @@ Quando existe mais de uma árvore de derivação para a mesma sentença.
 Isso representa um problema para o analisador sintático, pois
 ele não especifica com precisão a estrutura sintática do programa.
 
-O problema pode ser comparado aos autômatos nãodeterminísticos, onde dois caminhos podem aceitar a mesma cadeia
+O problema pode ser comparado aos autômatos não determinísticos, onde dois caminhos podem aceitar a mesma cadeia
 
 > Isso pode mudar todo o entendimento do comando -> mudar o if e else.
 
