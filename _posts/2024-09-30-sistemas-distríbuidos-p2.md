@@ -145,7 +145,7 @@ Sua versão 3 é descrita pela RFC 2251
 
 ![image](https://github.com/user-attachments/assets/8894736f-1469-44d3-a55b-2183ef29bf80)
 
-## LDIF
+## O que é LDIF?
 
 LDAP Data Interchange Format (RFC 2849).
 
