@@ -102,7 +102,7 @@ Diretório: banco de dados com informações sobre objetos e entidades, baseadas
 - DIB (Directory Information Base)  
 Banco de dados com os registros do serviço de diretório.  
 
-- DIB (Directory Information Tree)  
+- DIT (Directory Information Tree)  
 Define a organização hierárquica dos objetos  
 
 - Objetos  
