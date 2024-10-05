@@ -33,11 +33,11 @@ Referenciam endereços: endereço é um tipo especial de nome, que se refere a u
 
 Identificador: referência única de uma entidade.
 
-Transparência de localização:
+Fornecem transparência de localização:
 - um ponto de acesso pode ser modificado, mas seu nome mantido para o sistema.
 - o servidor de nomes deve manter a referência atual dos pontos de acesso.
 
-## Names Spaces
+## O que são Names Spaces
 
 Forma como os nomes estão organizados (grafos).
 
@@ -45,29 +45,24 @@ Forma como os nomes estão organizados (grafos).
 
 ## organização hierárquica
 
-3 níveis.
+Existem 3 níveis.
 
 ### Nível global
 
-Nós de mais alto nível (nó raiz e seus filhos diretos).
-
-Estrutura normalmente estável (modifica-se muito pouco).
-
-Descrevem organizações ou grupos de organizações.
+Nós de mais alto nível (nó raiz e seus filhos diretos).  
+Estrutura normalmente estável (modifica-se muito pouco).  
+Descrevem organizações ou grupos de organizações.  
 
 ### Nível administrativo
 
-Logo abaixo do nível global).
-
-Alteram-se com pouca frequência.
-
-Referenciam grupos de entidades de uma mesma organização ou unidade administrativa (exemplo: departamentos de uma organização).
+Abaixo do nível global.  
+Alteram-se com pouca frequência.  
+Referenciam grupos de entidades de uma mesma organização ou unidade administrativa (exemplo: departamentos de uma organização).  
 
 ### Nível gerencial
  
-Podem se alterar com maior frequência.
-
-Representam entidades, como hosts ou sistemas de arquivos.
+Alteram-se com maior frequência.  
+Representam entidades, como hosts ou sistemas de arquivos.  
 
 ## DNS
 
@@ -94,9 +89,8 @@ ftp.cs.vu.nl -> DNS host (IP).
 As implementações mais difundidas são:
 
 - DNS (Domain Name System): instituído pela RFC 1034, é o serviço de nomes padrão para a Internet.
-- LDAP (Lightweight Directory Access Protocol): implementação aberta, para uso na Internet, inspirada no modelo de serviço de diretórios X.500 DAP.
-- NDS (Novell Directory Services): implementação do serviço de
-diretórios da Novell, baseada no X.500 DAP.
+- LDAP (Lightweight Directory Access Protocol): implementação aberta inspirada no modelo de serviço de diretórios X.500 DAP para uso na Internet.
+- NDS (Novell Directory Services): implementação do serviço de diretórios da Novell, baseada no X.500 DAP.
 - Active Directory: implementação do padrão LDAP pela Microsoft.
 
 ## X.500 DAP ( Directory Access Protocol)
@@ -105,18 +99,19 @@ Padrão da ISO/ITU que define um modelo independente de plataforma para o servi�
 
 Diretório: banco de dados com informações sobre objetos e entidades, baseadas em atributos e organizadas em forma de árvore.
 
-- DIB - Directory Information Base  
-Banco de dados com os registros do serviço de diretório 
+- DIB (Directory Information Base)  
+Banco de dados com os registros do serviço de diretório.  
 
-- Directory Information Tree
-Define a organização hierárquica dos objetos
+- DIB (Directory Information Tree)  
+Define a organização hierárquica dos objetos  
 
-- Objetos
-Descritos pelas entradas no diretório e possuem atributos
+- Objetos  
+Descritos pelas entradas no diretório e possuem atributos  
 
 ## Hierarquia X.500
 
-- Diferentes classes para objetos, para cada nível
+- Diferentes classes para objetos, para cada nível  
+
 (Root)  
 DC Domain Component  
 C Country  
@@ -125,7 +120,7 @@ O Organization
 OU Organizational Unit  
 CN Common Name  
 
-- Regras de acesso (ACL – access control lists)
+- Regras de acesso (ACL – access control lists)  
 São definidas entre objetos, através de seus atributos
 
 ## O que é LDAP?
