@@ -43,7 +43,7 @@ Forma como os nomes estão organizados (grafos).
 
 ![image](https://github.com/user-attachments/assets/a45f09dd-59cd-44a9-9f5b-7b5d749ce273)
 
-## organização hierárquica
+## Explique a organização hierárquica
 
 Existem 3 níveis.
 
