@@ -110,7 +110,7 @@ Descritos pelas entradas no diretório e possuem atributos
 
 ## Hierarquia X.500
 
-- Diferentes classes para objetos, para cada nível  
+Diferentes classes para objetos, para cada nível  
 
 (Root)  
 DC Domain Component  
@@ -120,7 +120,7 @@ O Organization
 OU Organizational Unit  
 CN Common Name  
 
-- Regras de acesso (ACL – access control lists)  
+Regras de acesso (ACL – access control lists)  
 São definidas entre objetos, através de seus atributos
 
 ## O que é LDAP?
