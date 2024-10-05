@@ -15,6 +15,7 @@ toc: true
 
 ## Por que sistemas distribuídos usam resolução de nomes?
 
+Porque oferece:  
 - Compartilhamento de recursos  
 - Identificação única de entidades  
 - Referência de localidades  
