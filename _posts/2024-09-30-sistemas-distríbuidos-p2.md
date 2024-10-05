@@ -29,7 +29,7 @@ Geralmente realizada através da consulta a um servidor de nomes.
 
 Descrevem entidades: computadores, usuários, impressoras…
 
-Referenciam endereços: endereço é um tipo especial de nome, que se refere a um ponto de acesso de uma entidade.
+Referenciam endereços: endereço é um tipo especial de nome que se refere a um ponto de acesso de uma entidade.
 
 Identificador: referência única de uma entidade.
 
