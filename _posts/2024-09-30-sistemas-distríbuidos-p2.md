@@ -91,7 +91,7 @@ As implementações mais difundidas são:
 - DNS (Domain Name System): instituído pela RFC 1034, é o serviço de nomes padrão para a Internet.
 - LDAP (Lightweight Directory Access Protocol): implementação aberta inspirada no modelo de serviço de diretórios X.500 DAP para uso na Internet.
 - NDS (Novell Directory Services): implementação do serviço de diretórios da Novell, baseada no X.500 DAP.
-- Active Directory: implementação do padrão LDAP pela Microsoft.
+- Active Directory: implementação padrão do LDAP pela Microsoft.
 
 ## X.500 DAP ( Directory Access Protocol)
 
