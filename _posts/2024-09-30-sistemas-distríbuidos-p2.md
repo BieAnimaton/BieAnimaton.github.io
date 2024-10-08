@@ -11,11 +11,11 @@ tags:
 toc: true
 ---
 
-# Aula VI
+# Aula VII
 
 ## Por que sistemas distribuídos usam resolução de nomes?
 
-Porque oferece:  
+Porque oferecem:  
 - Compartilhamento de recursos  
 - Identificação única de entidades  
 - Referência de localidades  
@@ -161,3 +161,300 @@ Sintaxe:
 ## Exemplo LDIF com 2 entradas
 
 ![image](https://github.com/user-attachments/assets/3902b9b4-00c9-4f4d-a19e-b260bbb274ed)
+
+# Aula VIII
+
+## O que é transação distribuída?
+
+É uma sequência bem definida de operações e eventos que podem fazer uso de diversos recursos compartilhados.
+
+- Protege o acesso simultâneo a recursos compartilhados entre processos concorrentes.
+
+- Permite o processo acessar e modificar múltiplos itens de dados como uma operação atômica
+
+- Se um processo desistir no meio da transação tudo deve ser reestabelecido ao ponto inicial antes da transação.
+
+## Como funciona o modelo de transações?
+
+Abstraído do mundo dos negócios.
+
+Qualquer processos pode anunciar o início de uma transação.
+
+O processo que iniciou a transação pode:
+
+- Solicitar que todos se comprometam com o trabalho (commit).
+
+- Situação revetida caso um processo discorde (rollback).
+
+## Quais são as primitivas de transações
+
+![image](https://github.com/user-attachments/assets/d17a19c9-686e-4d8a-a868-86a68853fa5a)
+
+Escopo da transação:
+- BEGIN_TRANSACTION e END_TRANSACTION
+- Operações entre elas formam o corpo da transação
+
+Todas as operações do corpo da transação devem ser executadas, ou
+nenhuma deve ser executada
+
+## Explique rapidamente as propriedades de transações
+
+"tudo ou nada" -> principal propriedade, que possui quatro qualidades (ACID).
+
+- Atômica: transações são indivisíveis.
+- Consistente: o sistema deve ser mantido em estado consistente.
+- Isolada: uma transação não pode interferir em outra transação.
+- Durável: os efeitos de uma transação são permanentes.
+
+## Classificação de transações
+
+### Flat Transactions
+
+Uma série de operações que satisfazem as propriedades ACID.
+
+Sua limitação é não permitir que resultados parcias sejam "commited" ou mesmo "abortados".
+
+### Transações aninhadas
+
+Podem ser aninhadas através da definição de sub-transações (mais altas podem criar foks novos para os filhos rodarem).
+
+Quando uma transação inicia-se:
+
+- recebe uma cópia privada de todos os dados de todo o sistema para manipular como quiser.
+
+- Se a transação é abortad seu universo privado é descartado
+- Se ela chega ao commit seu universo privado sobrescreve o do pai.
+
+### Transações distribuídas
+
+Vista como uma transação flat e indivisível que opera dados distribuídos.
+
+Principal problema é definir algoritmos separados para manipular o controle de acesso aos dados e realizar (commit) a transação.
+
+![image](https://github.com/user-attachments/assets/5302590a-aea2-4655-bc9a-0de30782dc69)
+
+## Explique a implementação de transações
+
+### Espaço privado
+
+Quando um processo inicia uma transação, recebe um espaço privado de trabalho.
+
+- Se prever o acesso a diversos arquivos, copiar tudo para seu espaço privado pode ser impossível ou pouco aconselhável.
+- Se o processo apenas fará leitura em um arquivo (sem alterá-lo), não precisará de uma cópia privada.
+- Se necessitar escrever em um arquivo, o processo pode manter em sua área privada apenas o mapeamento (índice) dos blocos do arquivo.
+- Dessa forma, fará a leitura dos blocos e, se alterar algum deles, somente estes serão alterados no disco.
+
+### Writeahead log
+
+Alterações a serem realizadas em um arquivo são anotadas em um registro histórico.
+
+Somente depois de confirmada a gravação do log que a alteração pode ser realizada no arquivo.
+
+Ex:
+
+![image](https://github.com/user-attachments/assets/442cdd8d-e3e4-4ab2-b5b0-a82efe02cc02)
+
+- Todas as alterações sofridas em estruturas de dados (ou outros recursos) do sistema são armazenadas no registro histórico.
+
+- Se uma transação tiver que ser abortada antes de seu fim, todas as alterações registradas (efetuadas por suas operações) podem ser desfeitas e o estado inicial das estruturas (e recursos) restabelecido (rollback)
+
+## Controle de concorrência
+
+Trata dos requisitos de consistência e isolação.
+
+### Consistência
+
+Permitir que diversas transações executem simultaneamente acessos a uma coleção de itens de dados, mantendo-os em estado consistente.
+
+Execução sequencial das transações sobre o conjunto de dados.
+
+### Escalonador (scheduler)
+
+Responsável pelo controle da concorrência.
+
+Determina qual transação tem permissão para passar operações de leitura ou escrita ao gerenciador de dados (data manager) a cada momento.
+
+### Isolação e Consistência
+
+Podem ser garantidas pelas operações individuais de leitura e escrita realizadas pelo gerenciador.
+
+### Gerenciador de transações (transaction manager)
+
+Responsável por garantir a atomicidade das transações
+
+Processa as primitivas das transações, transformando-as em chamadas ao escalonador.
+
+![image](https://github.com/user-attachments/assets/7fe172fc-edc1-4019-a7c6-72fba1008ef6)
+
+Pode ser utilizado para acessar diversos escalonadores em um ambiente distribuído.
+
+![image](https://github.com/user-attachments/assets/e6ce33c1-e10c-4bdd-8ad6-dbb066c91238)
+
+## Serialização
+
+Impõe uma ordem de execução, isolando transações da execução simultânea e garantindo a execução sequencial de transações (só inicia se outra encerrar).
+
+Duas abordagens p/ solução
+
+Pessimista é mais utilizada e admite que problemas de concorrência irão ocorrer
+
+Utiliza o bloqueio dos recursos (locking) como forma preventiva de evitá-los.
+
+Ex:
+
+![image](https://github.com/user-attachments/assets/5aa8d65d-6756-48cd-912f-0170c8bbf26c)
+
+## Bloqueio em duas fases
+
+Two-phases locking
+
+- Quando um processo necessita de um recurso solicita o bloqueio do mesmo.
+
+- Quando prevê não mais utilizá-lo, realiza sua liberação.
+
+Sendo assim, o algoritmo prevê duas fases distintas:
+
+- growing phase: fase onde ocorre o bloqueio de recursos pelo  processo.
+
+- shrinking phase: fase na qual os recursos são liberados pelo  processo.
+
+![image](https://github.com/user-attachments/assets/375bcd93-34c1-4efe-a11b-b7a95a631560)
+
+![image](https://github.com/user-attachments/assets/5096924a-1fb8-4534-8cbe-468beb11c593)
+
+## Gerenciamento de transações em EJB
+
+Controle de transações resumi-se à demarcação de transações (quando será iniciada e concluída).
+
+Várias formas de demarcar transações (cliente - comuns, servlets, beans - ou servidor - no container, declarações no DD, ou no bean, APIs como JTA, JDBC ou JMS).
+
+## Estailo de demarcação
+
+### BMT (Bean-Managed Transactions)
+
+Total controle sobre o início e o fim das transações.
+
+Nas outras modalidades é necessário ter todo o bean dentro (ou fora) de uma transação.
+
+### CMT (Container-Managed Transactions)
+
+Maior simplicidade.
+
+Mais seguro: evita a introdução de código que pode provocar deadlock e outros problemas similares.
+
+Tunnig de transações sem alterar uma linha de código.
+
+### Demarcadas pelo cliente
+
+Vantagem: controle em relação a falhas de rede.
+
+Desvantagem: transação muito longa - ineficiente.
+
+## CMT – Container Managed Transactions
+
+Controle de transações totalmente gerenciado pelo container.
+
+Não permite o uso de métodos commit() e rollback() de java.sql.Connection ou javax.jms.Session dentro do código.
+
+Única forma de controlar transações em Entity Beans.
+
+## Políticas transacionais - atributos
+
+Os vetores suportados são:
+
+NotSupported
+- Indica que o método não suporta transações.
+
+Supports
+- Indica que o método suporta transações.
+
+Required
+- Indica que o escopo de uma transação é requerido pelo método.
+
+RequiresNew
+- Indica que o método requer uma nova transação.
+
+Mandatory
+- Indica que o método só pode ser chamado no escopo de uma transação do cliente.
+
+Never
+- Indica que o método nunca pode estar dentro de uma transação.
+
+## Serviço de transações
+
+Servidores J2EE oferecem serviço de transações distribuídas
+CORBA: Object Transaction Service (OTS).
+
+– Pode ser obtido através do serviço de nomes (via JNDI ou COS Naming).
+
+Clientes também podem obter o serviço de transações do recurso que estão utilizando (se houver).
+
+– Bancos de dados (através de JDBC).
+– Sistemas de messaging (através de JMS).
+
+Para ter acesso a esses serviços, existem APIs.
+
+– JDBC ou JMS, para serviços do recurso utilizado.
+– JTS ou JTA, para acesso ao OTS (distribuído).
+
+Beans também podem realizar controle declarativo.
+
+## JTS e JTA
+
+JTS - Java Transaction Service  
+é um mapeamento java-CORBA da especificação Object Transaction Service.
+
+- Usado por fabricantes de containers.
+
+JTA - Java Transaction API  
+é uma especificação de interfaces para o sistema de transações.
+
+- Suporte por parte do container é obrigatório.
+
+## Tipos de Beans 
+
+### Transientes (session beans)
+
+- Fornecem suporte à sessões de clientes, durante transações com servidores de aplicação Java EE.
+
+### Mensagens (message-driven beans)
+
+- Realizam a comunicação via troca de mensagens entre cada parte que compõe o sistema distribuído
+
+### Persistentes (entity beans)
+
+- Representam os dados armazenados (persistidos) em servidores de
+bancos de dados
+
+## Session Beans
+
+Encapsulam a lógica do negócio.
+
+O session bean realiza o trabalho para o cliente, escondendo a complexidade de executar as tarefas de negócio no lado servidor
+
+Tipos de session beans
+
+### Stateful Session Beans
+
+- As variáveis de instância representam uma única sessão do cliente
+- São transientes, ou seja, são descartados quando a sessão terminar
+
+### Stateless Session Beans
+- O estado (valores de instância) não é retido depois de uma  chamada.
+- Estado descartado assim que o método termina
+
+### Singleton Session Beans
+- São instanciados um por aplicação e existem enquanto ela executar.
+- Podem ser compartilhados entre diversas sessões de clientes.
+
+## Message-drive Beans
+
+Um message-driven bean é um EJB que permite aplicações Java EE processarem mensagens assíncronas.
+
+- Geralmente atua como um JMS message listener (Como um event listener, mas recebe mensagens no lugar de eventos).
+
+- Podem também processar outros tipos de mensagens, além de JMS.
+
+- Diferem-se dos session beans pois não são acessados via interfaces.
+
+- Operam transações de múltiplos clientes e não retêm estados (stateless).
