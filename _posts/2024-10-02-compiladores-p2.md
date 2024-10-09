@@ -12,9 +12,9 @@ tags:
 toc: true
 ---
 
-# Aula VI
+# Aula VII
 
-## Dervivação
+## Derivação
 
 Sequência de substituições de não-terminais por uma escolha das regras de produção gramaticais.  
 
@@ -176,3 +176,168 @@ Segunda representação -> não ambíguo.
 G1 e G3 são ambíguas, pois possuem dois símbolos não-terminais (S) do lado direito.
 
 G2 apresente apenas 1, por isso não é.
+
+# Aula VIII
+
+## Notação BNF
+
+Uma das representações formais utilizadas para descrever a sintaxe de uma linguagem.
+
+Desenvolvida por John Backus e Peter Naur.
+
+É possível construir um parser (analisador sintático) automaticamente com apenas a gramática em BNF.
+
+- Símbolos não-terminais são representados por textos delimitados por "<" e ">".
+
+- O meta-spimbolo " -> " é substituido por " ::= ".
+
+- Todas as alternativas de substituição para um mesmo não-terminal são agrupadas, separando-as com | .
+
+### Exemplo
+
+![image](https://github.com/user-attachments/assets/49e496c6-8e40-46cb-bba5-66fbd3456ef4)
+
+### Exemplo 2
+
+![image](https://github.com/user-attachments/assets/28dc3295-adc4-427f-bae6-61f76d850543)
+
+## BNF estendida com fecho transitivo
+
+" * " = operação de fecho
+
+![image](https://github.com/user-attachments/assets/1e7ee241-05eb-4e13-834f-b04b38ea165e)
+
+### 1º 
+
+linha <X> ::= a<X>|a
+
+ao invés de ficar na recursão "X" deriva "aX" ou "a" (infinitos "a"s), podemos reduzir ao símbolo mínimo ("a"), ou seja, "X" deriva " aa* ".
+
+> " aa* " já está passando a ideia da recursão.
+
+então fica <X> ::= aa*
+
+### 2º
+
+linha <Z> ::= cd<Z>|e<Z>|f
+
+ao invés de ficar na recursão "Z" deriva "cd<Z>" ou "e<Z>" (infinitos "cd"s e "e"s), podemos reduzir ao símbolo mínimo (" (cd|e)* , ou seja, "Z" deriva " (cd|e)* | f ".
+
+> " (cd|e)* " já está passando a ideia da recursão.
+
+então fica <Z> ::= (cd|e)*|f
+
+## Simplificando ainda mais
+
+![image](https://github.com/user-attachments/assets/580029d6-9865-4587-9d52-a9811e1cbbdc)
+
+![image](https://github.com/user-attachments/assets/1b642124-15cd-4aca-a785-187c9a7fc4f3)
+
+## BNF extensões
+
+" [ a ] " -> "a" opcional.
+
+" [ a | b ] " -> "a" ou "b" opcionais.
+
+" { a | b } " -> vários itens ("a" ou "b").
+
+" {";" <statement>} " -> várias sequencias de comandos.
+
+### Exemplo
+
+![image](https://github.com/user-attachments/assets/b71740bb-a61b-4faa-9e16-2744cb03c338)
+
+## Exercício 1
+
+BNF:
+
+<S> ::= (<M>)|a|b  
+<M> ::= <M>;<N>|<N>  
+<N> ::= <N>,<S>|<S>  
+
+Qual a representação formal?
+
+### Solução
+
+Representação formal:
+
+G = (V, T, P, S)
+
+G = ({M,N,S}, {a, b, (, ), "," , ;}, P, S)
+
+P = {  
+S -> (M)|a|b  
+M -> M;N|N  
+N -> N,S|S  
+}
+
+
+## Exercício 2
+
+Gramática:
+
+G = (Vt, Vn, P, S), sendo:
+
+Vt = {a, b},  
+Vn = {A, S},  
+P = {S -> A, A -> aAb, A -> ab}
+
+Qual a gramática em notação BNF?
+
+### Solução
+
+BNF:
+
+<S> ::= <A>  
+<A> ::= a<A>b  
+<A> ::= ab  
+
+## Autômato com pilha
+
+Parser é definido através de uma gramática livre de contexto, o que nos obriga a utilizar um autômato a pilha na sua implementação.
+
+O autômato a pilha é a ferramenta básica na construção do parser.
+
+### Estrutura da pilha
+
+![image](https://github.com/user-attachments/assets/5bf06e92-76e9-4eae-861f-f6ec85f1d2b7)
+
+### Como funciona?
+
+Dependendo do estado corrente, símbolo da fita e símbolo da pilha, determina o novo estado e a palavra a ser gravada na pilha.
+
+Um AP é definido pela 6-tupla:  
+
+![image](https://github.com/user-attachments/assets/c736e24b-be51-4d65-8305-e883d4c28b59)
+
+E = alfabeto  
+Q = conjunto de estados  
+& = funções transição  
+q0 = estado inicial  
+F = estados finais  
+V = alfabeto da pilha  
+
+![image](https://github.com/user-attachments/assets/df6bfe22-1f25-4f99-8988-9f2a63812d84)
+
+## Observação
+
+![image](https://github.com/user-attachments/assets/4861adae-b511-4cad-9007-4946d9064f53)
+
+## Exemplo
+
+![image](https://github.com/user-attachments/assets/5ef73762-05e0-40a5-bd05-964911eb2505)
+
+## Construindo um AP
+
+1) pilha começa não vazio - tem simbolo inicial (símbolo inicial da gramática).  
+2) apenas 1 estado - aceitação de pilha vazia.  
+2.1) &(q,x,x) = (q,λ), para cada simbolo (x) do alfabeto do alfabeto.  
+2.2) para cada A -> y, a transição &(q,λ,A) = (q,y).  
+
+## Exemplo
+
+![image](https://github.com/user-attachments/assets/2eba6e07-10b0-49e1-a4f7-54854d135265)
+
+![image](https://github.com/user-attachments/assets/b7b69c26-07be-48cf-b0d4-66cdfc7fa7f6)
+
+![image](https://github.com/user-attachments/assets/ba09d304-3b26-4e28-9837-cb9b0eb8fe3d)
