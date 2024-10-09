@@ -251,9 +251,9 @@ então fica < Z > ::= (cd|e)*|f
 
 BNF:
 
-< S > ::= (< M>)|a|b  
-< M > ::= < M >;< N >|< N >  
-< N > ::= < N >,< S >|< S >  
+< S > ::= (< M>) | a | b  
+< M > ::= < M >;< N > | < N >  
+< N > ::= < N >,< S > | < S >  
 
 Qual a representação formal?
 
@@ -266,9 +266,9 @@ G = (V, T, P, S)
 G = ({M,N,S}, {a, b, (, ), "," , ;}, P, S)
 
 P = {  
-S -> (M)|a|b  
-M -> M;N|N  
-N -> N,S|S  
+S -> (M) | a | b  
+M -> M;N | N  
+N -> N,S | S  
 }
 
 
