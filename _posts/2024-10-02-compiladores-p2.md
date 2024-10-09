@@ -209,23 +209,23 @@ Desenvolvida por John Backus e Peter Naur.
 
 ### 1º 
 
-linha <X> ::= a<X>|a
+linha < X > ::= a< X >|a
 
 ao invés de ficar na recursão "X" deriva "aX" ou "a" (infinitos "a"s), podemos reduzir ao símbolo mínimo ("a"), ou seja, "X" deriva " aa* ".
 
 > " aa* " já está passando a ideia da recursão.
 
-então fica <X> ::= aa*
+então fica < X > ::= aa*
 
 ### 2º
 
-linha <Z> ::= cd<Z>|e<Z>|f
+linha < Z > ::= cd< Z >|e< Z >|f
 
 ao invés de ficar na recursão "Z" deriva "cd<Z>" ou "e<Z>" (infinitos "cd"s e "e"s), podemos reduzir ao símbolo mínimo (" (cd|e)* , ou seja, "Z" deriva " (cd|e)* | f ".
 
-> " (cd|e)* " já está passando a ideia da recursão.
+> " (cd | e)* " já está passando a ideia da recursão.
 
-então fica <Z> ::= (cd|e)*|f
+então fica < Z > ::= (cd|e)*|f
 
 ## Simplificando ainda mais
 
@@ -251,9 +251,9 @@ então fica <Z> ::= (cd|e)*|f
 
 BNF:
 
-<S> ::= (<M>)|a|b  
-<M> ::= <M>;<N>|<N>  
-<N> ::= <N>,<S>|<S>  
+< S > ::= (< M>)|a|b  
+< M > ::= < M >;< N >|< N >  
+< N > ::= < N >,< S >|< S >  
 
 Qual a representação formal?
 
@@ -288,9 +288,9 @@ Qual a gramática em notação BNF?
 
 BNF:
 
-<S> ::= <A>  
-<A> ::= a<A>b  
-<A> ::= ab  
+< S > ::= < A >  
+< A > ::= a< A >b  
+< A > ::= ab  
 
 ## Autômato com pilha
 
