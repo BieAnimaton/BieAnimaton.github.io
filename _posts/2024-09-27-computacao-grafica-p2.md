@@ -190,11 +190,11 @@ Saindo dos descritores, podem seguir dois caminhos:
 
 - Serialização é a área onde estes dados podem ser armazenados em um arquivo (arquivo descrito de imagem).
 
-- Digitalização (essa é diferente da digitalizaçãi estudada, melhor chamada de renderização).
+- Digitalização (essa é diferente da digitalização já estudada, melhor chamada de renderização).
 
 Gera imagem digital (.png, .jpg).
 
-Exibição e tela (abrir uma imagem e analisar resultado).
+Pronto para ser exibida em tela (abrir uma imagem e analisar resultado).
 
 ## Pipeline de visualização
 
