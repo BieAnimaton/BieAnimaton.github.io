@@ -166,11 +166,11 @@ Observação: Muitos algoritmos para a renderização são aplicados nas Engines
 
 Ex 4 - Unity
 
-![image](https://github.com/user-attachments/assets/f652ff42-3060-4fb8-8010-d16e2741e8a2)
+![image](https://github.com/user-attachments/assets/608b0b66-416f-461d-801c-a133be261e6e)
 
 Ex 5 - Unreal
 
-![image](https://github.com/user-attachments/assets/a83e21f0-f24b-496c-8bcb-fdc5985e5dc6)
+![image](https://github.com/user-attachments/assets/1025536b-890f-4d67-80a0-d9f3429d51b8)
 
 A indústria de jogos também vai se inspirar nos algoritmos realistas de filmes/animações.  
 Os filmes também vão se inspiram nos melhores algoritmos de jogos.  
