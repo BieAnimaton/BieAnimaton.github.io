@@ -65,7 +65,6 @@ Forma direta:
 x2 = tx + x1  
 y2 = ty + y1  
 z2 = tz + z1
-1
 
 Forma de matriz:
 
