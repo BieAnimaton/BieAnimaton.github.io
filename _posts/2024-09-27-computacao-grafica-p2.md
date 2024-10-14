@@ -114,7 +114,8 @@ A rotação bidimensional em torno de um centro fora da origem pode ser obtida p
 
 ## Síntese de imagem
 
-Recebe dados como entrada (da análise de imagem).  
+Recebe dados como entrada (da análise de imagem).
+
 A imagem apresentada pelo processo de síntese é diferente da imagem que entrou no processo (amostragem, digitalização).
 
 Na síntese os mesmo pontos da imagem podem originar outros objetos.
