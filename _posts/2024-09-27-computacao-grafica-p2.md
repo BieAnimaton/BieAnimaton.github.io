@@ -70,7 +70,7 @@ Forma de matriz:
 
 ![image](https://github.com/user-attachments/assets/c461bea7-2787-4b73-8126-4a29e5e94c05)
 
-## Matrizes resultantes - escala de translação:
+## Matrizes resultantes - escala e translação:
 
 ![image](https://github.com/user-attachments/assets/a70db3e1-6be8-4b24-aa40-63fac7cc0376)
 
