@@ -16,7 +16,7 @@ toc: true
 
 Está dento da GTI.
 
-- É uma ferramenta que repune todos os servucos que a área de TI oferece e as principais informações sobre esses serviços.
+- É uma ferramenta que reúne todos os serviços que a área de TI oferece e as principais informações sobre esses serviços.
 
 - Visão geral de tudo o que está disponivel para atender às principas necessidades das área.
 
@@ -28,9 +28,13 @@ Catálogo: descrição do serviço, quem pode solicitar, como solicitar, níveis
 
 Dividido em duas funcionalidades: negócios e técnico.
 
-### Negócios: destinado aos clientes e usuários de TI, traz informações relevantes para a contratação do serviço (custos envolvidos, etc).
+### Negócios
 
-### Técnico: destinado ao time de TI, traz informações sobre a execução do serviço (complexidade, itens ténicos da base, etc).
+Destinado aos clientes e usuários de TI, traz informações relevantes para a contratação do serviço (custos envolvidos, etc).
+
+### Técnico
+
+Destinado ao time de TI, traz informações sobre a execução do serviço (complexidade, itens ténicos da base, etc).
 
 O catálogo de serviços de TI é um item dentro do portfólio de serviços de TI.
 
