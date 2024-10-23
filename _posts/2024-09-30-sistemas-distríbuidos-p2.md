@@ -458,3 +458,159 @@ Um message-driven bean é um EJB que permite aplicações Java EE processarem me
 - Diferem-se dos session beans pois não são acessados via interfaces.
 
 - Operam transações de múltiplos clientes e não retêm estados (stateless).
+
+# Aula IX
+
+## Requisitos de dependabilidade em SD
+
+Disponibilidade: mede quanto o SD está pronto para ser usado imediatamente, probabilidade de um SD estar opertante.
+
+Confiabilidade: mede quanto tempo um SD pode operar continuamente, sem a ocorrência de falha.
+
+Segurança: capacidade de um SD nçao gerar algo catastrófico quando falhar na operação.
+
+Manutenabilidade: facilidade de se reparar um SD ao apresentar falha. Boa manutenabilidade implica em maior disponibilidade.
+
+## Exemplo disponibilidade VS confiabilidade
+
+Se um sistema parar por um milissegundo a cada hora -> disponibilidade será alta e confiabilidade baixa.
+
+Se um sistema nunca falha, mas fica desligado por duas semanas todo mês de agosto -> sua confiabilidade será alta e disponibilidade de apenas 96%.
+
+## Defeito VS Erro VS falha
+
+Defeito: consequência de um estado de erro do SD (não cumpre promessa).
+
+Erro: constitui parte do estadp de um SD originado por uma falha.
+
+Falha: trata-se da causa que originou o erro.
+
+## Tipos de falhas
+
+Transientes: falhas que ocorrem apenas uma vez e então desaparecem.
+
+Interminentes: não definem um padrão exato de ocorrência e são imprevisíveis.
+
+Permanentes: não podem ser consertadas e normalmente implicam em danos irreparáveis em componentes.
+
+## Modelos de falhas
+
+Falha por quebra (crash): abrupta, normalmente associadas ao hardware e nada pode ser feito senão reiniciada.
+
+Falha por omissão: quando um servidor falha ao responder uma requisição.
+
+- Omissão da requisição: o servidor nem chega a receber a solicitação do cliente (perdida).
+
+- Omissão da resposta: a resposta já foi perdida ou nem ter sido encaminhada à rede (servidor acha que enviou).
+
+Falha de sincronismo: resposta em ritmo alterado pelo servidor (responder cedo ou tarde demais).
+
+Falha na resposta: resposta errado do servidor, pode ser por valor incorreto ou falha de transição de estados (reação inesperada).
+
+Falha arbitrária: servidor produz resposta que nunca deveria ser produzida, geralmente gerado por código malicioso e pode ser confundida com outras falhas.
+
+## Redundância e resiliência de processos
+
+Redundância de informação: uso de informação extra para recuperar erros em dados (código Hamming).
+
+Redundância de corrência: ação pode ser repetida durante a execução de uma transação, caso necessário.
+
+Redundância física (hardware ou software): adição de equipamento ou processos extras que permitem o sistema suportar o mau funcionamento de algum componente individual.
+
+## Agrupamento de processos
+
+Processos idênticos são agrupados e podem receber mensagems multicast - podem ser dinâmicos e um processo pode participar de mais de um grupo.
+
+Estrutura de um grupo
+
+- Grupo plano: processos têm papéis iguais e decisões são tomadas coletivamente.
+
+- Grupo hierárquico: um dos processos é considerado coordenador e fará uma papel diferente dos outros.
+
+![image](https://github.com/user-attachments/assets/6153cdeb-591f-4dcc-879e-235ecfc1bd94)
+
+## Controle de grupo
+
+Modelo centralizado: servidor de grupos administra os grupos (ponto único de falha do SD) e a replicação é baseada em um principal (primary-based - estruturação hierárquica - coordenador representa a comunicação com outros processos).
+
+Modelo distribuído: todos os processos do grupo mantém informações sobre ele (pedidos devem ser enviados a todos e é 'k fault tolerant') e possui replicação de escrita.
+
+## comunicação confiável
+
+Permite enviar/tratar falhas por quebra, omissão, sincronismo ou arbitrária.
+
+Comunicação ponto-a-ponto com TCP, protocolo de transporte confiável e mascara falhas (retransmite falhas perdidas).
+
+Problemas com TCP: a conexão pode se encerrar abruptamente
+
+## SRM
+
+Scalable Reliable Multicasting
+
+Só são comunicadas as mensagens faltantes, o que já reduz a demanda de tráfego na rede e evita que mais de um membro do grupo reclame a mesma mensagem.
+
+![image](https://github.com/user-attachments/assets/812c54ed-573d-4545-85c6-7ee6e2e21712)
+
+## Estratégia hierárquica
+
+O coordenador de cada subgrupo é responsável por comunicar eventuais mensagens não recebidas pelos membros do grupo.
+
+![image](https://github.com/user-attachments/assets/4efb4179-d224-4be5-ac8b-ebc152614ea1)
+
+## Comunicação multicast
+
+### Multicast atômico
+
+Todos devem receber a mensagem.
+
+Sincronismo virtual
+
+- A camada de comunicação do SD deve segurar a mensagem até que todas as suas parceiras notifiquem o recebimento.
+
+- A partir daí, todas as entidades podem passar a mensagem para a camada superior (aplicação).
+
+![image](https://github.com/user-attachments/assets/5e44c26a-34a9-49b2-9885-df0259ae4db6)
+
+### Ordenação de mensagens multicast
+
+4 abordagens.
+
+- Multicast desordenado confiável: garante-se que as mensagens cheguem, mas não garante a ordem.
+
+- Multicast ordenado em filas (FIFO) confiável: a camada de comunicação é obrigada a entregar as mensagens na mesma ordem que forem enviadas.
+
+- Multicast ordenado por causalidade e confiável: a entrega das mensagens mantém a relação de causalidade entre as diferentes operações do sistema.
+
+- Multicast totalmente ordenado: independentemente da estratégia utilizada para encaminhamento, exige que as mensagens sejam entregues a todos os membros na mesma ordem.
+
+## Commit distribuído
+
+Um problema para commit em SD é garantir que uma operação seja realizada por cada membro do grupo, ou nenhum deles.
+
+A solução é eleger um coordenador que ordena que os processos realizem, ou não, as operações em questão.
+
+## Commit em duas fases
+
+### Fase 1 - Votação
+
+- O coordenador envia uma mensagem 'VOTE_REQUEST' para todos os participantes.
+
+- Quando o participante recebe a mensagem, responde:
+
+  'VOTE_COMMIT' – se estiver preparado para fazer o commit local da
+  transação.  
+  'VOTE_ABORT' – caso contrário
+
+### Fase 2 - Decisão
+
+- O coordenador obtém os votos e responde a todos.
+  
+  'GLOBAL_COMMIT' – se todos votarem favoráveis ao commit.  
+  'GLOBAL_ABORT' – se apenas um deles votar por abortar.
+
+- Cada participante espera a resposta.
+
+  Se 'GLOBAL_COMMIT', executará localmente o commit da transação.  
+  Se a for um 'GLOBAL_ABORT', a transação local é abortada.
+
+![image](https://github.com/user-attachments/assets/98b2bdcb-ba77-4376-874f-8246e0d21399)
