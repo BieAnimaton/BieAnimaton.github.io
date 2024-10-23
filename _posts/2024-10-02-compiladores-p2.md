@@ -341,3 +341,82 @@ V = alfabeto da pilha
 ![image](https://github.com/user-attachments/assets/b7b69c26-07be-48cf-b0d4-66cdfc7fa7f6)
 
 ![image](https://github.com/user-attachments/assets/ba09d304-3b26-4e28-9837-cb9b0eb8fe3d)
+
+# Aula 10
+
+## Exercício
+
+![image](https://github.com/user-attachments/assets/d7e08ec0-a08b-48d1-8119-e5c55ce8d9b5)
+
+![image](https://github.com/user-attachments/assets/7b2968bd-9e0c-4bae-ab2f-b7b21f0bfd7f)
+
+Árvore sintática gerada
+
+![image](https://github.com/user-attachments/assets/213cdb4e-850b-452d-a7b0-cc82c7e9248c)
+
+## Análise sintática descendente
+
+- Toma-se uma determinada palavra P e o símbolo inicial S da gramática.
+
+- Procura-se por uma regra de derivação que permita derivar P em sua totalidade ou pelo menos se aproximar desta.
+
+- Repetir o passo acima até que a palavra P não apresente mais símbolos não-terminais.
+
+- Por fim, verifica-se se a cadeia obtida coincide com P. No caso negativo, tem-se que a cadeia analisada não pertence a linguagem.
+
+## Analisador sintático preditor
+
+- O analisador recebe uma sequência de entrada.
+
+- Manipula uma estrutura de dados tipo pilha.
+
+- Para cada símbolo de entrada, consulta uma tabela de análise sintática para aplicação da regra.
+
+- Emite uma sequência de saída (regras).
+
+![image](https://github.com/user-attachments/assets/9d153867-e99c-47a1-a49b-fd4121996d83)
+
+
+## Observações:
+
+### Entrada
+
+Sentença a ser analisada seguida pelo delimitador $.
+
+Pilha: contém uma sequência de símbolos da gramática precedida pelo indicador de base de pilha $.
+
+TAS: é uma matriz M[A,a], onde A é um não-terminal e a é um terminal ou dólar $.
+
+> O topo da pilha é na direita
+
+### Saída
+
+Constará as produções aplicadas a partir do símbolo inicial (S) na geração da sentença.
+
+## regras
+
+- 1 - Se X é um terminal = próximo_símbolo = $, o analisador encerra sua atividade e comunica fim da análise sintática com sucesso.
+
+- 2 - Se X é um terminal = próximo_símbolo ≠ $, o analisador elimina X do topo da pilha e avança para o próximo símbolo de entrada.
+
+- 3 - Se X é um terminal ≠ próximo_símbolo, o analisador acusa um erro de sintaxe (ativa rotina de tratamento de erros).
+
+- 4 - Se X é um não-terminal, o analisador consulta M[X,próximo_símbolo]
+
+  a) Se a resposta for uma regra de produção X ::= MVU, o analisador desempilha X do topo da pilha e empilha UVM, sendo M no topo da pilha.
+
+  b) Se M[X, próximo_símbolo] = ERRO, o analisador acusa um erro de sintaxe e ativa rotina de tratamento de erros.
+
+## Exemplo 1
+
+![image](https://github.com/user-attachments/assets/1cba062c-8763-4f4d-9b96-0145a9f1b97a)
+
+![image](https://github.com/user-attachments/assets/c7e5cf62-b788-42e7-a255-cc74c4e89172)
+
+![image](https://github.com/user-attachments/assets/ddaa1cb3-036b-4654-af52-b1d82e69b21d)
+
+## Exercício 1
+
+![image](https://github.com/user-attachments/assets/100cee69-0bc8-4453-97fa-9a7a7c473afb)
+
+![image](https://github.com/user-attachments/assets/7d28c2f4-f27e-4c2b-9bbe-572a93acbfeb)
