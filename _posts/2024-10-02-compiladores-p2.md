@@ -393,7 +393,7 @@ TAS: é uma matriz M[A,a], onde A é um não-terminal e a é um terminal ou dól
 
 Constará as produções aplicadas a partir do símbolo inicial (S) na geração da sentença.
 
-## regras
+## Regras
 
 - 1 - Se X é um terminal = próximo_símbolo = $, o analisador encerra sua atividade e comunica fim da análise sintática com sucesso.
 
