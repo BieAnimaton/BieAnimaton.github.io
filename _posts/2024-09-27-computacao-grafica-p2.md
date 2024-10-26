@@ -118,7 +118,7 @@ Recebe dados como entrada (da análise de imagem).
 
 A imagem apresentada pelo processo de síntese é diferente da imagem que entrou no processo (amostragem, digitalização).
 
-Na síntese os mesmo pontos da imagem podem originar outros objetos.
+Na síntese os mesmos pontos da imagem podem originar outros objetos.
 
 A ideia da imagem gerada da síntese é uma imagem descrita por um conjunto de informações (diz ao sistema como vai criar a outra imagem).
 
@@ -143,9 +143,11 @@ Ex 2 - Filme Toy Story:
 
 Estas imagens também servem para mostrar como a área de síntese foi rapidamente aprimorada com o passar do tempo.
 
-Jogos antigos possuíam poucos conjuntos de vértices, resultando em esferas mais "quadradas" -> menos polígonos (dados inseridos no ambiente).
+Jogos antigos possuíam poucos conjuntos de vértices, resultando em esferas mais "quadradas" -> menos polígonos.
 
-Quanto mais quantidades de faces (dado), mais realista o jogo fica (Tomb Raider 2023).
+> Polígonos = dados inseridos no ambiente.
+
+Quanto mais quantidades de faces (dados), mais realista o jogo fica (Tomb Raider 2023).
 
 A evolução também é graças à capacidade de processamento melhorada -> o computador consegue entender grande quantidade de vértices e depois renderizar imagens mais complexas.
 
@@ -158,11 +160,17 @@ Ex 3 - Blender:
 
 ## Síntese para jogos VS síntese para animações
 
-Filmes/Animações -> elementos não interativos -> tendem a ser mais fotorrealismo do que os elementos interativos (elementos estáticos e sem mudanças são melhores para a renderização).
+### Filmes/Animações
 
-Jogos -> elementos interativos -> menos realista que os filmes (a renderização precisa ser calculada dependendo da escolha do jogador).
+Elementos não interativos -> tendem a ser mais fotorrealismo porque os elementos estão estáticos e sem mudanças, sendo melhores para uma renderização mais realista.
 
-Observação: Muitos algoritmos para a renderização são aplicados nas Engines de jogos na tentativa de deixar o jogo o mais realista possível.
+### Jogos
+
+Elementos interativos -> menos realista que os filmes porque a renderização precisa ser calculada dependendo da escolha do jogador.
+
+### Observação
+
+Muitos algoritmos para a renderização são aplicados às Engines de jogos na tentativa de deixar o jogo o mais realista possível.
 
 Ex 4 - Unity
 
@@ -172,65 +180,85 @@ Ex 5 - Unreal
 
 ![image](https://github.com/user-attachments/assets/1025536b-890f-4d67-80a0-d9f3429d51b8)
 
-A indústria de jogos também vai se inspirar nos algoritmos realistas de filmes/animações.  
-Os filmes também vão se inspiram nos melhores algoritmos de jogos.  
-Um ajuda o outro.
+A indústria de jogos também vai se inspirar nos algoritmos realistas de filmes/animações.
+  
+Os filmes também vão se inspiram nos melhores algoritmos de jogos.
+
+> Um ajuda o outro.
 
 ## Artefatos da síntese de imagem
 
 ![image](https://github.com/user-attachments/assets/f60bc24d-c1f9-437d-85ed-ad8a220d9158)
 
-Mundo real -> representado pelo modelo matemático (descreve mundo real) -> pode passar direto para a digitalização (sem alterar nada).  
+- Modelo matemático: descreve o mundo real -> pode seguir para 'descrição' ou para 'digitalização'.  
 
-Dados passam por descritores e descritores de imagem.  
+- Descrição: cria uma representação detalhada da imagem baseada no modelo matemático.
 
-Transformações podem ser aplicadas nesses modelos matemáticos.  
+- Descritor de imagem: conjunto de dados que caracteriza a imagem, podendo ser transformado ou manipulado.
 
-Saindo dos descritores, podem seguir dois caminhos:  
+- Transformações: aplicação de operações geométricas (como rotação, translação, escalonamento) sobre o descritor de imagem.
 
-- Serialização é a área onde estes dados podem ser armazenados em um arquivo (arquivo descrito de imagem).
+Saindo dos descritores, pode seguir dois caminhos:  
 
-- Digitalização (essa é diferente da digitalização já estudada, melhor chamada de renderização).
+- Serialização: conversão do descritor de imagem em um formato que possa ser armazenado ou transmitido.
 
-Gera imagem digital (.png, .jpg).
+- Arquivo Descritor de Imagem: armazena o descritor de imagem serializado em um arquivo.
 
-Pronto para ser exibida em tela (abrir uma imagem e analisar resultado).
+Ou
+
+- Digitalização: ou renderização (diferente da digitalização já estudada), converte o descritor de imagem em dados digitais que podem ser processados para gerar uma imagem final.
+
+- Imagem Digital: representação final em formato digital pronta para exibição.
+
+- Exibição: mostra a imagem digital na Tela
 
 ## O que é Pipeline Tradicional de Visualização?
 
-Também chamado de pipeline de renderização, é o processo de vários estágios em que a saída de um estágio é a entrada de outrao estágio na sequência
+Também chamado de pipeline de renderização, é o processo de vários estágios em que a saída de um estágio é a entrada do próximo na sequência.
+
+O pipeline tradicional de visualização inclui etapas como modelagem, transformação, iluminação, projeção e rasterização, que, em conjunto, convertem dados geométricos e de cena em uma imagem final exibida na tela.
 
 ![image](https://github.com/user-attachments/assets/2f03ff6f-a4d4-4717-aed1-288c76850aad)
 
-## Explique a composição da aplicação
+## Explique os itens da aplicação
 
-Modelo matemático composto por 5 elementos
+A aplicação representa a interface inicial, onde o usuário fornece entrada e define os parâmetros de iluminação, ponto de vista, e características das malhas poligonais e texturas.
 
-- Dados de textura
-- Malhas poligonais
-- Vértices das malhas poligonais
-- Pontos de vista
-- Dados de iluminação
+Modelo matemático composto por 5 elementos:
 
-## Explique as partes do pipeline
+- Dados de Iluminação: informações sobre as fontes de luz, usadas para calcular como a iluminação afetará as cores e sombras na cena.
 
-## Transformações geométricas
+- Pontos de Vista: define o ângulo e a posição de visualização da câmera ou do observador na cena.
+
+- Vértices de Malhas Poligonais: posições dos pontos (vértices) que compõem os polígonos, utilizados para definir a geometria dos objetos.
+
+- Malhas Poligonais: conjunto de polígonos que formam a superfície dos objetos na cena.
+
+- Dados de Cor e Textura: informações visuais aplicadas às malhas, determinam a aparência de cor e textura dos objetos.
+
+## Explique os itens do pipeline
+
+### Transformações geométricas
 
 Aplicadas aos vértices das próprias malhas.
-
- Para representar translações e rotações de um único objeto, são aplicadas transformações  eométricas sobre os vértices damalha desse objeto.
  
-Para representar o reposicionamento e redirecionamento de uma câmera virtual (ponto de vista), são aplicadas transformações geométricas sobre todos os vértices de todas as malhas que compõem a cena.
-
-São aplicadas todas as transformações de um modelo de câmera, exceto a transformação de perspectiva, que será feita no estágio de digitalização.
-
-Por essa razão, os vértices e o ponto de vista são os elementos de entrada do estágio de transformações geométricas.
+Processos que aplicam translações, rotações e escalonamentos aos objetos (malhas), ajustando sua posição e orientação na cena.
 
 ### Digitalização
 
-Projeção perspectiva de pontos e leva em consideração a existência de oclusões.
+Projeção (transformação) de perspectiva de pontos.
 
-Gera diversos fragmentos de imagem digital que são a entrada do último estágio do pipeline: a montagem da imagem final.
+Leva em consideração a existência de oclusões.
+
+Gera diversos fragmentos de imagem digital para preparação na exibição.
+
+### Montagem
+
+Combina os fragmentos e realiza ajustes finais para criar a imagem completa, levando em consideração sobreposição e opacidade.
+
+### Extra
+
+A realimentação em várias etapas permite ajustes em tempo real, atualizando os dados com base em mudanças ou entrada do usuário.
 
 ## Para que serve a entrada de usuário no pipeline?
 
@@ -252,6 +280,10 @@ Também, converte o espaço contínuo para o espaço discreto e envolve cálculo
 
 ## Defina o estágio de renderização
 
+Fase do pipeline onde os dados processados da cena (como geometria, iluminação e textura) são convertidos em pixels para formar a imagem final exibida na tela.
+
+Pode incluir técnicas como rasterização, ray tracing ou ray casting para gerar a imagem final.
+
 # Aula VIII
 
 ## Como projetar recursos 3D na tela do computador/celucar?
@@ -260,19 +292,29 @@ Síntese de imagem -> pipeline de visualização -> ray casting / tay tracing.
 
 ## O que é Ray Casting?
 
-É a etapa onde a imagem do campo de visão da cãmera (FOV) será renderizada e apresentada ao espectador.
+![image](https://upload.wikimedia.org/wikipedia/commons/e/e7/Simple_raycasting_with_fisheye_correction.gif)
 
-É o algoritmo mais clássico e mais interessante que foi descoberto, usado para a construção de imagens 2D.
+![image](https://repository-images.githubusercontent.com/274744093/4e2fbf00-b922-11ea-946b-58b5beda91be)
 
-Não tem a interpretação de objetos transparentes.
+- Algoritmo mais clássico e mais interessante que foi descoberto para a construção de imagens 2D.
 
-Limita a quantidade de processamento do número de pixels da imagem (objetos complexos), tornando a renderização viável a computação.
+- Etapa onde a imagem do campo de visão da cãmera (FOV) será renderizada e apresentada ao espectador.
 
-PROBLEMA: caso a imagem seja bem realista -> o tamanho de armazenamento vai ser grande.
+- Determina quais objetos da cena são visíveis a partir de uma câmera, projetando "raios" da câmera para identificar interseções com objetos.
+
+- Limita a quantidade de processamento do número de pixels da imagem (objetos complexos), tornando a renderização viável a computação.
+
+> Não interpreta objetos transparentes.
+
+**PROBLEMA**: caso a imagem seja bem detalhada (muito realista) -> o tamanho de armazenamento vai ser bem grande.
 
 ## Seria possível a câmera caputurar ao infinito?
 
-A cãmera não vai captura ao infinito graças ao campo de visão.
+A cãmera não vai captura ao infinito graças ao seu campo de visão.
+
+Se for um campo grande, vai capturar uma grande área.
+
+Se for um campo pequeno, vai capturar uma pequena área.
 
 ![image](https://github.com/user-attachments/assets/d2e98f3b-d221-4c94-b70c-13001d62f9e4)
 
@@ -288,10 +330,18 @@ Sem as normais, eu precisaria considerar a outra face durante a renderização.
 
 ## O que é uma face difusa?
 
-É uma face ou material que não é muito reflexibo, como o couro.
+É uma face / material que não é muito reflexivo.
+
+Ex: o couro.
 
 ## Qual é a diferença para Ray Tracing?
 
 Ray Casting: não considera a interação dos objetos em cena e não considera a composição de cores misturada com a luz (que pode gerar uma nova cor).
 
 Ray Tracing: Considera as fontes de luz com os pixels vizinhos, e com isso, há a combinação de cores, devolvendo um aspecto mais real.
+
+![raytracing1](https://www.pixelsham.com/wp-content/uploads/2019/10/ray_tracing_2.jpg)
+
+![raytracing2](https://www.pixelsham.com/wp-content/uploads/2019/10/rasterization-vs-raytracing-l.jpg)
+
+![raytracing3](https://i.ytimg.com/vi/pp0T4OJNLlQ/mqdefault.jpg)
