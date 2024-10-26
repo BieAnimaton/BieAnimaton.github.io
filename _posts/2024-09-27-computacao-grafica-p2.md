@@ -306,7 +306,7 @@ Síntese de imagem -> pipeline de visualização -> ray casting / tay tracing.
 
 > Não interpreta objetos transparentes.
 
-**PROBLEMA**: caso a imagem seja bem detalhada (muito realista) -> o tamanho de armazenamento vai ser bem grande.
+**PROBLEMA**: caso a imagem seja bem detalhada (muito realista), o tamanho de armazenamento vai ser bem grande.
 
 ## Seria possível a câmera caputurar ao infinito?
 
