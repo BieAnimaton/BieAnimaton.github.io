@@ -14,11 +14,11 @@ toc: true
 
 ## Catálogo de serviços de TI
 
-Está dento da GTI.
+Está dentro da GTI.
 
 - Ferramenta que reúne todos os serviços oferecidos pela área de TI e as principais informações destes.
 
-- Visão geral de tudo o que está disponivel para atender às principas necessidades das área.
+- Visão geral de tudo o que está disponivel para atender às principas necessidades das áreas.
 
 - Deixa claro os processos e as condições envolvidas na requisição de serviços, permitindo melhores entregas e dando suporte à GTI.
 
@@ -157,10 +157,10 @@ Gastos associados à infraestrutura e aos serviços de TI em uma organização.
 
 ### Custos indiretos de TI
 
-- Energia e infraestrutura: gastos com eletricidadem, refrigeração, espaço físico e manutenção.
+- Energia e infraestrutura: gastos com eletricidade, refrigeração, espaço físico e manutenção.
 - Salários da equipe de TI: profissionais.
 - Treinamento de desenvolvimento: capacitação para a equipe de TI.
-- Segurança e conformidade: protelçao de dados e leis.
+- Segurança e conformidade: proteção de dados e leis.
 
 ### Redução de custos de TI
 
@@ -180,7 +180,8 @@ Boa gestão de custos -> proporiconar um maior valor agregado aos negócios e en
 
 ### Método TCO
 
-- Gestao finaceira -> aquisição, utilizacao e manutenção dos ativos do TI.
+- Gestao finaceira -> aquisição, utilização e manutenção dos ativos do TI.
+
 - Qualquer gestor pode usar para qualquer área -> só mudar o ativo.
 
 ### Método ITL
@@ -191,19 +192,30 @@ Boa gestão de custos -> proporiconar um maior valor agregado aos negócios e en
 
 ### Método COBIT
 
-- Entrega aos gestores indicadores que auxiliarão na tomada de decisão dos ambientes internos e externos
+- Entrega aos gestores indicadores que auxiliarão na tomada de decisão dos ambientes internos e externos.
+
 - Práticas de consenso entre profissionais especializados, foco o controle e até execução.
-- Modelo de principios e operações para transformar o setor de TI em uma estrutura bem gerida.
+
+- Modelo de princípios e operações para transformar o setor de TI em uma estrutura bem gerida.
+
 - Faz com que o setor atinja a verdadeira governança.
 
 ## Melhores práticas para redução de custos em TI
 
 - Padronizar processos, ferramenta e recursos: redução da redundância.
+
 - Uso da nuvem: capacidade em reduzir gastos com licensiamento de softwares, instalações, atualizações, etc - menos contratação e menos espaço físico.
+
 - Reavaliar os contratos: auditoria para avaliar os contratos firmados com fornecedores.
+
 - Uso de ferramenta adequadas: reavaliar as ferramentas, verififcar se há outras opções no mercado.
+
 - Investir em automação de processos: entrega com eficiência e segurança.
+
 - Investir em segurança cibernética.
+
 - Estabelece indicadores de desempenho.
+
 - Criar um modelo de governança.
+
 - Terinamento e conscientização.
