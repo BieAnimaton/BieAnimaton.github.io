@@ -202,7 +202,7 @@ Saindo dos descritores, pode seguir dois caminhos:
 
 - Serialização: conversão do descritor de imagem em um formato que possa ser armazenado ou transmitido.
 
-- Arquivo Descritor de Imagem: armazena o descritor de imagem serializado em um arquivo.
+- Arquivo Descritor de Imagem: guarda o descritor de imagem serializado em um arquivo que só pode ser aberto pelor editor (Blender, Photoshop, Maya...) - tem acesso aos objeto e as alterações feitas quando aberto.
 
 Ou
 
@@ -228,9 +228,9 @@ Modelo matemático composto por 5 elementos:
 
 - Dados de Iluminação: informações sobre as fontes de luz, usadas para calcular como a iluminação afetará as cores e sombras na cena.
 
-- Pontos de Vista: define o ângulo e a posição de visualização da câmera ou do observador na cena.
+- Pontos de Vista: define o ângulo, a posição de visualização da câmera, a quantidada de câmeras ou do observador na cena.
 
-- Vértices de Malhas Poligonais: posições dos pontos (vértices) que compõem os polígonos, utilizados para definir a geometria dos objetos.
+- Vértices de Malhas Poligonais: posições dos pontos (vértices) que compõem os polígonos, definem a geometria dos objetos.
 
 - Malhas Poligonais: conjunto de polígonos que formam a superfície dos objetos na cena.
 
@@ -246,11 +246,11 @@ Processos que aplicam translações, rotações e escalonamentos aos objetos (ma
 
 ### Digitalização
 
-Projeção (transformação) de perspectiva de pontos.
+Projeção (transformação) de perspectiva de pontos e gera diversos fragmentos de imagem digital para preparação na exibição.
+
+Converte o spaço contínuo para espaço discreto, ou seja, gera pixels.
 
 Leva em consideração a existência de oclusões.
-
-Gera diversos fragmentos de imagem digital para preparação na exibição.
 
 ### Montagem
 
@@ -310,7 +310,7 @@ Síntese de imagem -> pipeline de visualização -> ray casting / tay tracing.
 
 ## Seria possível a câmera caputurar ao infinito?
 
-A cãmera não vai captura ao infinito graças ao seu campo de visão.
+A câmera não vai capturar ao infinito graças ao seu campo de visão.
 
 Se for um campo grande, vai capturar uma grande área.
 
