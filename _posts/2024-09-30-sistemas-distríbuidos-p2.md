@@ -489,7 +489,7 @@ Falha: trata-se da causa que originou o erro.
 
 Transientes: falhas que ocorrem apenas uma vez e então desaparecem.
 
-Interminentes: não definem um padrão exato de ocorrência e são imprevisíveis.
+Intermitentes: não definem um padrão exato de ocorrência e são imprevisíveis.
 
 Permanentes: não podem ser consertadas e normalmente implicam em danos irreparáveis em componentes.
 
