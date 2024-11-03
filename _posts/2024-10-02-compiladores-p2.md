@@ -420,3 +420,26 @@ Constará as produções aplicadas a partir do símbolo inicial (S) na geração
 ![image](https://github.com/user-attachments/assets/100cee69-0bc8-4453-97fa-9a7a7c473afb)
 
 ![image](https://github.com/user-attachments/assets/7d28c2f4-f27e-4c2b-9bbe-572a93acbfeb)
+
+## Exercício 2
+
+![image](https://github.com/user-attachments/assets/bfde5984-f410-40da-b802-757e2b32a82b)
+
+![image](https://github.com/user-attachments/assets/31b52385-e8ac-42f9-ab0c-fb1388ead6b9)
+
+## Exercício 3
+
+![image](https://github.com/user-attachments/assets/aac5554b-c69c-454b-ae75-9b84e8155736)
+
+![image](https://github.com/user-attachments/assets/7928d08d-b790-47df-a4a9-85ff5928b064)
+
+
+![image](https://github.com/user-attachments/assets/79d5f8d2-f89b-4b33-8a34-ac914f97efb7)
+
+## Exercício 4
+
+![image](https://github.com/user-attachments/assets/03489ed3-8477-4ca3-9a2d-a79547a75dcc)
+
+![image](https://github.com/user-attachments/assets/09e18c86-566d-45b2-8bff-89a239221033)
+
+Da erro, não é possível completar.
