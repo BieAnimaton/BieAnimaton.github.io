@@ -350,7 +350,7 @@ Ray Tracing: Considera as fontes de luz com os pixels vizinhos, e com isso, há 
 
 Apresentação grupos.
 
-## 1 - Modelo geométrico
+## Modelo geométrico
 
 representação geométrica dos objetos tridimensionais - permite que objetos e cenários sejam representados digitalmente, manipulados e visualizados de diferentes ângulos e perspectivas.
 
@@ -495,7 +495,7 @@ calcula a iluminação de forma local, ou seja, diretamente sobre cada ponto da 
 
 ![image](https://github.com/user-attachments/assets/71dd718d-97a5-4b22-bdce-8f02a1fd18b3)
 
-### cálculo
+### Cálculo
 
 Iluminação Total Phong = Ambiente + Difusa + Especular
 
