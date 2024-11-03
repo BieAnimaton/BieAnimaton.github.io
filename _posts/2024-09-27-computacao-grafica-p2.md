@@ -345,3 +345,294 @@ Ray Tracing: Considera as fontes de luz com os pixels vizinhos, e com isso, há 
 ![raytracing2](https://www.pixelsham.com/wp-content/uploads/2019/10/rasterization-vs-raytracing-l.jpg)
 
 ![raytracing3](https://i.ytimg.com/vi/pp0T4OJNLlQ/mqdefault.jpg)
+
+# Aula 9
+
+Apresentação grupos.
+
+## 1 - Modelo geométrico
+
+representação geométrica dos objetos tridimensionais - permite que objetos e cenários sejam representados digitalmente, manipulados e visualizados de diferentes ângulos e perspectivas.
+
+diferentes formas de representar a estrutura e a superfície de objetos no espaço tridimensional
+
+### Modelos baseados em poligonos
+
+compostas por polígonos, comumente triângulos, que se conectam por vértices e arestas
+
+permite a criação de formas complexas de maneira eficiente, possibilitando que artistas e desenvolvedores manipulem e animem objetos em ambientes tridimensionais
+
+necessidade de otimização para garantir o desempenho em tempo real
+
+![image](https://github.com/user-attachments/assets/d02ea4ae-974b-4bb2-9fcb-90168cd0563c)
+
+### Modelos baseados em malhas
+
+tipo de polígono tridimensional que utiliza uma rede de vértices, arestas e faces para formar a superfície de um objeto.
+
+composta por polígonos conectados, geralmente triângulos, que definem a forma e a topologia do modelo -> criação de geometria complexas
+
+necessidade de controle detalhado sobre a geometria e a otimização para garantir uma performance adequada em tempo real.
+
+A qualidade da malha pode impactar diretamente a aparência do modelo em renderizações e animações, exigindo que artistas e desenvolvedores equilibrem complexidade geométrica e eficiência.
+
+![image](https://github.com/user-attachments/assets/36cda923-8b5a-498f-aad6-d75de952f002)
+
+### Modelos baseados em voxels
+
+voxels = grade de cubos (ou "voxels") para criar objetos e ambientes, um valor em uma grade tridimensional, funcionando como o equivalente 3D de um pixel
+
+modelagem de formas complexas e detalhadas, sendo especialmente eficaz em contextos onde a volumetria é importante, como em simulações médicas e jogos de construção.
+
+voxel é sua simplicidade na manipulação e edição, permitindo operações como subdivisão e transformação de maneira intuitiva -> exige mais recursos computacionais
+
+uma aparência menos suave em comparação com malhas
+
+![image](https://github.com/user-attachments/assets/10ceaa04-f075-473d-a88a-81aa5ca6b530)
+
+### Curvas e superfícies paramétricas
+
+representações matemáticas que permitem descrever formas complexas de maneira eficiente
+
+os pontos são definidos por uma função que relaciona um ou mais parâmetros a coordenadas no espaço -> modelagem de objetos orgânicos e detalhados.
+
+criação de modelos complexos, como carros e personagens, onde detalhes finos são necessários
+
+entendimento sólido de matemática e podem ser mais desafiadoras em termos de implementação e renderização
+
+![image](https://github.com/user-attachments/assets/4ceefea3-6d51-4efc-bdba-39ac973645a9)
+
+### Superfície implícita
+
+função matemática que determina se um ponto no espaço pertence à superfície ou não
+
+formas complexas e suaves, como esferas e toróides, de maneira eficiente, sem a necessidade de uma malha explícita
+
+capacidade de lidar com topologias complicadas
+
+mais desafiadora em termos computacionais e pode requerer mais esforço para a visualização em tempo real
+
+## Modelos de câmera
+
+### Esteroscópia
+
+imersão, apresentação de uma visualização mais cara pois apresenta mais informações (analisar textura, minúcias).
+
+### Perspectiva
+
+versão mais barata, utiliza a ideia que os objetos mudam de tamanho conforme a distancia do objeto e centro da camera, representação na tela, enxergando nossa realidade
+
+não considerando duas imagems (apernas uma)
+
+oportunidade de perceber o espaço
+
+### Ortografica
+
+mais barata das três, apresenta a analise bidimensional do ambiente, tudo fica em 2D para olhar com atenção em todos os objetos, de maneira q todos os elementos têm o mesmo peso visual, tudo fica equilibrado sem perspectiva
+
+principalmente usado em jogo 2D, player enxerga o objeto todo de uma vez
+
+## Iluminação local e global
+
+### Iluminação local
+
+depende apenas da superfície refletida e da fonte de luz.
+sombras básicas e sem reflexões entre ambientes o objetos.
+
+![image](https://github.com/user-attachments/assets/ac615290-eccc-4823-b19b-21e1eebf3473)
+
+menos custoso e não gera muita interferência de luzes, por outro lado, causa a falta de realismo
+
+Modelos comuns: Phong e Blinn-Phong.
+
+### Iluminação global
+
+cálculo e a simulação de como a luz interage com todos os objetos em um ambiente virtual, levando em consideração todas as suas interações e reflexões.
+
+simula iluminação indireta
+
+![image](https://github.com/user-attachments/assets/1e5ad94f-b729-4978-975d-0a0872a8eef7)
+
+
+possiveis interações:
+reflexões, refrações e oclusão ambiental.
+
+comportamentos:
+- reflexão Difusa: luz espalhada em todas as direções, dando cor aos objetos.
+- reflexão Especular: luz refletida em um único ângulo, criando brilhos.
+- refração: mudança de direção da luz ao passar por diferentes meios.
+- oclusão Ambiental: ausência de luz em áreas inacessíveis.
+
+algoritmos usados:
+
+- ray Tracing: simula o caminho da luz através do ambiente.
+- radiosidade: calcula a troca de energia radiante entre as superfícies.
+- photon Mapping: combina elementos de Ray Tracing e Radiosidade.
+
+Modelos avançados: Ray Tracing, Path Tracing.
+
+## Modelo de iluminação Phong
+
+técnica usada em computação gráfica para simular como a luz interage com superfícies, adicionando realismo a objetos 3D.
+
+calcula a iluminação de forma local, ou seja, diretamente sobre cada ponto da superfície sem considerar a luz refletida de outros objetos.
+
+É amplamente usado por equilibrar simplicidade e eficiência com um nível de realismo visual adequado para diversas aplicações.
+
+### Funções da Iluminação:
+
+- Profundidade e Forma: A iluminação ajuda a definir a forma dos objetos, permitindo distinguir detalhes de textura e contornos.
+
+- Efeito de Materialidade: Diferentes tipos de iluminação simulam materiais distintos, dando a cada um propriedades únicas como brilho, rugosidade ou suavidade.
+
+- Imersão e Realismo: Em jogos, animações e simulações, uma boa iluminação aumenta a sensação de realismo e a imersão do usuário, aprimorando a experiência visual.
+
+### Componentes:
+
+- Ambiente: representa a luz ambiente que ilumina o objeto de forma uniforme, simulando a luz que é refletida de outras superfícies - simula a luz espalhada no ambiente.
+- Difusa: simula a dispersão da luz em superfícies não brilhantes, como madeira ou pedra, sendo dependente do ângulo entre a luz e a superfície - representa o brilho que atinge diretamente a superfície.
+- Especular: representa o brilho e é visível em superfícies polidas, como metal ou vidro, dependendo do ângulo entre o observador e a luz - cria o brilho mais intenso, simulando reflexos em materiais brilhantes.
+
+![image](https://github.com/user-attachments/assets/71dd718d-97a5-4b22-bdce-8f02a1fd18b3)
+
+### cálculo
+
+Iluminação Total Phong = Ambiente + Difusa + Especular
+
+Cada uma dessas componentes é calculada separadamente e depois somada para obter o resultado final. Isso permite flexibilidade no controle de cada tipo de iluminação, ajustando a intensidade e cor de cada componente.
+
+![image](https://github.com/user-attachments/assets/f0ee1146-774e-4a4e-b783-6d29efb59132)
+
+### Diferenças entre o modelo Phong e outros
+
+Modelo Lambertiano:
+
+Calcula apenas a luz difusa, sem brilho especular, resultando em superfícies foscas. Ao contrário do Phong, não simula reflexos, sendo menos realista, mas mais leve computacionalmente.
+
+Modelo Blinn-Phong:
+
+Usa uma fórmula para brilho mais eficiente e menos sensível ao ângulo de visão. Comparado ao Phong, é mais rápido para reflexos especulares e gera um resultado visual similar.
+
+Modelo Cook-Torrance:
+
+Baseado em física realista, simula materiais complexos como metais e vidros. Difere do Phong por produzir reflexos precisos e texturas realistas, mas com maior custo computacional, ideal para renderizações de alta qualidade.
+
+![image](https://github.com/user-attachments/assets/931f5464-b2d0-4f72-8ced-ee8d9fb0142a)
+
+usado até hj pois consigo fazer alguns calculos simples (calculado em tempo real no jogs) e ter uma visualização mto interessante
+
+## Tonalização ou Shading
+
+### Tonalização
+
+Aplicar cores e tons a uma imagem/objeto e criar um efeito visual específico.
+
+Cria profundidade, textura e realismo.
+
+Pontos principais: cor bases, tons e matrizes e realismo.
+
+### Shading
+
+Adicionar sombras e simular efeitos de luz.
+
+Textura e reflexos.
+
+Tipo de shading:
+- Flat shading
+- Gouraud shading
+- Phong shading
+
+### Flat shading
+
+- Aplicação de uma única cor
+- Sem suavização
+- Resulta em um visual mais "quadrado"/facetado
+- Jogos retrô/vintage
+- Visualizações de engenharia
+
+### Gouraud shading
+
+- Suaviza as transições de cor
+- Cria um efeito mais leve e natural
+- Mais eficiente que as outras técnicas, pois iluminação é calculada somente nos vértices
+- Boa para superfícies sem reflexos intensos
+- Simulação em tempo real (suavidade suficiente sem sobrecarregar o sistema)
+
+![image](https://github.com/user-attachments/assets/bc4e97a5-c3da-4928-ab0d-4729b0fc49fe)
+
+### Phong shading
+
+- Nível mais alto de suavização
+- Calcula a iluminação de forma mais precisa
+- Cálculo é feito em cada pixel
+- Superfícies extremamente suaves e realistas
+- Design de produtos, renderização de alta qualidade
+
+![image](https://github.com/user-attachments/assets/9bfe629a-b167-4d66-b3f1-d245333704ef)
+
+### Limitações
+
+Flat:
+
+Facetada e sem suavização.
+Não captura variações sutis de luz e sombra.
+
+Gouraud:
+
+Pequenos reflexos podem ser perdidos por conta do cálculo no vértice.
+Não pega brilhos pontuais.
+Pode não capturar nuances em animações.
+
+Phong:
+
+Custo computacional elevado.
+Complexidade de implementação.
+
+## Mapeamento de texturas
+
+No processo de mapeamento UV, o modelo 3D é "desdobrado" em uma superfície 2D, criando um "layout UV".
+
+Esse layout distribui a geometria do objeto como um mapa plano que recebe a textura. Aqui estão as etapas principais:
+
+Desdobramento:
+
+- Primeiro, define-se onde "cortar" o modelo, dividindo a geometria em seções planas que possam ser abertas sem distorção excessiva.
+
+Layout UV:
+
+- Após o desdobramento, organiza-se o layout no editor UV, ajustando a posição de cada face para ocupar o máximo de espaço da textura, garantindo uma resolução adequada.
+
+Costuras e Alinhamento:
+
+- Cuida-se das costuras para minimizar linhas visíveis e ajusta-se o alinhamento para manter as partes contínuas da textura, evitando quebras visíveis entre diferentes partes do modelo.
+
+Ajustes Finais e Testes:
+
+- Refina-se o layout, verificando a aplicação da textura para assegurar que não há distorções.
+
+### Coordenadas UV
+
+As coordenadas UV vão de (0,0) a (1,1), onde:
+
+(0,0) representa o canto inferior esquerdo.
+(1,1) representa o canto superior direito da textura.
+
+Essas coordenadas determinam quais partes da textura ficam em quais áreas da superfície do modelo 3D.
+
+![image](https://github.com/user-attachments/assets/094c7162-8224-4a67-98f1-7a411a180325)
+
+### Tipos
+
+Mapeamento Automático: Onde o software automaticamente gera um mapa UV, geralmente com cortes e junções automáticas.
+
+Mapeamento Manual: Onde o artista ajusta e cria manualmente as coordenadas UV, definindo os cortes e o layout da textura.
+
+Mapeamento Esférico, Cúbico, Cilíndrico e Planar: Esses tipos de projeção são úteis para objetos com formas específicas, onde a projeção de textura pode ser mais simples e eficaz.
+
+### Ferramentas
+
+Blender: Oferece um sistema de UV muito robusto e inclui um editor UV.
+
+Maya e 3ds Max: São populares para produções de alto nível, com ferramentas detalhadas de mapeamento.
+
+Substance Painter: Usado para pintar texturas diretamente no modelo 3D, facilitando a aplicação de texturas complexas com base nas coordenadas UV.
