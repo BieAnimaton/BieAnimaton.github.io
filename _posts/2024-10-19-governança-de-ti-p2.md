@@ -121,8 +121,8 @@ Indicação para empresas com menos clientes ou clientes com especificações di
 ## SLA Multinível
 
 - Multilevel Service-Level Agreement.
-- Documento que comporta especificações e necessidade dde frentes diferentes.
-- Projetos que emvolvem diferentes áreas e diferentes dentregas.
+- Documento que comporta especificações e necessidade de frentes diferentes.
+- Projetos que emvolvem diferentes áreas e diferentes de entregas.
 - Indicado para operações full-service ou projetos com produtos diversos.
 
 ## O que não pode faltar em um SLA
@@ -174,7 +174,7 @@ Administração dos custos com base em um planejamento estratégico voltado para
 
 Importante que todos os setores consigam aplicar a redução de custos, que deverá ter parametros.
 
-Boa gestão de custos -> proporiconar um maior valor agregado aos negócios e entregar melhores soluções
+Boa gestão de custos -> proporcionar um maior valor agregado aos negócios e entregar melhores soluções
 
 ## Principais métodos utilizados na gestão de custos em TI
 
@@ -194,7 +194,7 @@ Boa gestão de custos -> proporiconar um maior valor agregado aos negócios e en
 
 - Entrega aos gestores indicadores que auxiliarão na tomada de decisão dos ambientes internos e externos.
 
-- Práticas de consenso entre profissionais especializados, foco o controle e até execução.
+- Práticas de consenso entre profissionais especializados, foco no controle e até execução.
 
 - Modelo de princípios e operações para transformar o setor de TI em uma estrutura bem gerida.
 
