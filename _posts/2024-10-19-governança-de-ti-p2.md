@@ -200,4 +200,4 @@ Uma boa gestão de custos proporciona um maior valor agregado aos negócios e en
 - Investir em segurança cibernética.
 - Estabelece indicadores de desempenho.
 - Criar um modelo de governança.
-- Terinamento e conscientização.
+- Treinamento e conscientização.
