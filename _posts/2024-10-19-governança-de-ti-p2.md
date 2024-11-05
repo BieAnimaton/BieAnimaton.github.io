@@ -106,7 +106,7 @@ Customer Service-Level Agreement.
 
 Internal Service-Level Agreement.
 
-- Mais utilizado por empresas com uma operação volumosa de clientes e serviços.
+- Usado por empresas com uma operação volumosa de clientes e serviços.
 - Possibilidade de escalar o gerenciamento de projetos.
 - Indicado para empresas que querem agilidade e escalabilidade.
 
