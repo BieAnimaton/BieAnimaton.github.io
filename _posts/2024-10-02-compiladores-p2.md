@@ -443,3 +443,234 @@ Constará as produções aplicadas a partir do símbolo inicial (S) na geração
 ![image](https://github.com/user-attachments/assets/09e18c86-566d-45b2-8bff-89a239221033)
 
 Da erro, não é possível completar.
+
+# Aula 11
+
+## Como construir a tabela?
+
+Analisador preditor
+- conjunto FIRST
+- conjunto FOLLOW
+
+## Etapas do analisador preditor
+
+Durante análise descendente -> as variáveis FIRST e FOLLOW nos ajudam a escolher qual produção deve ser usada, com base no próxim símbolo de entrada.
+
+Dada uma entrada 'a' e o não-terminal 'A', deve-se saber qual das produções alternativas 'A -> B1 | B2 | ...' deriva a sequência que inicia por 'a'.
+
+Primeiro são calculados os conjuntos de primeiros símbolos produzios por todas as alternativas na gramática, ou seja, os conjuntos FIRST.
+
+Sendo Y uma string de símbolos e não-terminas, FIRS(Y) é o conjunto de todos os terminais que podem iniciar strings derivadas de Y.
+
+## Algoritmo geral
+
+![image](https://github.com/user-attachments/assets/a4fb4857-6469-48ee-aa8d-8badae7e6ac8)
+
+## Regras do FIRST
+
+![image](https://github.com/user-attachments/assets/535af31f-2526-4f9d-9eb9-fba5bdeaa9eb)
+
+## Exemplo 1
+
+![image](https://github.com/user-attachments/assets/cd9fed41-8ff2-42e2-8d45-397530539227)
+
+### Tabela inicial
+
+Todos os símbolos não-terminais iniciam com vazio.
+
+![image](https://github.com/user-attachments/assets/210cc31c-1f85-439a-9228-59d5b4903f6a)
+
+Nota: λ = E (vazio).
+
+### Calculando 'S'
+
+Firts(S) = First(ABS) U First(aA)
+
+First(ABS) = First(A) \ {λ}  
+First(ABS) = ∅ \ {λ}  
+First(ABS) = ∅  
+
+> Calculou apenas o 'A' de 'ABS', pois 'A' não possui 'λ', então não precisa calcular o 'B'.
+
+First(aA) = First(a) \ {λ}  
+First(aA) = {a} \ {λ}  
+First(aA) = {a}  
+
+> Calculou apenas o 'a' de 'aA', pois 'a' não possui 'λ', então não precisa calcular o 'A'.
+
+**First(S) = {a}**
+
+### Calculando 'A'
+
+First(A) = First(λ) U First(a)
+
+First(λ) = {λ}
+First(a) = {a}
+
+**First(A) = {λ,a}**
+
+### Calculando 'B'
+
+First(B) = First(Bb) + First(cd)
+
+First(Bb) = First(B) \ {λ}  
+First(Bb) = ∅ \ {λ}  
+First(Bb) = ∅  
+
+> Calculou apenas o 'B' de 'Bb', pois 'B' não possui 'λ', então não precisa calcular o 'b'.
+
+First(cd) = First(c) \ {λ}  
+First(cd) = {c} \ {λ}  
+First(cd) = {c}  
+
+> Calculou apenas o 'c' de 'cd', pois 'c' não possui 'λ', então não precisa calcular o 'd'.
+
+**First(B) = {c}**
+
+### Nova tabela
+
+![image](https://github.com/user-attachments/assets/afb790a0-88d0-479a-8ff7-8a4eec1b13a3)
+
+### Recalcular
+
+Como FIRST de 'S' depende de 'A' e 'A' teve seu valor alterado, devemos recalcular 'S'.
+
+
+### Calculando 'S'
+
+Firts(S) = First(ABS) U First(aA)
+
+First(ABS) = First(A) \ {λ}  
+First(ABS) = {λ,a} \ {λ}  
+
+> First(A) agora tem 'λ', então vamos calcular o First(B).
+
+First(ABS) = {a} U First(B) \ {λ}  
+First(ABS) = {a} + {c}  
+
+First(aA} = {a}
+
+**First(S) = {a,c}**
+
+### Nova tabela 2
+
+![image](https://github.com/user-attachments/assets/b0ec40d9-0654-4aae-8bfd-a8f099c34654)
+
+## Exemplo 2
+
+![image](https://github.com/user-attachments/assets/63c952f8-05e3-4c33-b06d-c07810d73d1a)
+
+First(S) = First(cAd) = {c}  
+First(A) = First(b) U First(a) = {b,a}
+
+## Exemplo 3
+
+![image](https://github.com/user-attachments/assets/8033beab-06c0-45f8-9454-ca8bbd46f074)
+
+Podemos simplificar
+
+Z ::= d | XYZ  
+Y ::= λ | c  
+X ::= Y | a  
+
+### Tabela inicial
+
+Z = ∅  
+Y = ∅  
+X = ∅  
+XYZ = ∅  
+
+### Calculando 'Z'
+
+First(Z) = First(d) U First(XYZ)  
+First(Z) = {d} U {∅}  
+**First(Z) = {d}**  
+
+First(Y) = First(λ) U First(c)  
+First(Y) = {λ} U {c}  
+**First(Y) = {λ,c}**  
+
+First(X) = First(Y) U First(a)  
+First(X) = {λ,c} U {a}  
+**First(X) = {λ,c,a}**  
+
+### Nova tabela
+
+First(Z) = {d}  
+First(Y) = {λ,c}  
+First(X) = {λ,c,a}  
+
+### Recalculando Z
+
+First(Z) = First(d) U First(XYZ)  
+First(Z) = {d} U First(X) \ {λ} U First(YZ)  
+First(Z) = {d} U {c,a} U First(Y) \ {λ} U First(Z)  
+First(Z) = {d} U {c,a} U {c} U First(Z) \ {λ}  
+First(Z) = {d} U {c,a} U {c} U {d}  
+**First(Z) = {c,a,d}**  
+
+### Nova tabela 2
+
+First(Z) = {c,a,d}  
+First(Y) = {λ,c}  
+First(X) = {λ,c,a}  
+
+## Exemplo 4
+
+![image](https://github.com/user-attachments/assets/39defccb-d1e9-4b31-b1d9-fcd5339403e4)
+
+Podemos simplificar
+
+S ::= AaAb | Bb  
+A ::= λ  
+B ::= λ  
+
+### Tabela inicial
+
+S = ∅  
+A = ∅  
+B = ∅  
+
+### Calculando S
+
+First(S) = First(AaAb) U First(B)  
+First(S) = First(A) U First(B)  
+First(S) = {∅} U {∅}  
+**First(S) = {∅}**  
+
+### Calculando A
+
+**First(A) = {λ}**  
+
+### Calculando B
+
+**First(B) = {λ}**  
+
+### Nova tabela
+
+First(S) = {∅}  
+First(A) = {λ}  
+First(B) = {λ}  
+
+### Recalculando S
+
+First(S) = First(AaAb) U First(B)  
+First(S) = First(A) \ {λ} U First (aAb) U First(B) U First(b)  
+First(S) = {a} U {b}  
+**First(S) = {a,b}**  
+
+### Nova tabela 2
+
+First(S) = {a,b}  
+First(A) = {λ}  
+First(B) = {λ}  
+
+## Exemplo 5
+
+![image](https://github.com/user-attachments/assets/1bed62e8-9100-46ec-abce-2053fa72a36e)
+
+...
+
+## Exercício
+
+![image](https://github.com/user-attachments/assets/50a55545-7afc-4f9b-b21b-0e7a0ef257cf)
