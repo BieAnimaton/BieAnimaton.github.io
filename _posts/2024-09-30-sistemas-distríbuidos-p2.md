@@ -591,27 +591,13 @@ A solução é eleger um coordenador que ordena que os processos realizem, ou n�
 
 ## Commit em duas fases
 
-### Fase 1 - Votação
+Ocorre através de 2 fases.
 
-- O coordenador envia uma mensagem 'VOTE_REQUEST' para todos os participantes.
+A primeira é a fase de votação onde o coordenador envia uma mensagem 'VOTE_REQUEST' para os participantes. Os participantes podem responder 'VOTE_COMMIT' se estiverem preparado para fazer o commit local ou 'VOTE_ABORT' caso contrário.
 
-- Quando o participante recebe a mensagem, responde:
+A segunda é a fase de decisão onde o coordenador obtém os vaores e responde a todos 'GLOBAL_COMMIT' se todos votarem a favor ou 'GLOBAT_ABORT' se apenas um votar em abortar.
 
-  'VOTE_COMMIT' – se estiver preparado para fazer o commit local da
-  transação.  
-  'VOTE_ABORT' – caso contrário
-
-### Fase 2 - Decisão
-
-- O coordenador obtém os votos e responde a todos.
-  
-  'GLOBAL_COMMIT' – se todos votarem favoráveis ao commit.  
-  'GLOBAL_ABORT' – se apenas um deles votar por abortar.
-
-- Cada participante espera a resposta.
-
-  Se 'GLOBAL_COMMIT', executará localmente o commit da transação.  
-  Se a for um 'GLOBAL_ABORT', a transação local é abortada.
+Os participantes aguardam a resposta, se for 'GLOBAL_COMMIT', executam o commit local da transação e se for 'GLOBAT_ABORT', a transação local é abortada.
 
 ![image](https://github.com/user-attachments/assets/98b2bdcb-ba77-4376-874f-8246e0d21399)
 
