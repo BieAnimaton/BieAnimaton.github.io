@@ -614,3 +614,307 @@ A solução é eleger um coordenador que ordena que os processos realizem, ou n�
   Se a for um 'GLOBAL_ABORT', a transação local é abortada.
 
 ![image](https://github.com/user-attachments/assets/98b2bdcb-ba77-4376-874f-8246e0d21399)
+
+# Aula 10
+
+## Conceitos básicos
+
+Segurança em Sistemas Distribuídos
+
+- Relacionada à dependabilidade (tolerância a falhas) que o sistema pode oferecer.
+
+Parâmetros adicionais relacionados à informação
+
+- Confidência: a informação deve ser acessível apenas a quem for autorizado.
+- Integridade: as alterações na informação mantida por um sistema só podem ser realizadas das maneiras previstas e autorizadas.
+
+## Ameaças à informação
+
+Interceptação
+
+- Acesso não autorizado à informação.
+- Cópia ilegal da informação.
+
+Interrupção
+
+- Quando a informação torna-se inacessível.
+- Pode ser gerada pela indisponibilidade de um serviço (ex.: DOS – Denial of Service) ou pela destruição dos dados.
+
+Modificação
+
+- Troca não autorizada dos dados ou alteração em serviços fora das especificações originais.
+- Em redes de comunicação, a informação pode ser primeiramente interceptada e depois modificada.
+
+Fabricação
+
+- Criação de dados ou de atividades que não deveriam existir
+
+## Mecanismos
+
+Encriptação (cifragem)
+
+- Produção de cifra a partir dos dados
+
+  Para confidência: mensagens indecifráveis por terceiros  
+  Para integridade: assinaturas digitais para conferência  
+
+Autenticação
+
+- Verifica a identificação solicitada ao usuário (ou aplicação)
+- Normalmente apoiada por conferência de senhas
+
+Autorização
+
+- Estabelece as formas de interação com o sistema
+
+  Regras de acesso (permissões)  
+  Diferentes usuários podem ter diferentes perfis  
+
+Auditoria
+
+- Avaliação dos efeitos dos mecanismos de proteção de um sistema
+
+  São verificados registros históricos (arquivos de log, por exemplo), que descrevem as atividades de usuários no sistema  
+
+## Foco de controle
+
+![image](https://github.com/user-attachments/assets/1c0e2663-3904-4797-8b5c-9c7313260215)
+
+## Criptografia
+
+É  a arte e a ciência de esconder o objeto de uma comunicação de uma audiência não pretendida.  
+	
+### Permitem decifrar:
+
+Chave simétrica:
+
+    + Criptografia bidirecional.
+    + Melhor desempenho.
+    - Como enviar a chave?
+
+C = Eke(P)  
+P = Dkd(C)  
+Ke = Kd = Ks  
+
+> Ex: DES, 3DES, AES, Blowfish.
+			
+Chave assimétrica:
+
+Par de chaves único.  
+Publicar com certificado.  
+
+Confidência: Ke+ (Kd-)  
+Integridade: Kd+ (Ke-)  
+			
+	+ Impossível obter o par, a partir de uma.
+	+ Publicação de uma das chaves.
+	- Criptografia unidirecional.
+	- Pior desempenho.
+
+Ke != Kd
+
+> Ex: RSA, ElGamal, Diffie-Hellman
+
+### Não permitem decifrar:
+
+Hashs criptográficos.  
+"caminho único".  
+Hashs - digetores.  
+
+Ex: MD3, MD5, SHA.
+
+## Formas de ataque
+
+![image](https://github.com/user-attachments/assets/bfb6e36e-1bf4-4881-a0d9-d7a0ae12b2eb)
+
+Intruso passivo
+
+- Apenas intercepta e obtém a mensagem.
+- A encriptação deve garantir que a mensagem não possa ser facilmente decifrada pelo intruso.
+
+Intruso ativo (alteração)
+
+- Obtém a mensagem e a altera.
+- Isso é mais difícil, pois deve interceptar, decifrar e novamente cifrar a mensagem e, para isso, possuir a chave K.
+
+Intruso ativo (fabricação)
+
+- Tenta criar mensagem falsa.
+- Só conseguirá fazê-lo se possuir a chave K.
+
+## Chaves de encriptação e algoritmos
+
+Pode-se afirmar que a qualidade de um algoritmo criptográfico
+depende muito da chave utilizada
+
+- Os algoritmos criptográficos são conhecidos e têm código aberto.
+
+Classificação de algoritmos pela chave
+
+- Chave simétrica.
+- Chave assimétrica (ou pública).
+
+Classificação dos algoritmos quanto à decifragem
+
+- Permitem a recuperação da mensagem original.
+- Não permitem: são ditos “de caminho único” (one-way functions), ou digestores de mensagens.
+
+## Algortimos de chave simétrica
+
+Uma mesma chave é utilizada para cifrar e decifrar
+
+Algoritmos conhecidos
+
+- Data Encryption Standard (DES).  
+- Triple Data Encryption Standard (3DES).  
+- Advanced Encryption Standard (AES).  
+- International Data Encryption Algorithm (IDEA).  
+
+## Algoritmos de chave assimétrica
+
+Também conhecidos como de chave pública
+
+Par de chaves compatíveis: não existe outra chave que possa ser usada no lugar da original
+
+- Chave privada: mantida em segredo pelo criador do par.  
+- Chave pública: distribuída publicamente.  
+
+Toda mensagem cifrada através da chave pública só pode ser decifrado com a chave privada.
+
+    P = DKd(EKe(P)).  
+    Kd: chave privada.  
+    Ke: chave pública.  
+
+Algoritmos conhecidos
+
+- RSA
+- Diffie-Hellman
+- Elgamal  
+
+## Comparação de algoritmos
+
+Chave simétrica
+
+- Vantagem: simples e de baixo custo computacional.
+- Desvantagens: como enviar a chave única?
+
+Chave assimétrica
+
+- Vantagem: chaves públicas podem ser distribuídas livremente.
+- Desvantagem: altamente custoso para processamento.
+
+## Algoritmos de hashing criptográfico
+
+Conhecidos como digestores
+
+- “Digerem” a mensagem e geram um índice hash com ela.
+
+São algoritmos de caminho único
+
+- É computacionalmente impossível recuperar a mensagem.
+
+Funcionamento
+
+- Dada uma mensagem m, de qualquer tamanho, obtém-se o código h, de tamanho fixo para qualquer tamanho de m, através de uma função H.
+
+h = H(m)
+
+Algoritmos conhecidos
+
+- MD5
+- SHA
+
+## Autenticação
+
+Permite reconhecer a integridade de uma mensagem ou um usuário (aplicação, host, etc.)
+
+- Dada uma mensagem, pode-se produzir uma cifra que é conferida pelo destinatário.
+
+Também utilizada na criação de chaves de sessão
+
+- Tais chaves são utilizadas para a cifragem de mensagens durante o estabelecimento de um canal seguro.
+- Normalmente são descartadas no encerramento do canal.
+
+Três Modelos
+
+- Troca de chaves secretas.
+- Uso de um centro de distribuição de chaves.
+- Uso de criptografia com chave pública.
+
+## Assinaturas digitais
+
+Assinatura digital é um conteúdo cifrado, transmitido junto com a mensagem para sua conferência
+
+- Capaz de garantir autenticidade (integridade).
+
+Uma forma consiste no uso de chaves assimétricas
+
+- Chave privada é utilizada para cifrar, e a pública para decifrar uma mensagem (modelo usado no PGP).
+- Só a chave pública parceira pode decifrar o conteúdo.
+
+
+P = DKd(EKe(P))  
+Kd: chave pública  
+Ke: chave privada  
+
+## Assinaturas digitais com chave pública
+
+Sequência
+
+- Alice encaminha uma mensagem m para Bob e, paralelamente, uma versão assinada digitalmente.
+- A versão assinada envolve a cifragem de m através da chave privada de Alice e com a chave pública de Bob.
+- Bob, ao recebê-la, poderá decifrá-la, primeiramente com sua chave privada, e em seguida, com a chave pública de Alice.
+- O resultado então, pode ser comparado com a mensagem originalmente enviada.
+
+![image](https://github.com/user-attachments/assets/05dc1bc1-1c22-466a-b106-347264d76fcf)
+
+## Assinaturas digitais com hashing criptográfico
+
+Dois problemas com a abordagem anterior
+
+- O tamanho da “assinatura” é muito grande.
+- O algoritmo utilizado (chave pública) é mais lento.
+
+Aplicação de hashing criptográfico
+
+- Alice encaminha a mensagem m para Bob.
+- Paralelamente, processa o cálculo do código hash, através de um message digester.
+- O código é cifrado com a chave privada de Alice, e encaminhado a Bob.
+- Bob recebe a mensagem m e aplica a mesma função hash, gerando um código.
+- Tal código pode então ser comparado ao enviado por Alice, depois que Bob decifrar a assinatura, usando a chave pública de Alice.
+
+![image](https://github.com/user-attachments/assets/3c432258-9690-48b1-a885-0261a6af5845)
+
+## Controle de acesso
+
+Normalmente realizado através de regras explícitas
+
+- Descrevem permissões para usuários, ou grupos de usuários (subjects), para acessos a recursos do sistema (objects).
+
+Monitor de referência
+
+- Provê o acesso/proteção do recurso (objeto), deliberando sobre as regras do controle de acesso.
+
+![image](https://github.com/user-attachments/assets/cb52141a-3e2f-4a70-9ac0-57f221ce5130)
+
+
+## Controle de acesso – operação
+
+Visa fornecer, ou não, a autorização de acesso a um recurso a determinado usuário (ou entidade)
+
+- Cliente emite requisição de acesso r, que representa um sujeito s, ao servidor que centraliza o controle de acesso.
+-  O servidor consulta em sua lista de controle de acesso (ACL – Access Control List) os dados da requisição e do sujeito.
+- Se existir regra que permita o acesso, então é autorizado.
+
+![image](https://github.com/user-attachments/assets/3fa9ed92-acad-4ef1-b268-3937a5f01cb3)
+
+## Controle de acesso - tickets
+
+A liberação do acesso pode ser realizada através de tickets
+
+- Um ticket de acesso assinado digitalmente é fornecido ao cliente, que apresentará ao objeto de destino.
+- O objeto pode então confirmar a validade daquela autorização com o servidor e atender, ou não, o pedido do cliente.
+
+Tal estratégia reduz bastante a demanda pelo servidor para validação do acesso
+
+![image](https://github.com/user-attachments/assets/f2dc4cdb-1182-4400-b5bb-ae317b9345ec)
