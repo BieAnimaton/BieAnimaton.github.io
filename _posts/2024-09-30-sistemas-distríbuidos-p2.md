@@ -527,6 +527,13 @@ Estrutura de um grupo
 
 - Grupo hierárquico: um dos processos é considerado coordenador e fará uma papel diferente dos outros.
 
+## Em que contextos os protocolos TCP e UDP podem ser utilizados, em comunicações inter ou intragrupos de processos? Por quê?
+
+TCP: garante confiabilidade na comunicação entre processos para garantir a ordem de entrega, adequado para comunicações intergrupos onde processos podem estar geograficamente distribuídos e necessita retransmitir pacotes perdidos e controlar o congestionamento.
+
+UDP: adequado para comunicações com baixa latência, alta eficiência, a perda de pacotes é tolerada (confiabilidade baixa) e são usadas em comunicações intragrupo em redes locais ou quando se trata de enviar mensagens para muitos processos de forma rápida com menos overhead.
+
+
 ![image](https://github.com/user-attachments/assets/6153cdeb-591f-4dcc-879e-235ecfc1bd94)
 
 ## Controle de grupo
