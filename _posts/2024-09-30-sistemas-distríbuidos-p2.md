@@ -513,7 +513,7 @@ Falha arbitrária: servidor produz resposta que nunca deveria ser produzida, ger
 
 Redundância de informação: uso de informação extra para recuperar erros em dados (código Hamming).
 
-Redundância de ocorrência: ação pode ser repetida durante a execução de uma transação, caso necessário.
+Redundância de ocorrência: ação pode ser repetida durante a execução de uma transação, caso necessário (TCP).
 
 Redundância física (hardware ou software): adição de equipamento ou processos extras que permitem o sistema suportar o mau funcionamento de algum componente individual.
 
