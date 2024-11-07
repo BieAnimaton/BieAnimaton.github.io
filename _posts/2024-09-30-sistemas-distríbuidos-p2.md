@@ -519,7 +519,9 @@ Redundância física (hardware ou software): adição de equipamento ou processo
 
 ## Agrupamento de processos
 
-Processos idênticos são agrupados e podem receber mensagens multicast - podem ser dinâmicos e um processo pode participar de mais de um grupo.
+Processos idênticos são agrupados e podem receber mensagems multicast (grupos dinâmicos), garantindo organização e replicação.
+
+Podem ser dinâmicos e um processo pode participar de mais de um grupo.
 
 Estrutura de um grupo
 
