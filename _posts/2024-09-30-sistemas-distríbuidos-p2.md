@@ -527,7 +527,7 @@ Estrutura de um grupo
 
 - Grupo plano: processos têm papéis iguais e decisões são tomadas coletivamente.
 
-- Grupo hierárquico: um dos processos é considerado coordenador e fará uma papel diferente dos outros.
+- Grupo hierárquico: um dos processos é considerado coordenador e fará um papel diferente dos outros.
 
 ## Em que contextos os protocolos TCP e UDP podem ser utilizados, em comunicações inter ou intragrupos de processos? Por quê?
 
