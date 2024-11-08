@@ -162,7 +162,7 @@ Ex 3 - Blender:
 
 ### Filmes/Animações
 
-Elementos não interativos -> tendem a ser mais fotorrealismo porque os elementos estão estáticos e sem mudanças, sendo melhores para uma renderização mais realista.
+Elementos não interativos -> tendem a ser mais fotorrealista porque os elementos estão estáticos e sem mudanças, sendo melhores para uma renderização mais realista.
 
 ### Jogos
 
@@ -416,58 +416,76 @@ mais desafiadora em termos computacionais e pode requerer mais esforço para a v
 
 ### Esteroscópia
 
-imersão, apresentação de uma visualização mais cara pois apresenta mais informações (analisar textura, minúcias).
+Garante imersão, pois apresenta uma visualização mais cara graças a quantidade de informações (analisar textura, minúcias).
+
+![image](https://github.com/user-attachments/assets/011b9d21-a343-4047-8e42-d49a9cc10afb)
 
 ### Perspectiva
 
-versão mais barata, utiliza a ideia que os objetos mudam de tamanho conforme a distancia do objeto e centro da camera, representação na tela, enxergando nossa realidade
+Versão mais barata.
 
-não considerando duas imagems (apernas uma)
+Utiliza a ideia que os objetos mudam de tamanho conforme a distancia do objeto e centro da câmera, representação na tela, enxergando nossa realidade
 
-oportunidade de perceber o espaço
+Não considera duas imagems (apernas uma).
+
+Oportunidade de perceber o espaço.
+
+Ex: GTA
+
+![image](https://github.com/user-attachments/assets/2039b6d6-aa93-42e1-a482-5ea82f0147c7)
 
 ### Ortografica
 
-mais barata das três, apresenta a analise bidimensional do ambiente, tudo fica em 2D para olhar com atenção em todos os objetos, de maneira q todos os elementos têm o mesmo peso visual, tudo fica equilibrado sem perspectiva
+Mais barata das três, apresenta a analise bidimensional do ambiente, tudo fica em 2D para olhar com atenção em todos os objetos, de maneira que todos os elementos têm o mesmo peso visual.
 
-principalmente usado em jogo 2D, player enxerga o objeto todo de uma vez
+Tudo fica equilibrado sem perspectiva.
+
+Usado principalmente em jogo 2D, onde o player enxerga o objeto todo de uma vez sem distorções.
+
+Ex: Starder Valley
+
+![image](https://github.com/user-attachments/assets/c783b90d-268f-40b5-9766-edcc48a67920)
+
 
 ## Iluminação local e global
 
 ### Iluminação local
 
-depende apenas da superfície refletida e da fonte de luz.
-sombras básicas e sem reflexões entre ambientes o objetos.
+Depende apenas da superfície refletida e da fonte de luz.
+
+Sombras básicas e sem reflexões entre ambientes o objetos.
 
 ![image](https://github.com/user-attachments/assets/ac615290-eccc-4823-b19b-21e1eebf3473)
 
-menos custoso e não gera muita interferência de luzes, por outro lado, causa a falta de realismo
+Menos custoso e não gera muita interferência de luzes, por outro lado, causa a falta de realismo.
 
 Modelos comuns: Phong e Blinn-Phong.
 
 ### Iluminação global
 
-cálculo e a simulação de como a luz interage com todos os objetos em um ambiente virtual, levando em consideração todas as suas interações e reflexões.
+Cálculo e simulação de como a luz interage com todos os objetos em um ambiente virtual, levando em consideração todas as suas interações e reflexões.
 
-simula iluminação indireta
+Simula iluminação indireta
 
 ![image](https://github.com/user-attachments/assets/1e5ad94f-b729-4978-975d-0a0872a8eef7)
 
+Pssiveis interações:  
 
-possiveis interações:
-reflexões, refrações e oclusão ambiental.
+- Reflexões,
+- Refrações e
+- Oclusão ambiental.
 
-comportamentos:
-- reflexão Difusa: luz espalhada em todas as direções, dando cor aos objetos.
-- reflexão Especular: luz refletida em um único ângulo, criando brilhos.
-- refração: mudança de direção da luz ao passar por diferentes meios.
-- oclusão Ambiental: ausência de luz em áreas inacessíveis.
+Comportamentos:
+- Reflexão Difusa: luz espalhada em todas as direções, dando cor aos objetos.
+- Reflexão Especular: luz refletida em um único ângulo, criando brilhos.
+- Refração: mudança de direção da luz ao passar por diferentes meios.
+- Oclusão Ambiental: ausência de luz em áreas inacessíveis.
 
-algoritmos usados:
+Algoritmos usados:
 
-- ray Tracing: simula o caminho da luz através do ambiente.
-- radiosidade: calcula a troca de energia radiante entre as superfícies.
-- photon Mapping: combina elementos de Ray Tracing e Radiosidade.
+- Ray Tracing: simula o caminho da luz através do ambiente.
+- Radiosidade: calcula a troca de energia radiante entre as superfícies.
+- Photon Mapping: combina elementos de Ray Tracing e Radiosidade.
 
 Modelos avançados: Ray Tracing, Path Tracing.
 
