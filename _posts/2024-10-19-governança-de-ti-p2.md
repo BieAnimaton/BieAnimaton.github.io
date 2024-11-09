@@ -201,3 +201,63 @@ Uma boa gestão de custos proporciona um maior valor agregado aos negócios e en
 - Estabelece indicadores de desempenho.
 - Criar um modelo de governança.
 - Treinamento e conscientização.
+
+# Aula VIII
+
+## COBIT
+
+Control Objectives for Information and Related Technologies.
+
+É um framework criado pela ISACA para ajudar as organizações a gerenciar e governar suas tecnologias da informação.
+
+Fornece um conjunto de práticas, ferramentas e modelos para garantir que a TI esteja alinhada com os objetivos de negócios, maximizando o valor e minimizando os riscos (internos e externos).
+
+## Resuma COBIT em poucas palavras
+
+COBIT é um conjunto de práticas que vai alinhar a TI aos objetivos de negócio, maximizar valor e minizar riscos.
+
+## Evolução do COBIT
+
+![image](https://github.com/user-attachments/assets/1709b274-735f-4f1b-af2f-007cfa915191)
+
+## COBIT 4.1
+
+- Foco no Negócio: orientado para atender às necessidades de negócios, garantindo que a TI suporte os objetivos estratégicos da organização.
+- Orientação a Processos: conjunto de processos de TI que são gerenciados para alcançar os objetivos de controle.
+- Baseado em Controles: objetivos de controle para cada processo de TI, ajudando a medir e gerenciar o desempenho.
+- Direcionado por Métricas: usa indicadores de desempenho para monitorar e avaliar a eficácia dos processos de TI.
+
+## Estrutura do COBIT 4.1
+
+Organiza os processos de TI em 4 domínios.
+
+- Planejar e Organizar (PO): planejamento estratégico e na organização da TI.
+- Adquirir e Implementar (AI): aquisição e implementação de soluções de TI.
+- Entregar e Suportar (DS): entrega de serviços de TI e o suporte aos usuários.
+- Monitorar e Avaliar (ME): monitoração e avaliação do desempenho da TI e a conformidade com os requisitos regulatórios.
+
+## Benefícios do COBIT 4.1
+
+- Melhoria da Governança de TI: ajuda a implementar boas práticas de governança de TI.
+- Alinhamento com os Objetivos de Negócio: garante que a TI esteja alinhada com os objetivos estratégicos da organização.
+- Redução de Riscos: identifica e gerencia riscos associados aos processos de TI.
+- Compatibilidade com Outros Frameworks: pode ser integrado com outros frameworks e padrões, como ITIL e ISO/IEC 27001.
+
+## Princípios do COBIT 5
+
+Foco na integração de governançao e gestão de TI.
+
+- Atender as partes interessadas: garante que os objetivos de TI estejam alinhados com os objetivos da empresa.
+- Cobrir a organização de ponta a ponta: junta a governança de TI em toda a organização.
+- Aplicar um único framework integrado: usa um modelo unificado para a governança e gestão de TI.
+- Permitir uma abordagem holística: considera todos os fatores que podem influenciar a governança e gestão de TI.
+- Separar governança de gestão: define claramente as responsabilidades de governança e gestão.
+
+## COBIT 2019
+
+- Foco: maior flexibilidade e adaptação às necessidades específicas das organizações.
+- Princípios: 6 princípios de governança, com a adição de “Governança do Sistema”.
+- Processos: 40 processos (domínios), com novos processos adicionados e terminologias atualizadas (por exemplo, “Managed Data” e “Managed Projects”).
+- Modelo de Maturidade: baseado no CMMI, com níveis de capacidade e maturidade de 0 a 5.
+- Fatores de Design: introdução de fatores de design que influenciam a criação de um sistema de governança personalizado.
+- Modelo Open-Source: permite feedback contínuo da comunidade global para futuras atualizações.
