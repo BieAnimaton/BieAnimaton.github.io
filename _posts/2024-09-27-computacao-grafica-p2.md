@@ -216,7 +216,7 @@ Ou
 
 Também chamado de pipeline de renderização, é o processo de vários estágios em que a saída de um estágio é a entrada do próximo na sequência.
 
-O pipeline tradicional de visualização inclui etapas como modelagem, transformação, iluminação, projeção e rasterização, que, em conjunto, convertem dados geométricos e de cena em uma imagem final exibida na tela.
+O pipeline tradicional de visualização converte dados geométricos e de cena em uma imagem final exibida na tela.
 
 ![image](https://github.com/user-attachments/assets/2f03ff6f-a4d4-4717-aed1-288c76850aad)
 
@@ -300,7 +300,7 @@ Síntese de imagem -> pipeline de visualização -> ray casting / tay tracing.
 
 - Etapa onde a imagem do campo de visão da cãmera (FOV) será renderizada e apresentada ao espectador.
 
-- Determina quais objetos da cena são visíveis a partir de uma câmera, projetando "raios" da câmera para identificar interseções com objetos.
+- Determina quais objetos da cena são visíveis a partir de uma câmera, projetando "raios" da câmera para identificar interseções com objetos. Se este raio tocar em alguma superfície, o pixel no local (tela) receberá a mesma cor do objeto - gera fragmentos de imagem e representa o plano de visualização.
 
 - Limita a quantidade de processamento do número de pixels da imagem (objetos complexos), tornando a renderização viável a computação.
 
