@@ -356,27 +356,29 @@ Apresentação grupos.
 
 ## Modelo geométrico
 
-representação geométrica dos objetos tridimensionais - permite que objetos e cenários sejam representados digitalmente, manipulados e visualizados de diferentes ângulos e perspectivas.
+Representação geométrica dos objetos tridimensionais.
 
-diferentes formas de representar a estrutura e a superfície de objetos no espaço tridimensional
+Permite que objetos e cenários sejam representados digitalmente, manipulados e visualizados de diferentes ângulos e perspectivas.
+
+Diferentes formas de representar a estrutura e a superfície de objetos no espaço tridimensional.
 
 ### Modelos baseados em poligonos
 
-compostas por polígonos, comumente triângulos, que se conectam por vértices e arestas
+Polígonos que se conectam por vértices e arestas.
 
-permite a criação de formas complexas de maneira eficiente, possibilitando que artistas e desenvolvedores manipulem e animem objetos em ambientes tridimensionais
+Permite a criação de formas complexas de maneira eficiente, possibilitando que artistas e desenvolvedores manipulem e animem objetos em ambientes tridimensionais.
 
-necessidade de otimização para garantir o desempenho em tempo real
+Necessidade de otimização para garantir o desempenho em tempo real.
 
 ![image](https://github.com/user-attachments/assets/d02ea4ae-974b-4bb2-9fcb-90168cd0563c)
 
 ### Modelos baseados em malhas
 
-tipo de polígono tridimensional que utiliza uma rede de vértices, arestas e faces para formar a superfície de um objeto.
+Tipo de polígono tridimensional que utiliza uma rede de vértices, arestas e faces para formar a superfície de um objeto.
 
-composta por polígonos conectados, geralmente triângulos, que definem a forma e a topologia do modelo -> criação de geometria complexas
+Polígonos conectados que definem a forma e a topologia do modelo -> criação de geometria complexas.
 
-necessidade de controle detalhado sobre a geometria e a otimização para garantir uma performance adequada em tempo real.
+Necessita controle detalhado sobre a geometria e a otimização para garantir uma performance adequada em tempo real.
 
 A qualidade da malha pode impactar diretamente a aparência do modelo em renderizações e animações, exigindo que artistas e desenvolvedores equilibrem complexidade geométrica e eficiência.
 
@@ -384,13 +386,13 @@ A qualidade da malha pode impactar diretamente a aparência do modelo em renderi
 
 ### Modelos baseados em voxels
 
-voxels = grade de cubos (ou "voxels") para criar objetos e ambientes, um valor em uma grade tridimensional, funcionando como o equivalente 3D de um pixel
+Voxels = grade de cubos (ou "voxels") para criar objetos e ambientes, um valor em uma grade tridimensional, funcionando como o equivalente 3D de um pixel.
 
-modelagem de formas complexas e detalhadas, sendo especialmente eficaz em contextos onde a volumetria é importante, como em simulações médicas e jogos de construção.
+Modelagem de formas complexas e detalhadas, eficaz em contextos onde a volumetria é importante, como em simulações médicas e jogos de construção.
 
-voxel é sua simplicidade na manipulação e edição, permitindo operações como subdivisão e transformação de maneira intuitiva -> exige mais recursos computacionais
+Voxel é sua simplicidade na manipulação e edição, permitindo operações como subdivisão e transformação de maneira intuitiva -> exige mais recursos computacionais
 
-uma aparência menos suave em comparação com malhas
+Aparência menos suave em comparação com malhas
 
 ![image](https://github.com/user-attachments/assets/10ceaa04-f075-473d-a88a-81aa5ca6b530)
 
