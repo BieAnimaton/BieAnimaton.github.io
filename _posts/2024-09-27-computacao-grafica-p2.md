@@ -276,12 +276,6 @@ São APIs (Application Programming Interfaces) de desenvolvimento que implementa
 
 OpenGL é a versão multiplataforma e Direct3D é específica para Windows.
 
-## O que o estágio de digitalização faz?
-
-No pipeline, p estágio de transformações geométricas processa dados definidos no espaço contínuo para gerar dados ainda no espaço contínuo.
-
-Também, converte o espaço contínuo para o espaço discreto e envolve cálculos geométricos
-
 ## Defina o estágio de renderização
 
 Fase do pipeline onde os dados processados da cena (como geometria, iluminação e textura) são convertidos em pixels para formar a imagem final exibida na tela.
