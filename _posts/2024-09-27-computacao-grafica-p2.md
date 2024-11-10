@@ -477,7 +477,9 @@ Simula iluminação indireta.
 
 ![image](https://github.com/user-attachments/assets/1e5ad94f-b729-4978-975d-0a0872a8eef7)
 
-Pssiveis interações:  
+![image](https://github.com/user-attachments/assets/b713a71a-0099-48fb-a41d-4e73ee85a633)
+
+Possíveis interações:  
 
 - Reflexões,
 - Refrações e
