@@ -194,7 +194,7 @@ Os filmes também vão se inspiram nos melhores algoritmos de jogos.
 
 - Descrição: cria uma representação detalhada da imagem baseada no modelo matemático.
 
-- Descritor de imagem: conjunto de dados que caracterizam a imagem, podendo ser transformado ou manipulado.
+- Descritor de imagem: conjunto de dados que caracteriza a imagem, podendo ser transformado ou manipulado.
 
 - Transformações: aplicação de operações geométricas (como rotação, translação, escalonamento) sobre o descritor de imagem.
 
