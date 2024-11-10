@@ -202,7 +202,7 @@ Os filmes também vão se inspiram nos melhores algoritmos de jogos.
 
 - Arquivo Descritor de Imagem: guarda o descritor de imagem serializado em um arquivo que só pode ser aberto pelor editor (Blender, Photoshop, Maya...) - tem acesso aos objeto e as alterações feitas quando aberto.
 
-- Digitalização: ou renderização (diferente da digitalização já estudada), converte o descritor de imagem em dados digitais que podem ser processados para gerar uma imagem final.
+- Digitalização: ou renderização (diferente da digitalização já estudada), converte o descritor de imagem em dados digitais que podem ser processados para gerar uma imagem final (é o pipeline).
 
 - Imagem Digital: representação final em formato digital pronta para exibição.
 
