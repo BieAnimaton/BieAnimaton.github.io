@@ -308,6 +308,8 @@ Síntese de imagem -> pipeline de visualização -> ray casting / tay tracing.
 
 - Limita a quantidade de processamento do número de pixels da imagem (objetos complexos), tornando a renderização viável a computação.
 
+![image](https://github.com/user-attachments/assets/679d0101-fdcc-4c29-8bf3-0ec4c1bc8758)
+
 > Não interpreta objetos transparentes.
 
 **PROBLEMA**: caso a imagem seja bem detalhada (muito realista), o tamanho de armazenamento vai ser bem grande.
@@ -347,8 +349,6 @@ Ray Tracing: Considera as fontes de luz com os pixels vizinhos, e com isso, há 
 ![raytracing1](https://www.pixelsham.com/wp-content/uploads/2019/10/ray_tracing_2.jpg)
 
 ![raytracing2](https://www.pixelsham.com/wp-content/uploads/2019/10/rasterization-vs-raytracing-l.jpg)
-
-![raytracing3](https://i.ytimg.com/vi/pp0T4OJNLlQ/mqdefault.jpg)
 
 # Aula 9
 
@@ -494,6 +494,8 @@ Algoritmos usados:
 - Ray Tracing: simula o caminho da luz através do ambiente.
 - Radiosidade: calcula a troca de energia radiante entre as superfícies.
 - Photon Mapping: combina elementos de Ray Tracing e Radiosidade.
+
+![image](https://github.com/user-attachments/assets/c1321b53-1b39-422c-b943-181c4eb48b38)
 
 Modelos avançados: Ray Tracing, Path Tracing.
 
