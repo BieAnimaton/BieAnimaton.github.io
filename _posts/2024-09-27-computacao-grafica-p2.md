@@ -190,7 +190,7 @@ Os filmes também vão se inspiram nos melhores algoritmos de jogos.
 
 ![image](https://github.com/user-attachments/assets/f60bc24d-c1f9-437d-85ed-ad8a220d9158)
 
-- Modelo matemático: descreve o mundo real -> pode seguir para 'descrição' ou para 'digitalização'.  
+- Modelo matemático: descreve o mundo real.
 
 - Descrição: cria uma representação detalhada da imagem baseada no modelo matemático.
 
@@ -198,19 +198,17 @@ Os filmes também vão se inspiram nos melhores algoritmos de jogos.
 
 - Transformações: aplicação de operações geométricas (como rotação, translação, escalonamento) sobre o descritor de imagem.
 
-Saindo dos descritores, pode seguir dois caminhos:  
-
 - Serialização: conversão do descritor de imagem em um formato que possa ser armazenado ou transmitido.
 
 - Arquivo Descritor de Imagem: guarda o descritor de imagem serializado em um arquivo que só pode ser aberto pelor editor (Blender, Photoshop, Maya...) - tem acesso aos objeto e as alterações feitas quando aberto.
-
-Ou
 
 - Digitalização: ou renderização (diferente da digitalização já estudada), converte o descritor de imagem em dados digitais que podem ser processados para gerar uma imagem final.
 
 - Imagem Digital: representação final em formato digital pronta para exibição.
 
 - Exibição: mostra a imagem digital na Tela
+
+- Tela: Periférico conectado à GPU onde exibe a imagem.
 
 ## O que é Pipeline Tradicional de Visualização?
 
@@ -222,9 +220,7 @@ O pipeline tradicional de visualização converte dados geométricos e de cena e
 
 ## Explique os itens da aplicação
 
-A aplicação representa a interface inicial, onde o usuário fornece entrada e define os parâmetros de iluminação, ponto de vista, e características das malhas poligonais e texturas.
-
-Modelo matemático composto por 5 elementos:
+A aplicação representa a interface inicial, onde o usuário fornece:
 
 - Dados de Iluminação: informações sobre as fontes de luz, usadas para calcular como a iluminação afetará as cores e sombras na cena.
 
@@ -260,11 +256,17 @@ Combina os fragmentos e realiza ajustes finais para criar a imagem completa, lev
 
 A realimentação em várias etapas permite ajustes em tempo real, atualizando os dados com base em mudanças ou entrada do usuário.
 
+## Onde o pipeline fica no diagrama de síntese?
+
+![image](https://github.com/user-attachments/assets/48ea9981-1f6b-4acf-a585-996618415e5c)
+
 ## Para que serve a entrada de usuário no pipeline?
 
 Permite a interação com o modelo 3D, modificando cenas ou alterando a posição e direcionamento de câmeras virtuais (pontos de vistas).
 
 A entrada de usuário junto com a realimentação de informações de estágios do pipeline permite a criação de animações interativas.
+
+Ex: rotacionar a câmera para visualizar o objeto 3D no Blender enquanto renderiza o objeto na tela.
 
 ## O que OpenGL e Direct3D?
 
