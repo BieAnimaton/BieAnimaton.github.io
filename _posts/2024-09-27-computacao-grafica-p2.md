@@ -252,7 +252,7 @@ Leva em consideração a existência de oclusões.
 
 Combina os fragmentos e realiza ajustes finais para criar a imagem completa, levando em consideração sobreposição e opacidade.
 
-### Tela:
+### Tela
 
 Periférico conectado à GPU onde exibe a imagem.
 
