@@ -253,6 +253,10 @@ Foco na integração de governançao e gestão de TI.
 - Permitir uma abordagem holística: considera todos os fatores que podem influenciar a governança e gestão de TI.
 - Separar governança de gestão: define claramente as responsabilidades de governança e gestão.
 
+## Diferença do COBIT 4.1 para o 5.
+
+Enquanto o COBIT 4.1 é mais focado em atender necessidades do negócio, orientar processos para alcançar objetivos, medir e gerenciar o desempenho e direcionado por métricas, o COBIT 5 atende todas as partes interessadas para cobrir a organização de ponta a ponta, aplicar um único framework integrado (governança e gestã ode TI), permitir uma abordagem holística e separar governança de gestão.
+
 ## COBIT 2019
 
 - Foco: maior flexibilidade e adaptação às necessidades específicas das organizações.
@@ -261,3 +265,7 @@ Foco na integração de governançao e gestão de TI.
 - Modelo de Maturidade: baseado no CMMI, com níveis de capacidade e maturidade de 0 a 5.
 - Fatores de Design: introdução de fatores de design que influenciam a criação de um sistema de governança personalizado.
 - Modelo Open-Source: permite feedback contínuo da comunidade global para futuras atualizações.
+
+## Vantagens do COBIT 2019 comparado aos outros.
+
+Garante maior flexibilidade e adaptação às necessidades específicas da organização, 6 princípios de governança, 40 processos chamados de domínios, modelo de maturidade baseado no CMMI, fatores de design (sistema de governança personalizado) e modelo open-source.
