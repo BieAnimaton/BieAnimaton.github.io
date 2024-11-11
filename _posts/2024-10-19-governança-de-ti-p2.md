@@ -208,19 +208,19 @@ Uma boa gestão de custos proporciona um maior valor agregado aos negócios e en
 
 Control Objectives for Information and Related Technologies.
 
-É um framework criado pela ISACA para ajudar as organizações a gerenciar e governar suas tecnologias da informação.
+Framework criado pela ISACA para ajudar as organizações a gerenciar e governar suas tecnologias da informação.
 
-Fornece um conjunto de práticas, ferramentas e modelos para garantir que a TI esteja alinhada com os objetivos de negócios, maximizando o valor e minimizando os riscos (internos e externos).
+Conjunto de práticas, ferramentas e modelos para garantir que a TI esteja alinhada com os objetivos de negócios, maximizando o valor e minimizando os riscos (internos e externos).
 
 ## Resuma COBIT em poucas palavras
 
-COBIT é um conjunto de práticas que vai alinhar a TI aos objetivos de negócio, maximizar valor e minizar riscos.
+COBIT é um framework com boas práticas que visa alinhar os serviços de TI aos negócios, melhorar o valor da empresa e diminuir os riscos.
 
 ## Evolução do COBIT
 
 ![image](https://github.com/user-attachments/assets/1709b274-735f-4f1b-af2f-007cfa915191)
 
-## COBIT 4.1
+## Princípios do COBIT 4.1
 
 - Foco no Negócio: orientado para atender às necessidades de negócios, garantindo que a TI suporte os objetivos estratégicos da organização.
 - Orientação a Processos: conjunto de processos de TI que são gerenciados para alcançar os objetivos de controle.
@@ -231,10 +231,10 @@ COBIT é um conjunto de práticas que vai alinhar a TI aos objetivos de negócio
 
 Organiza os processos de TI em 4 domínios.
 
-- Planejar e Organizar (PO): planejamento estratégico e na organização da TI.
+- Planejar e Organizar (PO): planejamento e organização de TI estratégicos.
 - Adquirir e Implementar (AI): aquisição e implementação de soluções de TI.
 - Entregar e Suportar (DS): entrega de serviços de TI e o suporte aos usuários.
-- Monitorar e Avaliar (ME): monitoração e avaliação do desempenho da TI e a conformidade com os requisitos regulatórios.
+- Monitorar e Avaliar (ME): monitoramento do desempenho de TI e conformidade com requisitos.
 
 ## Benefícios do COBIT 4.1
 
