@@ -342,6 +342,14 @@ V = alfabeto da pilha
 
 ![image](https://github.com/user-attachments/assets/ba09d304-3b26-4e28-9837-cb9b0eb8fe3d)
 
+## Exemplo 2
+
+![image](https://github.com/user-attachments/assets/f3a7a2bc-35b8-4db2-8f2b-0a5d3517c756)
+
+![image](https://github.com/user-attachments/assets/20a469d9-3d84-4389-86fb-2c49b198eade)
+
+![image](https://github.com/user-attachments/assets/6e885c76-79bf-444c-a5ed-ce1509bb18f5)
+
 # Aula 10
 
 ## Exercício
@@ -674,3 +682,5 @@ First(B) = {λ}
 ## Exercício
 
 ![image](https://github.com/user-attachments/assets/50a55545-7afc-4f9b-b21b-0e7a0ef257cf)
+
+...
