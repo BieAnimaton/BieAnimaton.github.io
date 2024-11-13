@@ -677,10 +677,149 @@ First(B) = {λ}
 
 ![image](https://github.com/user-attachments/assets/1bed62e8-9100-46ec-abce-2053fa72a36e)
 
-...
+S -> cAa  
+A -> cB | B  
+B -> bcB | λ  
+
+### Tabela inicial
+
+S = ∅  
+A = ∅  
+B = ∅  
+
+First(B) = First(bcB) U First(λ)  
+First(B) = {b} U {λ}  
+First(B) = {b,λ}  
+
+First(A) = First(cB) U First(B)  
+First(A) = {c} U {b,λ}  
+First(A) = {c,b,λ}  
+
+First(S) = First(cAa)  
+First(S) = {c}  
+
+### Nova tabela
+
+S = {c}  
+A = {b,c,λ}  
+B = {b,λ}  
 
 ## Exercício
 
 ![image](https://github.com/user-attachments/assets/50a55545-7afc-4f9b-b21b-0e7a0ef257cf)
 
-...
+S -> aS | Ab  
+A -> XYZ | λ  
+X -> cS | λ  
+Y -> dS | λ
+Z -> eS  
+
+### Tabela inicial
+
+S = ∅  
+A = ∅  
+X = ∅  
+Y = ∅  
+Z = ∅  
+
+First(Z) = First(eS)  
+First(Z) = {e}  
+
+First(Y) = First(dS) U First(λ)  
+First(Y) = {d} U {λ}  
+First(Y) = {d,λ}  
+
+First(X) = First(cS) U First(λ)  
+First(X) = {c} U {λ}  
+First(X) = {c,λ}  
+
+First(A) = First(XYZ) U First(λ)  
+First(A) = First(X) \ {λ} U First(Y) \ {λ} U First(Z) U First(λ)  
+First(A) = {c} U {d} U {e} U {λ}  
+First(A) = {c,d,e,λ}  
+
+First(S) = First(aS) U First(Ab)  
+First(S) = {a} U First(A) \ {λ} U First(b)  
+First(S) = {a} U {c,d,e} U {b}  
+First(S) = {a,b,c,d,e}  
+
+### Nova tabela
+
+First(S) = {a,b,c,d,e}  
+First(A) = {c,d,e,λ}  
+First(X) = {c,λ}  
+First(Y) = {d,λ}  
+First(Z) = {e}  
+
+## Aula 12
+
+Conjunto Follow.  
+Criação da tabela preditiva.  
+
+## FOLLOW - Regras
+
+![image](https://github.com/user-attachments/assets/21b3a695-ea6d-4fdd-a49a-1286a34f7410)
+
+![image](https://github.com/user-attachments/assets/cff75ebe-1c40-46d0-a30d-cb679ecc6992)
+
+![image](https://github.com/user-attachments/assets/64a2d23b-e3da-42e6-b799-87cefc64b053)
+
+Como o 'S' é o símbolo inicial, Follow(S) recebe $ e deixamos o resto por último.  
+
+Follow(A) é 'b' pois em 'S' temos 'A' com 'b' em seguida (lado direito).  
+
+Follow(Z) é 'b' pois eu tenho 'Z' em 'XYZ', como não tem nada do lado direito, pega o mesmo valor de FOLLOW(A).  
+
+Follow(Y) é 'e' pois o FIRST(Z) é 'e' (pegou o FIRST pois o 'Z' está no lado direito).  
+
+Follow(X) é 'd,e' pois temos 'Y' e 'Z' no lado direito e o First de 'Y' e 'Z' é 'd,λ' e 'e' respectivamente (só calculou o First de Z pois Y tem palavra vazia).
+
+Agora, vamos recalcular o Follow(S), que é '$' com a soma do Follow(X), Follow(Y) e Follow(Z) (pois S não tem nada do lado direito então pega X, Y e Z),resultando em '$,b,d,e'.
+
+## Exercício ENADE
+
+![image](https://github.com/user-attachments/assets/cc7e08d3-df20-4426-b753-8e50415a0451)
+
+![image](https://github.com/user-attachments/assets/00d60cc4-837b-448c-b033-e55b93ee7402)
+
+## Tabela preditiva M(X,t)
+
+![image](https://github.com/user-attachments/assets/f75235a4-3af0-4f98-822a-3454372c62b6)
+
+![image](https://github.com/user-attachments/assets/148a3789-2d30-41e6-8d5b-c8ef261d4fc3)
+
+## Exemplo 1
+
+![image](https://github.com/user-attachments/assets/62bc2379-c0f0-4a0f-b1b1-4e2f078ebe29)
+
+![image](https://github.com/user-attachments/assets/415fe353-8829-4316-bb41-f6aa034ede5d)
+
+![image](https://github.com/user-attachments/assets/3b0ad56e-fe29-459a-9d39-1629a0cfef10)
+
+![image](https://github.com/user-attachments/assets/9b2e6c90-efb9-4f66-90ff-0656ea2aa6d7)
+
+![image](https://github.com/user-attachments/assets/0ade5d69-51ee-4998-94b3-dc441dbf1574)
+
+![image](https://github.com/user-attachments/assets/25c3343f-99b9-4e25-8f70-2a5cf3d245d2)
+
+![image](https://github.com/user-attachments/assets/85da962a-7766-4170-9df8-bf89e01516e9)
+
+![image](https://github.com/user-attachments/assets/dde50697-9691-4d92-b811-80fc200378fc)
+
+## Exercício 1
+
+![image](https://github.com/user-attachments/assets/d4573c30-504a-4e8b-bd14-757f34fbdc4b)
+
+![image](https://github.com/user-attachments/assets/7963ff01-c739-42c7-a9a7-537af0fd8287)
+
+![image](https://github.com/user-attachments/assets/e4a89fa8-c66d-46a2-92df-4888710f1da0)
+
+## Exercício 2
+
+![image](https://github.com/user-attachments/assets/f8b8d244-8768-4a1c-9c9d-a8e9c813b02a)
+
+![image](https://github.com/user-attachments/assets/7b253809-7a95-4d0d-8a43-88a91df669d4)
+
+## Exercícios para treinar
+
+![image](https://github.com/user-attachments/assets/3f510735-e6eb-44f5-b4f1-6c9c28faca0c)
