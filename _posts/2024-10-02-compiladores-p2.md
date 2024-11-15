@@ -762,9 +762,29 @@ Criação da tabela preditiva.
 
 ![image](https://github.com/user-attachments/assets/cff75ebe-1c40-46d0-a30d-cb679ecc6992)
 
+follow(S) = {$}  
+
+follow(A) = First(b) \ {λ}  
+follow(A) = {b}  
+
+follow(Z) = follow(A)  
+follow(Z) = {b}  
+
+follow(Y) = first(Z)  
+follow(Y) = {e}  
+
+follow(X) = first(Y) U first(Z)  
+follow(x) = {d,λ} U {e}  
+follow(x) = {d,e}  
+
+Recalculando S
+
+follow(S) = follow(X) U follow(Y) U follow(Z)  
+follow(S) = {$,b,d,e}  
+
 ![image](https://github.com/user-attachments/assets/64a2d23b-e3da-42e6-b799-87cefc64b053)
 
-Como o 'S' é o símbolo inicial, Follow(S) recebe $ e deixamos o resto por último.  
+Como o 'S' é o símbolo inicial, Follow(S) recebe '$' e deixamos o resto por último.  
 
 Follow(A) é 'b' pois em 'S' temos 'A' com 'b' em seguida (lado direito).  
 
@@ -792,23 +812,85 @@ Agora, vamos recalcular o Follow(S), que é '$' com a soma do Follow(X), Follow(
 
 ![image](https://github.com/user-attachments/assets/62bc2379-c0f0-4a0f-b1b1-4e2f078ebe29)
 
+---
+
+Linha 'S'.
+
+First(cAa) = {c}, por isso a localização em 'S', 'c'.
+
 ![image](https://github.com/user-attachments/assets/415fe353-8829-4316-bb41-f6aa034ede5d)
+
+---
+
+Linha 'A'.
+
+First(B) = {b,λ}, por isso a localização em 'A', 'b'.
 
 ![image](https://github.com/user-attachments/assets/3b0ad56e-fe29-459a-9d39-1629a0cfef10)
 
+---
+
+Como First(B) tem {λ}, analisamos o Follow(B) = {a}, ou seja, também coloca em 'A', 'a'.
+
 ![image](https://github.com/user-attachments/assets/9b2e6c90-efb9-4f66-90ff-0656ea2aa6d7)
+
+---
+
+First(cB) = {c}, por isso a localização em 'A', 'c'.
 
 ![image](https://github.com/user-attachments/assets/0ade5d69-51ee-4998-94b3-dc441dbf1574)
 
+---
+
+Linha 'B'
+
+First(λ) = {λ}, analisamos o Follow(B) = {a}, por isso a localização em 'B', 'a'.
+
 ![image](https://github.com/user-attachments/assets/25c3343f-99b9-4e25-8f70-2a5cf3d245d2)
 
+---
+
+First(bcB) = {b}, por isso a localização em 'B', 'b'.
+
 ![image](https://github.com/user-attachments/assets/85da962a-7766-4170-9df8-bf89e01516e9)
+
+---
+
+O resto é erro.
 
 ![image](https://github.com/user-attachments/assets/dde50697-9691-4d92-b811-80fc200378fc)
 
 ## Exercício 1
 
 ![image](https://github.com/user-attachments/assets/d4573c30-504a-4e8b-bd14-757f34fbdc4b)
+
+---
+FIRST
+
+First(A) = First(λ)  
+First(A) = {λ}  
+
+First(B) = First(λ)  
+First(B) = {λ}  
+
+First(S) = First(AaAb) U First(Bb)  
+First(S) = First(AaAb) \ {λ} U First(Bb) \ {λ}  
+First(S) = {a} U {b}
+First(S) = {a,b}
+
+FOLLOW
+
+Follow(S) = {$}
+
+Não existe 'S' em nenhuma outra parte, então fica assim.
+
+Follow(A) = First(aAb) \ {λ} U First(b) \ {λ}  
+Follow(A) = {a} U {b}  
+Follow(A) = {a,b}  
+
+Follow(B) = First(b)  
+Follow(B) = {b} \ {λ}  
+Follow(B) = {b}  
 
 ![image](https://github.com/user-attachments/assets/7963ff01-c739-42c7-a9a7-537af0fd8287)
 
@@ -818,8 +900,48 @@ Agora, vamos recalcular o Follow(S), que é '$' com a soma do Follow(X), Follow(
 
 ![image](https://github.com/user-attachments/assets/f8b8d244-8768-4a1c-9c9d-a8e9c813b02a)
 
+---
+
+Linha Z
+
+First(eS) é {s}, logo, 'Z -> eS' vai em 'Z,e'
+
+---
+
+Linha Y
+
+First(dS) é {d}, logo, 'Y -> dS' vai em 'Y,d'
+
+Como tem {λ}, devemos seguir Follow(Y) que é {e}, , logo, 'Y -> λ' vai em 'Y,e'
+
+---
+
+Linha X
+
+First(cS) é {c}, logo, 'X -> cS' vai em 'X,c'
+
+Como tem {λ}, devemos seguir Follow(X) que é {d,e}, , logo, 'X -> λ' vai em 'X,d' e 'X,e'
+
+---
+
+Linha A
+
+First(XYZ) é {c,d,e}, logo, 'A -> XYZ' vai em 'A,c', 'A,d' e 'A,e'
+
+Como tem {λ}, devemos seguir Follow(A) que é {b}, , logo, 'A -> λ' vai em 'A,b'
+
+---
+
+Linha S
+
+First(aS) é {a}, logo, 'S -> aS' vai em 'S,a'
+
+First(Ab) é {c,d,e,λ}, e como possui {λ}, calculamos o {b} também, então 'S -> Ab' vai em 'S,b', 'S,c', 'S,d', 'S,e'
+
 ![image](https://github.com/user-attachments/assets/7b253809-7a95-4d0d-8a43-88a91df669d4)
 
 ## Exercícios para treinar
 
 ![image](https://github.com/user-attachments/assets/3f510735-e6eb-44f5-b4f1-6c9c28faca0c)
+
+...
