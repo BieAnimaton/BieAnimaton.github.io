@@ -249,8 +249,8 @@ Solução: Começar com uma implementação em fases, priorizando áreas crític
 ## Quando devo usar COBIT e quando devo usar ISO/IEC 38500?
 
 
-Usar COBIT: Quando precisa-se de uma abordagem mais detalhada e técnica para governança e gestão de TI, com foco em controle e mensuração de desempenho.
+Usar COBIT: uma abordagem mais detalhada e técnica para governança e gestão de TI, com foco em controle e mensuração de desempenho.
 
-Usar ISO/IEC 38500: Quando deseja-se estabelecer princípios de GTI que envolvem a alta administração e precisam de uma abordagem mais estratégica e menos técnica.
+Usar ISO/IEC 38500: estabelecer princípios de GTI que envolvem a alta administração e precisam de uma abordagem mais estratégica e menos técnica.
 
 É importante considerar as necessidades específicas de cada organização, seu nível de maturidade em GTI e os recursos disponíveis ao escolher entre COBIT e ISO/IEC 38500.
