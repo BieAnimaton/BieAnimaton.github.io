@@ -124,17 +124,17 @@ Integridade: as alterações na informação mantida por um sistema só podem se
 
 ## Liste os tipos de criptografia. O que assimetria e simetria? como ocorre a autenticação? o que é assinatura digital?
 
-Assimétricas: Algoritmo de chaves públicas possui duas chaves: pública (pode ser distribuida em públio) e privada (fica guardada em segredo com o dono). O texto limpo é criptografado com a chave pública pelo destino e só pode ser descriptografado com a chave privada do mestre, ou vice-versa. As chaves públicas podem ser distribuídas livremente, porém seu algoritmo apresenta alto custo computacional. Ex: RSA, Diffie-Helman, Elgamal.
+Assimétricas: possui duas chaves, pública (pode ser distribuida em públio) e privada (fica guardada em segredo com o dono). O texto é criptografado com a chave pública pelo destino e só pode ser descriptografado com a chave privada do mestre, ou vice-versa. Podem ser distribuídas livremente e seu algoritmo apresenta alto custo computacional. Ex: RSA, Diffie-Helman, Elgamal.
 	
-Simétricas: Algoritmo de chave simétrica só possui uma chave, usada tanto para criptografar quanto descriptografar. O texto limpo é criptografado com uma chave qualquer e pode ser descriptografado com a mesma chave compartilhada ao destino, ou vice-versa. Tal algoritmo é simples e de baixo custo computacional e um problema é como enviar a chave única sem vazamento. EX: DES, 3DES, AES, IDEA.
+Simétricas: possui uma chave, usada tanto para criptografar quanto descriptografar. O texto é criptografado com uma chave qualquer e é descriptografado com a mesma. Seu algoritmo é simples e de baixo custo computacional, problema é como enviar a chave única sem vazamento. EX: DES, 3DES, AES, IDEA.
 	
-Assinatura digital: Assinatura digital é um conteúdo cifrado e transmitido junto com a mensagem para sua conferência. Geralmente são utilizadas para garantir autenticidade da mensagem (integridade) e pode ser implementadas na comunicação de duas entidades junto com o algoritmo de chave pública, onde uma entidade assina sua mensagem com sua chave privada e com a chave pública da outra antes de enviar, a outra decifra primeiro com sua chave privada e depois com a pública da entidade que enviou, provando para a outra que ela é ela mesma.
+Assinatura digital: conteúdo cifrado e transmitido junto com a mensagem para sua conferência. Usadas para garantir autenticidade da mensagem (integridade) e pode ser implementadas na comunicação de duas entidades junto com o algoritmo de chave pública, onde uma entidade assina sua mensagem com sua chave privada e depois com a chave pública da outra antes de enviar e, np processo inverso, a outra decifra primeiro com sua chave privada e depois com a pública da entidade que enviou, provando para a outra que ela é ela mesma.
 	
-Hashing criptográfico: O hashing criptográfico funciona "digerindo" uma mensagem de qualquer tamanho e gerando um índice hash de tamanho fixo. É considerada criptografia de caminho único pois é computacionalmente impossível recuperar a mensagem.
+Hashing criptográfico: funciona "digerindo" uma mensagem de qualquer tamanho e gerando um índice hash de tamanho fixo. É considerada criptografia de caminho único pois é computacionalmente impossível recuperar a mensagem.
 
 ## Explique o controle de acesso com ticket.
 
-Ticket de acesso assinado digital é fornecido ao cliente, que apresentará ao objeto de destino e o objeto pode então confirmar a validade daquela autorização com o servidor e atender o pedido do cliente. Essa estratégia reduz bastante a demanda pelo servidor para validação de acesso.
+Ticket de acesso assinado digital é fornecido ao cliente, que apresentará ao objeto de destino e este pode então confirmar a validade daquela autorização com o servidor e atender o pedido. Essa estratégia reduz bastante a demanda pelo servidor para validação de acesso.
 
 # Aula 11 e 12
 
