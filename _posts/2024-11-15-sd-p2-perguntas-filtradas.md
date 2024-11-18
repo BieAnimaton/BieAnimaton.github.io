@@ -138,13 +138,37 @@ Ticket de acesso assinado digital é fornecido ao cliente, que apresentará ao o
 
 # Aula 11 e 12
 
-## Defina stub, skeleton e IDL.
+## O que são stubs, skeletons e interfaces?
 
-Stub: representação local que disponibiliza todos os métodos expostos pela interface do objeto remoto.
+- Stub: representação local que disponibiliza todos os métodos expostos pela interface do objeto remoto.
 
-Skeleton: implementação server-side do objeto distribuído.
+- Skeleton: implementação server-side do objeto distribuído.
 
-IDL: interface que descreve os métodos que serão expostos pelos objetos distribuídos.
+- IDL: interface que descreve os métodos que serão expostos pelos objetos distribuídos.
+
+Esses conceitos são aplicáveis a muitas outras tecnologias de comunicação remota, como: CORBA, gRPC e SOAP.
+
+## Liste os passos de funcionamento das interface, stub e skeleton.
+
+- 1 . A interface define os métodos que o cliente pode chamar.
+
+- 2 . O stub recebe uma chamada para um método da interface, serializa os parâmetros e envia a requisição ao servidor.
+
+- 3 . O skeleton recebe a requisição, desserializa os parâmetros, chama o método correspondete no servidor e serializa a resposta enviando ao cliente.
+
+- 4 . O stub desserializa a resposta e retorna o resultado ao cliente.
+
+## Descreva, sucintamente, as principais diferenças entre as tecnologias de middleware: RPC, DCOM, CORBA e Java/RMI.
+
+Diferenças entre RPC, DCOM, CORBA e Java/RMI:
+
+- RPC: Simples, orientado a chamadas de função, linguagem e plataforma dependentes.
+
+- DCOM: Extensão do COM da Microsoft, usa protocolos proprietários, dependente de Windows.
+
+- CORBA: Padrão multiplataforma e multilíngue, usa IIOP para comunicação.
+
+- Java/RMI: Específico para Java, usa serialização de objetos.
 
 ## Compare e classifique: RPC, RMI, DCOM, CORBA, WS (WebServices).
 
@@ -157,3 +181,23 @@ DCOM: distributed componente object model, servidor fornece objetos em tempo de 
 CORBA: common object request broker architecture, independente de linguagem e plataforma, conhecida como ORB localiza objetos implementados, prepara para atender requisições e comunica requisições e respostas.
 
 WS: web service, apresenta interoperabilidade, baseados em padrões abertos, uso do XML, abrangência e alcançabilidade.
+
+## De que forma o stub empacota os parâmetros em invocações remotas de métodos?
+
+O stub usa marshalling para serializar os parâmetros em um formato transmissível pela rede.
+
+## Defina Web Services e apresente suas principais características.
+
+Sistemas baseados em XML (SOAP/REST) para comunicação entre aplicações, independentes de linguagem e plataforma.
+
+## Descreva uma vantagem que o uso de Web Services apresenta frente a cada uma das seguintes tecnologias: DCOM, RMI, CORBA. Justifique cada uma.
+
+Vantagens de Web Services sobre DCOM, RMI e CORBA:
+
+- DCOM: Independência de plataforma (não restrito ao Windows).
+- RMI: Interoperabilidade entre diferentes linguagens, não apenas Java.
+- CORBA: Menor complexidade e maior compatibilidade com sistemas modernos via HTTP.
+
+## Quais são os dois tipos de transações suportadas por Web Services?
+
+São as transações atômicas similar a CORBA Object Transaction Service (CORBA OTS) ou transações distribuídas de longa duração.
