@@ -26,7 +26,7 @@ Verificar se a sequência de tokens é aceita:
 - Inicia-se com um símbolo não-terminal chamado raiz.
 - Aplica-se produções, substituindo não-terminais, até somente restarem terminais.
 - Uma derivação substitui um não-terminal pelo lado direito de uma de suas produções.
-- O símbolo -> denota um passo de derivação.
+- O símbolo " -> " denota um passo de derivação.
 
 ## Exemplo
 
@@ -1055,3 +1055,7 @@ Cálculo dos atributos
 ![image](https://github.com/user-attachments/assets/bae56889-6020-43cd-a483-555dd1124124)
 
 ![image](https://github.com/user-attachments/assets/d9c8040c-2d59-41d4-8114-c31ff200eba3)
+
+## Exercício Extra
+
+![image](https://github.com/user-attachments/assets/d9679f7c-e474-4f8a-abff-7eb4d67bb00d)
