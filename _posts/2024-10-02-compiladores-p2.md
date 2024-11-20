@@ -945,3 +945,113 @@ First(Ab) é {c,d,e,λ}, e como possui {λ}, calculamos o {b} também, então 'S
 ![image](https://github.com/user-attachments/assets/3f510735-e6eb-44f5-b4f1-6c9c28faca0c)
 
 ...
+
+# Aula 13
+
+## Analisador semântico
+
+Verifica o uso de:
+
+- Análise contextual - declarações prévias de variáveis, procedimentos, etc
+- Checagem de tipos - o tipo da variável é o correto para o operador?
+- Unicidade - o identificador é único no escopo?
+
+![image](https://github.com/user-attachments/assets/d005f890-e579-4e4b-9580-72a332a3535f)
+
+## Verificações semânticas
+
+- X foi declarado apenas uma vez?
+- X foi declarado/definido antes do seu primeiro uso?
+- X é um tipo escalar, um array, uma função, ou uma classe?
+- X é declarado mais nunca utilizado?
+- A que declaração X se refere?
+- Os tipos de uma expressão são compatíveis?
+- As dimensões casam com o declarado?
+
+## Tipos de análise semânticas
+
+- Estática: em tempo de compilação (linguagens tipadas).
+- Dinâmica: em tempo de execução (variáveis são determinadas pelo con texto de uso).
+
+## Gramática de atributos
+
+Identifica quais ações serão realizadas em relação ao:
+
+- comportamento semântico das operações
+- checagem de tipos
+- manipulação de erros
+- tradução do programa
+
+## Tabela de símbolos
+
+Permite saber durante a compilação de um programa:
+
+- tipo e endereço dos elementos
+- escopo dos elementos
+- número e tipo dos parâmetros de um procedimento
+
+## Gramática de atributos
+
+Uma das formas de descrever a semântica.
+
+- São agregados atributos aos símbolos não-terminais da gramática.
+- São agregadas regras semânticas às produções da gramática, as quais computam os valores dos atributos dos símbolos.
+
+## Atributos VS Regras Semânticas
+
+Atributos: elementos associados aos símbolos gramaticais.
+
+- Ex: valor e escopo, representados na forma x.valor, x.escopo
+
+Regras semânticas: manipulam os atributos
+
+- Ex.: regra para somar os atributos valores de 2 variáveis -> x:=a+b, cuja regra é x.valor:=a.valor+b.valor
+
+## Amarração
+
+Atributos podem ser fixados durante a compilação ou na
+execução do programa.
+
+A associação de um valor a um atributo é chamada “amarração”
+do atributo.
+
+Acontece em “tempo de amarração”:
+
+– Em tempo de compilação, amarração estática
+– Em tempo de execução, amarração dinâmica
+
+## Exemplo 1
+
+![image](https://github.com/user-attachments/assets/2b4a83e7-6c05-493f-afe4-ad1540d1d748)
+
+![image](https://github.com/user-attachments/assets/d2549fec-b616-437e-974c-cb37cf8b72dd)
+
+![image](https://github.com/user-attachments/assets/42178ebf-d917-468e-87fe-c88dad8ced68)
+
+![image](https://github.com/user-attachments/assets/7bb5645a-b5b5-4303-a1c0-ae169a30112b)
+
+Cálculo dos atributos
+
+![image](https://github.com/user-attachments/assets/50f96d56-5c65-4c6b-a90f-511e1e21fa3c)
+
+![image](https://github.com/user-attachments/assets/66c7d9a8-dfdf-4c46-b093-247f6cd9e099)
+
+## Exercício 1
+
+![image](https://github.com/user-attachments/assets/17eca46e-bd35-44e5-b0c4-51c30a817da9)
+
+![image](https://github.com/user-attachments/assets/b3ab9a12-815c-4be3-9abf-38a55dd803ce)
+
+![image](https://github.com/user-attachments/assets/034570d9-6fd2-46f8-9e00-5b523939d178)
+
+![image](https://github.com/user-attachments/assets/f81e1cbd-de3d-40d7-924b-8908eb733f79)
+
+![image](https://github.com/user-attachments/assets/ba86e8d0-b27f-4547-a5c7-2ce5fc895b7a)
+
+## Exercício 2
+
+![image](https://github.com/user-attachments/assets/d83aa8cb-56aa-4851-b146-7698cbc1bf04)
+
+![image](https://github.com/user-attachments/assets/bae56889-6020-43cd-a483-555dd1124124)
+
+![image](https://github.com/user-attachments/assets/d9c8040c-2d59-41d4-8114-c31ff200eba3)
