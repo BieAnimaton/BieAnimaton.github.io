@@ -275,4 +275,52 @@ IoT ou Internet das Coisas disponibiliza dados em tempo real por meio de disposi
 
 # Aula 15
 
-...
+## O que é interface do usuário?
+
+É uma intereface que torna a programação de manipuladores uma tarefa mais fácil, de forma que a interface é de fundamental importância e também elimina a dependência de uso do equipamento físico durante a programação.
+
+## O que é programação off-line de robôs manipuladores? Por que ela é importante em ambientes industriais?
+
+Programação offline é a indicação da tarefa ao robô usando uma linguagem de programação de alto nível e esta é importante em ambientes industriais pois reduz o tempo ocioso (robô pode ser mantido na linha de produção enquanto a próxima tarefa está sendo programada), operação mais segure (redução do tempo de permanência do operador próximo ao robô) e simplificação de programação (programar grande variedade de robôs sem se conhecerem as peculiaridades de cada controlador).
+
+## O que se representam através da modelagem 3D de uma célula robótica industrial? Que parâmetros esse modelo pode oferecer para uma linguagem de programação off-line de robôs?
+
+Representam as formas espaciais (desrição analítica exata da superfície ou volume) pois é importante na detecção automática de colisão e os parâmetros oferecidos são: geometria e espaço físico, pontos de referência e dados cinemáticos e dinâmicos.
+
+## Quais são os métodos mais frequentemente utilizados para a programação de robôs industriais? Explique-os.
+
+Aprendizagem (online) onde o ensino do robô é feito guiando-o através da trajetória desejada pelo usuário (podem ser passiva e ativa) e textual (offline) onde indica-se a tarefa ao robô usando uma linguagem de programaçãp de alto nível (pode ser nível de robô, de objeto e de tarefa).
+
+## Do que se trata uma interface Teach in pendant? Que método de programação ela permite realizar?
+
+Teach in Pendant é um tipo de programação por aprendizagem ativa (ou indireta) onde o programador usa uma caixa de aprendizagem para controlar os motores das articulações ao longo da trajetória. Ex de aplicações: soldagem e paletização.
+
+## Descreva os modelos de interação em teleoperação de robôs: Operação remota, Mestre-escravo, Telepresença, Professor-aluno e Supervisor-companheiro.
+
+- Operação Remota: primeira forma de comunicação usada em ROVs, operada através de um terminal remoto texto ou gráfico.
+
+![image](https://github.com/user-attachments/assets/56e4214b-b466-4b19-9ac2-744df832628e)
+
+- Mestre-escravo: operador observa em vídeo o ambiente remoto e manipula um braço robótico mestre que controla o braço escravo remoto.
+
+![image](https://github.com/user-attachments/assets/3711cd9a-f108-40f7-9fda-17bbff2c98e8)
+
+- Telepresença: permitir a imersão do operador no ambiente onde o robô se encontra através de feedback de sensores.
+
+![image](https://github.com/user-attachments/assets/c4e500fe-3ad1-4b04-a10a-6f6b8215a147)
+
+- Professor-aluno: robô deve reconhecer e atuar em uma situação já aprendida (IA).
+
+- Supervisor-companheiro: o operador humano conttribui com suporte e melhorias durante a realização das tarefas previamente gravadas.
+
+## Descreva e justifique a importância das seguintes simulações (emulações) de uma célula robótica industrial em um ambiente de programação off-line: Cinemática, Planejamento de Trajetórias, Dinâmica, Multiprocesso e Sensores.
+
+- Cinemática: garante a emulação fiel dos aspectos gemétricos de cada manipulador simulado, substituindo a cinemáticos inversa do controlador do robô e sempre comunicar suas posições no espaço de juntas do mecanismo.
+
+- Planejamento de Trajetórias: a emulação da forma espacial da trajetória adotada é importante para a detecção de colisões entre o robô e o seu ambiente.
+
+- Dinâmica: O movimento simulado dos manipuladores pode negligenciar atributos dinâmicos se o sistema OLP for eficiente na emulação do algoritmo de planejamento de trajetória do controlador e se o robô de fato seguir as trajetórias desejadas com erros desprezíveis
+
+- Multiprocesso: Algumas aplicações industriais envolvem um ou mais robôs que cooperam no mesmo ambiente. Mesmo células de trabalho com um só robô muitas vezes contêm uma esteira transportadora, uma linha de transferência, um sistema de visão ou algum outro dispositivo ativo com o qual o robô tem de interagir. Ativisdades que implicam paralelismo.
+
+- Sensores: grande componente dos programas robóticos que consiste de expressões para inicialização, verificação de erro, entrada e saída, e outros tipos. Permite a simulação de aplicações completas, inclusive interação com sensores, várias entradas e saídas e comunicação com outros dispositivos.
