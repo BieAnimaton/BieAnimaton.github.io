@@ -894,7 +894,7 @@ Follow(B) = {b}
 
 ![image](https://github.com/user-attachments/assets/7963ff01-c739-42c7-a9a7-537af0fd8287)
 
-![image](https://github.com/user-attachments/assets/e4a89fa8-c66d-46a2-92df-4888710f1da0)
+![image](https://github.com/user-attachments/assets/e6c99658-4c33-4b72-bc27-d0432d5b1dad)
 
 ## Exercício 2
 
