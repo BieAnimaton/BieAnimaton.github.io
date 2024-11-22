@@ -49,9 +49,9 @@ A vantagem é a menor influência da temperatura ambiente nos condutores e maior
 
 ## O que são e para que são utilizados os cabos de extensão e de compensação em termopares?
 
-Cabos de extensão e de compensação em termopares servem para conectar o termopar ao sistema de medição sem alterar a precisão da leitura de temperatura.
+Cabos de extensão: fabricados com materiais similares ao termopar, transmitem o sinal térmico com precisão a longas distâncias.  
 
-O cabo de extensão é feito dos mesmos materiais do termopar para mantr as mesmas propriedades térmicas até o ponto de medição. Já o cabo de compensação utiliza materiais de composição semelhante para reduzir custos sendo eficaz dentro de uma faixa de temperatura.
+Cabos de compensação: feitos com materiais diferentes, mas com características térmicas equivalentes ao termopar, são usados para reduzir custos em transmissões de curta distância.
 
 ## Explique, em linhas gerais, os princípios de Seebeck sobre termopares.
 
@@ -79,7 +79,11 @@ f = 2kHz = 2000 Hz.
 
 ## Explique como um tacogerador consegue registrar a velocidade angular de um rotor.
 
-O tacogerador (dínamo taquimétrico) registra a velocidade angular de um rotor ao gerar um sinal diretamente proporcional à rotação. Um imã permanente cria um campo magnético fixo no estator, e, conforme o rotor gira com suas espiras, ele corta esse campo magnético. A rotação do rotor é então captada pelo movimento relativo entre o campo magnético e as espiras, permitindo que o sistema registre a velocidade de rotação e depois pode ser convertida para tensão.
+O tacogerador (dínamo taquimétrico) registra a velocidade angular de um rotor ao gerar um sinal diretamente proporcional à rotação.
+
+Um imã permanente cria um campo magnético fixo no estator e conforme o rotor gira com suas espiras, ele corta esse campo magnético.
+
+A rotação do rotor é então captada pelo movimento relativo entre o campo magnético e as espiras, permitindo que o sistema registre a velocidade de rotação e depois pode ser convertida para tensão.
 
 ## Um acelerômetro pode ser utilizado para medições de velocidade e de posição de um objeto? Como?
 
@@ -89,7 +93,7 @@ Sim, consiste de um transdutor que transforma aceleração (energia mecânica) e
 
 É um tipo de acelerômetro mecânico que mede a alteração da inércia sobre uma massa (possui uma parte mecânico em seu interior) e como a aceleração é proporcional a essa força, pode ser obtida e fornecida pelo sensor.
 
-Quando o corpo acelera, a força -m.a se opõe à força de restauração elástica e a massa m adota uma nova posição, sendo medida. Acompanha também um liquído para estabilizar oscilações.
+Quando o corpo acelera, a força '-m.a' se opõe à força de restauração elástica e a massa 'm' adota uma nova posição, sendo medida. Acompanha também um liquído para estabilizar oscilações.
 
 ## Em um acelerômetro de deslocamento, a massa de 1,5g do corpo de referência deslocou-se 0,5 cm. Sabendo-se que a constante de mola é de 0,3 dynas/cm, calcule a aceleração registrada pelo sensor.
 
@@ -113,11 +117,11 @@ K = 0,3 dynas/cm.
 
 ---
 
-- Variável Controlada: quantidade medida para efetuar indicação ou controle do processo.
+- Variável Controlada: valor para efetuar indicação ou controle do processo.
 
-- Variável Manipulada: grandeza operada para manter a variável controlada no valor desejado.
+- Variável Manipulada: grandeza que mantem a variável controlada no valor desejado.
 
-- Set Point: valor desejado que serve como referência da variável controlada.
+- Set Point: valor referência da variável controlada.
 
 ---
 
@@ -196,13 +200,13 @@ Comportamento deliberativo (capacidades cognitivas) + reativo (reflexivo) e vár
 
 - GGT: nível superior, decide as coordenadas do ponto de destino e intermediários através de mapas do entorno e se detectar obstrução deve redefinir a trajetória.
 
-- GLT: nível intermediário, faz o papel do piloto do robô (evita obstáculos, realiza correções da trajetória), atualiza o GGT sobre os resultados e comunia-se com snesores.
+- GLT: nível intermediário, faz o papel do piloto do robô, atualiza o GGT sobre os resultados e comunia-se com snesores.
 
 - CL: nível inferior, interpreta referências enviadas pelo GLT e gera ações de controle para atuação e controle dos motores de tração e direção.
 
 ## Diferencie ambientes estruturados e não estruturados.
 
-- Ambiente estrururado: é aquele em que os objetos são estáticos e possuem características físicas particulares que permitem associá-los a formas geométricas conhecidos.
+- Ambiente estruturado: aquele em que os objetos são estáticos e possuem características físicas que permitem associá-los a formas geométricas conhecidos.
 
 - Ambiente não estruturado: apresenta uma redondeza dinâmica ou a associação do entrono e características físicas não é viável.
 
@@ -218,29 +222,27 @@ Cria forças imaginárias que atuam sobre o robô:
 
 Primeiro método que permite evitar obstáculos em tempo real para veículos autônomos rápidos.
 
-Fazem parte do Método do Campo de Forças Virtuais, junto com outros componentes.
-
-Componentes: grade histograma cartesiana bidimensional para representar obstáculos e campo potencial é criado com a informação probabilística.
+Fazem parte do Método do Campo de Forças Virtuais, junto com outros componentes: grade histograma cartesiana bidimensional para representar obstáculos e campo potencial é criado com a informação probabilística.
 
 # Aula 14
 
 ## Explique resumidamente o que cada nível da pirâmide da automação faz.
 
-Estação (nível 1): Comando de Máquinas, Sequências e Movimentos através de Controladores Numéricos.
-
-Célula (nível 2): supervisionar e controlar as atividades produtivas e serviços de suporte à produção no chão de fábrica.
-
-Área (nível 3): coordenar a produção, suportar as atividades produtivas e cuidar da obtenção e alocação de recursos.
+Empresa (nível 5): define a missão da empresa e gerenciamento de corporação.
 
 Planta (nível 4): planejar e programar a produção total.
 
-Empresa (nível 5): define a missão da empresa e gerenciamento de corporação.
+Área (nível 3): coordenar a produção, suportar as atividades produtivas e cuidar da obtenção e alocação de recursos.
+
+Célula (nível 2): supervisionar e controlar as atividades produtivas e serviços de suporte à produção no chão de fábrica.
+
+Estação (nível 1): Comando de Máquinas, Sequências e Movimentos através de Controladores Numéricos.
 
 ## O que é CAM (Computer Aided Manufacturing)? E CIM (Computer Integrated Manufacture)?
 
-- CAM: ou Manufatura Auxiliada por Computador, representa a automação de uma indústria no nível de "Chão-de-Fábrica" através de Células e Sistemas Flexíveis de Manufatura, originada do desenvolvimento do processamento de informações (controle de máquinas e ferramentas).
+- CAM: Manufatura Auxiliada por Computador automatiza operações no chão de fábrica por meio de células e sistemas flexíveis. Ela é resultado do avanço no controle de máquinas e ferramentas, otimizando a eficiência e precisão na produção.  
 
-- CIM: ou Manufatura Integrada por Computador, liga todas as funções relacionadas à manufatura de um produto e é definido como um sistema de informação e controle de manufatura.
+- CIM: Manufatura Integrada por Computador conecta todas as etapas da produção, desde o design até o controle de qualidade. Funciona como um sistema integrado que gerencia informações e processos para aumentar a produtividade e a coordenação nas operações industriais.
 
 ## Quais são os principais benefícios da aplicação de CIM em um ambiente de manufatura?
 
@@ -248,20 +250,18 @@ Mudanças na estrutura de custos, aumento da repetibilidade dos processos, redu�
 
 ## Explique o agrupamento de atividades ligadas à manufatura, de acordo com uma visão em níveis hierárquicos CIM.
 
-Nível 1: hardware padrão, normalmente controlado por computadores
-existentes nas máquinas ou por controladores programáveis.
+Nível 1: hardware padrão controlado por computadores
+existentes nas máquinas ou controladores programáveis.
 
-Nível 2: grupos de equipamentos e materiais para a produção de famílias de peças através de um elevado grau de integração e
-comunicação.
+Nível 2: grupos de equipamentos e materiais para a produção de famílias de peças através de integração e comunicação.
 
-Nível 3: conexão de diversas Células do nível 2, formando ilhas, através da utilização de Redes de Comunicação - flexibilidade.
+Nível 3: conexão de diversas Células do nível 2, formando ilhas, através da utilização de Redes de Comunicação, fornecendo flexibilidade.
 
-Nível 4: representa a integração total, grandes redes de informações interligam todas as funções de manufatura, este nível de integração representa o conceito de CIM.
-
+Nível 4: representa a integração total com grandes redes de informações interligadas, este nível de integração representa o conceito de CIM.
 
 ## O que são células flexíveis de manufatura e de que forma são integradas em um sistema flexível de manufatura?
 
-As células flexíveis de manufatura produzem peças individuais ou pequenos lotes, executando todas as etapas do processo e adaptando-se facilmente a diferentes tipos de peças por meio da reprogramação dos seus componentes.
+Células flexíveis de manufatura produzem peças individuais ou pequenos lotes, executando todas as etapas do processo e se adaptando facilmente a diferentes tipos de peças por meio da reprogramação dos seus componentes.
 
 São interligadas em um sistema flexível por sistemas automatizados de manipulação e de carga/descarga de materiais.
 
@@ -271,7 +271,9 @@ São interligadas em um sistema flexível por sistemas automatizados de manipula
 
 ## O que é IoT? Quais são as contribuições dos robôs colaborativos nesse cenário?
 
-IoT ou Internet das Coisas disponibiliza dados em tempo real por meio de dispositivos móveis através de conexões a grandes bancos de dados, identificando a alteração na capacidade física das coisas (sensores inteligentes) e interagindo/conectando com diversos objetos. Com isso, os robôs colaborativos interagem entre si e trabalham de forma segura junto as pessoas e também aprendem com elas.
+IoT ou Internet das Coisas disponibiliza dados em tempo real por meio de dispositivos móveis através de conexões a grandes bancos de dados, identificando a alteração das coisas (sensores inteligentes) e interagindo com diversos objetos.
+
+Com isso, os robôs colaborativos interagem entre si e trabalham de forma segura junto as pessoas e também aprendem com elas.
 
 # Aula 15
 
@@ -281,15 +283,17 @@ IoT ou Internet das Coisas disponibiliza dados em tempo real por meio de disposi
 
 ## O que é programação off-line de robôs manipuladores? Por que ela é importante em ambientes industriais?
 
-Programação offline é a indicação da tarefa ao robô usando uma linguagem de programação de alto nível e esta é importante em ambientes industriais pois reduz o tempo ocioso (robô pode ser mantido na linha de produção enquanto a próxima tarefa está sendo programada), operação mais segure (redução do tempo de permanência do operador próximo ao robô) e simplificação de programação (programar grande variedade de robôs sem se conhecerem as peculiaridades de cada controlador).
+A programação offline permite criar tarefas para robôs usando linguagens de alto nível, reduzindo o tempo ocioso na fábrica, aumentando a segurança ao limitar a proximidade do operador e simplificando a programação de diferentes robôs sem precisar conhecer cada controlador.
 
 ## O que se representam através da modelagem 3D de uma célula robótica industrial? Que parâmetros esse modelo pode oferecer para uma linguagem de programação off-line de robôs?
 
-Representam as formas espaciais (desrição analítica exata da superfície ou volume) pois é importante na detecção automática de colisão e os parâmetros oferecidos são: geometria e espaço físico, pontos de referência e dados cinemáticos e dinâmicos.
+Representam as formas espaciais (descrição analítica exata da superfície ou volume) pois é importante na detecção automática de colisão e os parâmetros oferecidos são: geometria e espaço físico, pontos de referência e dados cinemáticos e dinâmicos.
 
 ## Quais são os métodos mais frequentemente utilizados para a programação de robôs industriais? Explique-os.
 
-Aprendizagem (online) onde o ensino do robô é feito guiando-o através da trajetória desejada pelo usuário (podem ser passiva e ativa) e textual (offline) onde indica-se a tarefa ao robô usando uma linguagem de programaçãp de alto nível (pode ser nível de robô, de objeto e de tarefa).
+Aprendizagem (online) onde o ensino do robô é feito guiando-o através da trajetória desejada pelo usuário (podem ser passiva e ativa).
+
+Textual (offline) onde indica-se a tarefa ao robô usando uma linguagem de programaçãp de alto nível (pode ser nível de robô, de objeto e de tarefa).
 
 ## Do que se trata uma interface Teach in pendant? Que método de programação ela permite realizar?
 
@@ -315,12 +319,12 @@ Teach in Pendant é um tipo de programação por aprendizagem ativa (ou indireta
 
 ## Descreva e justifique a importância das seguintes simulações (emulações) de uma célula robótica industrial em um ambiente de programação off-line: Cinemática, Planejamento de Trajetórias, Dinâmica, Multiprocesso e Sensores.
 
-- Cinemática: garante a emulação fiel dos aspectos gemétricos de cada manipulador simulado, substituindo a cinemáticos inversa do controlador do robô e sempre comunicar suas posições no espaço de juntas do mecanismo.
+- Cinemática: a emulação cinemática permite simular com precisão os movimentos geométricos e as posições das juntas do robô, garantindo a validação do modelo no ambiente virtual.
 
-- Planejamento de Trajetórias: a emulação da forma espacial da trajetória adotada é importante para a detecção de colisões entre o robô e o seu ambiente.
+- Planejamento de Trajetórias: essa emulação replica a trajetória real do robô, essencial para evitar colisões e assegurar que os algoritmos de controle sejam representados fielmente.
 
-- Dinâmica: O movimento simulado dos manipuladores pode negligenciar atributos dinâmicos se o sistema OLP for eficiente na emulação do algoritmo de planejamento de trajetória do controlador e se o robô de fato seguir as trajetórias desejadas com erros desprezíveis
+- Dinâmica: considera forças e movimentos para prever erros em altas velocidades ou com cargas pesadas, garantindo maior precisão em condições extremas.
 
-- Multiprocesso: Algumas aplicações industriais envolvem um ou mais robôs que cooperam no mesmo ambiente. Mesmo células de trabalho com um só robô muitas vezes contêm uma esteira transportadora, uma linha de transferência, um sistema de visão ou algum outro dispositivo ativo com o qual o robô tem de interagir. Ativisdades que implicam paralelismo.
+- Multiprocesso: simula a interação de múltiplos dispositivos em um ambiente compartilhado, permitindo a sincronização de robôs, esteiras e outros sistemas.
 
-- Sensores: grande componente dos programas robóticos que consiste de expressões para inicialização, verificação de erro, entrada e saída, e outros tipos. Permite a simulação de aplicações completas, inclusive interação com sensores, várias entradas e saídas e comunicação com outros dispositivos.
+- Sensores: emula interações completas do robô com sensores e entradas/saídas, viabilizando o teste de programas com cenários realistas de monitoramento e controle.
