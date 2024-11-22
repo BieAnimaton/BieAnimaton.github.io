@@ -27,7 +27,9 @@ SLA são revisadas a cada 1 ano, em caso de mudanças significativas, em feedbac
 - SLA tipo foco no cliente: modelo personalizado, adequa totalmente às especificações e necessidades do cliente e é indicado para empresas com menos clientes ou cliente com especificações diferentes.
  
 - SLA tipo foco no serviço: usado por empresas com operação volumosa de cliente e serviço, tem possibilidade de escalar e garantir agilidade e é indicado para empresas que querem agilidade e escalabilidade.
- 
+
+SLA multinível: documento que comporta especificações e necessidade de frentes diferentes, projetos que envolvem diferentes áreas e entregas e é indicado para operações full-service.
+
  
 custo de TI: associados à infraestrutua e serviço da organização
  
@@ -44,6 +46,7 @@ modelos de gestão:
  
 - método itil: mais popular, entrega boas práticas para administração de serviçlos de TI e traz procedimentos estruturais baseados em estudos sólidos com grandes empresas.
 
+- método cobit: fornece indicadores para auxiliar gestores na tomada de decisões, promove práticas de consenso entre especialistas, foca no controle e execução e transforma o setor de TI em uma estrutura bem gerida.
 
 práticas para redução de custos: padronizar ferramentas (evitar redundância), uso da nuvem (reduzir licenças e instalações), reavaliar os contratos, investir em segurança cibernética e aplicar treinamento com conscientização.
 
