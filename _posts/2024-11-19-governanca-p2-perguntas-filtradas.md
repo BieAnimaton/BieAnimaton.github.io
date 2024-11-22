@@ -94,7 +94,7 @@ para avaliar a maturidade de TI com o COBIT, a empresa define o escopo, coleta d
 
 ## como a conformidade pode ser garantida através da implementação do COBIT?
 
-pode ser garantida através de uma abordagem integrada, combinando governança, gerenciamento de riscos, políticas, segurança e auditoria. Ao seguir as práticas estabelecidas pelo COBIT, a empresa poderá atender às regulamentações (LGBT e SOX), aumentar sua eficiência operacional e fortalecer a confiança dos consumidores.
+pode ser garantida através de uma abordagem integrada, combinando governança, gerenciamento de riscos, políticas, segurança e auditoria. Ao seguir as práticas estabelecidas pelo COBIT, a empresa poderá atender às regulamentações (LGPD e SOX), aumentar sua eficiência operacional e fortalecer a confiança dos consumidores.
 
 ## quando devo usar COBIT e quando usar ISO/IEC 38500?
 
