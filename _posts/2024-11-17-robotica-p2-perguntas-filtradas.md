@@ -17,11 +17,11 @@ toc: true
 
 - Medir: procedimento experimental através do qual o valor momentâneo de uma grandeza física é determinada como um múltiplo ou fração de uma unidade.
 
-- Mensurando: é o fenômeno sobreo  qual se deseja expressar a medição, no caso, é temperatura (ex 1.a).
+- Mensurando: é o fenômeno sobre o  qual se deseja expressar a medição, no caso, é a temperatura (ex 1.a).
 
-- Indicação: é a quantidade/unidade do mensurando, no caso, ºC (ex 1.b).
+- Indicação: é a quantidade/unidade do mensurando, no caso, é ºC (ex 1.b).
 
-- Indicação direta: é a medidade indicada (unidade) pelo sensor, no caso, mV (ex a.c).
+- Indicação direta: é a medida indicada (unidade) pelo sensor, no caso, é mV (ex a.c).
 
 ## O que é range?
 
