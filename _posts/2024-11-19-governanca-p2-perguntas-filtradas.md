@@ -13,9 +13,9 @@ toc: true
 
 catalogo de ti: visão geral de todos processos oferecidos pela área de TI e suas principais informações, apresenta uma visão geral de tudoo que está disponível e deixa claro os processos e as condições envolvidas na requisição de serviços
  
-	catalogo de negócios: destinado aos clientes, traz informações relevantes para a contratação do serviço (custos envolvidos, tempo do serviço).
+- catalogo de negócios: destinado aos clientes, traz informações relevantes para a contratação do serviço (custos envolvidos, tempo do serviço).
  
-	catálogo técnico: destinado ao time de TI, traz informações sobre a execução do serviço (complexidade, itens ténicos da base).
+- catálogo técnico: destinado ao time de TI, traz informações sobre a execução do serviço (complexidade, itens ténicos da base).
  
 portfólio de TI: conjunto organizado de serviços que uma organização oferece, permite comunicação clara de que oferecem, garante gerenciamento eficaz dos serviços (necessidades atendidas) e tomada de decisões estratégias sobre melhorias
  
@@ -24,25 +24,25 @@ SLA: service level-agreement, contrato que deve seguir regras ABNT, lista os ser
  
 SLA são revisadas a cada 1 ano, em caso de mudanças significativas, em feedback contínuo, durante renegociações de contrato e após falhas ou acidentes críticos.
  
-	SLA tipo foco no cliente: modelo personalizado, adequa totalmente às especificações e necessidades do cliente e é indicado para empresas com menos clientes ou cliente com especificações diferentes.
+- SLA tipo foco no cliente: modelo personalizado, adequa totalmente às especificações e necessidades do cliente e é indicado para empresas com menos clientes ou cliente com especificações diferentes.
  
-	SLA tipo foco no serviço: usado por empresas com operação volumosa de cliente e serviço, tem possibilidade de escalar e garantir agilidade e é indicado para empresas que querem agilidade e escalabilidade.
+- SLA tipo foco no serviço: usado por empresas com operação volumosa de cliente e serviço, tem possibilidade de escalar e garantir agilidade e é indicado para empresas que querem agilidade e escalabilidade.
  
  
 custo de TI: associados à infraestrutua e serviço da organização
  
-	custos diretos: hardwares, licenças de software e serviços de TI contratados.
+- custos diretos: hardwares, licenças de software e serviços de TI contratados.
  
-	custos indiretos: energia e infraestrutura, salários da equipe de TI, treinamentos, segurança e conformidade.
+- custos indiretos: energia e infraestrutura, salários da equipe de TI, treinamentos, segurança e conformidade.
  
  
 gestão de TI: administração dos custos com um planejamento estratégico voltado às necessidades do negócio. Uma boa gestão de custos proporciona um maior valor agregado aos negócios e entrega melhores soluções.
  
 modelos de gestão:
  
-	método tco: aquisição, utilização e manutenção dos ativos de TI, qualquer gestor pode usar, basta apenas mudar o ativo.
+- método tco: aquisição, utilização e manutenção dos ativos de TI, qualquer gestor pode usar, basta apenas mudar o ativo.
  
-	método itil: mais popular, entrega boas práticas para administração de serviçlos de TI e traz procedimentos estruturais baseados em estudos sólidos com grandes empresas.
+- método itil: mais popular, entrega boas práticas para administração de serviçlos de TI e traz procedimentos estruturais baseados em estudos sólidos com grandes empresas.
 
 
 práticas para redução de custos: padronizar ferramentas (evitar redundância), uso da nuvem (reduzir licenças e instalações), reavaliar os contratos, investir em segurança cibernética e aplicar treinamento com conscientização.
@@ -51,89 +51,88 @@ práticas para redução de custos: padronizar ferramentas (evitar redundância)
 COBIT é um framework que implementa boas práticas às empresas visando alinhar os serviços de TI aos negócios, melhorar o valor da empresa e diminuir os riscos.
 
 
-estruturas COBIT 4.1
+## estruturas COBIT 4.1
 
-	PO - Planejar e Organizar: planejamento e organização das estratégias de TI.
-	AI - Analisar e Implementar: aqusição e implementação de soluções de TI.
-	DS - Entregar e Suportar: entrega de serviços de TI e o suporte aos usuários.
-	ME - Monitorar e Avaliar: monitoramento do desempenho de TI e conformidade com requisitos.
-
-
-benefícios COBIT 4.1:
-
-	melhoria na governança de TI (boas práticas), alinhamento com os objetivos de negócio, redução de riscos (gerenciamento de riscos) e compatibilidade com outros frameworks (intrgrado com ITIL).
+- PO - Planejar e Organizar: planejamento e organização das estratégias de TI.
+- AI - Analisar e Implementar: aqusição e implementação de soluções de TI.
+- DS - Entregar e Suportar: entrega de serviços de TI e o suporte aos usuários.
+- ME - Monitorar e Avaliar: monitoramento do desempenho de TI e conformidade com requisitos.
 
 
-diferença do COBIT 4.1 para o 5:
+## benefícios COBIT 4.1:
 
-	enquanto o COBIT 4.1 é mais focado em atender necessidades do negócio, como orientar processos para alcançar objetivos, gerenciar o desempenho e ser direcionado por métricas, o COBIT 5 atende todas as partes interessadas para cobrir a organização de ponta a ponta através um único framework integrado (governança e gestão de TI), permitindo uma abordagem holística e separação entre governanção e gestão.
-
-
-vantagens do COBIT 2019 comparado aos outros.
-
-	garante maior flexibilidade e adaptação às necessidades da organização, apresenta 6 princípios de governança, 40 processos chamados de domínios, possui um modelo de maturidade baseado no CMMI, fatores de design (sistema de governança personalizado) e modelo open-source.
+melhoria na governança de TI (boas práticas), alinhamento com os objetivos de negócio, redução de riscos (gerenciamento de riscos) e compatibilidade com outros frameworks (intrgrado com ITIL).
 
 
-qual versão de COBIT a empresa deve implementar e porquê?
+## diferença do COBIT 4.1 para o 5:
 
-	COBIT 2019 é mais adequado para a empresa devido à sua flexibilidade, foco na agilidade, capacidade de integração em ambientes descentralizados e suporte à compliance. A implementação deste framework pode ser feita de forma modular, facilitando a adaptação e aceitação por parte da equipe, em um processo transformará a cultura de governança da organização à medida que obtém resultados positivos.
-
-
-primeiros passos e desafios ao implementar o framework COBIT 5
-
-    a implementação começa com a avaliação da governança de TI, definição de objetivos e capacitação da equipe. É essencial envolver stakeholders, criar um plano com métricas e integrar processos ajustados às necessidades da organização, com monitoramento contínuo. Os desafios incluem resistência, falta de apoio, recursos limitados e dificuldade em gerenciar expectativas.
+enquanto o COBIT 4.1 é mais focado em atender necessidades do negócio, como orientar processos para alcançar objetivos, gerenciar o desempenho e ser direcionado por métricas, o COBIT 5 atende todas as partes interessadas para cobrir a organização de ponta a ponta através um único framework integrado (governança e gestão de TI), permitindo uma abordagem holística e separação entre governanção e gestão.
 
 
-desafios ao implementar o COBIT.
+## vantagens do COBIT 2019 comparado aos outros.
 
-    falta de conhecimento, resistência cultural, complexidade do framework, integração com outras normas e a necessidade de monitoramento contínuo. Para superar, é importante investir em capacitação, comunicar benefícios, alinhar o framework às metas da empresa, adotar uma implementação gradual e ágil, integrar normas existentes, definir KPIs (indicadores de desempenho) e um comitê para monitoramento regular.
-
-
-como avaliar a maturidade dos processos de TI segundo o COBIT.
-
-    para avaliar a maturidade de TI com o COBIT, a empresa define o escopo, coleta dados, avalia a maturidade atual e identifica lacunas. Em seguida, elabora e implementa um plano de ação alinhado à estratégia do negócio. Por fim, monitora os resultados e comunica os progressos às partes interessadas.
+garante maior flexibilidade e adaptação às necessidades da organização, apresenta 6 princípios de governança, 40 processos chamados de domínios, possui um modelo de maturidade baseado no CMMI, fatores de design (sistema de governança personalizado) e modelo open-source.
 
 
-como a conformidade pode ser garantida através da implementação do COBIT?
+## qual versão de COBIT a empresa deve implementar e porquê?
 
-    pode ser garantida através de uma abordagem integrada, combinando governança, gerenciamento de riscos, políticas, segurança e auditoria. Ao seguir as práticas estabelecidas pelo COBIT, a empresa poderá atender às regulamentações (LGBT e SOX), aumentar sua eficiência operacional e fortalecer a confiança dos consumidores.
+COBIT 2019 é mais adequado para a empresa devido à sua flexibilidade, foco na agilidade, capacidade de integração em ambientes descentralizados e suporte à compliance. A implementação deste framework pode ser feita de forma modular, facilitando a adaptação e aceitação por parte da equipe, em um processo transformará a cultura de governança da organização à medida que obtém resultados positivos.
 
 
-quando devo usar COBIT e quando usar ISO/IEC 38500?
+## primeiros passos e desafios ao implementar o framework COBIT 5
 
-	COBIT é usado em uma abordagem mais detalhada e técnica para governança e gestão de TI, com foco em controle e mensuração de desempenho.
+a implementação começa com a avaliação da governança de TI, definição de objetivos e capacitação da equipe. É essencial envolver stakeholders, criar um plano com métricas e integrar processos ajustados às necessidades da organização, com monitoramento contínuo. Os desafios incluem resistência, falta de apoio, recursos limitados e dificuldade em gerenciar expectativas.
+
+
+## desafios ao implementar o COBIT.
+
+falta de conhecimento, resistência cultural, complexidade do framework, integração com outras normas e a necessidade de monitoramento contínuo. Para superar, é importante investir em capacitação, comunicar benefícios, alinhar o framework às metas da empresa, adotar uma implementação gradual e ágil, integrar normas existentes, definir KPIs (indicadores de desempenho) e um comitê para monitoramento regular.
+
+
+## como avaliar a maturidade dos processos de TI segundo o COBIT.
+
+para avaliar a maturidade de TI com o COBIT, a empresa define o escopo, coleta dados, avalia a maturidade atual e identifica lacunas. Em seguida, elabora e implementa um plano de ação alinhado à estratégia do negócio. Por fim, monitora os resultados e comunica os progressos às partes interessadas.
+
+
+## como a conformidade pode ser garantida através da implementação do COBIT?
+
+pode ser garantida através de uma abordagem integrada, combinando governança, gerenciamento de riscos, políticas, segurança e auditoria. Ao seguir as práticas estabelecidas pelo COBIT, a empresa poderá atender às regulamentações (LGBT e SOX), aumentar sua eficiência operacional e fortalecer a confiança dos consumidores.
+
+
+## quando devo usar COBIT e quando usar ISO/IEC 38500?
+
+- COBIT é usado em uma abordagem mais detalhada e técnica para governança e gestão de TI, com foco em controle e mensuração de desempenho.
 	
-	ISO/IEC é usado para estabelecer princípios de GTI que envolvem a alta administração e precisam de uma abordagem mais estratégica e menos técnica.
+- ISO/IEC é usado para estabelecer princípios de GTI que envolvem a alta administração e precisam de uma abordagem mais estratégica e menos técnica.
 
 
-o que acontece quando a empresa adota COBIT e ITIL?
+## o que acontece quando a empresa adota COBIT e ITIL?
 
-	ao adotar tanto o COBIT quanto a ITIL, uma organização pode criar um forte programa de governança de TI que apoia a entrega eficiente de serviços e também assegura que a tecnologia está alinhada com as metas de negócio, promovendo um ambiente mais controlado e proativo.
-
-
-Elabore uma proposta de um plano de ação que uma empresa deve seguir para implementar o COBIT com foco em melhoria contínua e inovação.
-
-	a implementação do COBIT com foco em melhoria contínua e inovação não apenas elevará a governança de TI da empresa, mas também criará um diferencial competitivo relevante em um mercado dinâmico e em constante mudança. A adesão a este plano de ação resultará em operações mais eficientes e em uma experiência do cliente significativamente aprimorada.
+ao adotar tanto o COBIT quanto a ITIL, uma organização pode criar um forte programa de governança de TI que apoia a entrega eficiente de serviços e também assegura que a tecnologia está alinhada com as metas de negócio, promovendo um ambiente mais controlado e proativo.
 
 
-Análise de Cenário
+## Elabore uma proposta de um plano de ação que uma empresa deve seguir para implementar o COBIT com foco em melhoria contínua e inovação.
+
+a implementação do COBIT com foco em melhoria contínua e inovação não apenas elevará a governança de TI da empresa, mas também criará um diferencial competitivo relevante em um mercado dinâmico e em constante mudança. A adesão a este plano de ação resultará em operações mais eficientes e em uma experiência do cliente significativamente aprimorada.
 
 
-	"Uma empresa de tecnologia que desenvolve software para o setor financeiro tem crescido rapidamente nos últimos anos, adquirindo várias startups para expandir suas ofertas. Com essa expansão, a empresa passou a ter uma estrutura organizacional heterogênea, com múltiplos sistemas legados, equipes descentralizadas e uma cultura que valoriza agilidade e inovação acima da governança."
+## Análise de Cenário
 
 
-	Principais Desafios para Implementação do COBIT:
+"Uma empresa de tecnologia que desenvolve software para o setor financeiro tem crescido rapidamente nos últimos anos, adquirindo várias startups para expandir suas ofertas. Com essa expansão, a empresa passou a ter uma estrutura organizacional heterogênea, com múltiplos sistemas legados, equipes descentralizadas e uma cultura que valoriza agilidade e inovação acima da governança."
 
-	Falta de Cultura de Governança: resistência à adoção de processos formais de governança.
+Principais Desafios para Implementação do COBIT:
 
-	Estrutura Descentralizada: dificuldade em alinhar práticas de governança em um ambiente fragmentado.
+- Falta de Cultura de Governança: resistência à adoção de processos formais de governança.
 
-	Sistemas Legados e Integração: diversidade tecnológica e falta de integração entre sistemas dificultam uma visão holística.
+- Estrutura Descentralizada: dificuldade em alinhar práticas de governança em um ambiente fragmentado.
 
-	Falta de Treinamento e Conhecimento: ausência de capacitação adequada para uma implementação eficaz.
+- Sistemas Legados e Integração: diversidade tecnológica e falta de integração entre sistemas dificultam uma visão holística.
 
-	Recursos Limitados: insuficiência de pessoal dedicado à governança de TI.
+- Falta de Treinamento e Conhecimento: ausência de capacitação adequada para uma implementação eficaz.
+
+- Recursos Limitados: insuficiência de pessoal dedicado à governança de TI.
 	
-	Prioridade em Resultados Imediatos: foco em objetivos de curto prazo em detrimento de projetos de governança de longo prazo.
+- Prioridade em Resultados Imediatos: foco em objetivos de curto prazo em detrimento de projetos de governança de longo prazo.
 
-	Problemas com Compliance e Regulatório: desafios para atender regulamentos sem um framework de governança robusto, percebendo o COBIT como um possível obstáculo adicional.
+- Problemas com Compliance e Regulatório: desafios para atender regulamentos sem um framework de governança robusto, percebendo o COBIT como um possível obstáculo adicional.
