@@ -102,7 +102,7 @@ Ex: bugs, dano físico em hardware.
 
 ## Do que se trata o agrupamento de processos? Compare com TCP/UDP.
 
-Organização para replicação de processos onde processos idênticos são agrupados e podem receber multicast por grupos dinâmicos.
+É uma organização para replicação de processos onde processos idênticos são agrupados e podem receber multicast por grupos dinâmicos.
 
 Os grupos podem ser plano (processos têm papéis iguais e decisões coletivas) ou hierárquico (um processo será o eleitor e fará papel diferente dos demais).
 	
