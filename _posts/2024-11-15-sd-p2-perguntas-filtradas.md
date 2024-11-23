@@ -134,8 +134,8 @@ Simétricas: possui uma chave, usada tanto para criptografar quanto descriptogra
 
 Assimétricas: possui duas chaves, pública (pode ser distribuida em públio) e privada (fica guardada em segredo com o dono). O texto é criptografado com a chave pública pelo destino e só pode ser descriptografado com a chave privada do mestre, ou vice-versa. Podem ser distribuídas livremente e seu algoritmo apresenta alto custo computacional (pior desempenho), é impossível obter uma chave a partir de outra e é criptografia unidirecional. Ex: RSA, Diffie-Helman, Elgamal.
 	
-Assinatura digital: conteúdo cifrado e transmitido junto com a mensagem para sua conferência. Usadas para garantir autenticidade da mensagem (integridade) e pode ser implementadas na comunicação de duas entidades junto com o algoritmo de chave pública, onde uma entidade assina sua mensagem com sua chave privada e depois com a chave pública da outra antes de enviar e, np processo inverso, a outra decifra primeiro com sua chave privada e depois com a pública da entidade que enviou, provando para a outra que ela é ela mesma.
-	
+Assinatura digital: conteúdo cifrado e transmitido junto com a mensagem para sua conferência. Usadas para garantir autenticidade da mensagem (integridade) e pode ser implementadas na comunicação de duas entidades junto com o algoritmo de chave pública, onde uma entidade assina sua mensagem com sua chave privada e depois com a chave pública da outra antes de enviar e, no processo inverso, a outra decifra primeiro com sua chave privada e depois com a pública da entidade que enviou, provando para a outra que ela é ela mesma.
+
 Hashing criptográfico: funciona "digerindo" uma mensagem de qualquer tamanho e gerando um índice hash de tamanho fixo. É considerada criptografia de caminho único pois é computacionalmente impossível recuperar a mensagem.
 
 ## Explique o controle de acesso com ticket.
