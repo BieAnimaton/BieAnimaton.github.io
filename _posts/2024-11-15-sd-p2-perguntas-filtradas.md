@@ -114,11 +114,11 @@ O agrupamento de processos resolve isso com SRM (scalable reliable multicasting)
 
 Ocorre através de 2 fases.
 
-A primeira é a fase de votação onde o coordenador envia uma mensagem 'VOTE_REQUEST' para os participantes. Os participantes podem responder 'VOTE_COMMIT' se estiverem preparado para fazer o commit local ou 'VOTE_ABORT' caso contrário.
+A primeira é a fase de votação onde o coordenador envia uma mensagem 'VOTE_REQUEST' para os participantes. Os participantes podem responder 'VOTE_COMMIT' se estiverem preparados para fazer o commit local ou 'VOTE_ABORT' caso contrário.
 
-A segunda é a fase de decisão onde o coordenador obtém os vaores e responde a todos 'GLOBAL_COMMIT' se todos votarem a favor ou 'GLOBAT_ABORT' se apenas um votar em abortar.
+A segunda é a fase de decisão onde o coordenador obtém os valores e responde a todos 'GLOBAL_COMMIT' se todos votarem a favor ou 'GLOBAT_ABORT' se apenas um votar em abortar.
 
-Os participantes aguardam a resposta, se for 'GLOBAL_COMMIT', executam o commit local da transação e se for 'GLOBAT_ABORT', a transação local é abortada.
+Os participantes aguardam a resposta: se for 'GLOBAL_COMMIT' executam o commit local da transação e se for 'GLOBAT_ABORT' a transação local é abortada.
 
 # Aula 10
 
