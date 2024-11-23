@@ -94,7 +94,7 @@ Ex: sistema de login não autentica o usuário, mesmo com senha correta.
 Falhas transientes: falhas que ocorrem apenas uma vez e desaparecem.  
 Ex: perda de sinal por alguns segundos ao usar streaming de vídeo.
 
-Falhas interminentes: não definem um padrão exato e são imprevisíveis.  
+Falhas intermitentes: não definem um padrão exato e são imprevisíveis.  
 Ex: mau-contato de fios.
 	
 Falhas persistentes: não podem ser consertadas e implicam em danos irreparáveis.  
