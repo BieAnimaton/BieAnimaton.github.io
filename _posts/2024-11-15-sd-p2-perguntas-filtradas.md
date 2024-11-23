@@ -102,9 +102,13 @@ Ex: bugs, dano físico em hardware.
 
 ## Do que se trata o agrupamento de processos? Compare com TCP/UDP.
 
-Organização para replicação de processos onde processos idênticos são agrupados e podem receber multicast por grupos dinâmicos. Os grupos podem ser plano (processos têm papéis iguais e decisões coletivas) ou hierárquico (um processo será o eleitor e fará papel diferente dos demais).
+Organização para replicação de processos onde processos idênticos são agrupados e podem receber multicast por grupos dinâmicos.
+
+Os grupos podem ser plano (processos têm papéis iguais e decisões coletivas) ou hierárquico (um processo será o eleitor e fará papel diferente dos demais).
 	
-Comunicações com o TPC geram falhas por quebrar, mascaram falhas, e geram problema com a abordagem ponto-a-ponto (um canal ponto-a-ponto entre cada par do grupo). O agrupamento de processos resolve isso com SRM (scalable reliable multicasting) onde só são comunicadas as mensagens faltantes, reduzindo a demanda de tráfego na rede.
+Comunicações com o TPC geram falhas, mascaram falhas e geram problema com a abordagem ponto-a-ponto (um canal entre cada par).
+
+O agrupamento de processos resolve isso com SRM (scalable reliable multicasting) onde só são comunicadas as mensagens faltantes, reduzindo a demanda de tráfego na rede.
 	
 ## Explique 2FC.
 
