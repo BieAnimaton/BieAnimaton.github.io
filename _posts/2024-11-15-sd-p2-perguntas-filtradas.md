@@ -172,6 +172,10 @@ Esses conceitos são aplicáveis a muitas outras tecnologias de comunicação re
 
 - 4 . O stub desserializa a resposta e retorna o resultado ao cliente.
 
+## De que forma o stub empacota os parâmetros em invocações remotas de métodos?
+
+O stub usa marshalling para serializar os parâmetros em um formato transmissível pela rede.
+
 ## Descreva, sucintamente, as principais diferenças entre as tecnologias de middleware: RPC, DCOM, CORBA e Java/RMI.
 
 Diferenças entre RPC, DCOM, CORBA e Java/RMI:
@@ -195,10 +199,6 @@ DCOM: distributed componente object model, servidor fornece objetos em tempo de 
 CORBA: common object request broker architecture, independente de linguagem e plataforma, conhecida como ORB localiza objetos implementados, prepara para atender requisições e comunica requisições e respostas.
 
 WS: web service, apresenta interoperabilidade, baseados em padrões abertos, uso do XML, abrangência e alcançabilidade.
-
-## De que forma o stub empacota os parâmetros em invocações remotas de métodos?
-
-O stub usa marshalling para serializar os parâmetros em um formato transmissível pela rede.
 
 ## Defina Web Services e apresente suas principais características.
 
