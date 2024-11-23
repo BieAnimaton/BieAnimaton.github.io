@@ -128,11 +128,11 @@ Confidência: a informação deve ser acessível apenas a quem for autorizado.
 
 Integridade: as alterações na informação mantida por um sistema só podem ser realizadas das maneiras previstas e autorizadas.
 
-## Liste os tipos de criptografia. O que assimetria e simetria? como ocorre a autenticação? o que é assinatura digital?
+## Liste os tipos de criptografia. O que assimetria e simetria? como ocorre a autenticação? O que é assinatura digital? E hashing?
 
-Assimétricas: possui duas chaves, pública (pode ser distribuida em públio) e privada (fica guardada em segredo com o dono). O texto é criptografado com a chave pública pelo destino e só pode ser descriptografado com a chave privada do mestre, ou vice-versa. Podem ser distribuídas livremente e seu algoritmo apresenta alto custo computacional. Ex: RSA, Diffie-Helman, Elgamal.
-	
-Simétricas: possui uma chave, usada tanto para criptografar quanto descriptografar. O texto é criptografado com uma chave qualquer e é descriptografado com a mesma. Seu algoritmo é simples e de baixo custo computacional, problema é como enviar a chave única sem vazamento. EX: DES, 3DES, AES, IDEA.
+Simétricas: possui uma chave, usada tanto para criptografar quanto descriptografar. O texto é criptografado com uma chave qualquer e é descriptografado com a mesma. Algoritmo é simples e de baixo custo computacional, melhor desempenho, problema é como enviar a chave única sem vazamento e é criptografia bidirecional. EX: DES, 3DES, AES, IDEA.
+
+Assimétricas: possui duas chaves, pública (pode ser distribuida em públio) e privada (fica guardada em segredo com o dono). O texto é criptografado com a chave pública pelo destino e só pode ser descriptografado com a chave privada do mestre, ou vice-versa. Podem ser distribuídas livremente e seu algoritmo apresenta alto custo computacional (pior desempenho), é impossível obter uma chave a partir de outra e é criptografia unidirecional. Ex: RSA, Diffie-Helman, Elgamal.
 	
 Assinatura digital: conteúdo cifrado e transmitido junto com a mensagem para sua conferência. Usadas para garantir autenticidade da mensagem (integridade) e pode ser implementadas na comunicação de duas entidades junto com o algoritmo de chave pública, onde uma entidade assina sua mensagem com sua chave privada e depois com a chave pública da outra antes de enviar e, np processo inverso, a outra decifra primeiro com sua chave privada e depois com a pública da entidade que enviou, provando para a outra que ela é ela mesma.
 	
