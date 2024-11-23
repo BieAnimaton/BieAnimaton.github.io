@@ -68,9 +68,9 @@ O algoritmo de bloqueio em duas fases (2PL) pode ser utilizado para dar suporte 
 
 ## Defina disponibilidade e confiabilidade.
 
-Disponibilidade: quanto o SD está disponível para ser usado imediatamente (estar operante).
+Disponibilidade: quanto do SD está disponível para ser usado imediatamente (estar operante).
 
-Confiabilidade: quanto o SD pode operar de forma confiável.
+Confiabilidade: quanto do SD pode operar de forma confiável.
 
 ## Forneça um exemplo de disponibilidade e confiabilidade.
 
@@ -80,14 +80,14 @@ Se um sistema nunca falha, mas fica desligado duas semanas todo mês de agosto -
 
 ## Defina defeito, erro e falha e apresente um exemplo de cada.
 
-Defeito: consequência de um estado de erro do SD (não cumpre promessa).  
-Ex: sistema de login não autentica o usuário, mesmo com senha correta.
+Falha: trata-se da causa que originou o erro.  
+Ex: ocorreu um problema na comunicação com o banco de dados durante o cadastro.
 
 Erro: parte do estado de um SD originado por uma falha.  
 Ex: dados incorretos de autenticação estão armazenados na memória do sistema.
 
-Falha: trata-se da causa que originou o erro.  
-Ex: ocorreu um problema na comunicação com o banco de dados durante o cadastro.
+Defeito: consequência de um estado de erro do SD (não cumpre promessa).  
+Ex: sistema de login não autentica o usuário, mesmo com senha correta.
 
 ## Defina falhas transientes, intermitentes e permanentes e apresente um exemplo de cada.
 
