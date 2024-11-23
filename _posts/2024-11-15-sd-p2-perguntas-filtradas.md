@@ -140,7 +140,9 @@ Hashing criptográfico: funciona "digerindo" uma mensagem de qualquer tamanho e 
 
 ## Explique o controle de acesso com ticket.
 
-Ticket de acesso assinado digital é fornecido ao cliente, que apresentará ao objeto de destino e este pode então confirmar a validade daquela autorização com o servidor e atender o pedido. Essa estratégia reduz bastante a demanda pelo servidor para validação de acesso.
+Um ticket de acesso assinado digitalmente é fornecido ao cliente que apresentará ao objeto de destino e este pode então confirmar a validade da autorização com o servidor e atender o pedido.
+
+Essa estratégia reduz bastante a demanda pelo servidor para validação de acesso.
 
 # Aula 11 e 12
 
