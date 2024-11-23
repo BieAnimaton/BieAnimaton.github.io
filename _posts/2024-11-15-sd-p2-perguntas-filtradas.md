@@ -15,7 +15,9 @@ toc: true
 
 ## O que são nomes? Qual sua relação com a transparência de localização?
 
-Nomes descrevem entidades e referenciam endereços, usados na resolução de nomes (identificação de uma entidade) e garantem transparência de localização pois o ponto de acesso pode ser modificado mas seu nome mantido para o sistema (referência dos pontos de acesso).
+Nomes descrevem entidades e referenciam endereços, usados na resolução de nomes.
+
+Garantem transparência de localização pois ao mudar o ponto de acesso o nome continua o mesmo.
 
 ## O que é LDAP? Quais são suas siglas e hierarquias?
 
@@ -41,7 +43,7 @@ Conectados a ele, estão os hosts Sirius e Andromeda, ambos em São Paulo. Siriu
 
 ## Explique o que é transação e como usa o commit e o rollback. Defina e explique ACID.
 
-Transação é uma sequência definida de operações e eventos que podem fazer uso de diversos recursos compartilhados. Após um processo iniciar uma transação, usa Commit para solicitar que os outros processos se comprometam com o trabalho dele ou Rollback para discordar da situação e toda a transação é revertida ao ponto de partida.
+Transação é uma sequência definida de operações e eventos que podem usar recursos compartilhados. Ao ser iniciada, commit solicita que outros processos se comprometam com o primero e rollback discorda da situação e toda a transação é revertida ao ponto de partida.
 	
 ACID é uma das propriedades de uma transação.
 - Atômica: transações são indiviseis.
@@ -52,13 +54,13 @@ ACID é uma das propriedades de uma transação.
 
 ## Explique o gerenciamento de transações X scheduler.
 
-O gerenciamento de transações garante a atomicidade das transações, processa as primitivas para chamadas do escalonador e pode acessar diversos escalonadores.
+Gerenciamento de transações garante atomicidade das transações, transforma primitivas em chamadas de escalonador e acessa diversos escalonadores.
 	
-Por outro lado, o escalonador faz o controle da concorrência e determina qual transação pode passar operações de leitura ou escrita no gerenciador de dados.
+Escalonador: controle da concorrencia e determina qual transação pode passar operações de leitura e escrita ao gerenciador de dados.
 
 ## O que é serialização e como isso pode usar o algortimo 2FL?
 
-A Serialização impõe uma ordem de execução, isolando as transações simultâneas e garantindo que o resultado seja equivalente ao de uma execução sequencial.
+A Serialização impõe ordem de execução, isola transações simultâneas e garante que o resultado seja equivalente ao de uma execução sequencial.
 	
 O algoritmo de bloqueio em duas fases (2PL) pode ser utilizado para dar suporte à serialização já que funciona bloqueando um recurso sempre que uma transação precisa acessá-lo (growing phase) ou liberando o recurso quando não é mais usado (shrinking phase).
 
