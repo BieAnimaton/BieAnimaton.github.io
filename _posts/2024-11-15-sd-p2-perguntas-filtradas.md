@@ -148,15 +148,21 @@ Essa estratégia reduz bastante a demanda pelo servidor para validação de aces
 
 ## O que são stubs, skeletons e interfaces?
 
+![image](https://github.com/user-attachments/assets/bb2b4109-dd27-49ad-a2cd-acef80d286d9)
+
 - Stub: representação local que disponibiliza todos os métodos expostos pela interface do objeto remoto.
 
 - Skeleton: implementação server-side do objeto distribuído.
 
-- IDL: interface que descreve os métodos que serão expostos pelos objetos distribuídos.
+- Interfaces: descreve os métodos que serão expostos pelos objetos distribuídos.
 
 Esses conceitos são aplicáveis a muitas outras tecnologias de comunicação remota, como: CORBA, gRPC e SOAP.
 
-## Liste os passos de funcionamento das interface, stub e skeleton.
+- Para acessar métodos de um objeto distribuído o cliente deve utilizar a interface remota desse objeto presente no stub.
+
+- O stub intercepta a chamada e a remete ao objeto que representa a implementação (skeleton) no servidor.
+
+## Liste detalhadamente os passos de funcionamento das interface, stub e skeleton.
 
 - 1 . A interface define os métodos que o cliente pode chamar.
 
