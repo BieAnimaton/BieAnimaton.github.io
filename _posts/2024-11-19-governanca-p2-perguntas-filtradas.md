@@ -70,7 +70,7 @@ melhoria na governança de TI (boas práticas), alinhamento com os objetivos de 
 
 ## diferença do COBIT 4.1 para o 5:
 
-enquanto o COBIT 4.1 é mais focado em atender necessidades do negócio, como orientar processos para alcançar objetivos, gerenciar o desempenho e ser direcionado por métricas, o COBIT 5 atende todas as partes interessadas para cobrir a organização de ponta a ponta através de um único framework integrado (governança e gestão de TI), permitindo uma abordagem holística e separação entre governanção e gestão.
+enquanto o COBIT 4.1 é mais focado em atender necessidades do negócio, como orientar processos para alcançar objetivos, gerenciar o desempenho e ser direcionado por métricas, o COBIT 5 atende todas as partes interessadas para cobrir a organização de ponta a ponta através de um único framework integrado (governança e gestão de TI), permitindo uma abordagem holística e separação entre governança e gestão.
 
 ## vantagens do COBIT 2019 comparado aos outros.
 
