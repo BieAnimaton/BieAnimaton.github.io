@@ -80,7 +80,7 @@ garante maior flexibilidade, agilidade e adaptação às necessidades da organiz
 
 ## qual versão de COBIT a empresa deve implementar e porquê?
 
-COBIT 2019 é mais adequado para a empresa devido à sua flexibilidade, foco na agilidade, capacidade de integração em ambientes descentralizados e suporte à compliance. A implementação deste framework pode ser feita de forma modular, facilitando a adaptação e aceitação por parte da equipe, em um processo transformará a cultura de governança da organização à medida que obtém resultados positivos.
+COBIT 2019 é mais adequado para a empresa devido à sua flexibilidade, foco na agilidade, capacidade de integração em ambientes descentralizados e suporte à compliance. A implementação deste framework pode ser feita de forma modular, facilitando a adaptação e aceitação por parte da equipe, em um processo que transformará a cultura de governança da organização à medida que obtém resultados positivos.
 
 ## primeiros passos e desafios ao implementar o framework COBIT 5
 
@@ -119,18 +119,27 @@ a implementação do COBIT com foco em melhoria contínua e inovação não apen
 Principais Desafios para Implementação do COBIT:
 
 - Falta de Cultura de Governança: resistência à adoção de processos formais de governança.
-
 - Estrutura Descentralizada: dificuldade em alinhar práticas de governança em um ambiente fragmentado.
-
 - Sistemas Legados e Integração: diversidade tecnológica e falta de integração entre sistemas dificultam uma visão holística.
-
 - Falta de Treinamento e Conhecimento: ausência de capacitação adequada para uma implementação eficaz.
-
 - Recursos Limitados: insuficiência de pessoal dedicado à governança de TI.
-	
 - Prioridade em Resultados Imediatos: foco em objetivos de curto prazo em detrimento de projetos de governança de longo prazo.
-
 - Problemas com Compliance e Regulatório: desafios para atender regulamentos sem um framework de governança robusto, percebendo o COBIT como um possível obstáculo adicional.
+
+## Quais são os principais componentes do framework COBIT que devem ser considerados durante a sua implementação? Discuta a relevância de cada um deles.
+
+A implementação do COBIT envolve:
+
+- Governança e Gerenciamento: Alinhamento entre TI e negócios para atingir objetivos.
+- Objetivos de Controle: Proteção de dados e mitigação de riscos.
+- Arquitetura de Informação: Gerenciamento eficiente de dados para decisões estratégicas.
+- Processos: Operações contínuas e melhorias.
+- Papéis e Responsabilidades: Funções claras para eficiência.
+- Métricas: KPIs para monitorar desempenho.
+- Riscos e Compliance: Conformidade e segurança em transações.
+- Cultura e Comunicação: Governança integrada e comunicação clara.
+
+Implementar o COBIT em uma empresa não só melhora a governança e o gerenciamento de TI, mas também ajuda a garantir que as operações estão alinhadas às metas de negócios, riscos são gerenciados e a experiência do cliente é continuamente aprimorada.
 
 ## Diferenças entre COBITs
 
