@@ -59,7 +59,7 @@ ACID é uma das propriedades de uma transação.
 
 ## Explique o gerenciamento de transações X scheduler.
 
-Gerenciamento de transações garante atomicidade das transações, transforma primitivas em chamadas de escalonador e acessa diversos escalonadores.
+Gerenciamento de transações: garante atomicidade das transações, transforma primitivas em chamadas de escalonador e acessa diversos escalonadores.
 	
 Escalonador: controle da concorrencia e determina qual transação pode passar operações de leitura e escrita ao gerenciador de dados.
 
