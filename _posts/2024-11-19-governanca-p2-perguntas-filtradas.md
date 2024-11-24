@@ -76,7 +76,7 @@ enquanto o COBIT 4.1 é mais focado em atender necessidades do negócio, como or
 
 ## vantagens do COBIT 2019 comparado aos outros.
 
-garante maior flexibilidade, agilidade e adaptação às necessidades da organização, apresenta 6 princípios de governança, 40 processos chamados de domínios, possui um modelo de maturidade baseado no CMMI, fatores de design (sistema de governança personalizado) e modelo open-source.
+garante maior flexibilidade, agilidade e adaptação às necessidades da organização, apresenta 6 princípios de governança, 40 processos chamados de domínios, possui um modelo de maturidade baseado no CMMI (com 5 níveis), fatores de design (sistema de governança personalizado) e modelo open-source.
 
 ## qual versão de COBIT a empresa deve implementar e porquê?
 
