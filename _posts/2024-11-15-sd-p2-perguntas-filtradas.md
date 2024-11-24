@@ -85,7 +85,7 @@ Se um sistema nunca falha, mas fica desligado duas semanas todo mês de agosto -
 
 ## Defina defeito, erro e falha e apresente um exemplo de cada.
 
-Falha: trata-se da causa que originou o erro.  
+Falha: causa que originou o erro.  
 Ex: ocorreu um problema na comunicação com o banco de dados durante o cadastro.
 
 Erro: parte do estado de um SD originado por uma falha.  
