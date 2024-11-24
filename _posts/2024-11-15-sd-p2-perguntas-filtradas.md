@@ -17,7 +17,7 @@ toc: true
 
 Nomes descrevem entidades e referenciam endereços, usados na resolução de nomes.
 
-Garantem transparência de localização pois ao mudar o ponto de acesso o nome continua o mesmo.
+Garantem transparência de localização pois ao mudar o ponto de acesso o nome continua o mesmo (servidor de nomes deve manter a referência atual dos pontos de acesso)).
 
 ## O que é LDAP? Quais são suas siglas e hierarquias?
 
@@ -38,6 +38,11 @@ A hierarquia é:
 "No topo da hierarquia da Universidade de São Paulo (USP), no Brasil, está o Departamento de Física, que abriga o Servidor Central — essencial para gerenciar e distribuir dados de pesquisa entre pesquisadores e estudantes. Esse servidor centraliza a segurança e a eficiência na troca de informações dentro do departamento.
 
 Conectados a ele, estão os hosts Sirius e Andromeda, ambos em São Paulo. Sirius (IP 143.107.251.45) armazena grandes volumes de dados experimentais, enquanto Andromeda (IP 143.107.251.46) é responsável pelo processamento de simulações e análises complexas. Juntos, esses hosts garantem acesso constante aos dados cruciais para as pesquisas, contribuindo para a excelência acadêmica do departamento."
+
+![image](https://github.com/user-attachments/assets/4ce51489-66a7-4313-8870-94014bd9a290)
+
+![image](https://github.com/user-attachments/assets/6bd25176-1a3f-4387-b3d4-cc655b45646f)
+
 
 # Aula 8
 
