@@ -141,6 +141,17 @@ A implementação do COBIT envolve:
 
 Implementar o COBIT em uma empresa não só melhora a governança e o gerenciamento de TI, mas também ajuda a garantir que as operações estão alinhadas às metas de negócios, riscos são gerenciados e a experiência do cliente é continuamente aprimorada.
 
+## Analise como as métricas e indicadores de desempenho (KPIs) do COBIT podem ser utilizados para monitorar a eficácia das operações. Dê exemplos de KPIs que poderiam ser aplicados.
+
+As métricas e KPIs do COBIT monitoram a eficácia das operações em e-commerce, alinhando TI aos objetivos de negócios. Exemplos de KPIs incluem:  
+
+- Disponibilidade do Sistema: Percentual de tempo que a plataforma opera sem interrupções.  
+- Taxa de Conversão: Proporção de visitantes que concluem uma compra.  
+- Número de Incidentes de Segurança: Falhas de segurança reportadas em um período.  
+- ROI de Campanhas de Marketing: Receita gerada comparada ao custo das campanhas.  
+
+Esses KPIs ajudam a identificar melhorias, gerenciar riscos e aprimorar a experiência do cliente.
+
 ## Diferenças entre COBITs
 
 ### COBIT 4 (2005)
