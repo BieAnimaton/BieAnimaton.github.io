@@ -29,7 +29,7 @@ SLA são revisadas a cada 1 ano, em caso de mudanças significativas, em feedbac
  
 - SLA tipo foco no serviço: usado por empresas com operação volumosa de cliente e serviço, tem possibilidade de escalar e garantir agilidade e é indicado para empresas que querem agilidade e escalabilidade.
 
-SLA multinível: documento que comporta especificações e necessidade de frentes diferentes, projetos que envolvem diferentes áreas e entregas e é indicado para operações full-service.
+- SLA multinível: documento que comporta especificações e necessidade de frentes diferentes, projetos que envolvem diferentes áreas e entregas e é indicado para operações full-service.
 
 ---
 
@@ -74,7 +74,7 @@ enquanto o COBIT 4.1 é mais focado em atender necessidades do negócio, como or
 
 ## vantagens do COBIT 2019 comparado aos outros.
 
-garante maior flexibilidade e adaptação às necessidades da organização, apresenta 6 princípios de governança, 40 processos chamados de domínios, possui um modelo de maturidade baseado no CMMI, fatores de design (sistema de governança personalizado) e modelo open-source.
+garante maior flexibilidade, agilidade e adaptação às necessidades da organização, apresenta 6 princípios de governança, 40 processos chamados de domínios, possui um modelo de maturidade baseado no CMMI, fatores de design (sistema de governança personalizado) e modelo open-source.
 
 ## qual versão de COBIT a empresa deve implementar e porquê?
 
