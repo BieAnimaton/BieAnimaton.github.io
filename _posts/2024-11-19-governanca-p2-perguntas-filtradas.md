@@ -133,32 +133,32 @@ Principais Desafios para Implementação do COBIT:
 ## Diferenças entre COBITs
 
 ### COBIT 4 (2005)
-Versão mais popular.
-Foco na governança de TI e alinhamento com objetivos de negócios.
-Introdução de métricas como KPIs e KRIs.
-Direcionado para controle e supervisão de processos de TI.
+Versão mais popular.  
+Foco na governança de TI e alinhamento com objetivos de negócios.  
+Introdução de métricas como KPIs e KRIs.  
+Direcionado para controle e supervisão de processos de TI.  
 
 ### COBIT 4.1 (2007)
-Refinamento e maior clareza nos conceitos do COBIT 4.
-Integração aprimorada com frameworks como ITIL e ISO.
-Ênfase na avaliação de desempenho e indicadores de controle.
-Expansão para incluir governança corporativa de TI.
-34 processos.
-4 domínios (processos de TI):
+Refinamento e maior clareza nos conceitos do COBIT 4.  
+Integração aprimorada com frameworks como ITIL e ISO.  
+Ênfase na avaliação de desempenho e indicadores de controle.  
+Expansão para incluir governança corporativa de TI.  
+34 processos.  
+4 domínios (processos de TI):  
 - PO - Planejar e Organizar: planejamento e organização das estratégias de TI.
 - AI - Analisar e Implementar: aqusição e implementação de soluções de TI.
 - DS - Entregar e Suportar: entrega de serviços de TI e o suporte aos usuários.
 - ME - Monitorar e Avaliar: monitoramento do desempenho de TI e conformidade com requisitos.
 
 ### COBIT 5 (2012)
-Também popular
-Governança corporativa e TI integradas para criação de valor.
-Domínios de governança e gestão.
-Modelo de Avaliação de Processo alinhado à ISO/IEC 15504.
-Outros frameworks: CMMI e ITIL.
-Maior foco em alinhamento estratégico com os objetivos organizacionais.
-37 processos de governança e gestão.
-4 domíninos:
+Também popular.  
+Governança corporativa e TI integradas para criação de valor.  
+Domínios de governança e gestão.  
+Modelo de Avaliação de Processo alinhado à ISO/IEC 15504.  
+Outros frameworks: CMMI e ITIL.  
+Maior foco em alinhamento estratégico com os objetivos organizacionais.  
+37 processos de governança e gestão.  
+4 domíninos:  
 - APO - Alinhar, Planejar e Organizar: organiza, alinha e prepara para atender às necessidades da empresa.
 - BUI - Construir, Adquirir e Implementar: mudanças entregues com qualidade e alinhadas às expectativas do negócio.
 - DSS - Entregar, Servir e Suportar: entrega de serviços confiáveis, seguros e eficientes para suportar o negócio.
@@ -173,13 +173,12 @@ Introdução de novos componentes de governança (cultura, infraestrutura).
 Novo modelo de medição de desempenho (CPG).  
 6 princípios de governança.  
 40 objetivos (processo/domínios).  
-Modelo de maturidade CMMI com 5 níveis:
+Modelo de maturidade CMMI com 5 níveis:  
 - 1 - Inicial
 - 2 - Repetível
 - 3 - Definido
 - 4 - Gerenciado
 - 5 - Otimizado
-
 
 ## Relembrando SOX
 
