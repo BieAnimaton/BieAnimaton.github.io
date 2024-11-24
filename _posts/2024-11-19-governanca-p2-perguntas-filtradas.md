@@ -11,7 +11,7 @@ tags:
 toc: true
 ---
 
-catalogo de ti: visão geral de todos processos oferecidos pela área de TI e suas principais informações, apresenta uma visão geral de tudoo que está disponível e deixa claro os processos e as condições envolvidas na requisição de serviços
+catalogo de ti: visão geral de todos processos oferecidos pela área de TI e suas principais informações, apresenta uma visão geral de tudo que está disponível e deixa claro os processos e as condições envolvidas na requisição de serviços
 
 - catalogo de negócios: destinado aos clientes, traz informações relevantes para a contratação do serviço (custos envolvidos, tempo do serviço).
 
@@ -29,7 +29,7 @@ SLA são revisadas a cada 1 ano, em caso de mudanças significativas, em feedbac
  
 - SLA tipo foco no serviço: usado por empresas com operação volumosa de cliente e serviço, tem possibilidade de escalar e garantir agilidade e é indicado para empresas que querem agilidade e escalabilidade.
 
-SLA multinível: documento que comporta especificações e necessidade de frentes diferentes, projetos que envolvem diferentes áreas e entregas e é indicado para operações full-service.
+- SLA multinível: documento que comporta especificações e necessidade de frentes diferentes, projetos que envolvem diferentes áreas e entregas e é indicado para operações full-service.
 
 ---
 
@@ -60,13 +60,13 @@ COBIT é um framework que implementa boas práticas às empresas visando alinhar
 ## estruturas COBIT 4.1
 
 - PO - Planejar e Organizar: planejamento e organização das estratégias de TI.
-- AI - Analisar e Implementar: aquisição e implementação de soluções de TI.
+- AI - Analisar e Implementar: aqusição e implementação de soluções de TI.
 - DS - Entregar e Suportar: entrega de serviços de TI e o suporte aos usuários.
 - ME - Monitorar e Avaliar: monitoramento do desempenho de TI e conformidade com requisitos.
 
 ## benefícios COBIT 4.1:
 
-melhoria na governança de TI (boas práticas), alinhamento com os objetivos de negócio, redução de riscos (gerenciamento de riscos) e compatibilidade com outros frameworks (intrgrado com ITIL).
+melhoria na governança de TI (boas práticas), alinhamento com os objetivos de negócio, redução de riscos (gerenciamento de riscos) e compatibilidade com outros frameworks (integrado com ITIL).
 
 ## diferença do COBIT 4.1 para o 5:
 
