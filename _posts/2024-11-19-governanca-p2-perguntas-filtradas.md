@@ -129,3 +129,58 @@ Principais Desafios para Implementação do COBIT:
 - Prioridade em Resultados Imediatos: foco em objetivos de curto prazo em detrimento de projetos de governança de longo prazo.
 
 - Problemas com Compliance e Regulatório: desafios para atender regulamentos sem um framework de governança robusto, percebendo o COBIT como um possível obstáculo adicional.
+
+## Diferenças entre COBITs
+
+### COBIT 4 (2005)
+Versão mais popular.
+Foco na governança de TI e alinhamento com objetivos de negócios.
+Introdução de métricas como KPIs e KRIs.
+Direcionado para controle e supervisão de processos de TI.
+
+### COBIT 4.1 (2007)
+Refinamento e maior clareza nos conceitos do COBIT 4.
+Integração aprimorada com frameworks como ITIL e ISO.
+Ênfase na avaliação de desempenho e indicadores de controle.
+Expansão para incluir governança corporativa de TI.
+34 processos.
+4 domínios (processos de TI):
+- PO - Planejar e Organizar: planejamento e organização das estratégias de TI.
+- AI - Analisar e Implementar: aqusição e implementação de soluções de TI.
+- DS - Entregar e Suportar: entrega de serviços de TI e o suporte aos usuários.
+- ME - Monitorar e Avaliar: monitoramento do desempenho de TI e conformidade com requisitos.
+
+### COBIT 5 (2012)
+Também popular
+Governança corporativa e TI integradas para criação de valor.
+Domínios de governança e gestão.
+Modelo de Avaliação de Processo alinhado à ISO/IEC 15504.
+Outros frameworks: CMMI e ITIL.
+Maior foco em alinhamento estratégico com os objetivos organizacionais.
+37 processos de governança e gestão.
+4 domíninos:
+- APO - Alinhar, Planejar e Organizar: organiza, alinha e prepara para atender às necessidades da empresa.
+- BUI - Construir, Adquirir e Implementar: mudanças entregues com qualidade e alinhadas às expectativas do negócio.
+- DSS - Entregar, Servir e Suportar: entrega de serviços confiáveis, seguros e eficientes para suportar o negócio.
+- MEA - Monitorar, Avaliar e Analisar: identificar desvios, conformidade e promover melhorias contínuas.
+
+### COBIT 2019
+Atualizado para o contexto digital e novas tecnologias (IA, big data).  
+Garante flexiblidade, agilidade, capacidade de integração e suporte à compliance.  
+Modelo de design de governança para personalização.  
+Dois conjuntos de princípios: governança e estrutura do COBIT.  
+Introdução de novos componentes de governança (cultura, infraestrutura).  
+Novo modelo de medição de desempenho (CPG).  
+6 princípios de governança.  
+40 objetivos (processo/domínios).  
+Modelo de maturidade CMMI com 5 níveis:
+- 1 - Inicial
+- 2 - Repetível
+- 3 - Definido
+- 4 - Gerenciado
+- 5 - Otimizado
+
+
+## Relembrando SOX
+
+SOX (Sarbanes-Oxley Act) é uma lei dos EUA criada em 2002 para aumentar a transparência e a confiabilidade das informações financeiras de empresas públicas, prevenindo fraudes corporativas. Ela exige controles internos robustos, auditorias independentes e responsabilidade dos executivos pelas demonstrações financeiras.
