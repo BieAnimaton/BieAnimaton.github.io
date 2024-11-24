@@ -51,6 +51,8 @@ modelos de gestão:
 
 - método cobit: fornece indicadores para auxiliar gestores na tomada de decisões, promove práticas de consenso entre especialistas, foca no controle e execução e transforma o setor de TI em uma estrutura bem gerida.
 
+---
+
 práticas para redução de custos: padronizar ferramentas (evitar redundância), uso da nuvem (reduzir licenças e instalações), reavaliar os contratos, investir em segurança cibernética e aplicar treinamento com conscientização.
 
 ---
