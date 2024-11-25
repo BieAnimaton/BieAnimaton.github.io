@@ -48,7 +48,7 @@ Conectados a ele, estão os hosts Sirius e Andromeda, ambos em São Paulo. Siriu
 
 ## Explique o que é transação e como usa o commit e o rollback. Defina e explique ACID.
 
-Transação é uma sequência definida de operações e eventos que podem usar recursos compartilhados. Ao ser iniciada, commit solicita que outros processos se comprometam com o primero e rollback discorda da situação e toda a transação é revertida ao ponto de partida.
+Transação é uma sequência definida de operações e eventos que podem usar recursos compartilhados e devem proteger o acesso simultâneo a estes. Ao ser iniciada, commit solicita que outros processos se comprometam com o primero, tendo um resultado permanente e/ou rollback discorda da situação e toda a transação é revertida ao ponto de partida.
 	
 ACID é uma das propriedades de uma transação.
 - Atômica: transações são indiviseis.
