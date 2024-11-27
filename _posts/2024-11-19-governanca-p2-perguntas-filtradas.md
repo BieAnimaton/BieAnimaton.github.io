@@ -11,13 +11,13 @@ tags:
 toc: true
 ---
 
-catalogo de ti: visão geral de todos processos oferecidos pela área de TI e suas principais informações, apresenta uma visão geral de tudoo que está disponível e deixa claro os processos e as condições envolvidas na requisição de serviços
+catalogo de ti: visão geral de todos processos oferecidos pela área de TI e suas principais informações, apresenta uma visão geral de tudo que está disponível, deixa claro os processos e as condições envolvidas na requisição de serviços
 
 - catalogo de negócios: destinado aos clientes, traz informações relevantes para a contratação do serviço (custos envolvidos, tempo do serviço).
 
 - catálogo técnico: destinado ao time de TI, traz informações sobre a execução do serviço (complexidade, itens ténicos da base).
 
-portfólio de TI: conjunto organizado de serviços que uma organização oferece, permite comunicação clara de que oferecem, garante gerenciamento eficaz dos serviços (necessidades atendidas) e tomada de decisões estratégias sobre melhorias
+portfólio de TI: conjunto organizado de serviços que uma organização oferece, permite comunicação clara de que oferecem, garante gerenciamento eficaz dos serviços e tomada de decisões estratégias sobre melhorias
 
 ---
 
@@ -27,9 +27,9 @@ SLA são revisadas a cada 1 ano, em caso de mudanças significativas, em feedbac
  
 - SLA tipo foco no cliente: modelo personalizado, adequa totalmente às especificações e necessidades do cliente e é indicado para empresas com menos clientes ou cliente com especificações diferentes.
  
-- SLA tipo foco no serviço: usado por empresas com operação volumosa de cliente e serviço, tem possibilidade de escalar e garantir agilidade e é indicado para empresas que querem agilidade e escalabilidade.
+- SLA tipo foco no serviço: usado por empresas com operação volumosa de cliente e serviço e é indicado para empresas que querem agilidade e escalabilidade.
 
-- SLA multinível: documento que comporta especificações e necessidade de frentes diferentes, projetos que envolvem diferentes áreas e entregas e é indicado para operações full-service.
+- SLA multinível: documento que comporta especificações e necessidade de frentes diferentes, projetos de diferentes áreas e entregas e é indicado para operações full-service.
 
 ---
 
