@@ -47,9 +47,9 @@ modelos de gestão:
  
 - método tco: aquisição, utilização e manutenção dos ativos de TI, qualquer gestor pode usar, basta apenas mudar o ativo.
  
-- método itil: mais popular, entrega boas práticas para administração de serviçlos de TI e traz procedimentos estruturais baseados em estudos sólidos com grandes empresas.
+- método itil: mais popular, entrega boas práticas para administração de serviços de TI e traz procedimentos estruturais baseados em estudos sólidos com grandes empresas.
 
-- método cobit: fornece indicadores para auxiliar gestores na tomada de decisões, promove práticas de consenso entre especialistas, foca no controle e execução e transforma o setor de TI em uma estrutura bem gerida.
+- método cobit: fornece indicadores para auxiliar gestores na tomada de decisões, promove práticas de consenso entre especialistas, foco no controle e execução e transforma o setor de TI em uma estrutura bem gerida.
 
 ---
 
