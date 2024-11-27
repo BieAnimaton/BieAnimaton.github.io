@@ -68,7 +68,7 @@ COBIT é um framework que implementa boas práticas às empresas visando alinhar
 
 ## benefícios COBIT 4.1:
 
-melhoria na governança de TI (boas práticas), alinhamento com os objetivos de negócio, redução de riscos (gerenciamento de riscos) e compatibilidade com outros frameworks (intrgrado com ITIL).
+melhoria na governança de TI (boas práticas), alinhamento com os objetivos de negócio, redução de riscos (gerenciamento de riscos) e compatibilidade com outros frameworks (integrado com ITIL).
 
 ## diferença do COBIT 4.1 para o 5:
 
