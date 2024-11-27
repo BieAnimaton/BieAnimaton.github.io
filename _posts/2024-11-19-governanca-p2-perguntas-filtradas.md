@@ -70,9 +70,19 @@ COBIT é um framework que implementa boas práticas às empresas visando alinhar
 
 melhoria na governança de TI (boas práticas), alinhamento com os objetivos de negócio, redução de riscos (gerenciamento de riscos) e compatibilidade com outros frameworks (integrado com ITIL).
 
-## diferença do COBIT 4.1 para o 5:
+## diferença do COBIT 4.1 para o COBIT 5:
 
 enquanto o COBIT 4.1 é mais focado em atender necessidades do negócio, como orientar processos para alcançar objetivos, gerenciar o desempenho e ser direcionado por métricas, o COBIT 5 atende todas as partes interessadas para cobrir a organização de ponta a ponta através de um único framework integrado (governança e gestão de TI), permitindo uma abordagem holística e separação entre governança e gestão.
+
+## COBIT 5
+
+COBIT 5 é um framework de governança e gestão de TI que alinha os objetivos de TI aos da organização, cobrindo a empresa de ponta a ponta com uma abordagem integrada, holística e separando claramente governança de gestão. Seus princípios são:
+- Atender às necessidades das partes interessadas.
+- Cobrir a organização de ponta a ponta.
+- Aplicar um único framework integrado.
+- Permitir uma abordagem holística.
+- Separar governança de gestão.
+Baseia-se em sete facilitadores (princípios, processos, estruturas, cultura, informação, tecnologia e pessoas) e um modelo de maturidade baseado no ISO/IEC 33000.
 
 ## vantagens do COBIT 2019 comparado aos outros.
 
